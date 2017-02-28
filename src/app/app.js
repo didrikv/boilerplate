@@ -7,6 +7,6 @@ import store from "./store.js"
 const app = document.getElementById("app")
 
 ReactDom.render(
-	<p>Yeah, Fuck!</p>
+	<p>Fuck Yeah!</p>
 ,app)
 
