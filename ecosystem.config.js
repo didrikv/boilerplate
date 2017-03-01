@@ -25,8 +25,8 @@ module.exports = {
       user : "deploy",
       host : "188.166.148.124",
       ref  : "origin/master",
-      repo : "git@github.com:didrikv/boilerplate.git",
-      path : "~/boilerplate",
+      repo : "https://github.com/didrikv/boilerplate.git",
+      path : "/home/deploy/boilerplate/",
       "post-deploy" : "nvm install && npm install && pm2 startOrRestart ecosystem.config.js --env production"
     },
   }
