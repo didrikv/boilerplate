@@ -24846,7 +24846,7 @@ var app = document.getElementById("app");
 _reactDom2.default.render(_react2.default.createElement(
 	"p",
 	null,
-	"Fuck Yeah!"
+	"Fuck Yeah, deploying like a Boss!!!"
 ), app);
 
 /***/ })
