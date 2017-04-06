@@ -4,23 +4,10 @@ import norge_org from "../data/norway_original.json"
 import { feature } from 'topojson'
 import {geoTransverseMercator, geoPath} from 'd3'
 import Map from "../components/Map.js"
-import {selectArea}from "../actions/actions.js"
-import { connect } from 'react-redux'
 
 
-function mapDispatchToProps(dispatch) {
-	return {onClick: (Nr) => {dispatch(selectArea(Nr))}}
-}
 
-function mapStateToProps(state) {
-	return {selected: state.selected}
-}
-
-console.log(connect)
-
-export default connect(mapStateToProps, mapDispatchToProps)(NorwayMap)
-
-export function NorwayMap(props) {
+export default function NorwayMap(props) {
 	let width = props.width ? props.width : 300
 	let height = props.height ? props.height : 300
 
@@ -47,22 +34,22 @@ export function NorwayMap(props) {
 
 	if(props.fylke) {
 		if (!props.object || props.object == 'kommune') {
-			areas = areas.filter((area) => area.properties.Fylke == props.fylke)
+			areas = areas.filter((area) => area.properties.Fnr == props.fylke)
 		}
 		else if (props.object == 'fylke') {
-			areas = areas.filter((area) => area.properties.Sted == props.fylke)
+			areas = areas.filter((area) => area.properties.Nr == props.fylke)
 		}
 	}
 	else if (props.region) {
 		if (!props.object || props.object == 'kommune') {
-			areas = areas.filter((area) => area.properties.Region == props.region)
+			areas = areas.filter((area) => area.properties.Rnr == props.region)
 		}
 		else if (props.object == 'region') {
-			areas = areas.filter((area) => area.properties.Sted == props.fylke)
+			areas = areas.filter((area) => area.properties.Nr == props.fylke)
 		}
 	}
 	else if(props.kommune && (!props.object || props.object =='kommune')) {
-		areas = areas.filter((area) => area.properties.Sted == props.kommune)
+		areas = areas.filter((area) => area.propertiNrr == props.kommune)
 	}
 
 

@@ -56,7 +56,7 @@ export default function Map(props){
 				d={path(area)} 
 				className={css(styles.path)} 
 				key={area.properties.Nr}
-				onClick={() => props.onClick(area.properties.Sted)}
+				onClick={() => props.onClick(area.properties.Nr)}
 				style = {{fill: getColor(area.properties.Nr)}}
 			>
 			<title className={css(styles.tooltip)}>{area.properties.Sted}</title>

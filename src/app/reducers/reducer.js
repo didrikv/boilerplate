@@ -1,7 +1,12 @@
-export default function reducer(state = {selected: null}, action) {
+export default function reducer(state = {fylke: 8, kommune: 821}, action) {
 	switch(action.type) {
-		case "SELECT_AREA": {
-			return {...state, selected: action.payload}
+		case "SELECT_FYLKE": {
+			return {...state, fylke: action.payload}
+		}
+	}
+	switch(action.type) {
+		case "SELECT_KOMMUNE": {
+			return {...state, kommune: action.payload}
 		}
 	}
 	return state
