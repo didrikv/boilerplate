@@ -1,7 +1,6 @@
 import React from 'react'
 import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryStack, VictoryLine, VictoryZoomContainer, VictoryZoom, VictoryContainer} from 'victory'
 
-console.log(VictoryTheme)
 export default class Chart extends React.Component {
 	render(){
 		return(
