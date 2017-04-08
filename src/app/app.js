@@ -13,6 +13,7 @@ import NorgeFylkeMap from "./containers/NorgeFylkeMap.js"
 import NorgeKommuneMap from "./containers/NorgeKommuneMap.js"
 import Chart from "./components/Chart.js"
 import BoAtrakkChart from "./containers/BoAttrakkChart.js"
+import BestWorstFylkeChart from "./containers/BestWorstFylkeChart.js"
 
 var data = csvParse(csvString, (d) => ({
 	Nr: d.Nr,
@@ -43,6 +44,7 @@ function Container(props){
 		<NorgeFylkeMap type="simple" object="fylke" data={fylkeObject}/>
 		<NorgeKommuneMap type="original" data={kommuneObject}/>
 		<BoAtrakkChart data={data}/>
+		<BestWorstFylkeChart data={data} />
 	</div>
 	)
 }

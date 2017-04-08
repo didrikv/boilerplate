@@ -9,6 +9,7 @@ import {VictoryBar,
 	Bar,
 	VictoryLabel
 	} from 'victory'
+import theme from "../data/VictoryTheme.js"
 
 export default function StackAndLineChart(props){
 	let data = props.data
@@ -30,6 +31,7 @@ export default function StackAndLineChart(props){
 		height={300}
 		//padding={{top:0, bottom:0, left:60, right:40}}
 		domainPadding={{x:[20,10], y:[10,10]}}
+		theme={theme}
 		>
 		<VictoryLabel text={data[0].Sted} x={450/2} y={30} textAnchor="middle"/>
 		<VictoryAxis 
@@ -45,7 +47,6 @@ export default function StackAndLineChart(props){
 		>
 		{props.stack.map((e, i) => 
 			<VictoryBar data={data} x={props.x} y={e} key={e}
-				dataComponent={<Bar style={{ width: "20", fill:colorScale[i] }} />}	
 			/>
 		)}
 		</VictoryStack>
