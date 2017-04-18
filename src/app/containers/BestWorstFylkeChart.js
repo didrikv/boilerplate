@@ -11,15 +11,17 @@ export default connect(mapStateToProps)(BestWorstFylkeChart)
 
 function BestWorstFylkeChart(props) {
 	let data = props.data
-	data = data.filter((e) => e.Nr > props.selected *100 && e.Nr < (props.selected + 1)*100 && e.Aar == 2015)
+	if(props.selected){
+		data = data.filter((e) => e.Nr > props.selected *100 && e.Nr < (props.selected + 1)*100 && e.Aar == 2015)
+	}
+	else{
+		data = data.filter((e) => e.Inndeling == "Kommune" && e.Aar == 2015)
+	}
 	let stack = ["Bostedsattraktivitet", "Egenvekst", "Strukturelle flyttefaktorer"]
-
 
 	return (
 		<TopBottomHorizontalChart data={data} n={5} x="Sted" stack={stack} sortby="Bostedsattraktivitet"/>
 	)
-
 	
 
-	return (null)
 }

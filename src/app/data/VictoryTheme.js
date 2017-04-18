@@ -74,14 +74,14 @@ export default {
       }),
       grid: {
         fill: "transparent",
-        stroke: blueGrey50,
+        stroke: blueGrey300,
         //strokeDasharray,
         strokeLinecap,
         strokeLinejoin,
         pointerEvents: "none"
       },
       axis: {
-        fill: "transparent",
+        fill:blueGrey300,
 		stroke: blueGrey300,
         strokeWidth: 2,
         strokeLinecap,
@@ -163,10 +163,10 @@ export default {
   scatter: assign({
     style: {
       data: {
-        fill: blueGrey700,
-        opacity: 1,
-        stroke: "transparent",
-        strokeWidth: 0
+        fill: blueGrey300,
+        opacity: 0.5,
+        stroke: blueGrey700,
+        strokeWidth: 1
       },
       labels: centeredLabelStyles
     }

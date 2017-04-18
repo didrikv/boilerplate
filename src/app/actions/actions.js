@@ -1,7 +1,7 @@
-export function selectFylke(Navn) {
+export function selectFylke(Nr) {
 	return {
 		type: "SELECT_FYLKE",
-		payload: Navn
+		payload: Nr
 	}
 }
 

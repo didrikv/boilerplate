@@ -13,13 +13,6 @@ import theme from "../data/VictoryTheme.js"
 
 export default function StackAndLineChart(props){
 	let data = props.data
-	console.log(data.length)
-	var colorScale=["red", "green", "blue", "orange"]
-	var min = Math.min.apply(Math, data.map((e) => e.Nettoinnflytting))
-	var max = Math.max.apply(Math, data.map((e) => e.Nettoinnflytting))
-	var domain = [min, max]
-	console.log(domain)
-	console.log(data)
 	
 	
 	return (
@@ -38,9 +31,11 @@ export default function StackAndLineChart(props){
 			tickValues={data.map((e) => e.Aar)}
 			tickLabelComponent={<VictoryLabel angle={90} verticalAnchor="middle" dx={10}/>}
 			offsetY={50}
+			style={{grid:{stroke: "transparent"}}}
 		/>
 		<VictoryAxis dependentAxis 
 			crossAxis={false}
+			style={{grid:{stroke: "transparent"}}}
 		/>
 		
 		<VictoryStack
@@ -54,6 +49,7 @@ export default function StackAndLineChart(props){
 			data={data}
 			x={props.x}
 			y={props.line}
+			interpolation="natural"
 		/>
 	</VictoryChart>	
 		

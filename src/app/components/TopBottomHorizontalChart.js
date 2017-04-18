@@ -1,6 +1,5 @@
 import React from 'react'
 import HorizontalBarChart from "./HorizontalBarChart.js"
-import HorizontalBarChart2 from "./HorizontalBarChart2.js"
 
 export default function TopBottomHorizontalChart(props) {
 	let data = props.data
@@ -11,8 +10,8 @@ export default function TopBottomHorizontalChart(props) {
 
 	let top = data.slice(0,n)
 	let bottom = data.slice(-n)
+	console.log(data)
 	
-	console.log({...props})
 	return(
 		<div>
 			<HorizontalBarChart {...props} data={top} />

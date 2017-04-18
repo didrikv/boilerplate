@@ -1,4 +1,4 @@
-export default function reducer(state = {fylke: 8, kommune: 821}, action) {
+export default function reducer(state = {}, action) {
 	switch(action.type) {
 		case "SELECT_FYLKE": {
 			return {...state, fylke: action.payload}

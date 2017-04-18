@@ -14,6 +14,7 @@ import NorgeKommuneMap from "./containers/NorgeKommuneMap.js"
 import Chart from "./components/Chart.js"
 import BoAtrakkChart from "./containers/BoAttrakkChart.js"
 import BestWorstFylkeChart from "./containers/BestWorstFylkeChart.js"
+import ScatterContainer from "./containers/ScatterContainer.js"
 
 var data = csvParse(csvString, (d) => ({
 	Nr: d.Nr,
@@ -28,7 +29,6 @@ var data = csvParse(csvString, (d) => ({
 var fylkeArray = data.filter((e) => e.Aar == 2015 && e.Inndeling == "Fylke")
 var fylkeObject = {}
 fylkeArray.forEach((e) => {fylkeObject[e.Nr] = e.Bostedsattraktivitet})
-console.log(fylkeObject)
 var kommuneArray = data.filter((e) => e.Aar == 2015 && e.Inndeling == "Kommune")
 var kommuneObject = {}
 kommuneArray.forEach((e) => {kommuneObject[e.Nr] = e.Bostedsattraktivitet})
@@ -45,6 +45,7 @@ function Container(props){
 		<NorgeKommuneMap type="original" data={kommuneObject}/>
 		<BoAtrakkChart data={data}/>
 		<BestWorstFylkeChart data={data} />
+		<ScatterContainer data={kommuneArray} />
 	</div>
 	)
 }

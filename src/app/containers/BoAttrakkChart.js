@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import StackAndLineChart from "../components/StackAndLineChart.js"
 import StackAndLineChart2 from "../components/StackAndLineChart2.js"
 
 function mapStateToProps(state){

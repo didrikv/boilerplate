@@ -5,7 +5,7 @@ import NorwayMap from "./NorwayMap.js"
 import {selectKommune} from "../actions/actions.js"
 
 function mapStateToProps(state) {
-	return {fylke: state.fylke}
+	return {fylke: state.fylke, selectedID:state.kommune}
 }
 function mapDispatchToProps(dispatch) {
 	return {onClick:(Nr) => dispatch(selectKommune(Nr))}

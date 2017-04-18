@@ -61,6 +61,7 @@ export default function NorwayMap(props) {
 			width={width}
 			onClick={props.onClick}
 			data={props.data}
+			selectedID={props.selectedID}
 		/>
 	)
 }

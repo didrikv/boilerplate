@@ -43,8 +43,20 @@ export default function Map(props){
 			return false
 		}
 	}
+
+	let names = areas.map((area) => <option value={area.properties.Nr}>{area.properties.Sted}</option>)
+	let blank = <option value={0}></option>
+	names.splice(0,0,blank)
+	
+	function handleChange(event) {
+		props.onClick(parseInt(event.target.value))
+	}
 	
 	return(
+		<div>
+		<select id="test" onChange={handleChange} value={props.selectedID} style={{display: "block"}}>
+			{names}
+		</select>
 		<svg 
 			height={height} 
 			width={width} 
@@ -63,6 +75,7 @@ export default function Map(props){
 			</path>
 		)}
 		</svg>
+		</div>
 	)
 }
 	
