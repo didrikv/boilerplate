@@ -10,12 +10,17 @@ export default function TopBottomHorizontalChart(props) {
 
 	let top = data.slice(0,n)
 	let bottom = data.slice(-n)
-	console.log(data)
 	
 	return(
 		<div>
+			<div>
+			<h3>Top 5 </h3>
 			<HorizontalBarChart {...props} data={top} />
-			<HorizontalBarChart {...props} data={bottom}/>
+			</div>
+			<div>
+			<h3>Bånn 5 </h3>
+			<HorizontalBarChart {...props} data={bottom} />
+			</div>
 		</div>
 	)
 		

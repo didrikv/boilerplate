@@ -55,13 +55,11 @@ export default function NorwayMap(props) {
 
 	return (
 		<Map 
+			{...props}
 			areas={areas} 
 			path={path} 
 			height={height} 
 			width={width}
-			onClick={props.onClick}
-			data={props.data}
-			selectedID={props.selectedID}
 		/>
 	)
 }

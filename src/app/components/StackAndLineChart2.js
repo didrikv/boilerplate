@@ -13,7 +13,9 @@ import theme from "../data/VictoryTheme.js"
 
 export default function StackAndLineChart(props){
 	let data = props.data
-	
+	console.log(data)
+	console.log(props.line)
+	console.log(props.stack)
 	
 	return (
 		<VictoryChart 
@@ -26,9 +28,9 @@ export default function StackAndLineChart(props){
 		domainPadding={{x:[20,10], y:[10,10]}}
 		theme={theme}
 		>
-		<VictoryLabel text={data[0].Sted} x={450/2} y={30} textAnchor="middle"/>
+		<VictoryLabel text={data[0][props.label]} x={450/2} y={30} textAnchor="middle"/>
 		<VictoryAxis 
-			tickValues={data.map((e) => e.Aar)}
+			tickValues={data.map((e) => e[props.x])}
 			tickLabelComponent={<VictoryLabel angle={90} verticalAnchor="middle" dx={10}/>}
 			offsetY={50}
 			style={{grid:{stroke: "transparent"}}}

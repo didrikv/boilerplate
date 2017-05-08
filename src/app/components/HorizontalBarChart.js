@@ -1,13 +1,16 @@
 import React from 'react'
-import { VictoryChart, VictoryBar, VictoryLabel, VictoryStack, VictoryTheme, VictoryContainer, VictoryAxis, VictoryPortal, Bar} from 'victory'
+import { VictoryChart, VictoryBar, VictoryLabel, VictoryStack, VictoryTheme, VictoryContainer, VictoryAxis, VictoryPortal, Bar, VictoryLegend} from 'victory'
 import theme from "../data/VictoryTheme.js"
 
 export default function HorizontalBarChart(props) {
 	let data = props.data
 	data.reverse()
 	let names = data.map((e) => e[props.x])
-	console.log(data)
-	console.log("fuck")
+	let foo = props.stack.map( (e) => ({name:e}))
+	let legendNames = [{name: "yo"}, {name:"foo"}]
+	console.log(legendNames)
+	console.log(foo)
+
 	return (
 		<VictoryChart
 		animate={{onLoad:{duration:500, delay:100}}}
@@ -15,9 +18,16 @@ export default function HorizontalBarChart(props) {
 		width={450}
 		height={300}
 		domainPadding={{x:[0,0], y:[20,20]}}
-		padding={{top:0, bottom:50, left:100}}
+		padding={{top:0, bottom:50, left:100, right:0}}
 		theme={theme}
 		>
+		<VictoryLegend 
+			x={50}
+			y={50}
+			data={foo}
+			symbolSpacer={0}
+			gutter={0}
+		/>
 
 		<VictoryAxis dependentAxis 
 			tickFormat={(tick) => ""}
@@ -39,6 +49,7 @@ export default function HorizontalBarChart(props) {
 			/>
 		)}
 		</VictoryStack>
+		
 
 		</VictoryChart>
 	)

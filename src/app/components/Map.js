@@ -1,6 +1,7 @@
 import React from 'react'
 import {min, max, scaleQuantile, scaleLinear, scaleQuantize} from 'd3'
 import {StyleSheet, css} from 'aphrodite/no-important'
+import Picker from "./Picker.js"
 
 
 function computeViewBox(areas, path){
@@ -44,19 +45,17 @@ export default function Map(props){
 		}
 	}
 
-	let names = areas.map((area) => <option value={area.properties.Nr}>{area.properties.Sted}</option>)
-	let blank = <option value={0}></option>
-	names.splice(0,0,blank)
+
+	let names = areas.map( (area) => area.properties.Sted )
+	let values = areas.map( (area) => area.properties.Nr)
+	values.splice(0,0,0)
+	names.splice(0,0,"")
 	
-	function handleChange(event) {
-		props.onClick(parseInt(event.target.value))
-	}
 	
 	return(
 		<div>
-		<select id="test" onChange={handleChange} value={props.selectedID} style={{display: "block"}}>
-			{names}
-		</select>
+		<Picker names={names} values={values} value={props.selectedID} handleChange={props.onClick} />
+
 		<svg 
 			height={height} 
 			width={width} 

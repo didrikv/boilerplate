@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import TopBottomHorizontalChart from "../components/TopBottomHorizontalChart.js"
 
 function mapStateToProps(state) {
-	return {selected: state.fylke}
+	return {selected: state.fylke, year:state.year ,domain:state.domain}
 }
 
 export default connect(mapStateToProps)(BestWorstFylkeChart)
@@ -12,15 +12,23 @@ export default connect(mapStateToProps)(BestWorstFylkeChart)
 function BestWorstFylkeChart(props) {
 	let data = props.data
 	if(props.selected){
-		data = data.filter((e) => e.Nr > props.selected *100 && e.Nr < (props.selected + 1)*100 && e.Aar == 2015)
+		data = data.filter((e) => e.Fnr == props.selected && e.År == props.year)
 	}
 	else{
-		data = data.filter((e) => e.Inndeling == "Kommune" && e.Aar == 2015)
+		data = data.filter((e) => e.Inndeling == "Kommune" && e.År == props.year)
 	}
-	let stack = ["Bostedsattraktivitet", "Egenvekst", "Strukturelle flyttefaktorer"]
+	
+	if(props.domain == "Bosted") {
+		var stack = ["Bostedsattraktivitet", "Egenvekst", "Strukturelle flyttefaktorer"]
+		var sortby = "Bostedsattraktivitet"
+	} else {
+		var stack = ["Næringsattraktivitet", "Nasjonalt Bidrag", "Strukturelle Arbeidsfaktorer"]
+		var sortby = "Næringsattraktivitet"
+	}
+
 
 	return (
-		<TopBottomHorizontalChart data={data} n={5} x="Sted" stack={stack} sortby="Bostedsattraktivitet"/>
+		<TopBottomHorizontalChart data={data} n={5} x="Navn" stack={stack} sortby={sortby}/>
 	)
 	
 
