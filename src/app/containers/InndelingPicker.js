@@ -13,7 +13,7 @@ function mapDispatchToProps(dispatch){
 
 function InndelingPicker(props) {
 	let inndelinger =  ["Kommuner", "Regioner", "Fylker"]
-	let values = ["kommune", "fylke", "region"]
+	let values = ["kommune", "region", "fylke"]
 
 	return(
 		<RadioPicker 

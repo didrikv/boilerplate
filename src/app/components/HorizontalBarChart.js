@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from "./GeneralChart.css"
 import { VictoryChart, 
 	VictoryBar, 
 	VictoryLabel, 
@@ -16,14 +17,14 @@ export default function HorizontalBarChart(props) {
 	data.reverse()
 	let names = data.map((e) => e[props.x])
 	let foo = props.stack.map( (e) => ({name:e, symbol: {type: "square"}}))
-	console.log(props.stack)
 
 	return (
+		<div className={styles} >
 		<VictoryChart
 			//animate={{onLoad:{duration:500, delay:100}}}
-			containerComponent={<VictoryContainer responsive={false}/>}
+			containerComponent={<VictoryContainer responsive={true}/>}
 			width={650}
-			height={300}
+			height={400}
 			domainPadding={{x:[0,0], y:[20,10]}}
 			padding={{top:0, bottom:50, left:100, right:200}}
 			theme={theme}
@@ -63,5 +64,6 @@ export default function HorizontalBarChart(props) {
 		</VictoryStack>
 
 		</VictoryChart>
+		</div>
 	)
 }

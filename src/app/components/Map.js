@@ -85,9 +85,10 @@ export default function Map(props){
 		<div>
 		{props.dropdown ? <Picker names={names} values={values} value={props.selectedID} handleChange={props.onClick} /> : null }
 		<svg 
-			height={height} 
-			width={width} 
+			width="100%"
+			height="100%" 
 			viewBox={computeViewBox(areas, path)}
+			className={styles.map}
 		>
 		{htmlPaths}
 		</svg>

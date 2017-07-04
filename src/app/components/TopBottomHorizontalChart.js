@@ -12,15 +12,20 @@ export default function TopBottomHorizontalChart(props) {
 	let bottom = data.slice(-n)
 	let dummy = generateDummy(top[0])
 	let both = top.concat(dummy).concat(bottom)
+
+	if(props.view == "top") {
+		data = top 
+	} else if(props.view == "bottom") {
+		data = bottom
+	} else {
+		data = both
+	}
 	
 	return(
-		<div>
-			<h3>Best and worst </h3>
 			<HorizontalBarChart 
 				{...props} 
-				data={both}
+				data={data}
 			/>
-		</div>
 	)
 }
 

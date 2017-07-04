@@ -3,7 +3,7 @@ import ReactDom from "react-dom"
 import { Provider } from "react-redux"
 import { connect } from 'react-redux'
 import { csvParse } from 'd3'
-import { Grid, Row, Col, Jumbotron} from 'react-bootstrap'
+import { Grid, Row, Col, Jumbotron, PageHeader} from 'react-bootstrap'
 
 import store from "./store.js"
 import selectArea from "./actions/actions.js"
@@ -60,9 +60,10 @@ function Container(props){
 	<Grid>
 
 		<Row>
-		<Jumbotron>
-			<h1 style={{textAlign:"center"}} > Attraktivitetsanalyser </h1>
-		</Jumbotron>
+		<PageHeader style={{textAlign: "center", padding:"0px"}}>
+			 Attraktivitetsanalyser  
+			<small style={{textAlign: "right", fontSize:"12px"}}> Telemarksforskning </small>
+		</PageHeader>
 		</Row>
 
 		<Row>
@@ -76,7 +77,7 @@ function Container(props){
 
 		<Row>
 			<Col sm={6} > <StaticNorwayMap onClick={null} data={data}/> </Col>
-			<Col sm={6} > <BestWorstChart data={data}/> </Col>
+			<Col sm={6} > <BestWorstChart view="top" n={10} data={data}/> </Col>
 		</Row>
 
 

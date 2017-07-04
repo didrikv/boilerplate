@@ -24,8 +24,9 @@ function BestWorstChart(props) {
 
 	return (
 		<TopBottomHorizontalChart 
+			{...props}
 			data={data} 
-			n={5} 
+			n={props.n ? props.n : 5} 
 			x="Navn" 
 			stack={stack} 
 			sortby={sortby}

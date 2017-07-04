@@ -2,29 +2,38 @@
 @value selectedColor: black;
 @value hoverColor: lightblue;
 @value defaultColor: grey;
+@value fontColor: #001937;
 
 .container {
 	display:flex;
 	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
 .element {
-	margin:5px;
 	padding:0;
+	display: flex;
 }
 
 label {
-	border: 1px solid defaultColor;
+	border-bottom: 1px solid;
+	border-color: fontColor; opacity:0.50;
 	padding: 5px;
-	border-radius: 5px;
 	cursor: pointer;
-	color: defaultColor;
+	color: fontColor; opacity:0.50;
 	margin:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: italic;
 }
 label:hover {
-	color: hoverColor;
-	border-color: hoverColor;
+	border-color: fontColor; opacity:0.75;
+	color: fontColor; opacity:0.75;
+	font-size:19px;
+	padding: 0px;
+
 }
 
 input[type="radio"] {
@@ -34,7 +43,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked ~ label {
-	color: selectedColor;
-	border-color: selectedColor;
+	border-color: fontColor; opacity:1;
+	color: fontColor; opacity:1;
 }
 
