@@ -7,7 +7,7 @@ module.exports = {
 
     // First application
     {
-      name      : "boilerplate",
+      name      : "AwesomeWebsite",
       script    : "server.js",
       env_production : {
         NODE_ENV: "production"

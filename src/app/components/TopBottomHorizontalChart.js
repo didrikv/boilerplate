@@ -10,21 +10,28 @@ export default function TopBottomHorizontalChart(props) {
 
 	let top = data.slice(0,n)
 	let bottom = data.slice(-n)
+	let dummy = generateDummy(top[0])
+	let both = top.concat(dummy).concat(bottom)
 	
 	return(
 		<div>
-			<div>
-			<h3>Top 5 </h3>
-			<HorizontalBarChart {...props} data={top} />
-			</div>
-			<div>
-			<h3>Bånn 5 </h3>
-			<HorizontalBarChart {...props} data={bottom} />
-			</div>
+			<h3>Best and worst </h3>
+			<HorizontalBarChart 
+				{...props} 
+				data={both}
+			/>
 		</div>
 	)
-		
-
-	return(null)
 }
+
+function generateDummy(element) {
+	let dummy = {}
+	Object.keys(element).forEach( 
+		(key) => {
+			dummy[key] = isNaN(element[key]) ? "" : 0
+		}
+	)
+	return dummy
+}
+
 

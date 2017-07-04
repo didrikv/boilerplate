@@ -25,3 +25,12 @@ export function selectDomain(domain) {
 		payload: domain
 	}
 }
+
+export function selectInndeling(inndeling) {
+	return {
+		type: "SELECT_INNDELING",
+		payload: inndeling
+	}
+}
+
+

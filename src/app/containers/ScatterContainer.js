@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import ScatterPlot from "../components/ScatterPlot.js"
 
 function mapStateToProps(state) {

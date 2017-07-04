@@ -1,4 +1,5 @@
 import React from 'react'
+import {FormControl} from 'react-bootstrap'
 
 export default function Picker(props){
 	if(!props.values) {
@@ -18,8 +19,13 @@ export default function Picker(props){
 	}
 
 	return (
-		<select onChange={onChange} value={props.value} style={{display: "block"}} >
+		<FormControl 
+			componentClass="select" 
+			onChange={onChange} 
+			value={props.value} 
+			style={{display: "block"}} 
+		>
 			{options}
-		</select>
+		</FormControl>
 	)
 }

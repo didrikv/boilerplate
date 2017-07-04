@@ -1,0 +1,20 @@
+.static {
+	stroke: grey;
+	stroke-width: 1px
+}
+	
+.active {
+	composes: static;
+}
+
+.active:hover {
+	stroke: black;
+	stroke-width: 1px;
+	fill-opacity: 0.5
+}
+
+
+
+
+
+

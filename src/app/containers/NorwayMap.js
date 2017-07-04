@@ -1,15 +1,12 @@
 import React from 'react'
 import norge_simp from "../data/norway_simple.json"
-import norge_org from "../data/norway_original.json"
 import { feature } from 'topojson'
 import {geoTransverseMercator, geoPath} from 'd3'
 import Map from "../components/Map.js"
 
-
-
 export default function NorwayMap(props) {
-	let width = props.width ? props.width : 300
-	let height = props.height ? props.height : 300
+	let width = props.width ? props.width : 450
+	let height = props.height ? props.height : 450
 
 	let projection = geoTransverseMercator()
 		.rotate([-15, -65, 0])
@@ -19,12 +16,7 @@ export default function NorwayMap(props) {
 	let path = geoPath()
 		.projection(projection)
 
-	if (props.type == "original") {
-		var norge = norge_org
-	} else {
-		var norge = norge_simp
-	}
-	
+	var norge = norge_simp
 
 	if (props.object) {
 		var areas = feature(norge, norge.objects[props.object]).features
@@ -49,9 +41,8 @@ export default function NorwayMap(props) {
 		}
 	}
 	else if(props.kommune && (!props.object || props.object =='kommune')) {
-		areas = areas.filter((area) => area.propertiNrr == props.kommune)
+		areas = areas.filter((area) => area.properties.Nr == props.kommune)
 	}
-
 
 	return (
 		<Map 

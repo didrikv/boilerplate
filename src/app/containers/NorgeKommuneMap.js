@@ -1,6 +1,5 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
 import NorwayMap from "./NorwayMap.js"
 import {selectKommune} from "../actions/actions.js"
 
@@ -14,6 +13,7 @@ function mapDispatchToProps(dispatch) {
 function NorgeKommuneMap(props) {
 	let data = props.data.filter( (e) => e.Inndeling == "Kommune" && e.År == props.year)
 	let dataobj = {}
+
 	for(let i=0; i<data.length; i++) {
 		if(props.domain == "Bosted") {
 			var value = data[i].Bostedsattraktivitet
@@ -22,8 +22,15 @@ function NorgeKommuneMap(props) {
 		}
 		dataobj[data[i].Nr] = value
 	}
+
 	if(props.fylke) {
-		return <NorwayMap {...props} fylke={props.fylke} data={dataobj} />
+		return(
+			<NorwayMap 
+				{...props} 
+				fylke={props.fylke} 
+				data={dataobj} 
+			/>
+		)
 	}
 	else {return null}
 }

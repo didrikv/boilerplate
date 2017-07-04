@@ -1,7 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { selectFylke , selectKommune} from "../actions/actions.js"
-
 import NorwayMap from "./NorwayMap.js"
 
 function mapDispatchToProps(dispatch) {
@@ -15,6 +14,7 @@ function mapStateToProps(state) {
 function NorgeFylkeMap(props) {
 	let data = props.data.filter( (e) => e.Inndeling == "Fylke" && e.År == props.year)
 	let dataobj = {}
+
 	for(let i=0; i<data.length; i++) {
 		if(props.domain == "Bosted") {
 			var value = data[i].Bostedsattraktivitet
@@ -24,9 +24,12 @@ function NorgeFylkeMap(props) {
 		dataobj[data[i].Nr] = value
 	}
 
-	return <NorwayMap {...props} data={dataobj}/>
+	return( 
+		<NorwayMap 
+			{...props} 
+			data={dataobj}
+		/>	
+	)
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(NorgeFylkeMap)
-	
-

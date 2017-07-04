@@ -1,19 +1,21 @@
 import React from 'react'
 import {min, max, scaleQuantile, scaleLinear, scaleQuantize} from 'd3'
 import {StyleSheet, css} from 'aphrodite/no-important'
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Picker from "./Picker.js"
-
+import styles from "./Map.css"
 
 function computeViewBox(areas, path){
 	let bounds = areas.map((area) => path.bounds(area))
-
 	let xmin = [], xmax = [], ymin = [], ymax = []
+
 	for(let i=0; i<bounds.length; i++){
 		xmin[i] = bounds[i][0][0]
 		ymin[i] = bounds[i][0][1]
 		xmax[i] = bounds[i][1][0]
 		ymax[i] = bounds[i][1][1]
 	}
+
 	xmin = min(xmin)
 	xmax = max(xmax)
 	ymin = min(ymin)
@@ -37,6 +39,7 @@ export default function Map(props){
 	else {
 		var scale = () => false
 	}
+
 	let getColor = (Nr) => {
 		if(props.data) {
 			return scale(props.data[Nr]) 
@@ -50,54 +53,44 @@ export default function Map(props){
 	let values = areas.map( (area) => area.properties.Nr)
 	values.splice(0,0,0)
 	names.splice(0,0,"")
-	
+
+	let htmlPaths = 
+		areas.map((area) => {
+			let areaPath = <path
+							className={props.onClick ? styles.active : styles.static}
+							vectorEffect="non-scaling-stroke"
+							d={path(area)} 
+							key={area.properties.Nr}
+							onClick={() => props.onClick(area.properties.Nr)}
+							style = {{fill: getColor(area.properties.Nr)}}
+						/>
+			if(props.tooltip) {	
+				return(
+				<OverlayTrigger
+					placement="top"
+					animation={false}
+					overlay={ <Tooltip id={area.properties.Nr}> {area.properties.Sted} </Tooltip> }
+				>
+				{areaPath}
+				</OverlayTrigger>
+			)
+			}
+			else {
+				return(areaPath)
+			}
+			}
+		)
 	
 	return(
 		<div>
-		<Picker names={names} values={values} value={props.selectedID} handleChange={props.onClick} />
-
+		{props.dropdown ? <Picker names={names} values={values} value={props.selectedID} handleChange={props.onClick} /> : null }
 		<svg 
 			height={height} 
 			width={width} 
-			style={{border: "1px solid black"}}
 			viewBox={computeViewBox(areas, path)}
 		>
-		{areas.map((area) => 
-			<path
-				d={path(area)} 
-				className={css(styles.path)} 
-				key={area.properties.Nr}
-				onClick={() => props.onClick(area.properties.Nr)}
-				style = {{fill: getColor(area.properties.Nr)}}
-			>
-			<title className={css(styles.tooltip)}>{area.properties.Sted}</title>
-			</path>
-		)}
+		{htmlPaths}
 		</svg>
 		</div>
 	)
 }
-	
-
-let styles = StyleSheet.create({
-	path: {
-		fill: "grey",
-		stroke: "black",
-		strokeWidth: "0.5px",
-		vectorEffect: "non-scaling-stroke",
-		':hover': {
-			strokeWidth: "1px",
-			fillOpacity: 0.5
-		},
-	},
-	tooltip: {
-		fill: "white",
-		strokeWidth: "2px"
-	}
-
-})
-
-
-
-
-
