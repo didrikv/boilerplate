@@ -15,6 +15,7 @@ import YearPicker from "./containers/YearPicker.js"
 import DomainPicker from "./containers/DomainPicker.js"
 import InndelingPicker from "./containers/InndelingPicker.js"
 import HorizontalBarChart from "./components/HorizontalBarChart.js"
+import MultiSelect from "./components/MultiSelect.js"
 
 var data = csvParse(csvString, (d) => (
 	createParseObject(csvString, d)
@@ -55,7 +56,35 @@ function createAuxVars(data) {
 
 const app = document.getElementById("app")
 
+function mapStateToProps(state) {
+	return {year: state.year}
+}
+
+function averageYear(data, years) {
+	let keys = Object.keys(data[0]).filter( (e) => !["Inndeling", "Nr", "Navn", "År",].includes(e) )
+	data = data.filter( (e) => years.includes(e.År) )
+	if(years.length == 1) {
+		return data}
+	
+	let firstyear = data.filter( (e) => e.År == years[0] )
+	let addon = data.filter( (e) => e.År != years[0] )
+	let output = []
+	for(let e of firstyear) {
+		let k = {...e}
+		k.År = years
+		for(let key of keys) {
+			for(let add of addon.filter( (i) => i.Nr == k.Nr)) {
+				k[key] += add[key]
+			}
+			k[key] /= years.length
+		}
+		output.push(k)
+	}
+	return(output)
+}
+
 function Container(props){
+	let tempdata = averageYear(data, props.year)
 	return(
 	<Grid>
 
@@ -66,24 +95,26 @@ function Container(props){
 		</PageHeader>
 		</Row>
 
-		<Row>
+		<Row >
 			<Col sm={12} > <YearPicker data={data}/> </Col>
 		</Row>
 
-		<Row>
-			<Col sm={6} > <InndelingPicker/> </Col>
+		<Row style={{display:"flex", alignItems:"flex-end"}}>
+			<Col sm={6} style={{display:"flex", alignSelf:"flex-end"}}> <InndelingPicker/> </Col>
 			<Col sm={6} > <DomainPicker/> </Col>
 		</Row>
 
 		<Row>
-			<Col sm={6} > <StaticNorwayMap onClick={null} data={data}/> </Col>
-			<Col sm={6} > <BestWorstChart view="top" n={10} data={data}/> </Col>
+			<Col sm={6} > <StaticNorwayMap onClick={null} data={tempdata}/> </Col>
+			<Col sm={6} > <BestWorstChart view="top" n={10} data={tempdata}/> </Col>
 		</Row>
 
 
 	</Grid>
 	)
 }
+
+Container = connect(mapStateToProps)(Container)
 
 ReactDom.render(
 	<Provider store={store}>

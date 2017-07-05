@@ -3,12 +3,12 @@ import {connect} from 'react-redux'
 import NorwayMap from "./NorwayMap.js"
 
 function mapStateToProps(state) {
-	return {year:state.year, domain:state.domain, inndeling:state.inndeling}
+	return {domain:state.domain, inndeling:state.inndeling}
 }
 
 function NorgeKommuneMap(props) {
 	let inndeling = props.inndeling[0].toUpperCase() + props.inndeling.slice(1) 
-	let data = props.data.filter( (e) => e.Inndeling == inndeling && e.År == props.year)
+	let data = props.data.filter( (e) => e.Inndeling == inndeling)
 	let dataobj = {}
 
 	for(let i=0; i<data.length; i++) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { selectYear } from "../actions/actions.js"
-import RadioPicker from "../components/RadioPicker.js"
+import MultiSelect from "../components/MultiSelect.js"
 
 function mapStateToProps(state) {
 	return {year: state.year}
@@ -15,10 +15,10 @@ function YearPicker(props) {
 	let years =  Array.from(new Set(props.data.map((e) => e.År))).sort()
 
 	return(
-		<RadioPicker 
+		<MultiSelect 
 			names={years} 
 			value={props.year} 
-			handleChange={props.handleChange} 
+			onChange={props.handleChange} 
 		/>
 	)
 }

@@ -1,5 +1,5 @@
 let defaultState = {
-	year:2015,
+	year:[2015],
 	domain:"Samlet attraktivitet",
 	fylke:8,
 	kommune:821,
