@@ -38,6 +38,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "css-loader": "^0.28.4",
+    "csv-parse": "^1.2.0",
     "pm2": "^2.4.1",
     "style-loader": "^0.18.2",
     "webpack": "^2.2.1",

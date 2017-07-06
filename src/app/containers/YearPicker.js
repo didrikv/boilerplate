@@ -8,15 +8,16 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch){
-	return {handleChange: (year) => dispatch(selectYear(year))}
+	return {handleChange: (year) => {
+		return dispatch(selectYear(year))}
+	}
 }
 
 function YearPicker(props) {
-	let years =  Array.from(new Set(props.data.map((e) => e.År))).sort()
 
 	return(
 		<MultiSelect 
-			names={years} 
+			names={props.years} 
 			value={props.year} 
 			onChange={props.handleChange} 
 		/>

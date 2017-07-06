@@ -7,7 +7,7 @@ import { Grid, Row, Col, Jumbotron, PageHeader} from 'react-bootstrap'
 
 import store from "./store.js"
 import selectArea from "./actions/actions.js"
-import csvString from "./data/WebInput v2.1 6dec.js"
+import dataSet from "./data/createData.js"
 
 import StaticNorwayMap from "./containers/StaticNorwayMap.js"
 import BestWorstChart from "./containers/BestWorstChart.js"
@@ -17,42 +17,55 @@ import InndelingPicker from "./containers/InndelingPicker.js"
 import HorizontalBarChart from "./components/HorizontalBarChart.js"
 import MultiSelect from "./components/MultiSelect.js"
 
-var data = csvParse(csvString, (d) => (
-	createParseObject(csvString, d)
-))
 
-function createParseObject(csvString, d) {
-	let lines = csvString.split("\n")
-	let names = lines[0].split(",")
-	let values = lines[1].split(",") 
-	let obj = {}
+//function createParseObject(csvString, d) {
+//	let lines = csvString.split("\n")
+//	let names = lines[0].split(",")
+//	let values = lines[1].split(",") 
+//	let obj = {}
+//
+//	for(let i=0; i<names.length; i++) {
+//		if(isNaN(values[i])) {
+//			obj[names[i]] = d[names[i]] 
+//		} else {
+//			obj[names[i]] = +d[names[i]]
+//		}
+//	}
+//	return obj
+//}
 
-	for(let i=0; i<names.length; i++) {
-		if(isNaN(values[i])) {
-			obj[names[i]] = d[names[i]] 
-		} else {
-			obj[names[i]] = +d[names[i]]
-		}
-	}
-	return obj
-}
-
-data = createAuxVars(data)
+const data = createAuxVars(dataSet)
+const years = Object.keys(data).filter( (e) => e != "vars" )
 
 function createAuxVars(data) {
-	let result = data.map( (e) => ({
-		...e,
-		"Egenvekst": e["Egenvekst Attraktivitet"] + e["Egenvekst Struktur"] + e["Egenvekst Offentlig"],
-		"Arbeidsplasseffekt": e["Egenvekst Attraktivitet"] + e["Egenvekst Struktur"] + e["Egenvekst Offentlig"] + e["Nabovekst"],
-		"Bostedsstruktur": e["Størrelse"] + e["Arbeidsmarkedintegrasjon"] + e["Intern Arbeidsmarkedintegrasjon"],
-		"Næringsstruktur": e["Befolkningseffekt"] + e["Bransjeeffekt"],
-		"Samlet struktur": e["Størrelse"] + e["Arbeidsmarkedintegrasjon"] + e["Intern Arbeidsmarkedintegrasjon"] +
-			e["Egenvekst Struktur"] + e["Egenvekst Offentlig"] + e["Nabovekst"],
-		"Samlet Attraktivitet": e["Bostedsattraktivitet"] + e["Egenvekst Attraktivitet"]
-	}))
-	return(result)
+	let newvars = [
+		["Egenvekst",["Egenvekst Attraktivitet", "Egenvekst Struktur", "Egenvekst Offentlig"]],
+		["Arbeidsplasseffekt", ["Egenvekst Attraktivitet", "Egenvekst Struktur", "Egenvekst Offentlig", "Nabovekst"]],
+		["Bostedsstruktur", ["Størrelse", "Arbeidsmarkedintegrasjon", "Intern Arbeidsmarkedintegrasjon"]],
+		["Næringsstruktur", ["Befolkningseffekt", "Bransjeeffekt",]],
+		["Samlet struktur", ["Størrelse", "Arbeidsmarkedintegrasjon", "Intern Arbeidsmarkedintegrasjon",
+			"Egenvekst Struktur", "Egenvekst Offentlig", "Nabovekst"]],
+		["Samlet Attraktivitet", ["Bostedsattraktivitet", "Egenvekst Attraktivitet"]]
+	]
+	for(let newvar of newvars) {
+		createVar(data, newvar[0], newvar[1])
+	}
+	return(data)
 }
-	
+
+function createVar(data, variable, sum) {
+	let years = Object.keys(data).filter( (e) => e != "vars" ) 
+	data.vars.push(variable)
+	for(let year of years){
+		for(let obs of data[year]){
+			let input = 0
+			for(let summand of sum){
+				input += obs[data.vars.indexOf(summand)]
+			}
+			obs.push(input)
+		}
+	}
+}
 
 const app = document.getElementById("app")
 
@@ -60,31 +73,45 @@ function mapStateToProps(state) {
 	return {year: state.year}
 }
 
-function averageYear(data, years) {
-	let keys = Object.keys(data[0]).filter( (e) => !["Inndeling", "Nr", "Navn", "År",].includes(e) )
-	data = data.filter( (e) => years.includes(e.År) )
+function createDataObject(data, years) {
 	if(years.length == 1) {
-		return data}
-	
-	let firstyear = data.filter( (e) => e.År == years[0] )
-	let addon = data.filter( (e) => e.År != years[0] )
-	let output = []
-	for(let e of firstyear) {
-		let k = {...e}
-		k.År = years
-		for(let key of keys) {
-			for(let add of addon.filter( (i) => i.Nr == k.Nr)) {
-				k[key] += add[key]
+		var variables = data[years[0]]
+	} else {
+		let count = years.length
+		let n = data[years[0]].length
+		var variables = Array(n)
+		for(let i=0; i<n; i++) {
+			let nvar = data.vars.length
+			variables[i] = []
+			for(let el=0; el<nvar; el++) {
+				if(el < 4) {
+					variables[i][el] = data[years[0]][i][el]
+				} else {
+					let input = 0
+					for(let year of years) {
+						input += data[year][i][el]
+					}
+					variables[i][el] = input/count
+				}
 			}
-			k[key] /= years.length
 		}
-		output.push(k)
 	}
-	return(output)
+	let dataobj = variables.map( (e) => {
+		let obs = {}
+		for(let i in data.vars) {
+			obs[data.vars[i]] = e[i]
+		}
+		obs["År"] = years
+		return(obs)
+	})
+	return dataobj
 }
+		
+
+
 
 function Container(props){
-	let tempdata = averageYear(data, props.year)
+	let tempdata = createDataObject(data, props.year)
 	return(
 	<Grid>
 
@@ -96,7 +123,7 @@ function Container(props){
 		</Row>
 
 		<Row >
-			<Col sm={12} > <YearPicker data={data}/> </Col>
+			<Col sm={12} > <YearPicker years={years}/> </Col>
 		</Row>
 
 		<Row style={{display:"flex", alignItems:"flex-end"}}>

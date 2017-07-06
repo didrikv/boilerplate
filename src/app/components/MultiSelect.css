@@ -20,6 +20,12 @@ select {
 	background: none;
 }
 
+option:checked {
+	font-style: italic;
+	color: red;
+	background-color: blue;
+}
+
 
 select:focus {
 	outline: none;
