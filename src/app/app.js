@@ -4,10 +4,12 @@ import { Provider } from "react-redux"
 import { connect } from 'react-redux'
 import { csvParse } from 'd3'
 import { Grid, Row, Col, Jumbotron, PageHeader} from 'react-bootstrap'
+import {CSSTransitionGroup} from 'react-transition-group'
 
 import store from "./store.js"
 import selectArea from "./actions/actions.js"
 import dataSet from "./data/createData.js"
+import style from "./app.css"
 
 import StaticNorwayMap from "./containers/StaticNorwayMap.js"
 import BestWorstChart from "./containers/BestWorstChart.js"
@@ -113,6 +115,20 @@ function createDataObject(data, years) {
 function Container(props){
 	let tempdata = createDataObject(data, props.year)
 	return(
+	<CSSTransitionGroup
+		transitionAppear={true}
+		transitionAppearTimeout={2000}
+		transitionEnterTimeout={2000}
+		transitionLeaveTimeout={2000}
+		transitionName={ {
+		enter: style.enter,
+		enterActive: style.enterActive,
+		leave: style.leave,
+		leaveActive: style.leaveActive,
+		appear: style.appear,
+		appearActive: style.appearActive
+		}}
+	>
 	<Grid>
 
 		<Row>
@@ -126,7 +142,7 @@ function Container(props){
 			<Col sm={12} > <YearPicker years={years}/> </Col>
 		</Row>
 
-		<Row style={{display:"flex", alignItems:"flex-end"}}>
+		<Row style={{display:"flex", alignItems:"flex-end", borderBottom:"1px solid #eee", marginBottom:"30px"}}>
 			<Col sm={6} style={{display:"flex", alignSelf:"flex-end"}}> <InndelingPicker/> </Col>
 			<Col sm={6} > <DomainPicker/> </Col>
 		</Row>
@@ -138,6 +154,7 @@ function Container(props){
 
 
 	</Grid>
+	</CSSTransitionGroup>
 	)
 }
 

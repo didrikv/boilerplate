@@ -1,6 +1,8 @@
 .static {
 	stroke: grey;
-	stroke-width: 1px
+	stroke-width: 0.2px;
+	fill: grey;
+	transition: 1s;
 }
 	
 .active {

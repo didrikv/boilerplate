@@ -4,6 +4,8 @@ import {StyleSheet, css} from 'aphrodite/no-important'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Picker from "./Picker.js"
 import styles from "./Map.css"
+import MapLegend from "./MapLegend.js"
+
 
 function computeViewBox(areas, path){
 	let bounds = areas.map((area) => path.bounds(area))
@@ -29,16 +31,19 @@ function computeViewBox(areas, path){
 export default function Map(props){
 	let height = props.height, width = props.width
 	let areas = props.areas, path = props.path
+	let colors = ["#CA0020", "#F4A582", "#dedede", "#92C5DE", "#0571B0"]
 	
 	if(props.data) {
 		var array = Object.keys( props.data ).map(function ( key ) { return props.data[key]; });
 		var scale = scaleQuantile()
 			.domain(array)
-			.range(["#CA0020", "#F4A582", "#dedede", "#92C5DE", "#0571B0"])
+			.range(colors)
 	}
 	else {
 		var scale = () => false
 	}
+	let threshold = [min(array), ...scale.quantiles(), max(array)]
+	
 
 	let getColor = (Nr) => {
 		if(props.data) {
@@ -53,6 +58,8 @@ export default function Map(props){
 	let values = areas.map( (area) => area.properties.Nr)
 	values.splice(0,0,0)
 	names.splice(0,0,"")
+
+	let borderColor="#5F6A6A"
 
 	let htmlPaths = 
 		areas.map((area) => {
@@ -91,6 +98,7 @@ export default function Map(props){
 			className={styles.map}
 		>
 		{htmlPaths}
+		<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor={borderColor}/>
 		</svg>
 		</div>
 	)
