@@ -1,5 +1,7 @@
 import React from 'react'
 import styles from "./Map.css"
+import {CSSTransitionGroup} from 'react-transition-group'
+import transitions from "../transitions.css"
 
 export default function MapLegend(props) {
 	let rectDim = 20
@@ -36,7 +38,18 @@ export default function MapLegend(props) {
 	return(
 		<g transform={translate}>
 			{rects}
+		<CSSTransitionGroup
+			transitionAppear={true}
+			transitionAppearTimeout={700}
+			transitionEnterTimeout={700}
+			transitionLeaveTimeout={700}
+			transitionName={transitions} 
+			component="g"
+		>
+		<g key={props.threshold[0]}>
 			{text}
+		</g>
+		</CSSTransitionGroup>
 		</g>
 	)
 }

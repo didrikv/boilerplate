@@ -18,14 +18,15 @@ export default function MultiSelect(props){
 		}
 		props.onChange(value)
 	}
-
+	console.log("Hei")
+	console.log(styles)
 	let options = props.names.map( (e, i) =>
-		<option value={values[i]} key={values[i]} className={styles.temp}> {e} </option>
+		<option value={values[i]} key={values[i]} className={styles.option}> {e} </option>
 	)
 
 	return (
 		<div className={styles.container}>
-		<select multiple size={1} onChange={onChange} value={props.value}>
+		<select className={styles.select} multiple size={1} onChange={onChange} value={props.value}>
 			{options}
 		</select>
 		</div>

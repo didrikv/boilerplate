@@ -3,7 +3,8 @@ let defaultState = {
 	domain:"Samlet attraktivitet",
 	fylke:8,
 	kommune:821,
-	inndeling:"kommune"
+	inndeling:"kommune",
+	population: 0
 }
 
 export default function reducer(state = defaultState, action) {
@@ -22,6 +23,9 @@ export default function reducer(state = defaultState, action) {
 		}
 		case "SELECT_INNDELING": {
 			return {...state, inndeling: action.payload}
+		}
+		case "SELECT_POPULATION": {
+			return {...state, population: action.payload}
 		}
 		default:
 			return state

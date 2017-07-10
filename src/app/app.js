@@ -9,7 +9,7 @@ import {CSSTransitionGroup} from 'react-transition-group'
 import store from "./store.js"
 import selectArea from "./actions/actions.js"
 import dataSet from "./data/createData.js"
-import style from "./app.css"
+import transitions from "./transitions.css"
 
 import StaticNorwayMap from "./containers/StaticNorwayMap.js"
 import BestWorstChart from "./containers/BestWorstChart.js"
@@ -18,6 +18,7 @@ import DomainPicker from "./containers/DomainPicker.js"
 import InndelingPicker from "./containers/InndelingPicker.js"
 import HorizontalBarChart from "./components/HorizontalBarChart.js"
 import MultiSelect from "./components/MultiSelect.js"
+import PopulationSlider from "./containers/PopulationSlider.js"
 
 
 //function createParseObject(csvString, d) {
@@ -47,7 +48,9 @@ function createAuxVars(data) {
 		["Næringsstruktur", ["Befolkningseffekt", "Bransjeeffekt",]],
 		["Samlet struktur", ["Størrelse", "Arbeidsmarkedintegrasjon", "Intern Arbeidsmarkedintegrasjon",
 			"Egenvekst Struktur", "Egenvekst Offentlig", "Nabovekst"]],
-		["Samlet Attraktivitet", ["Bostedsattraktivitet", "Egenvekst Attraktivitet"]]
+		["Samlet Attraktivitet", ["Bostedsattraktivitet", "Egenvekst Attraktivitet"]],
+		["Forventet Flytting", ["Bostedsstruktur", "Innvandringsbidrag"]],
+		["Samlet Forventet Flytting", ["Samlet struktur", "Innvandringsbidrag"]]
 	]
 	for(let newvar of newvars) {
 		createVar(data, newvar[0], newvar[1])
@@ -115,20 +118,7 @@ function createDataObject(data, years) {
 function Container(props){
 	let tempdata = createDataObject(data, props.year)
 	return(
-	<CSSTransitionGroup
-		transitionAppear={true}
-		transitionAppearTimeout={2000}
-		transitionEnterTimeout={2000}
-		transitionLeaveTimeout={2000}
-		transitionName={ {
-		enter: style.enter,
-		enterActive: style.enterActive,
-		leave: style.leave,
-		leaveActive: style.leaveActive,
-		appear: style.appear,
-		appearActive: style.appearActive
-		}}
-	>
+	<div>
 	<Grid>
 
 		<Row>
@@ -137,24 +127,29 @@ function Container(props){
 			<small style={{textAlign: "right", fontSize:"12px"}}> Telemarksforskning </small>
 		</PageHeader>
 		</Row>
-
+			<Col sm={12} style={{display:"flex", justifyContent:"center"}}> <YearPicker years={years}/> </Col>
 		<Row >
-			<Col sm={12} > <YearPicker years={years}/> </Col>
-		</Row>
 
-		<Row style={{display:"flex", alignItems:"flex-end", borderBottom:"1px solid #eee", marginBottom:"30px"}}>
-			<Col sm={6} style={{display:"flex", alignSelf:"flex-end"}}> <InndelingPicker/> </Col>
-			<Col sm={6} > <DomainPicker/> </Col>
+		<Row style={{borderBottom:"1px solid #eee", marginBottom:"30px"}}>
+			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> <InndelingPicker/> </Col>
+			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> <DomainPicker/> </Col>
+		</Row>
 		</Row>
 
 		<Row>
 			<Col sm={6} > <StaticNorwayMap onClick={null} data={tempdata}/> </Col>
-			<Col sm={6} > <BestWorstChart view="top" n={10} data={tempdata}/> </Col>
+			<Col sm={6} > 
+			<Row>
+				
+				<Col sm={10} ><BestWorstChart view="top" n={10} data={tempdata}/> </Col>
+				<Col sm={2} style={{paddingTop:"70px"}}> <PopulationSlider /> </Col>
+			</Row>
+			</Col>
 		</Row>
 
 
 	</Grid>
-	</CSSTransitionGroup>
+	</div>
 	)
 }
 

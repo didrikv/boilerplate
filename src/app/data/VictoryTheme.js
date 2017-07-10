@@ -24,9 +24,9 @@ const grey900 = "#212121";
 // *
 // * Typography
 // *
-const sansSerif = "'Roboto', 'Helvetica Neue', Helvetica, sans-serif";
+const sansSerif = "'Arial', 'Arial', Helvetica, sans-serif";
 const letterSpacing = "normal";
-const fontSize = 14;
+const fontSize = 16;
 // *
 // * Layout
 // *

@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {OverlayTrigger, Popover } from 'react-bootstrap'
-import info from "../data/info.svg"
+import info from "../data/info2.svg"
 import NorwayMap from "./NorwayMap.js"
 
 function mapStateToProps(state) {

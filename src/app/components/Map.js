@@ -4,6 +4,8 @@ import {StyleSheet, css} from 'aphrodite/no-important'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Picker from "./Picker.js"
 import styles from "./Map.css"
+import transitions from "../transitions.css"
+import {CSSTransitionGroup} from 'react-transition-group'
 import MapLegend from "./MapLegend.js"
 
 
@@ -97,7 +99,18 @@ export default function Map(props){
 			viewBox={computeViewBox(areas, path)}
 			className={styles.map}
 		>
-		{htmlPaths}
+		<CSSTransitionGroup
+			transitionAppear={true}
+			transitionAppearTimeout={700}
+			transitionEnterTimeout={700}
+			transitionLeaveTimeout={700}
+			transitionName={transitions} 
+			component="g"
+		>
+		<g key={props.inndeling}>
+			{htmlPaths}
+		</g>
+		</CSSTransitionGroup>
 		<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor={borderColor}/>
 		</svg>
 		</div>

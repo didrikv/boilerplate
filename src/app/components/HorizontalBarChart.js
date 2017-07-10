@@ -17,23 +17,28 @@ export default function HorizontalBarChart(props) {
 	data.reverse()
 	let names = data.map((e) => e[props.x])
 	let foo = props.stack.map( (e) => ({name:e, symbol: {type: "square"}}))
+	if(props.colorScale) {var colorScale = props.colorScale}
 
 	return (
 		<div className={styles} >
 		<VictoryChart
-			//animate={{onLoad:{duration:500, delay:100}}}
+			animate={{duration: 500, onLoad: {duration: 500}, onEnter: {duration: 500, before: () => ({y: 0})}}}
 			containerComponent={<VictoryContainer responsive={true}/>}
 			width={650}
 			height={400}
 			domainPadding={{x:[0,0], y:[20,10]}}
-			padding={{top:0, bottom:50, left:100, right:200}}
+			padding={{top:40, bottom:10, left:120, right:0}}
 			theme={theme}
 		>
 
 		<VictoryLegend 
-			x={360}
-			y={0}
+			y={-40}
+			x={-50}
 			data={foo}
+			colorScale={colorScale}
+			orientation="horizontal"
+			gutter={5}
+			symbolSpacer={5}
 		/>
 
 		<VictoryAxis dependentAxis 
@@ -51,7 +56,8 @@ export default function HorizontalBarChart(props) {
 		<VictoryStack 
 			horizontal={true} 
 			labels={names}
-			labelComponent={<VictoryLabel x={90} textAnchor="end"/>}	
+			labelComponent={<VictoryLabel x={0} textAnchor="beginning"/>}	
+			colorScale={colorScale}
 		>
 			{props.stack.map((e, i) => 
 				<VictoryBar 

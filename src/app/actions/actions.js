@@ -33,4 +33,10 @@ export function selectInndeling(inndeling) {
 	}
 }
 
+export function selectPopulation(population) {
+	return {
+		type: "SELECT_POPULATION",
+		payload: population
+	}
+}
 

@@ -5,23 +5,26 @@ import TopBottomHorizontalChart from "../components/TopBottomHorizontalChart.js"
 import info from "../data/info2.svg"
 
 function mapStateToProps(state) {
-	return {domain:state.domain, inndeling: state.inndeling}
+	return {domain:state.domain, inndeling: state.inndeling, population:state.population}
 }
 
 function BestWorstChart(props) {
 	let inndeling = props.inndeling[0].toUpperCase() + props.inndeling.slice(1) 
-	let data = props.data.filter( (e) => e.Inndeling == inndeling)
+	let data = props.data.filter( (e) => e.Inndeling == inndeling && e.Folketall >= props.population)
 
 	
 	if(props.domain == "Bostedsattraktivitet") {
-		var stack = ["Innvandringsbidrag", "Fødselsoverskudd", "Bostedsstruktur", "Bostedsattraktivitet"]
+		var stack = ["Fødselsoverskudd", "Forventet Flytting", "Bostedsattraktivitet"]
 		var sortby = "Bostedsattraktivitet"
+		var colorScale = ["#fc6a98", "#0fafff", "#7be24a"]
 	} else if(props.domain == "Næringsattraktivitet"){
 		var stack = ["Nasjonalt Bidrag", "Næringsstruktur", "Næringsattraktivitet"]
 		var sortby = "Næringsattraktivitet"
+		var colorScale = ["#34a8a6", "#f42e2e", "#efdd3e"]
 	} else {
-		var stack = ["Innvandringsbidrag", "Fødselsoverskudd", "Samlet struktur", "Samlet Attraktivitet"]
+		var stack = ["Fødselsoverskudd", "Samlet Forventet Flytting", "Samlet Attraktivitet"]
 		var sortby = "Samlet Attraktivitet"
+		var colorScale = ["#fc6a98", "#0fafff", "#ff9e16"]
 	}
 
 	var text = 
@@ -48,6 +51,7 @@ function BestWorstChart(props) {
 			x="Navn" 
 			stack={stack} 
 			sortby={sortby}
+			colorScale={colorScale}
 		/>
 		</div>
 	)
