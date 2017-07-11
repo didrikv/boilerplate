@@ -19,6 +19,7 @@ import InndelingPicker from "./containers/InndelingPicker.js"
 import HorizontalBarChart from "./components/HorizontalBarChart.js"
 import MultiSelect from "./components/MultiSelect.js"
 import PopulationSlider from "./containers/PopulationSlider.js"
+import populationTransition from "./populationTrasition.css"
 
 
 //function createParseObject(csvString, d) {
@@ -38,7 +39,8 @@ import PopulationSlider from "./containers/PopulationSlider.js"
 //}
 
 const data = createAuxVars(dataSet)
-const years = Object.keys(data).filter( (e) => e != "vars" )
+let years = Object.keys(data).filter( (e) => e != "vars" )
+years = years.map( (e) => +e )
 
 function createAuxVars(data) {
 	let newvars = [
@@ -75,7 +77,7 @@ function createVar(data, variable, sum) {
 const app = document.getElementById("app")
 
 function mapStateToProps(state) {
-	return {year: state.year}
+	return {year: state.year, inndeling: state.inndeling}
 }
 
 function createDataObject(data, years) {
@@ -131,20 +133,26 @@ function Container(props){
 		<Row >
 
 		<Row style={{borderBottom:"1px solid #eee", marginBottom:"30px"}}>
-			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> <InndelingPicker/> </Col>
+			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> 
+				<CSSTransitionGroup
+					transitionName={populationTransition}
+					transitionAppear={true}
+					transitionAppearTimeout={700}
+					transitionEnterTimeout={700}
+					transitionLeaveTimeout={700}
+					component="div"
+				>
+				{props.inndeling == "kommune" ? <PopulationSlider /> : null}
+				</ CSSTransitionGroup>
+				<InndelingPicker /> 
+			</Col>
 			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> <DomainPicker/> </Col>
 		</Row>
 		</Row>
 
 		<Row>
 			<Col sm={6} > <StaticNorwayMap onClick={null} data={tempdata}/> </Col>
-			<Col sm={6} > 
-			<Row>
-				
-				<Col sm={10} ><BestWorstChart view="top" n={10} data={tempdata}/> </Col>
-				<Col sm={2} style={{paddingTop:"70px"}}> <PopulationSlider /> </Col>
-			</Row>
-			</Col>
+			<Col sm={6} > <BestWorstChart view="top" n={10} data={tempdata}/> </Col>
 		</Row>
 
 

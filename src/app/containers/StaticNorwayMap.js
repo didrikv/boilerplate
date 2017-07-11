@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import {OverlayTrigger, Popover } from 'react-bootstrap'
 import info from "../data/info2.svg"
 import NorwayMap from "./NorwayMap.js"
+import styles from "./Button.css"
 
 function mapStateToProps(state) {
 	return {domain:state.domain, inndeling:state.inndeling}
@@ -37,7 +38,7 @@ function NorgeKommuneMap(props) {
 
 		<div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
 		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="right">
-		<input type="image"  src={info} height="20px"/>
+		<input className={styles.button} type="image"  src={info} height="20px" />
 		</OverlayTrigger>
 		<h5 style={{display: "inline"}}> &emsp; Norgeskart</h5>
 		</div>

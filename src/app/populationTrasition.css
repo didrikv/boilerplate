@@ -1,0 +1,39 @@
+@value transit: all 700ms ease;
+@value maxWidth: 300px;
+
+.enter {
+  max-width: 1px;
+  opacity: 0.01;
+}
+
+.enterActive {
+  transition: transit;
+  max-width: maxWidth;
+  opacity: 1;
+}
+
+
+.appear {
+  max-width: 1px;
+  opacity: 0.01;
+}
+
+.appearActive {
+  transition: transit;
+  max-width: maxWidth;
+  opacity: 1;
+}
+
+.leave {
+  max-width: maxWidth;
+  opacity: 1;
+
+}
+
+.leaveActive {
+  max-width: 1px;
+  opacity: 0.01;
+    transition: transit;
+
+}
+

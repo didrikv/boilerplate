@@ -16,12 +16,15 @@ function InndelingPicker(props) {
 	let values = ["kommune", "region", "fylke"]
 
 	return(
+		<div style={{zIndex:"1"}}>
 		<RadioPicker 
 			names={inndelinger} 
 			values={values}
 			value={props.inndeling} 
 			handleChange={props.handleChange} 
 		/>
+		</div>
+	
 	)
 }
 

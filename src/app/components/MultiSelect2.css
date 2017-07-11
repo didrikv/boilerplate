@@ -1,0 +1,33 @@
+.container {
+	display: flex;
+	justify-content: center;
+	border: 1px solid #e7e7e7;
+	background-color: #f3f3f3;
+}
+
+.button {
+	border: none;
+	padding: 8px;
+	background: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+.button:hover {
+	background-color: #ddd;
+	transition: background-color 300ms ease;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.buttonChecked {
+	composes: button;
+	color: white;
+	background-color: #666362;
+}
+
+.buttonChecked:hover {
+	background-color: #666362;
+}
+
