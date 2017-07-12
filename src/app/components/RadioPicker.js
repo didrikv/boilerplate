@@ -1,6 +1,6 @@
 import React from 'react'
 import {Radio} from 'react-bootstrap'
-import styles from "./RadioPicker.css"
+import styles from "./MultiSelect2.css"
 
 export default function RadioPicker(props){
 	if(!props.values) {
@@ -29,16 +29,18 @@ export default function RadioPicker(props){
 		> {e} </label>
 		</div>
 	)
+	console.log(props.value)
+	console.log(values[0])
 	let options2 = props.names.map( (e, i) => 
-		<Radio 
+		<button 
 			name={e} 
 			value={values[i]} 
 			key={values[i]} 
-			checked={props.value == values[i]}
-			onChange={onChange}
-			inline={true}
-			style={{transform:"rotate(90deg)", margin:"0px 0px 0px 0px", padding:"35px 0px 0px 0px"}}
-		> {e} </Radio>
+			onClick={onChange}
+			className={props.value == values[i] ? styles.buttonChecked: styles.button}
+		>
+			{e} 
+		</button>
 
 	)
 
@@ -52,7 +54,7 @@ export default function RadioPicker(props){
 
 	return (
 		<div className={styles.container}>
-			{options}
+			{options2}
 		</div>
 	)
 }

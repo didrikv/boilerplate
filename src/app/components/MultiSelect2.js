@@ -10,16 +10,15 @@ export default class MultiSelect2 extends React.Component {
 		} else {
 			this.state = {values: props.values}
 		}
-		console.log(props.names)
 		
 		this.state.names = props.names
 		this.state.on = false;
-		this.state.value = props.value;
 		this.first = props.value[0]
 		this.last = props.value[props.value.length -1]
 
 		document.addEventListener("mouseup", (e) =>
-				{if(this.state.on){
+				{
+					if(this.state.on){
 					this.setState({on:false})
 					props.onChange(this.state.value)
 				}
@@ -28,6 +27,8 @@ export default class MultiSelect2 extends React.Component {
 		this.startSelect = this.startSelect.bind(this)
 		this.onMouseEnter = this.onMouseEnter.bind(this)
 		this.between = this.between.bind(this)
+		this.onTouchMove = this.onTouchMove.bind(this)
+		this.onTouchEnd = this.onTouchEnd.bind(this)
 
 	}
 
@@ -67,6 +68,27 @@ export default class MultiSelect2 extends React.Component {
 		}
 	}
 
+	onTouchMove(e) {
+		if(this.state.on){
+			var touch = e.touches.item(0)
+			let value =	+document.elementFromPoint(touch.clientX, touch.clientY).value 
+			
+			if(!value) {return}
+			if(value == this.last) {return}
+			if(!this.state.values.includes(value)) {return}
+
+			this.last = value
+			this.setState({value: this.between(this.first, this.last)})
+		}
+	}
+
+	onTouchEnd(e) {
+		if(this.state.on){
+			this.setState({on:false})
+			this.props.onChange(this.state.value)
+		}
+	}
+
 
 	render() {
 		if(this.state.on) {var value = this.state.value}
@@ -80,7 +102,10 @@ export default class MultiSelect2 extends React.Component {
 				key={i}
 				className={value.includes(e) ? styles.buttonChecked : styles.button}
 				onMouseDown={this.startSelect}
+				onTouchStart={this.startSelect}
 				onMouseEnter={this.onMouseEnter}
+				onTouchMove={this.onTouchMove}
+				onTouchEnd={this.onTouchEnd}
 			>
 				{this.state.names[i]}
 			</button>

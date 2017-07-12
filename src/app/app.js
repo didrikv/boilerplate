@@ -20,6 +20,7 @@ import HorizontalBarChart from "./components/HorizontalBarChart.js"
 import MultiSelect from "./components/MultiSelect.js"
 import PopulationSlider from "./containers/PopulationSlider.js"
 import populationTransition from "./populationTrasition.css"
+import styles from "./theme.css"
 
 
 //function createParseObject(csvString, d) {
@@ -120,7 +121,7 @@ function createDataObject(data, years) {
 function Container(props){
 	let tempdata = createDataObject(data, props.year)
 	return(
-	<div>
+	<div className={styles.default}>
 	<Grid>
 
 		<Row>
@@ -130,10 +131,9 @@ function Container(props){
 		</PageHeader>
 		</Row>
 			<Col sm={12} style={{display:"flex", justifyContent:"center"}}> <YearPicker years={years}/> </Col>
-		<Row >
 
 		<Row style={{borderBottom:"1px solid #eee", marginBottom:"30px"}}>
-			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> 
+			<Col sm={6} style={{display:"flex", justifyContent:"flex-end"}}> 
 				<CSSTransitionGroup
 					transitionName={populationTransition}
 					transitionAppear={true}
@@ -148,11 +148,10 @@ function Container(props){
 			</Col>
 			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> <DomainPicker/> </Col>
 		</Row>
-		</Row>
 
 		<Row>
 			<Col sm={6} > <StaticNorwayMap onClick={null} data={tempdata}/> </Col>
-			<Col sm={6} > <BestWorstChart view="top" n={10} data={tempdata}/> </Col>
+			<Col sm={6} style={{display:"flex", alignItems:"flex-start"}}> <BestWorstChart view="top" n={10} data={tempdata}/> </Col>
 		</Row>
 
 
@@ -165,7 +164,7 @@ Container = connect(mapStateToProps)(Container)
 
 ReactDom.render(
 	<Provider store={store}>
-	<Container/>
+	<Container />
 	</Provider>
 ,app)
 

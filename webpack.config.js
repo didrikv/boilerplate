@@ -7,6 +7,9 @@ module.exports = {
 		path: __dirname + "/src/build",
 		filename: "bundle.js"
 	},
+	devServer: {
+		disableHostCheck: true,   // That solved it
+	},
 	module: {
 		rules: [
 			{

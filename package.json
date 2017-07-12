@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base src/build --inline --hot",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src/build --inline --hot --host 0.0.0.0",
     "deploy": "./node_modules/.bin/webpack -p && git add -A && git commit -m \"I dont giva a fuck! \" && git push && pm2 deploy production"
   },
   "author": "Didrik Vareide",

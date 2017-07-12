@@ -37,7 +37,7 @@ function BestWorstChart(props) {
 				</Popover>)
 
 	return (
-		<div>
+		<div >
 
 		<div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
 		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="left">
@@ -45,7 +45,6 @@ function BestWorstChart(props) {
 		</OverlayTrigger>
 		<h5 style={{display: "inline"}}> &emsp; 10 Beste i landet</h5>
 		</div>
-
 		<TopBottomHorizontalChart 
 			{...props}
 			data={data} 
