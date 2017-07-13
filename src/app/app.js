@@ -1,43 +1,11 @@
 import React from "react"
 import ReactDom from "react-dom"
-import { Provider } from "react-redux"
-import { connect } from 'react-redux'
-import { csvParse } from 'd3'
-import { Grid, Row, Col, Jumbotron, PageHeader} from 'react-bootstrap'
-import {CSSTransitionGroup} from 'react-transition-group'
+import { Provider, connect } from "react-redux"
 
 import store from "./store.js"
-import selectArea from "./actions/actions.js"
-import dataSet from "./data/createData.js"
-import transitions from "./transitions.css"
-
-import StaticNorwayMap from "./containers/StaticNorwayMap.js"
-import BestWorstChart from "./containers/BestWorstChart.js"
-import YearPicker from "./containers/YearPicker.js"
-import DomainPicker from "./containers/DomainPicker.js"
-import InndelingPicker from "./containers/InndelingPicker.js"
-import HorizontalBarChart from "./components/HorizontalBarChart.js"
-import MultiSelect from "./components/MultiSelect.js"
-import PopulationSlider from "./containers/PopulationSlider.js"
-import populationTransition from "./populationTrasition.css"
-import styles from "./theme.css"
-
-
-//function createParseObject(csvString, d) {
-//	let lines = csvString.split("\n")
-//	let names = lines[0].split(",")
-//	let values = lines[1].split(",") 
-//	let obj = {}
-//
-//	for(let i=0; i<names.length; i++) {
-//		if(isNaN(values[i])) {
-//			obj[names[i]] = d[names[i]] 
-//		} else {
-//			obj[names[i]] = +d[names[i]]
-//		}
-//	}
-//	return obj
-//}
+import dataSet from "./data/data.json"
+import Layout from "./Layout.js"
+import { csvParse } from 'd3'
 
 const data = createAuxVars(dataSet)
 let years = Object.keys(data).filter( (e) => e != "vars" )
@@ -70,15 +38,9 @@ function createVar(data, variable, sum) {
 			for(let summand of sum){
 				input += obs[data.vars.indexOf(summand)]
 			}
-			obs.push(input)
+			obs.push(+input.toFixed(2))
 		}
 	}
-}
-
-const app = document.getElementById("app")
-
-function mapStateToProps(state) {
-	return {year: state.year, inndeling: state.inndeling}
 }
 
 function createDataObject(data, years) {
@@ -114,57 +76,23 @@ function createDataObject(data, years) {
 	})
 	return dataobj
 }
-		
 
+const app = document.getElementById("app")
 
+function mapStateToProps(state){
+	return {year: state.year}
+}
 
-function Container(props){
-	let tempdata = createDataObject(data, props.year)
-	return(
-	<div className={styles.default}>
-	<Grid>
-
-		<Row>
-		<PageHeader style={{textAlign: "center", padding:"0px"}}>
-			 Attraktivitetsanalyser  
-			<small style={{textAlign: "right", fontSize:"12px"}}> Telemarksforskning </small>
-		</PageHeader>
-		</Row>
-			<Col sm={12} style={{display:"flex", justifyContent:"center"}}> <YearPicker years={years}/> </Col>
-
-		<Row style={{borderBottom:"1px solid #eee", marginBottom:"30px"}}>
-			<Col sm={6} style={{display:"flex", justifyContent:"flex-end"}}> 
-				<CSSTransitionGroup
-					transitionName={populationTransition}
-					transitionAppear={true}
-					transitionAppearTimeout={700}
-					transitionEnterTimeout={700}
-					transitionLeaveTimeout={700}
-					component="div"
-				>
-				{props.inndeling == "kommune" ? <PopulationSlider /> : null}
-				</ CSSTransitionGroup>
-				<InndelingPicker /> 
-			</Col>
-			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> <DomainPicker/> </Col>
-		</Row>
-
-		<Row>
-			<Col sm={6} > <StaticNorwayMap onClick={null} data={tempdata}/> </Col>
-			<Col sm={6} style={{display:"flex", alignItems:"flex-start"}}> <BestWorstChart view="top" n={10} data={tempdata}/> </Col>
-		</Row>
-
-
-	</Grid>
-	</div>
-	)
+function Container(props) {
+	let dataobj = createDataObject(data, props.year)
+	return <Layout data={dataobj} years={years}/>
 }
 
 Container = connect(mapStateToProps)(Container)
 
 ReactDom.render(
 	<Provider store={store}>
-	<Container />
+		<Container/>
 	</Provider>
 ,app)
 

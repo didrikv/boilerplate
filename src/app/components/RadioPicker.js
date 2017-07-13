@@ -29,8 +29,6 @@ export default function RadioPicker(props){
 		> {e} </label>
 		</div>
 	)
-	console.log(props.value)
-	console.log(values[0])
 	let options2 = props.names.map( (e, i) => 
 		<button 
 			name={e} 

@@ -1,4 +1,5 @@
-let inputfile = require("./WebInput v2.1 6dec.js").inputstring
+let inputfile = require("./WebInput").data
+let fs = require('fs')
 
 let rows = inputfile.split("\n")
 let data = {}
@@ -12,7 +13,7 @@ for(let i = 1; i < rows.length; i++) {
 	let year = row[data.vars.indexOf("År")]
 	if(!data[year]) {data[year]=[]}
 	data[year].push(row)
+	if(!year) {console.log(i)}
 }
 
-export default data
-
+fs.writeFileSync("./data.json", JSON.stringify(data), 'utf-8')

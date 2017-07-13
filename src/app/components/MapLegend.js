@@ -6,7 +6,6 @@ import transitions from "../transitions.css"
 export default function MapLegend(props) {
 	let rectDim = 20
 	let colors = props.colors
-	console.log(colors)
 	let rects = colors.map( (e, i) => 
 		<rect 
 			width={rectDim}

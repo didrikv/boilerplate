@@ -45,6 +45,7 @@ function BestWorstChart(props) {
 		</OverlayTrigger>
 		<h5 style={{display: "inline"}}> &emsp; 10 Beste i landet</h5>
 		</div>
+
 		<TopBottomHorizontalChart 
 			{...props}
 			data={data} 
@@ -54,6 +55,7 @@ function BestWorstChart(props) {
 			sortby={sortby}
 			colorScale={colorScale}
 		/>
+
 		</div>
 	)
 }
