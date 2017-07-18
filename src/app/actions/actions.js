@@ -12,6 +12,13 @@ export function selectKommune(Nr) {
 	}
 }
 
+export function selectNr(Nr) {
+	return {
+		type: "SELECT_NR",
+		payload: Nr
+	}
+}
+
 export function selectYear(year) {
 	return {
 		type: "SELECT_YEAR",
@@ -37,6 +44,13 @@ export function selectPopulation(population) {
 	return {
 		type: "SELECT_POPULATION",
 		payload: population
+	}
+}
+
+export function selectSearch(search) {
+	return {
+		type: "SELECT_SEARCH",
+		payload: search
 	}
 }
 

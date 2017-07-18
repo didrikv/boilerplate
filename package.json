@@ -21,6 +21,7 @@
     "pm2": "^2.4.6",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
+    "react-bootstrap-table": "^3.4.5",
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-transition-group": "^1.2.0",
@@ -28,7 +29,7 @@
     "redux-logger": "^2.10.2",
     "redux-thunk": "^2.2.0",
     "topojson": "^2.2.0",
-    "victory": "^0.18.4",
+    "victory": "^0.21.2",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },

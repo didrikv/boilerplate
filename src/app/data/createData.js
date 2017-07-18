@@ -4,6 +4,7 @@ let fs = require('fs')
 let rows = inputfile.split("\n")
 let data = {}
 data.vars = rows[0].split(",")
+console.log(data.vars)
 
 for(let i = 1; i < rows.length; i++) {
 	let row = rows[i].split(",")
@@ -13,7 +14,6 @@ for(let i = 1; i < rows.length; i++) {
 	let year = row[data.vars.indexOf("År")]
 	if(!data[year]) {data[year]=[]}
 	data[year].push(row)
-	if(!year) {console.log(i)}
 }
 
 fs.writeFileSync("./data.json", JSON.stringify(data), 'utf-8')

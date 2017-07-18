@@ -19,7 +19,7 @@ function createAuxVars(data) {
 		["Næringsstruktur", ["Befolkningseffekt", "Bransjeeffekt",]],
 		["Samlet struktur", ["Størrelse", "Arbeidsmarkedintegrasjon", "Intern Arbeidsmarkedintegrasjon",
 			"Egenvekst Struktur", "Egenvekst Offentlig", "Nabovekst"]],
-		["Samlet Attraktivitet", ["Bostedsattraktivitet", "Egenvekst Attraktivitet"]],
+		["Samlet attraktivitet", ["Bostedsattraktivitet", "Egenvekst Attraktivitet"]],
 		["Forventet Flytting", ["Bostedsstruktur", "Innvandringsbidrag"]],
 		["Samlet Forventet Flytting", ["Samlet struktur", "Innvandringsbidrag"]]
 	]
@@ -54,14 +54,14 @@ function createDataObject(data, years) {
 			let nvar = data.vars.length
 			variables[i] = []
 			for(let el=0; el<nvar; el++) {
-				if(el < 4) {
+				if(["Inndeling", "Nr", "Navn", "Fylke", "Region", "År"].includes(data.vars[el])) {
 					variables[i][el] = data[years[0]][i][el]
 				} else {
 					let input = 0
 					for(let year of years) {
 						input += data[year][i][el]
 					}
-					variables[i][el] = input/count
+					variables[i][el] = +(input/count).toFixed(2)
 				}
 			}
 		}
@@ -85,7 +85,7 @@ function mapStateToProps(state){
 
 function Container(props) {
 	let dataobj = createDataObject(data, props.year)
-	return <Layout data={dataobj} years={years}/>
+	return <Layout data={dataobj} origData={data} years={years}/>
 }
 
 Container = connect(mapStateToProps)(Container)

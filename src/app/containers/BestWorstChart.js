@@ -24,8 +24,8 @@ function BestWorstChart(props) {
 		var sortby = "Næringsattraktivitet"
 		var colorScale = ["#e57e69", "#95d6d6", "#EDEB5D"]
 	} else {
-		var stack = ["Fødselsoverskudd", "Samlet Forventet Flytting", "Samlet Attraktivitet"]
-		var sortby = "Samlet Attraktivitet"
+		var stack = ["Fødselsoverskudd", "Samlet Forventet Flytting", "Samlet attraktivitet"]
+		var sortby = "Samlet attraktivitet"
 		var colorScale = ["#f0b0d7", "#6BB7F0", "#FBBB57"]
 	}
 

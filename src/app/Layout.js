@@ -4,8 +4,16 @@ import {connect} from 'react-redux'
 import {CSSTransitionGroup} from 'react-transition-group'
 import transitions from "./transitions.css"
 import populationTransition from "./populationTrasition.css"
-import { Grid, Row, Col, Jumbotron, PageHeader} from 'react-bootstrap'
 import styles from "./theme.css"
+
+import { Grid,
+		Row,
+		Col,
+		Jumbotron,
+		PageHeader,
+		Tabs,
+		Tab
+	} from 'react-bootstrap'
 
 import StaticNorwayMap from "./containers/StaticNorwayMap.js"
 import BestWorstChart from "./containers/BestWorstChart.js"
@@ -14,6 +22,10 @@ import DomainPicker from "./containers/DomainPicker.js"
 import InndelingPicker from "./containers/InndelingPicker.js"
 import MultiSelect from "./components/MultiSelect.js"
 import PopulationSlider from "./containers/PopulationSlider.js"
+import ScatterContainer from "./containers/ScatterContainer.js"
+import PlacePicker from "./containers/PlacePicker.js"
+import DecompChart from "./containers/DecompChart.js"
+
 
 function mapStateToProps(state) {
 	return {inndeling: state.inndeling}
@@ -32,7 +44,9 @@ function Layout(props){
 				<small style={{textAlign: "right", fontSize:"12px"}}> Telemarksforskning </small>
 			</PageHeader>
 		</Row>
+		<Row>
 			<Col sm={12} style={{display:"flex", justifyContent:"center"}}> <YearPicker years={years}/> </Col>
+		</Row>
 		<Row style={{borderBottom:"1px solid #eee", marginBottom:"30px"}}>
 			<Col sm={6} style={{display:"flex", justifyContent:"flex-end"}}> 
 				<CSSTransitionGroup
@@ -52,9 +66,25 @@ function Layout(props){
 			</Col>
 		</Row>
 		<Row>
-			<Col sm={6} > <StaticNorwayMap onClick={null} data={data}/> </Col>
-			<Col sm={6} > <BestWorstChart view="top" n={10} data={data}/> </Col>
+		<Tabs id="paneSelector" defaultActiveKey={2} bsStyle="tabs" style={{marginTop: "-5px"}}>
+			<Tab eventKey={1} title="Top i Landet" unmountOnExit>
+				<Row>
+					<Col sm={6} > <StaticNorwayMap onClick={null} data={data}/> </Col>
+					<Col sm={6} > <BestWorstChart view="top" n={10} data={data}/> </Col>
+				</Row>
+			</Tab>
+			<Tab eventKey={2} title="Resultat per enkelt sted" unmountOnExit>
+				<Row>
+					<Col sm={6} > <PlacePicker data={data} /> </Col>
+					<Col sm={6} > 
+						<ScatterContainer data={data} />
+						<DecompChart data={props.origData}/> 
+					</Col>
+				</Row>
+			</Tab>
+		</Tabs>
 		</Row>
+
 	</Grid>
 
 	</div>

@@ -5,6 +5,7 @@
 }
 .default *{
 	font-family: Arial, Helvetica, sans-serif;
+	outline: none;
 }
 
 .buttonContainer {

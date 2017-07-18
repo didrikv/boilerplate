@@ -163,12 +163,12 @@ export default {
   scatter: assign({
     style: {
       data: {
-        fill: blueGrey300,
+        fill: "lightblue",
         opacity: 0.5,
         stroke: blueGrey700,
-        strokeWidth: 1
+        strokeWidth: 0.5
       },
-      labels: centeredLabelStyles
+	  labels: centeredLabelStyles,
     }
   }, baseProps),
   stack: assign({

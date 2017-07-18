@@ -4,7 +4,9 @@ let defaultState = {
 	fylke:8,
 	kommune:821,
 	inndeling:"kommune",
-	population: 0
+	population: 0,
+	Nr: 821,
+	search: [],
 }
 
 export default function reducer(state = defaultState, action) {
@@ -26,6 +28,12 @@ export default function reducer(state = defaultState, action) {
 		}
 		case "SELECT_POPULATION": {
 			return {...state, population: action.payload}
+		}
+		case "SELECT_NR": {
+			return {...state, Nr: action.payload}
+		}
+		case "SELECT_SEARCH": {
+			return {...state, search: action.payload}
 		}
 		default:
 			return state

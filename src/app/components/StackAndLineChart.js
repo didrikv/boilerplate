@@ -30,15 +30,14 @@ class CustomTooltip extends React.Component {
 export default function StackAndLineChart(props){
 	let data = props.data
 	let legendData = props.stack.map( (e) => ({name:e, symbol: {type: "square"}}))
-	legendData.push({name:props.line, symbol:{type:"plus"}})
+	legendData.push({name:props.line, symbol:{type:"diamond"}})
 	let labels = data.map( (e) => `Rang Bostedsattraktivitet: ${e["Rang Bostedattraktivitet"]}`)
 		
 	return (
 		<VictoryChart 
 			theme={VictoryTheme.material}
-			//animate={{onLoad:{duration:100, delay:0}}}
+			animate={{onLoad:{duration:100, delay:0}}}
 			//containerComponent={<VictoryContainer responsive={false}/>}
-			containerComponent={<VictoryVoronoiContainer dimension="x" responsive={false}/>}
 			width={650}
 			height={300}
 			padding={{top:50, bottom:50, left:50, right:200}}
@@ -48,6 +47,7 @@ export default function StackAndLineChart(props){
 
 		<VictoryLegend 
 			data={legendData}
+			colorScale={props.colorScale}
 			x={410}
 			y={0}
 		
@@ -73,8 +73,7 @@ export default function StackAndLineChart(props){
 		/>
 		
 		<VictoryStack
-			labels={labels}
-			labelComponent={<VictoryTooltip/>}
+			colorScale={props.colorScale}
 		>
 			{props.stack.map((e, i) => 
 				<VictoryBar 

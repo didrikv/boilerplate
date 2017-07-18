@@ -21,7 +21,7 @@ function NorgeKommuneMap(props) {
 			var value = data[i].Næringsattraktivitet
 		}
 		else {
-			var value = data[i].Bostedsattraktivitet + data[i]["Egenvekst Attraktivitet"]
+			var value = data[i]["Samlet attraktivitet"]
 		}
 		dataobj[data[i].Nr] = value
 	}
