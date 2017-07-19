@@ -3,7 +3,6 @@ var webpack = require('webpack');
 module.exports = {
 	context: __dirname,
 	entry: "./src/app/app.js",
-	devtool: "#eval-source-map",
 	output: {
 		path: __dirname + "/src/build",
 		filename: "bundle.js"
