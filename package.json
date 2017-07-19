@@ -13,6 +13,7 @@
   "dependencies": {
     "aphrodite": "^1.2.1",
     "d3": "^4.8.0",
+    "express-static-gzip": "^0.3.0",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-bootstrap-table": "^3.4.5",
