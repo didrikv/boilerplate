@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {CSSTransitionGroup} from 'react-transition-group'
+import {CSSTransition} from 'react-transition-group'
 import transitions from "./transitions.css"
 import populationTransition from "./populationTrasition.css"
 import styles from "./theme.css"
@@ -26,6 +26,8 @@ import ScatterContainer from "./containers/ScatterContainer.js"
 import PlacePicker from "./containers/PlacePicker.js"
 import DecompChart from "./containers/DecompChart.js"
 
+console.log(CSSTransition)
+
 
 function mapStateToProps(state) {
 	return {inndeling: state.inndeling}
@@ -49,16 +51,7 @@ function Layout(props){
 		</Row>
 		<Row style={{borderBottom:"1px solid #eee", marginBottom:"30px"}}>
 			<Col sm={6} style={{display:"flex", justifyContent:"flex-end"}}> 
-				<CSSTransitionGroup
-					transitionName={populationTransition}
-					transitionAppear={true}
-					transitionAppearTimeout={700}
-					transitionEnterTimeout={700}
-					transitionLeaveTimeout={700}
-					component="div"
-				>
 					{props.inndeling == "kommune" ? <PopulationSlider /> : null}
-				</ CSSTransitionGroup>
 				<InndelingPicker /> 
 			</Col>
 			<Col sm={6} style={{display:"flex", justifyContent:"center"}}> 

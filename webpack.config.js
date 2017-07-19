@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
 	context: __dirname,
@@ -11,7 +12,8 @@ module.exports = {
 		disableHostCheck: true,   // That solved it
 	},
 	plugins: [
-		new webpack.optimize.ModuleConcatenationPlugin()
+		new webpack.optimize.ModuleConcatenationPlugin(),
+		new CompressionPlugin()
 	],
 	module: {
 		rules: [
