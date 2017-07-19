@@ -10,6 +10,9 @@ module.exports = {
 	devServer: {
 		disableHostCheck: true,   // That solved it
 	},
+	plugins: [
+		new webpack.optimize.ModuleConcatenationPlugin()
+	],
 	module: {
 		rules: [
 			{
