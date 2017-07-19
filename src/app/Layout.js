@@ -42,7 +42,7 @@ function Layout(props){
 	<Grid>
 		<Row>
 			<PageHeader style={{textAlign: "center", padding:"0px"}}>
-				 Attraktivitetsanalyser v2.1  
+				 Attraktivitetsanalyser
 				<small style={{textAlign: "right", fontSize:"12px"}}> Telemarksforskning </small>
 			</PageHeader>
 		</Row>
