@@ -3,17 +3,17 @@ var CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
 	context: __dirname,
-	entry: "./src/app/app.js",
+	entry: __dirname + '/src/app/index.js',
 	output: {
 		path: __dirname + "/src/build",
-		filename: "bundle.js"
+		filename: "bundle.js",
 	},
 	devServer: {
 		disableHostCheck: true,   // That solved it
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
-		new CompressionPlugin()
+		new CompressionPlugin(),
 	],
 	module: {
 		rules: [

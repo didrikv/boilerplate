@@ -1,8 +1,6 @@
 import React from "react"
-import ReactDom from "react-dom"
-import { Provider, connect } from "react-redux"
+import { connect } from "react-redux"
 
-import store from "./store.js"
 import dataSet from "./data/data.json"
 import Layout from "./Layout.js"
 import { csvParse } from 'd3'
@@ -77,7 +75,6 @@ function createDataObject(data, years) {
 	return dataobj
 }
 
-const app = document.getElementById("app")
 
 function mapStateToProps(state){
 	return {year: state.year}
@@ -90,11 +87,12 @@ function Container(props) {
 
 Container = connect(mapStateToProps)(Container)
 
-ReactDom.render(
-	<Provider store={store}>
-		<Container/>
-	</Provider>
-,app)
+export default function App(props) {
+	return(
+			<Container/>
+	)
+}
+
 
 
 
