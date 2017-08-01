@@ -13,7 +13,7 @@ export default function MapLegend(props) {
 			y={i*rectDim}
 			key={i}
 			className={styles.static}
-			style={{fill:e}}
+			style={{fill:e, stroke:"grey", strokeWidth:0.4}}
 		/>
 	)
 

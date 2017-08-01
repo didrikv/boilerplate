@@ -1,12 +1,14 @@
 var webpack = require('webpack');
 var CompressionPlugin = require("compression-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	context: __dirname,
-	entry: __dirname + '/src/app/index.js',
+    entry: './src/app/index.js',
 	output: {
 		path: __dirname + "/src/build",
 		filename: "bundle.js",
+        libraryTarget: 'umd'
 	},
 	devServer: {
 		disableHostCheck: true,   // That solved it
@@ -14,6 +16,10 @@ module.exports = {
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new CompressionPlugin(),
+		new ExtractTextPlugin({
+			  filename: 'styles.css',
+			  allChunks: true
+			}),
 	],
 	module: {
 		rules: [
@@ -27,15 +33,16 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				loader: 'style-loader'
-			}, 
-			{
-				test: /\.css$/,
-				loader: 'css-loader',
-				query: {
-					modules: true,
-					localIdentName: '[name]__[local]___[hash:base64:5]'
-				}
+				use: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use: {
+						loader:'css-loader',
+						options: {
+							modules: true,
+							localIdentName: '[path][name]__[local]--[hash:base64:5]',
+						}
+					},
+					})
 			},
 			{
 				test: /\.(png|jpg|gif|svg)$/,

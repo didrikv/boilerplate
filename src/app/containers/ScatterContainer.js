@@ -37,8 +37,8 @@ function ScatterContainer(props) {
 		var x = "Bostedsattraktivitet"
 		var y = "Bostedsstruktur"
 	} else if(props.domain == "Samlet attraktivitet") {
-		var x = "Samlet attraktivitet"
-		var y = "Samlet struktur"
+		var x = "Bostedsattraktivitet"
+		var y = "Egenvekst Attraktivitet"
 	} else {
 		var x = "Næringsattraktivitet"
 		var y = "Næringsstruktur"

@@ -19,7 +19,8 @@ function createAuxVars(data) {
 			"Egenvekst Struktur", "Egenvekst Offentlig", "Nabovekst"]],
 		["Samlet attraktivitet", ["Bostedsattraktivitet", "Egenvekst Attraktivitet"]],
 		["Forventet Flytting", ["Bostedsstruktur", "Innvandringsbidrag"]],
-		["Samlet Forventet Flytting", ["Samlet struktur", "Innvandringsbidrag"]]
+		["Samlet Forventet Flytting", ["Samlet struktur", "Innvandringsbidrag"]],
+		["Forventet Befolkningsvekst", ["Samlet Forventet Flytting", "Fødselsoverskudd"]]
 	]
 	for(let newvar of newvars) {
 		createVar(data, newvar[0], newvar[1])

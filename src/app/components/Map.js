@@ -70,7 +70,7 @@ export default function Map(props){
 							d={path(area)} 
 							key={area.properties.Nr}
 							onClick={() => props.onClick(area.properties.Nr)}
-							style = {{fill: getColor(area.properties.Nr)}}
+							style = {{fill: getColor(area.properties.Nr), stroke:"grey", strokeWidth: 0.4}}
 						/>
 			if(props.tooltip) {	
 				return(
@@ -90,13 +90,14 @@ export default function Map(props){
 		)
 	
 	return(
-		<div>
+		<div style={{padding: "20px"}}>
 		{props.dropdown ? <Picker names={names} values={values} value={props.selectedID} handleChange={props.onClick} /> : null }
 		<svg 
 			width="100%"
 			height="100%" 
 			viewBox={computeViewBox(areas, path)}
 			className={styles.map}
+			id={props.mapId}
 		>
 		<g key={props.inndeling}>
 			{htmlPaths}

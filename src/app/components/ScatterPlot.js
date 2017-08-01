@@ -38,7 +38,7 @@ export default function ScatterPlot(props) {
 			style={{ticks:{size:0}, grid:{stroke: "transparent"}}}
 			tickLabelComponent={ <VictoryLabel y={255} style={style} /> }
 			crossAxis={false}
-			label="Attraktivitet"
+			label={props.x}
 			axisLabelComponent={ <VictoryLabel y={280} style={labelstyle}/> }
 		/>
 
@@ -47,7 +47,7 @@ export default function ScatterPlot(props) {
 			tickLabelComponent={ <VictoryLabel x={45} theme={theme} style={style} /> }
 			axisLabelComponent={ <VictoryLabel x={20} style={labelstyle}/> }
 			crossAxis={false}
-			label="Struktur"
+			label={props.y}
 		/>
 
 		<VictoryScatter 
