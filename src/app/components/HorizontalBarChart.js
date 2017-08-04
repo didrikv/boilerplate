@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from "./GeneralChart.css"
 import { VictoryChart, 
 	VictoryBar, 
 	VictoryLabel, 
@@ -20,25 +19,23 @@ export default function HorizontalBarChart(props) {
 	if(props.colorScale) {var colorScale = props.colorScale}
 
 	return (
-		<div className={styles} >
+		<div id={props.chartId}>
 		<VictoryChart
 			animate={{duration: 500, onLoad: {duration: 500}, onEnter: {duration: 500, before: () => ({y: 0})}}}
-			containerComponent={<VictoryContainer responsive={true}/>}
+			containerComponent={<VictoryContainer responsive={true} />}
 			width={650}
 			height={400}
 			domainPadding={{x:[0,0], y:[20,10]}}
-			padding={{top:40, bottom:10, left:120, right:0}}
+			padding={{top:70, bottom:30, left:120, right:20}}
 			theme={theme}
 		>
 
 		<VictoryLegend 
-			y={-40}
-			x={-50}
+			y={-70}
+			x={-120}
 			data={foo}
 			colorScale={colorScale}
-			orientation="horizontal"
-			gutter={5}
-			symbolSpacer={5}
+			gutter={2}
 		/>
 
 		<VictoryAxis dependentAxis 
@@ -51,6 +48,7 @@ export default function HorizontalBarChart(props) {
 			crossAxis={false}
 			orientation="bottom"
 			style={{grid:{stroke: "transparent"}}}
+			tickFormat={(tick) => tick}
 		/>
 		
 		<VictoryStack 

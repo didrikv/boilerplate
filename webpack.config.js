@@ -33,16 +33,16 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				use: ExtractTextPlugin.extract({
-					fallback: "style-loader",
-					use: {
-						loader:'css-loader',
-						options: {
-							modules: true,
-							localIdentName: '[path][name]__[local]--[hash:base64:5]',
+					use: [
+						{ loader: 'style-loader' },
+						{
+							loader:'css-loader',
+							options: {
+								modules: true,
+								localIdentName: '[path][name]__[local]--[hash:base64:5]',
+							}
 						}
-					},
-					})
+					],
 			},
 			{
 				test: /\.(png|jpg|gif|svg)$/,

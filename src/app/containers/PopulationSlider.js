@@ -3,10 +3,14 @@ import {connect} from 'react-redux'
 import {selectPopulation} from "../actions/actions.js"
 import Slider from "../components/Slider.js"
 import RadioPicker from "../components/RadioPicker.js"
+import {Fade} from 'react-bootstrap'
 
 
 function mapStateToProps(state) {
-	return {population: state.population}
+	return {
+		population: state.population,
+		inndeling: state.inndeling
+	}
 }
 
 function mapDispatchToProps(dispatch){
@@ -17,14 +21,18 @@ let names = ["Alle", "> 1000", "> 3000", "> 10 000"]
 let values = [0, 1000, 3000, 10000]
 
 function PopulationSlider(props) {
-
+	let show = props.inndeling == "kommune"
 	return(
-		<RadioPicker
-			{...props}
-			names={names}
-			values={values}
-			value={props.population}
-		/>
+		<Fade in={show}>
+			<div>
+			<RadioPicker
+				{...props}
+				names={names}
+				values={values}
+				value={props.population}
+			/>
+			</div>
+		</Fade>
 	)
 }
 

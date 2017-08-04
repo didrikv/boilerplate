@@ -32,7 +32,12 @@ export default class Download extends React.Component {
 	}
 
 	png() {
+
 		let svg = document.getElementById(this.props.svgId)
+		console.log(svg)
+		console.log(svg.nodeName)
+		console.log(svg.firstChild)
+		if(svg.nodeName != "SVG") {svg = svg.firstChild}
 		let viewBox = svg.getAttribute("viewBox").split(" ").map( (e) => +e)
 		let scale = this.state.value/viewBox[2]
 		saveSvgAsPng(svg, "map.png", {left: viewBox[0], top: viewBox[1], width: viewBox[2], height: viewBox[3], scale:scale})
@@ -56,7 +61,7 @@ export default class Download extends React.Component {
 	render() {
 		return(
 			<div>
-			<input className={styles.button} type="image" src={download} height="20px" onClick={this.onClick} />
+			<input className={styles.button} type="image" src={download} height="30px" onClick={this.onClick} />
 			<Modal show={this.state.showModal} onHide={this.close} bsSize="small">
 
 				<Modal.Header closeButton>

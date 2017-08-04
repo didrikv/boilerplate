@@ -4,6 +4,7 @@ import { OverlayTrigger, Popover } from 'react-bootstrap'
 import TopBottomHorizontalChart from "../components/TopBottomHorizontalChart.js"
 import info from "../data/info2.svg"
 import styles from "./Button.css"
+import Download from "../components/Download.js"
 
 function mapStateToProps(state) {
 	return {domain:state.domain, inndeling: state.inndeling, population:state.population}
@@ -26,7 +27,7 @@ function BestWorstChart(props) {
 	} else {
 		var stack = ["Forventet Befolkningsvekst", "Bostedsattraktivitet", "Egenvekst Attraktivitet"]
 		var sortby = "Samlet attraktivitet"
-		var colorScale = ["#f0b0d7", "#6BB7F0", "#FBBB57"]
+		var colorScale = ["#9E9E9E", "#8BC34A", "#FFB74D"]
 	}
 
 	var text = 
@@ -35,15 +36,15 @@ function BestWorstChart(props) {
 	var infotab = (<Popover title="Forklaring for grafen:" id="pop-focus" style={{fontSize:12}}>
 			{text}
 				</Popover>)
-
 	return (
-		<div >
+		<div>
 
-		<div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+		<div style={{display:"flex", alignItems:"center", justifyContent:"center", borderBottom: "1px solid lightgray", marginBottom: "10px"}}>
 		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="left">
-		<input className={styles.button} type="image"  src={info} height="20px"/>
+		<div> <input className={styles.button} type="image"  src={info} height="30px"/> </div>
 		</OverlayTrigger>
-		<h5 style={{display: "inline"}}> &emsp; 10 Beste i landet</h5>
+		&ensp; <Download svgId={props.chartId} />
+		<p style={{display: "inline", margin:"0px", fontSize:"20px"}}> &emsp; 10 Beste i landet</p>
 		</div>
 
 		<TopBottomHorizontalChart 

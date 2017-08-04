@@ -26,7 +26,6 @@ import ScatterContainer from "./containers/ScatterContainer.js"
 import PlacePicker from "./containers/PlacePicker.js"
 import DecompChart from "./containers/DecompChart.js"
 
-console.log(CSSTransition)
 
 
 function mapStateToProps(state) {

@@ -54,3 +54,10 @@ export function selectSearch(search) {
 	}
 }
 
+export function selectbestControl(bool) {
+	return {
+		type: "SELECT_BESTCONTROL",
+		payload: bool
+	}
+}
+

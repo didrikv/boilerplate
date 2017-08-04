@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 
 import dataSet from "./data/data.json"
 import Layout from "./Layout.js"
+import Article from "./containers/Article.js"
 import { csvParse } from 'd3'
 
 const data = createAuxVars(dataSet)
@@ -83,7 +84,7 @@ function mapStateToProps(state){
 
 function Container(props) {
 	let dataobj = createDataObject(data, props.year)
-	return <Layout data={dataobj} origData={data} years={years}/>
+	return <Article data={dataobj} origData={data} years={years}/>
 }
 
 Container = connect(mapStateToProps)(Container)
