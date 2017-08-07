@@ -12,6 +12,7 @@ module.exports = {
 	},
 	devServer: {
 		disableHostCheck: true,   // That solved it
+		historyApiFallback: true,
 	},
 	plugins: [
 		new webpack.optimize.ModuleConcatenationPlugin(),

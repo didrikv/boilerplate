@@ -31,7 +31,11 @@ class TwoColumn extends React.Component {
 	}
 	
 	renderChart = () => {
-		let offset = this.props.graphOffset
+		let element = document.getElementById("graphContainer")
+		let elementHeight = element ? element.clientHeight : 0
+		let windowHeight = window.innerHeight
+		let offset = Math.max((windowHeight - elementHeight)/2, 0)
+
 		return(
 			<StickyContainer style={{height: this.props.height}}>
 				<Sticky topOffset={-offset} disableCompensation>
@@ -39,7 +43,7 @@ class TwoColumn extends React.Component {
 					let newStyle = {...e.style}
 					if(e.distanceFromBottom > offset) {newStyle.top += offset}
 					else if(e.distanceFromBottom > 0) {newStyle.top += e.distanceFromBottom}
-					return( <div style={newStyle}>
+					return( <div style={newStyle} id="graphContainer">
 								{this.props.graph}
 							</div>
 					)

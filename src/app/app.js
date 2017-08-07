@@ -5,6 +5,11 @@ import dataSet from "./data/data.json"
 import Layout from "./Layout.js"
 import Article from "./containers/Article.js"
 import { csvParse } from 'd3'
+import { 
+	BrowserRouter as Router,
+	Route,
+	Link
+} from 'react-router-dom'
 
 const data = createAuxVars(dataSet)
 let years = Object.keys(data).filter( (e) => e != "vars" )
@@ -84,7 +89,16 @@ function mapStateToProps(state){
 
 function Container(props) {
 	let dataobj = createDataObject(data, props.year)
-	return <Article data={dataobj} origData={data} years={years}/>
+	let article = <Article data={dataobj} origData={data} years={years}/>
+	let dashboard = <Layout data={dataobj} origData={data} years={years}/>
+	return( 
+		<Router>
+			<div>
+			<Route path="/test" render={ (props) => dashboard } />
+			<Route exact path="/" render={ (props) => article } />
+			</div>
+		</Router>
+	)
 }
 
 Container = connect(mapStateToProps)(Container)
