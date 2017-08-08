@@ -57,7 +57,7 @@ function Article(props) {
 		]
 
 		//let graph = <BestWorstChart view="top" n={10} data={props.data}/>
-		let graph = <BestControl {...props} />
+		let graph = <BestControl {...props}/>
 
 		return <TwoColumn height="2000px" graphWidth={8} graphOffset={150} sections={sections} graph={graph} />
 	}

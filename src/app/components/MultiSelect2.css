@@ -5,6 +5,8 @@
 	justify-content: center;
 }
 
+
+
 .button {
 	composes: button from "../theme.css";
 	border: none;
@@ -30,4 +32,29 @@
 	outline: none;
 }
 
+.dropbtn {
+	composes: buttonChecked;
+	min-width: 100px;
+}
+
+.dropdownContent {
+	composes: container;
+	display: none;
+	flex-direction: column;
+	margin: 0px;
+	z-index: 2;
+	position: absolute;
+				://www.w3schools.com/howto/howto_css_fixed_menu.asp /div>
+}
+
+.dropdown {
+	position: relative;
+	margin: 10px;
+
+}
+
+.show {
+	composes: dropdownContent;
+	display: flex;
+}
 

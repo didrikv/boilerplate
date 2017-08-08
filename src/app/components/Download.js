@@ -34,9 +34,6 @@ export default class Download extends React.Component {
 	png() {
 
 		let svg = document.getElementById(this.props.svgId)
-		console.log(svg)
-		console.log(svg.nodeName)
-		console.log(svg.firstChild)
 		if(svg.nodeName != "SVG") {svg = svg.firstChild}
 		let viewBox = svg.getAttribute("viewBox").split(" ").map( (e) => +e)
 		let scale = this.state.value/viewBox[2]

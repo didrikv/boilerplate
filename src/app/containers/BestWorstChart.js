@@ -43,8 +43,8 @@ function BestWorstChart(props) {
 		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="left">
 		<div> <input className={styles.button} type="image"  src={info} height="30px"/> </div>
 		</OverlayTrigger>
-		&ensp; <Download svgId={props.chartId} />
-		<p style={{display: "inline", margin:"0px", fontSize:"20px"}}> &emsp; 10 Beste i landet</p>
+		&ensp; <Download svgId="uniqeName" />
+		<p style={{display: "inline", margin:"0px", fontSize:"20px"}}> &emsp; 20 Beste i landet</p>
 		</div>
 
 		<TopBottomHorizontalChart 
@@ -55,6 +55,7 @@ function BestWorstChart(props) {
 			stack={stack} 
 			sortby={sortby}
 			colorScale={colorScale}
+			chartId="uniqeName"
 		/>
 
 		</div>

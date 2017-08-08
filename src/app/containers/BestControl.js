@@ -19,7 +19,7 @@ function BestControl(props) {
 	return(
 		<div >
 		<div style={{height: "150px", border: "1px solid transparent"}}>
-		<Fade in={props.bestControl}>
+		<Fade in={props.bestControl} mountOnEnter unmountOnExit>
 				<div>
 					<YearPicker years={props.years} />
 					<div style={{display: "flex"}}>
