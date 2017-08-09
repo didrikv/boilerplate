@@ -11,9 +11,10 @@ import article from "../data/article.json"
 import styles from "./Article.css"
 import pstyles from "../components/TwoColumn.css"
 import BestWorstChart from "./BestWorstChart.js"
+import StaticNorwayMap from "./StaticNorwayMap.js"
 import Waypoint from 'react-waypoint'
 import { StickyContainer, Sticky } from 'react-sticky'
-import {selectInndeling, selectbestControl, selectPopulation, selectYear} from "../actions/actions.js"
+import {selectInndeling, selectbestControl, selectPopulation, selectYear, selectVariable} from "../actions/actions.js"
 import { connect } from 'react-redux'
 import TwoColumn from "../components/TwoColumn.js"
 import BestControl from "./BestControl.js"
@@ -23,7 +24,14 @@ function mapDispatchToProps(dispatch) {
 		chooseInndeling: (inndeling) => dispatch(selectInndeling(inndeling)),
 		selectbestControl:(bool) =>  dispatch(selectbestControl(bool)),
 		selectPopulation:(pop) => dispatch(selectPopulation(pop)),
-		selectYear: (year) => dispatch(selectYear(year))
+		selectYear: (year) => dispatch(selectYear(year)),
+		selectVariable: (variable) => dispatch(selectVariable(variable))
+	}
+}
+
+function mapStateToProps(state) {
+	return {
+		variable: state.variable
 	}
 }
 
@@ -40,6 +48,20 @@ function renderSection(section) {
 
 function Article(props) {
 	let setInndeling = props.chooseInndeling
+	let selectVariable = props.selectVariable
+
+	function renderStructureSection() {
+		let sections = [
+			{ ...article.s1, trigger: () => selectVariable("Forventet Befolkningsvekst") },
+			{ ...article.s2, trigger: () => selectVariable("Forventet Befolkningsvekst") },
+			{ ...article.s3, trigger: () => selectVariable("Befolkningsvekst") },
+			{ ...article.s4, trigger: () => selectVariable("Samlet attraktivitet") },
+		]
+
+		let graph = <StaticNorwayMap onClick={null} {...props} variable={props.variable}/> 
+
+		return <TwoColumn height="2000px" graphWidth={7} sections={sections} graph={graph} paddingBottom={200}/>
+	}
 	
 	function renderFirstSection() {
 		let sections = [
@@ -56,10 +78,9 @@ function Article(props) {
 			{ ...article.p6, trigger: () => props.selectbestControl(true)}
 		]
 
-		//let graph = <BestWorstChart view="top" n={10} data={props.data}/>
 		let graph = <BestControl {...props}/>
 
-		return <TwoColumn height="2000px" graphWidth={8} graphOffset={150} sections={sections} graph={graph} />
+		return <TwoColumn height="2000px" graphWidth={8} sections={sections} graph={graph} paddingTop={150}/>
 	}
 
 	return(
@@ -75,8 +96,13 @@ function Article(props) {
 		<Row>
 			{renderSection("p1")}
 		</Row>
+		<div style={{height: "100px"}} > </div>
 		<Row>
 			{renderSection("p2")}
+		</Row>
+		<div style={{height: "200px"}} > </div>
+		<Row>
+			{renderStructureSection()}
 		</Row>
 			{renderFirstSection()}
 		<Row>
@@ -88,5 +114,5 @@ function Article(props) {
 	)
 }
 
-export default connect(null, mapDispatchToProps)(Article)
+export default connect(mapStateToProps, mapDispatchToProps)(Article)
 

@@ -39,12 +39,14 @@
 
 .dropdownContent {
 	composes: container;
-	display: none;
 	flex-direction: column;
 	margin: 0px;
 	z-index: 2;
 	position: absolute;
-				://www.w3schools.com/howto/howto_css_fixed_menu.asp /div>
+	display: flex;
+	visibility: hidden;
+	transition: 500ms;
+	opacity: 0;
 }
 
 .dropdown {
@@ -55,6 +57,7 @@
 
 .show {
 	composes: dropdownContent;
-	display: flex;
+	visibility: visible;
+	opacity: 1;
 }
 

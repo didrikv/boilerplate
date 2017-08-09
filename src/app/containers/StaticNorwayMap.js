@@ -16,8 +16,13 @@ function NorgeKommuneMap(props) {
 	let dataobj = {}
 	console.log(data)
 
+
+
 	for(let i=0; i<data.length; i++) {
-		if(props.domain == "Bostedsattraktivitet") {
+		if(props.variable) {
+			var value = data[i][props.variable]
+			var name = props.variable
+		} else if(props.domain == "Bostedsattraktivitet") {
 			var value = data[i].Bostedsstruktur
 			var name = "Bostedsstruktur"
 		} else if(props.domain == "Næringsattraktivitet"){
@@ -43,10 +48,10 @@ function NorgeKommuneMap(props) {
 	return(
 		<div>
 
-		<div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
+		<div style={{display:"flex", alignItems:"center", justifyContent:"center", borderBottom: "1px solid lightgray"}}>
 		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="right">
 		<div>
-		<input className={styles.button} type="image"  src={info} height="20px" />
+		<input className={styles.button} type="image"  src={info} height="30px" />
 		</div>
 		</OverlayTrigger>
 		&emsp;

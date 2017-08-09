@@ -61,3 +61,10 @@ export function selectbestControl(bool) {
 	}
 }
 
+export function selectVariable(variable) {
+	return {
+		type: "SELECT_VARIABLE",
+		payload: variable
+	}
+}
+

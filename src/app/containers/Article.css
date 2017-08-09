@@ -16,6 +16,7 @@ html {
 	color: whitesmoke;
 	padding: 20px 0;
 	border-bottom: 3px solid lightgray;
+	margin-bottom: 100px;
 
 }
 
@@ -30,5 +31,4 @@ html {
 .header p a{
 	color: lightblue;
 }
-
 

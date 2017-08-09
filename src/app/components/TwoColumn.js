@@ -27,7 +27,7 @@ class TwoColumn extends React.Component {
 				</Waypoint>
 			)
 		})
-		return <div style={{height: this.props.height}} className={styles.container}> {sections} </div>
+		return <div style={{height: this.props.height, paddingTop: this.props.paddingTop, paddingBottom: this.props.paddingBottom}} className={styles.container}> {sections} </div>
 	}
 	
 	renderChart = () => {

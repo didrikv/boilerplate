@@ -21,11 +21,11 @@ export default function MapLegend(props) {
 		<text 
 			x={rectDim + 5} 
 			y={rectDim*(i)}
-			fontSize={10}
 			alignmentBaseline="middle"
 			key={i}
 			fontFamily="Arial, Helvetica, sans-serif"
 			fill={props.borderColor}
+			style={{fontSize:"10px"}}
 		>
 			{Math.round(e*Math.pow(10,2))/Math.pow(10,2)} 
 		</text>

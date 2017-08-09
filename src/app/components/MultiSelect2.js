@@ -6,7 +6,7 @@ export default class MultiSelect2 extends React.Component {
 	
 	constructor(props) {
 		super(props)
-		this.state = {showDropdown: false, small: false, width: 0}
+		this.state = {showDropdown: false, small: false, width: 0, renderDropdown: false}
 		if(!props.values) {
 			this.state = {...this.state, values: props.names}
 		} else {
@@ -126,17 +126,23 @@ export default class MultiSelect2 extends React.Component {
 		this.setState({ showDropdown: !this.state.showDropdown})
 	}
 
+
 	renderDropdown = () => {
 		let chosen = this.props.value
 		if(this.state.on) {var value = this.state.value}
 		else {var value = chosen}
 		let name = chosen.length == 1 ? chosen[0] : chosen[0] + " - " + chosen[chosen.length - 1]
+		let enter = (e) => {
+			this.setState({renderDropdown: true})
+		}
+		let leave = (e) => {
+			this.setState({renderDropdown: false})
+		}
 		let dropclass = this.state.showDropdown ? styles.show : styles.dropdownContent
 		return(
 			<div className={styles.dropdown}>
 				<button className={styles.dropbtn} onClick={this.toggleShow}> {name} &#x25BC;</button>
-				<Fade in={this.state.showDropdown}>
-				<div className={styles.show} id="myDropdown">
+				<div className={dropclass} id="myDropdown">
 					{this.state.values.map( (e,i) => {
 					return(
 					<button 
@@ -153,7 +159,6 @@ export default class MultiSelect2 extends React.Component {
 					</button>
 					)})}
 				</div>
-				</Fade>
 			</div>
 		)
 	}
@@ -193,7 +198,7 @@ export default class MultiSelect2 extends React.Component {
 			setTimeout( () => {
 			let wrapper = document.getElementById("wrapper")
 			updateSize()
-			}, 0)
+			}, 50)
 		}
 
 		window.addEventListener("resize" ,onResize)

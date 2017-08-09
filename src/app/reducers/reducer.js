@@ -7,7 +7,8 @@ let defaultState = {
 	population: 0,
 	Nr: 821,
 	search: [],
-	bestControl: false
+	bestControl: false,
+	variable: "Forventet Befolkningsvekst"
 }
 
 export default function reducer(state = defaultState, action) {
@@ -38,6 +39,9 @@ export default function reducer(state = defaultState, action) {
 		}
 		case "SELECT_BESTCONTROL": {
 			return {...state, bestControl: action.payload}
+		}
+		case "SELECT_VARIABLE": {
+			return {...state, variable: action.payload}
 		}
 		default:
 			return state
