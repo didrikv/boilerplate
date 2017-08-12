@@ -15,8 +15,6 @@ html {
 	background: #515A5A;
 	color: whitesmoke;
 	padding: 20px 0;
-	border-bottom: 3px solid lightgray;
-	margin-bottom: 100px;
 
 }
 
@@ -30,5 +28,18 @@ html {
 
 .header p a{
 	color: lightblue;
+}
+
+.navbar2{
+	display: flex;
+	justify-content: center;
+	outline: none;
+}
+
+
+
+.navbar{
+	display: flex;
+	justify-content: center;
 }
 

@@ -1,5 +1,5 @@
 let defaultState = {
-	year:[2007, 2008, 2009, 2010, 2011, 2012, 2013],
+	year:[2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
 	domain:"Samlet attraktivitet",
 	fylke:8,
 	kommune:821,
@@ -8,7 +8,8 @@ let defaultState = {
 	Nr: 821,
 	search: [],
 	bestControl: false,
-	variable: "Forventet Befolkningsvekst"
+	variable: "Forventet Befolkningsvekst",
+	pane: 1
 }
 
 export default function reducer(state = defaultState, action) {
@@ -42,6 +43,9 @@ export default function reducer(state = defaultState, action) {
 		}
 		case "SELECT_VARIABLE": {
 			return {...state, variable: action.payload}
+		}
+		case "SELECT_PANE": {
+			return {...state, pane: action.payload}
 		}
 		default:
 			return state

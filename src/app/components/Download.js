@@ -2,7 +2,7 @@ import React from 'react'
 import download from "../data/download.svg"
 import { Modal, Button, Form, FormControl } from 'react-bootstrap'
 import {saveAs} from 'file-saver'
-import styles from "../containers/Button.css"
+import styles from "../containers/chartWrapper.css"
 import { saveSvgAsPng } from 'save-svg-as-png'
 
 
@@ -34,7 +34,7 @@ export default class Download extends React.Component {
 	png() {
 
 		let svg = document.getElementById(this.props.svgId)
-		if(svg.nodeName != "SVG") {svg = svg.firstChild}
+		if(svg.nodeName != "svg") {svg = svg.firstChild}
 		let viewBox = svg.getAttribute("viewBox").split(" ").map( (e) => +e)
 		let scale = this.state.value/viewBox[2]
 		saveSvgAsPng(svg, "map.png", {left: viewBox[0], top: viewBox[1], width: viewBox[2], height: viewBox[3], scale:scale})
@@ -58,7 +58,7 @@ export default class Download extends React.Component {
 	render() {
 		return(
 			<div>
-			<input className={styles.button} type="image" src={download} height="30px" onClick={this.onClick} />
+			<input className={styles.svgButton} type="image" src={download} height="30px" onClick={this.onClick} />
 			<Modal show={this.state.showModal} onHide={this.close} bsSize="small">
 
 				<Modal.Header closeButton>

@@ -3,11 +3,16 @@ import { connect } from 'react-redux'
 import { OverlayTrigger, Popover } from 'react-bootstrap'
 import TopBottomHorizontalChart from "../components/TopBottomHorizontalChart.js"
 import info from "../data/info2.svg"
-import styles from "./Button.css"
+import styles from "./chartWrapper.css"
 import Download from "../components/Download.js"
 
 function mapStateToProps(state) {
-	return {domain:state.domain, inndeling: state.inndeling, population:state.population}
+	return {
+		domain:state.domain, 
+		inndeling: state.inndeling, 
+		population:state.population,
+		years: state.year
+	}
 }
 
 function BestWorstChart(props) {
@@ -30,6 +35,9 @@ function BestWorstChart(props) {
 		var colorScale = ["#9E9E9E", "#8BC34A", "#FFB74D"]
 	}
 
+	let name = "Top 10 " + inndeling + " "
+	name += props.years.length == 1 ? props.years[0] : props.years[0] + "-" + props.years[props.years.length-1]
+
 	var text = 
 	`Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt.`
 
@@ -37,27 +45,33 @@ function BestWorstChart(props) {
 			{text}
 				</Popover>)
 	return (
-		<div>
-
-		<div style={{display:"flex", alignItems:"center", justifyContent:"center", borderBottom: "1px solid lightgray", marginBottom: "10px"}}>
-		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="left">
-		<div> <input className={styles.button} type="image"  src={info} height="30px"/> </div>
-		</OverlayTrigger>
-		&ensp; <Download svgId="uniqeName" />
-		<p style={{display: "inline", margin:"0px", fontSize:"20px"}}> &emsp; 20 Beste i landet</p>
-		</div>
-
-		<TopBottomHorizontalChart 
-			{...props}
-			data={data} 
-			n={props.n ? props.n : 5} 
-			x="Navn" 
-			stack={stack} 
-			sortby={sortby}
-			colorScale={colorScale}
-			chartId="uniqeName"
-		/>
-
+		<div className={styles.container}>
+			<div className={styles.header}>
+				<div className={styles.right}> </div>
+				<p className={styles.title}> {name} </ p>
+				<div className={styles.btnContainer}>
+					<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="right">
+						<div>
+						<input className={styles.svgButton} type="image"  src={info}/>
+						</div>
+					</OverlayTrigger>
+					&emsp;
+						<Download svgId="uniqeName" />
+				</div>
+			</div>
+			
+			<div className={styles.chartContainer}>
+				<TopBottomHorizontalChart 
+					{...props}
+					data={data} 
+					n={props.n ? props.n : 5} 
+					x="Navn" 
+					stack={stack} 
+					sortby={sortby}
+					colorScale={colorScale}
+					chartId="uniqeName"
+				/>
+			</div>
 		</div>
 	)
 }

@@ -67,4 +67,11 @@ export function selectVariable(variable) {
 		payload: variable
 	}
 }
+	
+export function selectPane(pane) {
+	return {
+		type: "SELECT_PANE",
+		payload: pane
+	}
+}
 

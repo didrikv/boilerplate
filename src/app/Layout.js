@@ -25,11 +25,16 @@ import PopulationSlider from "./containers/PopulationSlider.js"
 import ScatterContainer from "./containers/ScatterContainer.js"
 import PlacePicker from "./containers/PlacePicker.js"
 import DecompChart from "./containers/DecompChart.js"
+import { selectPane } from "./actions/actions.js"
 
 
 
 function mapStateToProps(state) {
-	return {inndeling: state.inndeling}
+	return {inndeling: state.inndeling, pane: state.pane}
+}
+
+function mapDispatchToProps(dispatch) {
+	return{selectPane: (pane) => dispatch(selectPane(pane)) }
 }
 
 function Layout(props){
@@ -39,12 +44,6 @@ function Layout(props){
 	<div className={styles.default}>
 
 	<Grid>
-		<Row>
-			<PageHeader style={{textAlign: "center", padding:"0px"}}>
-				 Attraktivitetsanalyser
-				<small style={{textAlign: "right", fontSize:"12px"}}> Telemarksforskning </small>
-			</PageHeader>
-		</Row>
 		<Row>
 			<Col sm={12} style={{display:"flex", justifyContent:"center"}}> <YearPicker years={years}/> </Col>
 		</Row>
@@ -58,7 +57,8 @@ function Layout(props){
 			</Col>
 		</Row>
 		<Row>
-		<Tabs id="paneSelector" defaultActiveKey={2} bsStyle="tabs" style={{marginTop: "-5px"}}>
+		<Tabs id="paneSelector" activeKey={props.pane} onSelect={props.selectPane} bsStyle="pills">
+			<div style={{height: "20px"}} > </div>
 			<Tab eventKey={1} title="Top i Landet" unmountOnExit>
 				<Row>
 					<Col sm={6} > <StaticNorwayMap onClick={null} data={data}/> </Col>
@@ -76,11 +76,9 @@ function Layout(props){
 			</Tab>
 		</Tabs>
 		</Row>
-
 	</Grid>
-
 	</div>
 	)
 }
 
-export default connect(mapStateToProps)(Layout)
+export default connect(mapStateToProps, mapDispatchToProps)(Layout)

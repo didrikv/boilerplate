@@ -3,6 +3,7 @@ import styles from "./TwoColumn.css"
 import Waypoint from 'react-waypoint'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {Row, Col} from 'react-bootstrap'
+import {AutoAffix} from 'react-overlays'
 
 class TwoColumn extends React.Component {
 	constructor(props) {
@@ -31,25 +32,34 @@ class TwoColumn extends React.Component {
 	}
 	
 	renderChart = () => {
-		let element = document.getElementById("graphContainer")
-		let elementHeight = element ? element.clientHeight : 0
-		let windowHeight = window.innerHeight
-		let offset = Math.max((windowHeight - elementHeight)/2, 0)
+		//let element = document.getElementById("graphContainer")
+		//let elementHeight = element ? element.clientHeight : 0
+		//let windowHeight = window.innerHeight
+		//let offset = Math.max((windowHeight - elementHeight)/2, 0)
 
+		//return(
+		//	<StickyContainer style={{height: this.props.height}}>
+		//		<Sticky topOffset={-offset} disableCompensation>
+		//		{ (e) => {
+		//			let newStyle = {...e.style}
+		//			if(e.distanceFromBottom > offset) {newStyle.top += offset}
+		//			else if(e.distanceFromBottom > 0) {newStyle.top += e.distanceFromBottom}
+		//			return( <div style={newStyle} id="graphContainer">
+		//						{this.props.graph}
+		//					</div>
+		//			)
+		//		}}
+		//		</Sticky>
+		//	</StickyContainer>
+		//)
 		return(
-			<StickyContainer style={{height: this.props.height}}>
-				<Sticky topOffset={-offset} disableCompensation>
-				{ (e) => {
-					let newStyle = {...e.style}
-					if(e.distanceFromBottom > offset) {newStyle.top += offset}
-					else if(e.distanceFromBottom > 0) {newStyle.top += e.distanceFromBottom}
-					return( <div style={newStyle} id="graphContainer">
-								{this.props.graph}
-							</div>
-					)
-				}}
-				</Sticky>
-			</StickyContainer>
+			<div style={{height: this.props.height}}>
+				<AutoAffix viewportOffsetTop={100} container={this} >
+					<div>
+					{this.props.graph}
+					</div>
+				</AutoAffix>
+			</div>
 		)
 	}
 

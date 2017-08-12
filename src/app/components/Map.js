@@ -90,7 +90,7 @@ export default function Map(props){
 		)
 	
 	return(
-		<div style={{padding: "20px"}}>
+		<div>
 		{props.dropdown ? <Picker names={names} values={values} value={props.selectedID} handleChange={props.onClick} /> : null }
 		<svg 
 			width="100%"

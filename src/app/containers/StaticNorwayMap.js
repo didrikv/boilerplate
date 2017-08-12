@@ -3,18 +3,21 @@ import {connect} from 'react-redux'
 import {OverlayTrigger, Popover, Button } from 'react-bootstrap'
 import info from "../data/info2.svg"
 import NorwayMap from "./NorwayMap.js"
-import styles from "./Button.css"
+import styles from "./chartWrapper.css"
 import Download from "../components/Download.js"
 
 function mapStateToProps(state) {
-	return {domain:state.domain, inndeling:state.inndeling}
+	return {
+		domain:state.domain,
+		inndeling:state.inndeling,
+		years: state.year
+	}
 }
 
-function NorgeKommuneMap(props) {
+function StaticNorwayMap(props) {
 	let inndeling = props.inndeling[0].toUpperCase() + props.inndeling.slice(1) 
 	let data = props.data.filter( (e) => e.Inndeling == inndeling)
 	let dataobj = {}
-	console.log(data)
 
 
 
@@ -36,6 +39,9 @@ function NorgeKommuneMap(props) {
 		dataobj[data[i].Nr] = value
 	}
 
+	name += " "
+	name += props.years.length == 1 ? props.years[0] : props.years[0] + "-" + props.years[props.years.length-1]
+
 	var text = 
 	`Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt.`
 
@@ -44,29 +50,32 @@ function NorgeKommuneMap(props) {
 				</Popover>)
 	
 
-
 	return(
-		<div>
+		<div className={styles.container}>
+			<div className={styles.header}>
+				<div className={styles.right}> </div>
+				<p className={styles.title}> {name} </ p>
+				<div className={styles.btnContainer}>
+					<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="right">
+						<div>
+						<input className={styles.svgButton} type="image"  src={info}/>
+						</div>
+					</OverlayTrigger>
+					&emsp;
+						<Download svgId="statnorwaymap" />
+				</div>
+			</div>
 
-		<div style={{display:"flex", alignItems:"center", justifyContent:"center", borderBottom: "1px solid lightgray"}}>
-		<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="right">
-		<div>
-		<input className={styles.button} type="image"  src={info} height="30px" />
-		</div>
-		</OverlayTrigger>
-		&emsp;
-		<Download svgId="statnorwaymap" />
-		<h5 style={{display: "inline"}}> &emsp; {name} &emsp; </h5>
-		</div>
-		
-		<NorwayMap 
-			{...props} 
-			data={dataobj} 
-			object={props.inndeling}
-			mapId="statnorwaymap"
-		/>
+			<div className={styles.chartContainer}>	
+				<NorwayMap 
+					{...props} 
+					data={dataobj} 
+					object={props.inndeling}
+					mapId="statnorwaymap"
+				/>
+			</div>
 		</div>
 	)
 }
 
-export default connect(mapStateToProps)(NorgeKommuneMap)
+export default connect(mapStateToProps)(StaticNorwayMap)
