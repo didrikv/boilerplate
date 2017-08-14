@@ -12,8 +12,9 @@ import {
 	selectYear,
 	selectVariable
 } from "../actions/actions.js"
+import { renderSection } from "./Article.js"
 
-import article from "../data/article.json"
+import article from "../data/SamletAtrakk.json"
 import styles from "./Article.css"
 import pstyles from "../components/TwoColumn.css"
 import BestWorstChart from "../containers/BestWorstChart.js"
@@ -37,18 +38,6 @@ function mapStateToProps(state) {
 	}
 }
 
-function renderSection(section) {
-	return(
-		<div>	
-			<div className={pstyles.section}>
-				<h3 className={pstyles.header}> {article[section].title} </h3>
-				<p className={pstyles.paragraph}> {article[section].text} </p>
-			</div>
-			<div style={{height: "100px"}} > </div>
-		</div>
-		
-	)
-}
 
 function SamletAtrakk(props) {
 	let selectInndeling = props.selectInndeling
@@ -60,66 +49,75 @@ function SamletAtrakk(props) {
 		let select = (variable) => {
 			selectVariable(variable)
 			selectInndeling("kommune")
-			selectYear([2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016])
+			selectYear([2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016]),
+			props.selectbestControl(false)
+
 		}
+		let control = {YearPicker: {years: props.years}, 
+						VariablePicker: {names: ["Forventet Befolkningsvekst", "Befolkningsvekst", "Samlet attraktivitet"]},
+						InndelingsPicker: true}
 
 		let sections = [
 			{ ...article.s2, trigger: () => select("Forventet Befolkningsvekst") },
 			{ ...article.s3, trigger: () => select("Befolkningsvekst") },
 			{ ...article.s4, trigger: () => select("Samlet attraktivitet") },
+			{ ...article.s5, trigger: () => props.selectbestControl(control)}
 		]
 
 		let graph = <StaticNorwayMap onClick={null} {...props} variable={props.variable}/> 
+		let lastTrigger = () => props.selectbestControl(false)
 
-		return <TwoColumn height="2000px" graphWidth={7} sections={sections} graph={graph} paddingBottom={200}/>
+		return <TwoColumn height="2000px" graphWidth={6} sections={sections} graph={graph} paddingBottom={200} lastTrigger={lastTrigger}/>
 	}
 	
 	function renderFirstSection() {
 		let select = (inndeling) => {
 			selectInndeling(inndeling)
 			selectYear([2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016])
-			selectPopulation(1000)
+			selectPopulation(1000),
+			props.selectbestControl(false)
 		}
+		let control = {YearPicker: {years: props.years}, 
+					InndelingsPicker: true,
+					PopulationSlider: true
+		}
+
 
 		let sections = [
 			{ ...article.p3, trigger: () => select("kommune")},
 			{ ...article.p4, trigger: () => select("region")},
-			{ ...article.p5, trigger: () => {
-				props.selectbestControl(false)
-				setTimeout( () => {
-					select("fylke")
-				}, 100)
-			}},
-			{ ...article.p6, trigger: () => props.selectbestControl(true)}
+			{ ...article.p5, trigger: () => select("fylke")},
+			{ ...article.p6, trigger: () => props.selectbestControl(control)}
 		]
 
-		let graph = <BestControl {...props}/>
-		//let graph = <div style={{height: "500px", background: "gray"}}> </div>
+		let graph = <BestWorstChart {...props} view="top" n={10}/>
+		let lastTrigger = () => props.selectbestControl(false)
 
-		return <TwoColumn height="2500px" graphWidth={8} sections={sections} graph={graph} paddingTop={150} paddingBottom={150}/>
+		return <TwoColumn height="2500px" graphWidth={8} sections={sections} graph={graph}  paddingBottom={200} lastTrigger={lastTrigger}/>
 	}
 
 	return(
 	<Grid>
 		<Row>
-			{renderSection("p1")}
+			{renderSection(article.p1)}
 		</Row>
 		<Row>
-			{renderSection("p2")}
+			{renderSection(article.p2)}
 		</Row>
 		<Row>
-			{renderSection("s1")}
+			{renderSection(article.s1)}
 		</Row>
 		<div style={{height: "100px"}}> </div>
 		<Row>
 			{renderStructureSection()}
 		</Row>
+		<div style={{height: "200px"}}> </div>
 		<Row>
 			{renderFirstSection()}
 		</Row>
 		<div style={{height: "100px"}}> </div>
 		<Row>
-			{renderSection("p7")}
+			{renderSection(article.p7)}
 		</Row>
 	</Grid>
 	)

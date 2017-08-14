@@ -11,8 +11,7 @@
 .buttonContainer {
 	composes: default;
 	background-color: #f3f3f3;
-	border: 1px solid #e7e7e7;
-	margin: 10px;
+	border: 1px solid #BBB;
 }
 
 .button{

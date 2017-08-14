@@ -19,8 +19,9 @@ class TwoColumn extends React.Component {
 	renderSections = () => {
 		let sections = this.props.sections.map( (e, i) => {
 			let sClass  = this.state.active == i ? styles.active : styles.passive
+			let onLeave = i == this.props.sections.length-1 ? this.props.lastTrigger : undefined
 			return(
-				<Waypoint onEnter={(e) => this.handleEnter(i)} bottomOffset="49.999%" topOffset="50%" key={i}>
+				<Waypoint onEnter={(e) => this.handleEnter(i)} onLeave={onLeave} bottomOffset="49.999%" topOffset="50%" key={i}>
 					<div className={sClass}>
 						<h3 className={styles.header}> {this.props.sections[i].title} </h3>
 						<p className={styles.paragraph}> {this.props.sections[i].text} </p> 
@@ -28,7 +29,15 @@ class TwoColumn extends React.Component {
 				</Waypoint>
 			)
 		})
-		return <div style={{height: this.props.height, paddingTop: this.props.paddingTop, paddingBottom: this.props.paddingBottom}} className={styles.container}> {sections} </div>
+		
+		
+
+		return <div 
+			style={{height: this.props.height, paddingTop: this.props.paddingTop, paddingBottom: this.props.paddingBottom}} 
+			className={styles.container}
+		> 
+			{sections} 
+		</div>
 	}
 	
 	renderChart = () => {
@@ -54,7 +63,7 @@ class TwoColumn extends React.Component {
 		//)
 		return(
 			<div style={{height: this.props.height}}>
-				<AutoAffix viewportOffsetTop={100} container={this} >
+				<AutoAffix container={this} viewportOffsetTop={170}>
 					<div>
 					{this.props.graph}
 					</div>

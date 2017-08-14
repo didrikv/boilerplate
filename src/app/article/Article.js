@@ -7,6 +7,8 @@ import Bostedsattraktivitet from "./Bostedsattraktivitet.js"
 import Naringsattraktivitet from "./Naringsattraktivitet.js"
 import Befolkningsframskriving from "./Befolkningsframskriving.js"
 import Layout from "../Layout.js"
+import pstyles from "../components/TwoColumn.css"
+import ControlPanel from "../containers/ControlPanel.js"
 
 import { 
 	BrowserRouter as Router,
@@ -31,6 +33,7 @@ function Article(props) {
 		<Router>
 		<div>
 			<Header />
+			<ControlPanel />
 			<div>
 			<Route exact path="/" render={attrak} />
 			<Route path="/bosted" render={bosted} />
@@ -41,6 +44,18 @@ function Article(props) {
 		</div>
 		</Router>
 		</div>
+	)
+}
+export function renderSection(section) {
+	return(
+		<div>	
+			<div className={pstyles.section}>
+				<h3 className={pstyles.header}> {section.title} </h3>
+				<p className={pstyles.paragraph}> {section.text} </p>
+			</div>
+			<div style={{height: "100px"}} > </div>
+		</div>
+		
 	)
 }
 

@@ -4,13 +4,14 @@ import styles from "./Article.css"
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
+import {Affix} from 'react-overlays'
 
 
 function Header(props) {
 	
 	return(
 		<div>
-			<div className={styles.header}>
+			<div className={styles.header} >
 				<p> Telemarksforskning </p>
 				<h1> ATTRAKTIVITETSANALYSER </h1> 
 				<p> HVA FÅR STEDER TIL Å VOKSE? </p>
