@@ -21,6 +21,7 @@ export default class MultiSelect2 extends React.Component {
 		document.addEventListener("mouseup", (e) =>
 				{
 					if(this.state.on){
+						console.log("mouseup")
 					this.setState({on:false})
 					props.onChange(this.state.value)
 					this.toggleShow()
@@ -38,6 +39,7 @@ export default class MultiSelect2 extends React.Component {
 	}
 
 	onChange(e) {
+		console.log("onchange")
 		var options = e.target.options;
 		var value = [];
 		for (var i = 0, l = options.length; i < l; i++) {
@@ -90,6 +92,8 @@ export default class MultiSelect2 extends React.Component {
 
 	onTouchEnd(e) {
 		if(this.state.on){
+			e.preventDefault()
+			console.log("touchend")
 			this.setState({on:false})
 			this.props.onChange(this.state.value)
 			this.toggleShow()
@@ -123,6 +127,7 @@ export default class MultiSelect2 extends React.Component {
 	}
 
 	toggleShow = () => {
+		console.log("toggele show")
 		this.setState({ showDropdown: !this.state.showDropdown})
 	}
 
@@ -144,7 +149,7 @@ export default class MultiSelect2 extends React.Component {
 				<button className={styles.dropbtn} onClick={this.toggleShow}> {name} &#x25BC;</button>
 				<div className={dropclass} id="myDropdown">
 					{this.state.values.map( (e,i) => {
-					return(
+					let button = 
 					<button 
 						value={e}
 						key={i}
@@ -152,11 +157,18 @@ export default class MultiSelect2 extends React.Component {
 						onMouseDown={this.startSelect}
 						onTouchStart={this.startSelect}
 						onMouseEnter={this.onMouseEnter}
-						onTouchMove={this.onTouchMove}
 						onTouchEnd={this.onTouchEnd}
+						ref={ (button) => {
+							if(button) {
+								button.addEventListener('touchmove', this.onTouchMove, {passive: false})
+							}
+						}}
 					>
 						{this.state.names[i]}
 					</button>
+					
+					return(
+						button
 					)})}
 				</div>
 			</div>

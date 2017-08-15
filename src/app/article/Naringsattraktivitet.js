@@ -10,7 +10,8 @@ import {
 	selectbestControl,
 	selectPopulation,
 	selectYear,
-	selectVariable
+	selectVariable,
+	selectDomain
 } from "../actions/actions.js"
 import { renderSection } from "./Article.js"
 
@@ -29,7 +30,8 @@ function mapDispatchToProps(dispatch) {
 		selectbestControl:(bool) =>  dispatch(selectbestControl(bool)),
 		selectPopulation:(pop) => dispatch(selectPopulation(pop)),
 		selectYear: (year) => dispatch(selectYear(year)),
-		selectVariable: (variable) => dispatch(selectVariable(variable))
+		selectVariable: (variable) => dispatch(selectVariable(variable)),
+		selectDomain: (domain) => dispatch(selectDomain(domain))
 	}
 }
 
@@ -44,6 +46,7 @@ function Naringsattraktivitet(props) {
 	let selectVariable = props.selectVariable
 	let	selectYear = props.selectYear 
 	let selectPopulation = props.selectPopulation
+	let selectDomain = props.selectDomain
 
 	function renderMapSection() {
 		let select = (variable) => {

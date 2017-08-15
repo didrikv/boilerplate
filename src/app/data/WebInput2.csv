@@ -1,4 +1,4 @@
-let WebInput = `Inndeling,Nr,Navn,Fylke,Region,År,Folketall,Befolkningsvekst,Fødselsoverskudd,Innvandringsbidrag,Egenvekst Offentlig,Egenvekst Struktur,Egenvekst Attraktivitet,Nabovekst,Størrelse,Arbeidsmarkedintegrasjon,Intern Arbeidsmarkedintegrasjon,Konstantledd,Bostedsattraktivitet,Private Arbeidsplasser,Arbeidsplassvekst,Nasjonalt Bidrag,Bransjeeffekt,Befolkningseffekt,Næringsattraktivitet
+Inndeling,Nr,Navn,Fylke,Region,Aar,Folketall,Befolkningsvekst,Fødselsoverskudd,Innvandringsbidrag,Egenvekst Offentlig,Egenvekst Struktur,Egenvekst Attraktivitet,Nabovekst,Størrelse,Arbeidsmarkedintegrasjon,Intern Arbeidsmarkedintegrasjon,Konstantledd,Bostedsattraktivitet,Private Arbeidsplasser,Arbeidsplassvekst,Nasjonalt Bidrag,Bransjeeffekt,Befolkningseffekt,Næringsattraktivitet
 Fylke,1,Østfold,Østfold,,2003,255122,0.61,0.02,0.25,0.01,0.01,0,-0.07,0,-0.01,0.24,-0.1,0.26,75780,-2.38,-1.43,0.21,0.12,-1.28
 Fylke,1,Østfold,Østfold,,2004,256668,0.73,0.08,0.29,-0.01,-0.05,-0.06,-0.01,0,-0.01,0.23,-0.1,0.37,75653,-0.17,0.72,-0.28,0.02,-0.63
 Fylke,1,Østfold,Østfold,,2005,258542,0.71,0.06,0.4,-0.02,-0.15,-0.01,0.04,0,-0.01,0.23,-0.1,0.29,76747,1.45,2.21,-0.25,0.04,-0.55
@@ -7419,5 +7419,5 @@ Region,3085,Øst-Finnmark,,Øst-Finnmark,2013,23391,1.38,-0.03,0.79,-0.11,0.56,-
 Region,3085,Øst-Finnmark,,Øst-Finnmark,2014,23713,0.76,-0.1,0.75,-0.06,0.13,-0.35,-0.01,-0.02,-0.2,-0.11,-0.14,0.88,6614,-0.82,1.18,0.01,0.09,-2.1
 Region,3085,Øst-Finnmark,,Øst-Finnmark,2015,23893,-0.25,-0.13,0.58,-0.06,-0.62,-0.21,0,-0.02,-0.21,-0.11,-0.14,0.66,5781,-12.59,-3.94,-0.36,-0.13,-8.17
 Region,3085,Øst-Finnmark,,Øst-Finnmark,2016,23833,-0.13,-0.03,0.5,0.01,-0.5,-0.14,0,-0.02,-0.22,-0.11,-0.14,0.51,5813,0.55,-0.32,0.85,-0.48,0.51`
-
-module.exports.data = WebInput
+,,,,,,,,,,,,,,,,,,,,,,,,
+module.exports.data = WebInput,,,,,,,,,,,,,,,,,,,,,,,,

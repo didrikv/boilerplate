@@ -30,13 +30,6 @@ export default function HorizontalBarChart(props) {
 			theme={theme}
 		>
 
-		<VictoryLegend 
-			y={-70}
-			x={-120}
-			data={foo}
-			colorScale={colorScale}
-			gutter={2}
-		/>
 
 		<VictoryAxis dependentAxis 
 			tickFormat={(tick) => ""}
@@ -66,6 +59,14 @@ export default function HorizontalBarChart(props) {
 				/>
 			)}
 		</VictoryStack>
+
+		<VictoryLegend 
+			y={-70}
+			x={-120}
+			data={foo}
+			colorScale={colorScale}
+			gutter={2}
+		/>
 
 		</VictoryChart>
 		</div>

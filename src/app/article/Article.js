@@ -45,7 +45,6 @@ function Article(props) {
 	)
 }
 export function renderSection(section) {
-	console.log(section)
 	if(Array.isArray(section.text)) {
 		var paragraph = section.text.map( (e,i) => 
 			<p className={pstyles.paragraph} key={i}> {section.text[i]} </p>
@@ -53,7 +52,6 @@ export function renderSection(section) {
 	} else {
 		var paragraph = <p className={pstyles.paragraph}> {section.text} </p>
 	}
-	console.log(paragraph)
 	return(
 		<div>	
 			<div className={pstyles.section}>
