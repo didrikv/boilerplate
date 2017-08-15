@@ -2,24 +2,31 @@ import React from 'react'
 import styles from "./TwoColumn.css"
 import Waypoint from 'react-waypoint'
 import {StickyContainer, Sticky} from 'react-sticky'
-import {Row, Col} from 'react-bootstrap'
+import {Row, Col, Fade} from 'react-bootstrap'
 import {AutoAffix} from 'react-overlays'
 
 class TwoColumn extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {active: 0}
+		this.state = {active: 0, fade: false}
 	}
 
 	handleEnter = (i) => {
 		this.setState( {active: i} )
 		this.props.sections[i].trigger()
+		if(i == this.props.sections.length-1) {
+			this.setState({fade: true})
+		}
+	}
+
+	onLeave = () => {
+		this.setState({fade: false})
 	}
 	
 	renderSections = () => {
 		let sections = this.props.sections.map( (e, i) => {
 			let sClass  = this.state.active == i ? styles.active : styles.passive
-			let onLeave = i == this.props.sections.length-1 ? this.props.lastTrigger : undefined
+			let onLeave = i == this.props.sections.length-1 ? this.onLeave : undefined
 			return(
 				<Waypoint onEnter={(e) => this.handleEnter(i)} onLeave={onLeave} bottomOffset="49.999%" topOffset="50%" key={i}>
 					<div className={sClass}>
@@ -63,10 +70,18 @@ class TwoColumn extends React.Component {
 		//)
 		return(
 			<div style={{height: this.props.height}}>
-				<AutoAffix container={this} viewportOffsetTop={170}>
+				<AutoAffix container={this} viewportOffsetTop={20}>
+				<div>
+					<Fade in={this.state.fade}>
+					<div style={{height: "120px"}}>
+					{this.props.control}
+					</div>
+					</Fade>
+					
 					<div>
 					{this.props.graph}
 					</div>
+				</div>
 				</AutoAffix>
 			</div>
 		)

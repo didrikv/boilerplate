@@ -12,6 +12,7 @@
 	composes: default;
 	background-color: #f3f3f3;
 	border: 1px solid #BBB;
+	margin: 5px;
 }
 
 .button{
