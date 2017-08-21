@@ -1,10 +1,8 @@
 import React from 'react'
 import {min, max, scaleQuantile, scaleLinear, scaleQuantize} from 'd3'
-import {StyleSheet, css} from 'aphrodite/no-important'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'
 import Picker from "./Picker.js"
 import styles from "./Map.css"
-import transitions from "../transitions.css"
 import MapLegend from "./MapLegend.js"
 
 
@@ -69,7 +67,7 @@ export default function Map(props){
 							vectorEffect="non-scaling-stroke"
 							d={path(area)} 
 							key={area.properties.Nr}
-							onClick={() => props.onClick(area.properties.Nr)}
+							onClick={props.handleClick ? () => props.handleClick(area.properties.Nr) : null}
 							style = {{fill: getColor(area.properties.Nr), stroke:"grey", strokeWidth: 0.4}}
 						/>
 			if(props.tooltip) {	

@@ -1,10 +1,7 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { OverlayTrigger, Popover } from 'react-bootstrap'
+ import { connect } from 'react-redux'
 import TopBottomHorizontalChart from "../components/TopBottomHorizontalChart.js"
-import info from "../data/info2.svg"
-import styles from "./chartWrapper.css"
-import Download from "../components/Download.js"
+import ChartWrapper from "./ChartWrapper.js"
 
 function mapStateToProps(state) {
 	return {
@@ -41,26 +38,8 @@ function BestWorstChart(props) {
 	var text = 
 	`Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt.`
 
-	var infotab = (<Popover title="Forklaring for grafen:" id="pop-focus" style={{fontSize:12}}>
-			{text}
-				</Popover>)
 	return (
-		<div className={styles.container}>
-			<div className={styles.header}>
-				<div className={styles.right}> </div>
-				<p className={styles.title}> {name} </ p>
-				<div className={styles.btnContainer}>
-					<OverlayTrigger trigger="click" rootClose overlay={infotab} placement="right">
-						<div>
-						<input className={styles.svgButton} type="image"  src={info}/>
-						</div>
-					</OverlayTrigger>
-					&emsp;
-						<Download svgId="uniqeName" />
-				</div>
-			</div>
-			
-			<div className={styles.chartContainer}>
+			<ChartWrapper name={name} info={text}>	
 				<TopBottomHorizontalChart 
 					{...props}
 					data={data} 
@@ -69,10 +48,8 @@ function BestWorstChart(props) {
 					stack={stack} 
 					sortby={sortby}
 					colorScale={colorScale}
-					chartId="uniqeName"
 				/>
-			</div>
-		</div>
+			</ChartWrapper>
 	)
 }
 

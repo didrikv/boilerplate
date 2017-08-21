@@ -2,11 +2,12 @@ import React from 'react'
 import deepEqual from 'deep-equal'
 
 import ControlPanel from './ControlPanel.js'
-import NorwayMap from './NorwayMap.js'
-import ChartWrapper from '../containers/ChartWrapper.js'
+import TopBottomHorizontalChart from "../components/TopBottomHorizontalChart.js"
+import ChartWrapper from "./ChartWrapper.js"
 import { data, years, createDataObject } from '../dataStore.js'
 
-export default class StaticNorwayMap extends React.Component {
+
+export default class HorizontalChart extends React.Component {
 	constructor(props) {
 		super()
 		this.state = {...this.createInitialState(), ...props}
@@ -15,11 +16,17 @@ export default class StaticNorwayMap extends React.Component {
 	createInitialState = () => {
 		let defaultState = {
 			years: [2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
+			stack: ["Forventet Befolkningsvekst", "Bostedsattraktivitet", "Egenvekst Attraktivitet"],
+			colorScale:["#9E9E9E", "#8BC34A", "#FFB74D"],
+			sortby: "Samlet attraktivitet",
 			inndeling: "Kommune",
+			population: 1000,
+			n: 10,
+			view: "top",
+			x: "Navn",
 			createControl: true,
-			hideControl: false,
-			variable: "Bostedsattraktivitet",
-			options: ["Fødselsoverskudd", "Forventet Flytting", "Bostedsattraktivitet"],
+			hideControl: false
+
 		}
 
 		return {...defaultState, ...this.props}
@@ -39,6 +46,7 @@ export default class StaticNorwayMap extends React.Component {
 		let should = !deepEqual(this.state, nextState)
 		return should
 	}
+	
 
 	componentWillMount = () => {
 		this.aggData = createDataObject(data, this.state.years)
@@ -46,7 +54,7 @@ export default class StaticNorwayMap extends React.Component {
 
 	generateName = () => {
 		let years = this.state.years
-		let name = this.state.variable + " "
+		let name = "Top 10 " + this.state.inndeling + " "
 		name += years.length == 1 ? years[0] : years[0] + "-" + years[years.length-1]
 		return name
 	}
@@ -63,37 +71,35 @@ export default class StaticNorwayMap extends React.Component {
 				value: this.state.inndeling,
 				handleChange: (inndeling) => this.setState({inndeling})
 			},
-			selectVariable: {
-				names: this.state.options,
-				value: this.state.variable,
-				handleChange: (variable) => this.setState({variable})
+			selectPopulation: {
+				names: ["All", ">1000", ">3000", ">10 000"],
+				values: [0, 1000, 3000, 10000],
+				value: this.state.population,
+				handleChange: (population) => this.setState({population})
 			},
 			hide: this.state.hideControl
 		}
 		return <ControlPanel {...controls}/>
 	}
 
-	
 
-	render =() => {
+	
+	render() {
 		let data = this.aggData.filter( (e) => e.Inndeling == this.state.inndeling)
-		let dataobj = {}
-		data.forEach( (e) => {
-			dataobj[e["Nr"]] = e[this.state.variable]
-		})
-		let controlPanel = this.state.createControl ? this.createControlPanel() : null
+		if(this.state.inndeling == "Kommune") {data = data.filter( (e) => e.Folketall >= this.state.population)}
 		
+		let controlPanel = this.state.createControl ? this.createControlPanel() : null
+
 		return(
 			<div>
 			{controlPanel}
-			<ChartWrapper name={this.generateName()}>
-				<NorwayMap 
-					{...this.state} 
-					data={dataobj} 
+			<ChartWrapper name={this.generateName()}>	
+				<TopBottomHorizontalChart 
+					{...this.state}
+					data={data} 
 				/>
 			</ChartWrapper>
 			</div>
 		)
 	}
 }
-

@@ -26,6 +26,7 @@ function Article(props) {
 	const bosted = () => <Bostedsattraktivitet {...props}/>
 	const framskriving = () => <Befolkningsframskriving {...props}/>
 	const layout = () => <Layout {...props}/>
+	console.log("fuck")
 
 	return(
 		<div>

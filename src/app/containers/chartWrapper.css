@@ -24,6 +24,7 @@
 	height: 30px;
 	display: block;
 	margin-bottom: 2px;
+	outline: none;
 }
 
 .chartContainer{

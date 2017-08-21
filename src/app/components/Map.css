@@ -2,7 +2,7 @@
 	stroke: grey;
 	stroke-width: 0.4px;
 	fill: grey;
-	transition: 1s;
+	transition: 300ms linear;
 }
 	
 .active {
@@ -22,6 +22,15 @@
 
 .text{
 	font-size: 10px;
+}
+
+.in{
+	opacity: 1;
+}
+
+.out{
+	opacity: 0;
+	transition: 300;
 }
 
 

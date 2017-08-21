@@ -2,23 +2,17 @@ import React from 'react'
 import HorizontalBarChart from "./HorizontalBarChart.js"
 
 export default function TopBottomHorizontalChart(props) {
-	let data = props.data
+	let data = props.data.slice()
 	let sortby = props.sortby
 	let n = props.n
+	data.sort((a, b) => b[sortby] - a[sortby])
 
-	data.sort((b, a) => a[sortby] - b[sortby])
-
-	let top = data.slice(0,n)
-	let bottom = data.slice(-n)
-	let dummy = generateDummy(top[0])
-	let both = top.concat(dummy).concat(bottom)
-
-	if(props.view == "top") {
-		data = top 
-	} else if(props.view == "bottom") {
-		data = bottom
+	if(props.view == 'top') {
+		data = data.slice(0,n)
+	} else if(props.view == 'bottom') {
+		data = data.slice(-n)
 	} else {
-		data = both
+		data = data.slice(0,n).concat(generateDummy(data[0])).concat(data.slice(-n))
 	}
 	
 	return(
@@ -38,5 +32,3 @@ function generateDummy(element) {
 	)
 	return dummy
 }
-
-

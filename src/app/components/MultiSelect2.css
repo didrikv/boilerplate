@@ -45,7 +45,6 @@
 	position: absolute;
 	display: flex;
 	visibility: hidden;
-	transition: 500ms;
 	opacity: 0;
 }
 
@@ -55,9 +54,14 @@
 
 }
 
+.flowdiv {
+	overflow: hidden;
+}
+
 .show {
 	composes: dropdownContent;
 	visibility: visible;
 	opacity: 1;
+	transition: 500ms;
 }
 

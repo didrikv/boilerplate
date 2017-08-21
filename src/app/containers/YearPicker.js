@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { selectYear } from "../actions/actions.js"
 import MultiSelect from "../components/MultiSelect.js"
 import MultiSelect2 from "../components/MultiSelect2.js"
-import { years } from "../app.js"
+import { years } from "../dataStore.js"
 
 function mapStateToProps(state) {
 	return {year: state.year}

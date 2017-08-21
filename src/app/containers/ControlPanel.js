@@ -1,29 +1,32 @@
 import React from 'react'
-
-import YearPicker from "./YearPicker.js"
-import InndelingPicker from "./InndelingPicker.js"
-import PopulationSlider from "./PopulationSlider.js"
-import VariablePicker from "./VariablePicker.js"
-import {Collapse, Fade} from 'react-bootstrap'
-import {Row} from 'react-bootstrap'
-import styles from "./ControlPanel.css"
+import styles from './ControlPanel.css'
+import MultiSelect from '../components/MultiSelect2.js'
+import RadioPicker from '../components/RadioPicker.js'
+import { Fade } from 'react-bootstrap'
 
 
-function ControlPanel(props) {
+function ControlPanel({ selectYears, selectInndeling, selectPopulation, selectVariable, hide}) {
 
-	let yearPicker = props.YearPicker ? <YearPicker years={props.YearPicker.years} /> : null
-	let variablePicker = props.VariablePicker ? <VariablePicker names={props.VariablePicker.names} values={props.VariablePicker.values} /> : null
-	let inndelingPicker = props.InndelingPicker ? <InndelingPicker /> : null
-	let populationSlider = props.PopulationSlider ? <PopulationSlider /> : null
+	if(selectPopulation) { var populationClass = selectInndeling.value == "Kommune" ? styles.show : styles.hide }
+	let displayClass = hide ? styles.hide : styles.show
+	
+	selectPopulation = selectPopulation ? <div className={populationClass}> <RadioPicker {...selectPopulation} /> </div> : null
+	selectYears = selectYears ? <MultiSelect {...selectYears}/> : null
+	selectInndeling = selectInndeling ? <RadioPicker {...selectInndeling} /> : null
+	selectVariable = selectVariable ? <RadioPicker {...selectVariable} /> : null
 
+
+	
 	return(
+				<div className={displayClass}>
 				<div className={styles.header}>
-					{yearPicker}
+					{selectYears}
 					<div className={styles.row}>
-					{variablePicker}
-					{inndelingPicker}
-					{populationSlider}
+					{selectInndeling}
+					{selectPopulation}
+					{selectVariable}
 					</div>
+				</div>
 				</div>
 	)
 }

@@ -4,31 +4,29 @@ import Waypoint from 'react-waypoint'
 import {StickyContainer, Sticky} from 'react-sticky'
 import {Row, Col, Fade} from 'react-bootstrap'
 import {AutoAffix} from 'react-overlays'
+import HorizontalChart from '../containers/HorizontalChart.js'
+
 
 class TwoColumn extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {active: 0, fade: false}
-	}
-
-	handleEnter = (i) => {
-		this.setState( {active: i} )
-		this.props.sections[i].trigger()
-		if(i == this.props.sections.length-1) {
-			this.setState({fade: true})
+		this.state = {
+			active: 0, 
+			fade: false, 
+			graphProps: props.graphProps
 		}
 	}
 
-	onLeave = () => {
-		this.setState({fade: false})
+	handleEnter = (i) => {
+		let graphProps =  {...this.props.graphProps, ...this.props.sections[i].graphProps}
+		this.setState({active: i, graphProps})
 	}
 	
 	renderSections = () => {
 		let sections = this.props.sections.map( (e, i) => {
 			let sClass  = this.state.active == i ? styles.active : styles.passive
-			let onLeave = i == this.props.sections.length-1 ? this.onLeave : undefined
 			return(
-				<Waypoint onEnter={(e) => this.handleEnter(i)} onLeave={onLeave} bottomOffset="49.999%" topOffset="50%" key={i}>
+				<Waypoint onEnter={(e) => this.handleEnter(i)}  bottomOffset="49.999%" topOffset="50%" key={i} fireOnRapidScroll={false}>
 					<div className={sClass}>
 						<h3 className={styles.header}> {this.props.sections[i].title} </h3>
 						<p className={styles.paragraph}> {this.props.sections[i].text} </p> 
@@ -68,19 +66,12 @@ class TwoColumn extends React.Component {
 		//		</Sticky>
 		//	</StickyContainer>
 		//)
+		
 		return(
 			<div style={{height: this.props.height}}>
 				<AutoAffix container={this} viewportOffsetTop={20}>
 				<div>
-					<Fade in={this.state.fade}>
-					<div style={{height: "120px"}}>
-					{this.props.control}
-					</div>
-					</Fade>
-					
-					<div>
-					{this.props.graph}
-					</div>
+					<this.props.graph {...this.state.graphProps}/>
 				</div>
 				</AutoAffix>
 			</div>
