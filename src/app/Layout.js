@@ -61,7 +61,7 @@ function Layout(props){
 			<div style={{height: "20px"}} > </div>
 			<Tab eventKey={1} title="Top i Landet" unmountOnExit>
 				<Row>
-					<Col sm={6} > <StaticNorwayMap onClick={null} data={data}/> </Col>
+					<Col sm={6} > <StaticNorwayMap createControl={false}/> </Col>
 					<Col sm={6} > <BestWorstChart view="top" n={10} data={data}/> </Col>
 				</Row>
 			</Tab>

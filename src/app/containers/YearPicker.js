@@ -22,8 +22,8 @@ function YearPicker(props) {
 		<div>
 		<MultiSelect2
 			names={years} 
-			value={props.year} 
-			onChange={props.handleChange} 
+			chosen={props.year} 
+			handleChange={props.handleChange} 
 		/>
 		</div>
 	)
