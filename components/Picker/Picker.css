@@ -1,0 +1,16 @@
+.bold {
+	font-weight: bold;
+}
+
+.outer{
+	border: 0px;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+}
+
+.outer > div:first-of-type {
+	border: 0px;
+	border-bottom: 1px solid #f0f0f0;
+	border-color: #e7e7e7 !important;
+	border-radius: 0px;
+	box-shadow: none !important;
+}

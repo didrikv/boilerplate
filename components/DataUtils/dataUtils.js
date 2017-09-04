@@ -21,6 +21,7 @@ function createVar(data, variable, sum) {
 }
 
 function createDataObject(data, years) {
+	years = Array.isArray(years) ? years : [years]
 	if(years.length == 1) {
 		var variables = data[years[0]]
 	} else {

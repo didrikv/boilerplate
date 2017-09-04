@@ -20,7 +20,6 @@ var config = {
 			links: [
 				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
 				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
-				"https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css"
 			],
 			template: require('html-webpack-template'),
 			filename: 'attraktivitet/index.html',
@@ -33,7 +32,6 @@ var config = {
 			links: [
 				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
 				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
-				"https://npmcdn.com/react-bootstrap-table/dist/react-bootstrap-table-all.min.css"
 			],
 			template: require('html-webpack-template'),
 			filename: 'kultur/index.html',
@@ -61,6 +59,17 @@ var config = {
 			},
 			{
 				test: /\.css$/,
+				include: __dirname + '/node_modules',
+				use: [
+					{ loader: 'style-loader' },
+					{
+						loader:'css-loader',
+					}
+				],
+			},
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
 				use: [
 					{ loader: 'style-loader' },
 					{

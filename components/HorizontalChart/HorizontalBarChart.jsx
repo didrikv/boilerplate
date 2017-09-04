@@ -20,17 +20,14 @@ export default function HorizontalBarChart(props) {
 	let names = data.map((e) => e[x])
 	let legendData = stack.map( (e) => ({name:e, symbol: {type: 'square'}}))
 
-	console.log(data)
 	let varCount = stack.length
 	let nameLen = 0
 	names.forEach( (e) => {
 		nameLen = e.length > nameLen ? e.length : nameLen
 	})
-	console.log(nameLen)
-	console.log(varCount)
 	
 	let topPadding = 10 + 20*varCount	
-	let leftPadding = 5 + 8*nameLen
+	let leftPadding = 8 + 8*nameLen
 	let height = 30 + topPadding + names.length * 30
 	
 
@@ -39,13 +36,13 @@ export default function HorizontalBarChart(props) {
 		<VictoryChart
 			width={650}
 			height={height}
-			animate={{
-				duration: 300, 
-				onLoad: {duration: 200}, 
-			}}
 			domainPadding={{x:[0,0], y:[20,10]}}
 			padding={{top:topPadding, bottom:30, left:leftPadding, right: 20}}
 			theme={theme}
+			animate={{
+						duration: 300, 
+						onLoad: {duration: 200}, 
+					}}
 		>
 
 
@@ -68,13 +65,16 @@ export default function HorizontalBarChart(props) {
 			labelComponent={<VictoryLabel x={0} textAnchor='beginning'/>}	
 			colorScale={colorScale}
 		>
-			{stack.map((e, i) => 
-				<VictoryBar 
-					data={data} 
-					x={x} 
-					y={e} 
-					key={e}
-				/>
+			{stack.map((e, i) => {
+
+				return(
+					<VictoryBar 
+						data={data} 
+						x={x} 
+						y={e} 
+						key={e}
+					/>
+				)}
 			)}
 		</VictoryStack>
 

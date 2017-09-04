@@ -90,6 +90,7 @@ export default class HorizontalChart extends React.Component {
 		
 		let controlPanel = this.state.createControl ? this.createControlPanel() : null
 		let fylkekey = this.state.inndeling == "Fylke" ? "Fylke" : "Other"
+		fylkekey += this.state.stack.length
 
 		return(
 			<div key={fylkekey}>

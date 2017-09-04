@@ -9,7 +9,7 @@ export default class StaticNorwayMap extends React.Component {
 	constructor(props) {
 		super()
 		this.state = {...this.createInitialState(), ...props}
-		this.state.variable = props.varibable ? props.variable : props.options[0]
+		this.state.variable = props.variable ? props.variable : props.options[0]
 	}
 
 	createInitialState = () => {
