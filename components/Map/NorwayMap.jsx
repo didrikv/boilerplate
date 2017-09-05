@@ -39,9 +39,8 @@ inndelinger.forEach( (inndeling) => {
 export default function NorwayMap({ inndeling, data, svgId }) {
   let areas = inndeling ? maps[inndeling] : maps.Kommune
   let colors = ['#CA0020', '#F4A582', '#b29fa9', '#92C5DE', '#0571B0']
-
 	Object.keys(data).forEach( (key) => {
-		if(!data[key]){
+		if(data[key] === ""){
 			delete data[key]
 		}
 	})
@@ -54,7 +53,7 @@ export default function NorwayMap({ inndeling, data, svgId }) {
       .domain(array)
       .range(colors)
     areas.forEach( (e) => {
-			if(data[e.key]) {
+			if(! (data[e.key] === undefined)) {
 				e.props.style.fill = scale(data[e.key])
 			} else {
 				e.props.style.fill = "#e9e9e9"
@@ -66,7 +65,7 @@ export default function NorwayMap({ inndeling, data, svgId }) {
   let threshold = [min(array), ...scale.quantiles(), max(array)]
 
   return (
-		<div style={{position: 'relative'}} id="sdff">
+		<div style={{position: 'relative', zIndex: '-1'}} id="sdff">
 			<TransitionGroup>
 				<FadeTransition key={inndeling}>
 					<svg

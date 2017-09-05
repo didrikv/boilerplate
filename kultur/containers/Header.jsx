@@ -39,13 +39,13 @@ function Header(props) {
 								)}
 							</NavDropdown>
 							<NavDropdown title="Steder">
-								<LinkContainer to='/Kommuner'>
+								<LinkContainer to='/kommuner'>
 									<MenuItem> Kommuner </MenuItem>
 								</LinkContainer>
-								<LinkContainer to='/Regioner'>
+								<LinkContainer to='/regioner'>
 									<MenuItem> Regioner </MenuItem>
 								</LinkContainer>
-								<LinkContainer to='/Fylker'>
+								<LinkContainer to='/fylker'>
 									<MenuItem> Fylker </MenuItem>
 								</LinkContainer>
 							</NavDropdown>

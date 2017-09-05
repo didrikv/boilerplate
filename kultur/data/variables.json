@@ -108,31 +108,7 @@
 		"weight": 1
 	},
 	{
-		"id": "TONO Arrangemanger",
-		"title": "", 
-		"category": "Konserter",
-		"mål": "",
-		"formel": "", 
-		"metode": "",
-		"kilder": "",
-		"vekting": "",
-		"merknad": "" ,
-		"weight": 1
-	},
-	{
-		"id": "TONO Avregning",
-		"title": "", 
-		"category": "Konserter",
-		"mål": "",
-		"formel": "", 
-		"metode": "",
-		"kilder": "",
-		"vekting": "",
-		"merknad": "" ,
-		"weight": 1
-	},
-	{
-		"id": "Billettselskap Arrangemanger",
+		"id": "Arrangemanger",
 		"title": "Antall konserter billettselskaper", 
 		"category": "Konserter",
 		"mål": "Indikerer hvor mange konserter som har blitt avholdt i en kommune.",
@@ -144,7 +120,7 @@
 		"weight": 1
 	},
 	{
-		"id": "Billettselskap Omsettning",
+		"id": "Omsettning",
 		"title": "Billettinntekter for konserter gjennom billettselskaper", 
 		"category": "Konserter",
 		"mål": "Indikerer størrelsen og populariteten på konserter som er avholdt.",
@@ -241,6 +217,18 @@
 		"merknad": "En voksen aktiv låner er en person over 18 år som har minst 1 registrert lån i et gitt år." ,
 		"weight": 1
 	},
+    {
+        "id": "Arrangement deltakere",
+        "title": "Antall deltagere på arrangementer i Folkebibliotekene",
+        "category": "Bibliotek",
+        "mål": "Indikerer hvor mange som oppsøker folkebibliotekene og dermed hvor relevant biblioteket er som møtested.",
+        "formel": "(A/B) der A= Antall deltagere og B= Antall innbyggere i kommunen.",
+        "metode": "Beregne antall deltagere på arrangement ved folkebibliotek per innbygger i kommunen i 2015.",
+        "kilder": "Folkebibliotekstatistikk frå Nasjonalbiblioteket.",
+        "vekting": "Delindikatoren vektes med 25 % av bibliotekindikatoren og 2,5 % av Norsk kulturindeks.",
+        "weight": 1
+
+    },
 	{
 		"id": "Teater Forestillinger",
 		"title": "Antall teaterforestillinger", 
