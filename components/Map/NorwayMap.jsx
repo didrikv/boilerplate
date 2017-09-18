@@ -36,14 +36,28 @@ inndelinger.forEach( (inndeling) => {
   )
 })
 
-export default function NorwayMap({ inndeling, data, svgId }) {
+export default function NorwayMap({ inndeling, data, svgId}) {
   let areas = inndeling ? maps[inndeling] : maps.Kommune
   let colors = ['#CA0020', '#F4A582', '#b29fa9', '#92C5DE', '#0571B0']
+	let zeroColor = 'gray'
+
+	let origData = {...data}
+
+	let all = Object.keys(data)
+	let zeros = all.filter( (key) => data[key] === 0 )
+	let whiteZeros = zeros.length / all.length > 0.2
+	console.log(zeros.length / all.length)
+	console.log(whiteZeros)
+
 	Object.keys(data).forEach( (key) => {
 		if(data[key] === ""){
 			delete data[key]
+		} else if(data[key] === 0 && whiteZeros) {
+			delete data[key]
 		}
 	})
+	console.log(data)
+	console.log(origData)
   
   if(data) {
 		var array = Object.keys(data).map(
@@ -76,7 +90,7 @@ export default function NorwayMap({ inndeling, data, svgId }) {
 						id={svgId}
 					>
 						{areas}
-					<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor='gray'/>
+					<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor='gray' whiteZeros={whiteZeros}/>
 					</svg>
 				</FadeTransition>
 			</TransitionGroup>

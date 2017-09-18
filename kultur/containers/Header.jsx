@@ -19,7 +19,7 @@ function Header(props) {
 			</div>
 
 			<AutoAffix>
-				<Navbar bsStyle='default' staticTop>
+				<Navbar bsStyle='inverse' staticTop>
 					<div className={styles.navbar}>
 						<Nav>
 							<LinkContainer exact to="/">

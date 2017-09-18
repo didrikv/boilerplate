@@ -30,16 +30,26 @@ function createRank(i, data, reverse) {
 	})
 	let max = Math.max( ...rank, 1)	
 	let score = rank.map( (e) => (max - e)*100*weight/max/totalWeight)
+	rank = rank.map( (e) => e + 1 )
 
 	data.forEach( (e, j) => {
 		e.push(rank[j])
 		e.push(score[j])
 	})
-
-
 }
 
-let inndeling = ['Kommune', 'Region', 'Fylke']
+function createJustRank(i, data, reverse) {
+	let orig = data.map( (e) => e[i] )
+	let sort = orig.slice().sort(sortInt).reverse()
+	if(reverse) {sort.reverse()}
+	let rank = orig.map( (e) => sort.indexOf(e) + 1 )
+
+	data.forEach( (e, j) => {
+		e.push(rank[j])
+	})
+}
+
+let inndeling = ['Land', 'Fylke', 'Kommune', 'Region']
 
 let newdata = {}
 let newvars = vars
@@ -60,25 +70,54 @@ variables.forEach( (e) => {
 	newvars.push(e.id + ' Score')
 })
 
-categories.forEach( (cat) => {
-	let vars = cat.variables
-	years.forEach( (year) => {
-		newdata[year].forEach( (array) => {
+years.forEach( (year) => {
+	newdata[year].forEach( (array) => {
+		let indeks = 0
+		categories.forEach( (cat) => {
+			let vars = cat.variables
 			let catScore = 0
 			vars.forEach( (variable) => {
 				catScore += array[newvars.indexOf(variable + ' Score')]
 			})
 			array.push(catScore)
+			if(cat.title == 'DKS') {
+				indeks += 0.25*catScore
+			} else if(cat.title == 'Kulturskole') {
+				indeks += 0.75*catScore
+			} else {
+				indeks += catScore
+			}
 		})
+		array.push(indeks)
 	})
 })
 
 categories.forEach( (e) => {
 	newvars.push(e.title)
 })
+newvars.push('Kulturindeks Score')
+
+years.forEach( (year) => {
+	let newYear = []
+	inndeling.forEach( (inndeling) => {
+		let section = newdata[year].filter( (e) => e[vars.indexOf('Inndeling')] == inndeling )
+		let catI = categories.map( (e) => e.title).map( (cat) => newvars.indexOf(cat))
+		catI.forEach( (cat) => {
+			createJustRank(cat, section, false)
+		})
+		createJustRank(newvars.indexOf('Kulturindeks Score'), section, false)
+		newYear = newYear.concat(section)
+	})
+	newdata[year] = newYear
+})
+
+categories.forEach( (e) => {
+	newvars.push(e.title + ' Rank')
+})
+
+newvars.push('Kulturindeks')
 
 newdata.vars = newvars
-console.log(newdata)
 
 vars = newvars
 data = newdata

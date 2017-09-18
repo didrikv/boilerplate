@@ -101,6 +101,11 @@ export default class Kategori extends React.Component {
 			createControl: false,
 		}
 
+		let unit = this.state.variable == this.state.variables[0] ?
+			'Score' : 
+			allVariables.find( (e) => e.id == this.state.variable).benevning
+
+			
 
 		let chartProps = {
 			stack: stack,
@@ -109,7 +114,8 @@ export default class Kategori extends React.Component {
 			createControl: false,
 			years: this.state.years,
 			dataStore: this.state.dataStore,
-			n: 20
+			n: 20,
+			ytitle: unit
 		}
 
 		let infoText = this.state.variable == this.state.variables[0] ? null :

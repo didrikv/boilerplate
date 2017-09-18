@@ -5,23 +5,25 @@ import '../../node_modules/react-select/dist/react-select.css'
 import styles from './Picker.css'
 
 
-export default function Picker({names, values, handleChange, chosen, boldFirst, title, justify, width}){
-	values = values ? values : names
+export default function Picker({sections, handleChange, chosen, title, justify, width}){
 
-	let options = names.map( (e, i) => {
-		if( boldFirst && i == 0 ) {
-			var cName = styles.bold
-		} else {
-			var cName = undefined
-		}
-		return(
-		{
-			label: String(names[i]),
-			value: values[i],
-			className: cName
-		}
-		)
+	let options = []
+	sections.forEach( (e) => {
+		options.push({
+			label: String(e.name + ':'),
+			value: e.name,
+			disabled: true,
+			className: styles.section
+		})
+		e.subnames.forEach( (v) => {
+			options.push({
+				label: String(v),
+				value: v,
+				className: styles.variable
+			})
+		})
 	})
+
 
 	function onChange(option) {
 		handleChange(option.value)
@@ -36,7 +38,7 @@ export default function Picker({names, values, handleChange, chosen, boldFirst, 
 	return (
 		<div style={{justifyContent: justify}} className={styles.container} >
 			<div className={styles.title}>
-				{title}&ensp;
+				{title}&emsp;
 			</div>
 
 			<div style={style}>
