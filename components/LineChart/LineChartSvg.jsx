@@ -21,8 +21,6 @@ export default function LineChartSvg(props) {
 	let  xarray = [ ... new Set(data.map( (e) => e[x]) ) ]
 	let min = Math.min( ...data.map((e) => e[variable]))
 	let max = Math.max( ...data.map((e) => e[variable]))
-	console.log(min)
-	console.log(max)
 
 
 	let renderLines = () => {

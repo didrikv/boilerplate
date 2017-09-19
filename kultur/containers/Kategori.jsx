@@ -19,15 +19,17 @@ import InfoText2 from './InfoText2.jsx'
 export default class Kategori extends React.Component {
 
 	constructor(props) {
-		let {i} = props
-		let variables = categories[i].variables.slice()
-		variables.unshift(categories[i].title)
 		super()
-		this.state = {...props}
-		this.state.variables = variables
-		this.state.variable = categories[i].title
-		this.state.inndeling='Kommune'
-		this.state.years=[2015]
+		let {i} = props
+		this.variables = categories[i].variables.slice().unshift(categories[i].title)
+
+		this.state = {
+			...props,
+			variable: categories[i].title,
+			inndeling: 'Kommune',
+			year: [2015]
+		}
+
 
 	}
 
@@ -91,7 +93,7 @@ export default class Kategori extends React.Component {
 		if(this.state.variable == categories[i].title) {
 			var stack = categories[i].variables.map( (e) => e + ' Score')
 			var legendNames= categories[i].variables
-			var noLegend=true
+			var percentLegend=true
 			var noticks=true
 		} else {
 			var legendNames= [variable]
@@ -100,10 +102,11 @@ export default class Kategori extends React.Component {
 				var stack = [variable]
 				var noticks=true
 				var noLegend=true
+				var percentLegend=true
 			} else {
 				var stack = [variable]
 				var noticks=false
-				var noLegend=false
+				var percentLegend=false
 			}
 
 		}
@@ -113,7 +116,7 @@ export default class Kategori extends React.Component {
 		let mapProps = {
 			variable: variable,
 			createControl: false,
-			noLegend
+			percentLegend
 		}
 
 		let unit = this.state.variable == this.state.variables[0] ?

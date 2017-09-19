@@ -3,8 +3,6 @@ import {createAuxVars, createDataObject} from '../components/DataUtils/dataUtils
 import variables from './data/variables.json'
 import categories from './data/categories.json'
 
-
-
 let data = dataSet
 
 let years = Object.keys(data).filter( (e) => e != 'vars' ).map((e) => +e )
@@ -122,7 +120,12 @@ newdata.vars = newvars
 vars = newvars
 data = newdata
 
-let dataStore = {years, vars, data, createDataObject}
+let allDataObject = []
+years.forEach( (year) => {
+	allDataObject = allDataObject.concat( createDataObject(data, year))
+})
+
+let dataStore = {years, vars, data, allDataObject, createDataObject}
 
 
 

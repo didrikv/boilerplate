@@ -13,9 +13,8 @@ import theme from '../LineChart/VictoryTheme.js'
 
 export default function PolarChartSvg(props) {
 	let {data, x, variable, svgId, center} = props
-	let width=520
+	let width=540
 	let height=400
-	console.log(VictoryTheme.material)
 
 	return(
 		<div id={svgId}>
@@ -74,11 +73,10 @@ export default function PolarChartSvg(props) {
 					style={{
 						data:{
 							opacity: 0.7,
-							fill: "DCE77F",
-							stroke: 'DCE77F',
-							strokeWidth: 1
+							fill: "#DCE77F",
 						}
 					}}
+					width={50}
 					/>
 				<VictoryLabel
 					text={center}
@@ -87,7 +85,7 @@ export default function PolarChartSvg(props) {
 					textAnchor='middle'
 					style={{
 						fontSize: 30,
-						fill: '90A4Ae'
+						fill: '#90A4Ae'
 					}}
 						
 				/>

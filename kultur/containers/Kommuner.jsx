@@ -12,15 +12,21 @@ import styles from '../../components/TwoColumn/TwoColumn.css'
 export default class Kommuner extends React.Component {
 	constructor(props) {
 		super()
-		let {data, years, createDataObject} = props.dataStore
+		let {data, years, createDataObject, allDataObject} = props.dataStore
 
-		let tempData = []
-		years.forEach( (year) => {
-			tempData = tempData.concat( createDataObject(data, year))
-		})
-		this.data = tempData
-		this.years = [... new Set(tempData.map( (e)  => e.År[0]))]
+		this.data = allDataObject
+		this.years =	years 
+		this.categories = categories.map( (e) => e.title)
 
+		this.variables = categories.map( (e) => ({
+			name: e.title,
+			subnames: e.variables.filter( (v) => 
+				!variables.find( (s) => s.id == v).reverse)
+		}))
+
+		this.knrs = createDataObject(data, 2015)
+			.filter( (e) => e.Inndeling == 'Kommune')
+			.map( (e) => ({ Nr: e.Nr, Navn: e.Navn}))
 
 		this.state = {
 			knr: 821,
@@ -28,76 +34,57 @@ export default class Kommuner extends React.Component {
 			year: 2015
 		}
 
-		this.categories = categories.map( (e) => e.title)
 		this.lineData = this.createLineData(this.state.knr)
-		this.polarData = this.createPolarData(this.state.knr, this.state.year, this.categories)
-		
-		this.state.sections = categories.map( (e) => ({
-			name: e.title,
-			subnames: e.variables.filter( (v) => 
-				!variables.find( (s) => s.id == v).reverse)
-		}))
-
-		this.state.list = createDataObject(data, 2015)
-			.filter( (e) => e.Inndeling == 'Kommune')
-			.map( (e) => ({ Nr: e.Nr, Navn: e.Navn}))
+		this.polarData = this.createPolarData(this.state.knr, this.state.year)
 	}
-
 
 	createLineData = (knr) => {
 		let fnr = Math.floor(knr/100)
-		let dataobj = this.data.filter( (e) => [0, fnr, knr].includes(e.Nr) )
+		let data = this.data.filter( (e) => [0, fnr, knr].includes(e.Nr) )
+
 		if(knr == 301) {
-			dataobj = dataobj.filter( (e) => !(e.Inndeling == "Fylke"))
+			data = data.filter( (e) => !(e.Inndeling == "Fylke"))
 		}
-		dataobj = dataobj.map( (e) => ({...e, År: String(e.År)}) )
-		return dataobj
+
+		data = data.map( (e) => ({...e, År: String(e.År)}) )
+		let variable = variables.find( (e) => e.id == this.state.variable )
+
+		return {
+			data,
+			name: variable.category + ': ' + variable.id,
+			unit: variable.benevning
+		}
 	}
 
-	createPolarData = (knr, year, variables) => {
+	createPolarData = (knr, year) => {
 		let obs = this.data.filter( (e) => e.Nr == knr && e.År == year)[0]
-		let newData = []
-		variables.forEach( (variable) => {	
-			newData.push({
-				x: variable + ' ' + obs[variable +  ' Rank'],
-				value: obs[variable]
-			})
-		})
-		let rank = obs['Kulturindeks']
-		return [newData, rank]
+
+		let data = this.categories.map( (variable) => ({
+			x: variable + ' (' + obs[variable +  ' Rank'] + ')',
+			value: obs[variable]
+		}))
+
+		return {
+			data,
+			center: obs['Kulturindeks'],
+			name: 'Kulturindeks ' + obs.Navn + ' ' + year
+		}
 	}
 
 	componentWillUpdate = (nextProps, nextState) => {
 		if(this.state.knr != nextState.knr) {
 			this.lineData = this.createLineData(nextState.knr)
-			this.polarData = this.createPolarData(nextState.knr, nextState.year, this.categories)
+			this.polarData = this.createPolarData(nextState.knr, nextState.year)
 		}
 		if(this.state.year != nextState.year) {
-			this.polarData = this.createPolarData(nextState.knr, nextState.year, this.categories)
+			this.polarData = this.createPolarData(nextState.knr, nextState.year)
 		}
 	}
-
-	getlineChartName = () => {
-		let tmp = variables.find( (e) => e.id == this.state.variable )
-		return tmp.category + ': ' + tmp.id
-	}
-
-	getLineBenevning = () => {
-		let tmp = variables.find( (e) => e.id == this.state.variable )
-		return tmp.benevning
-	}
-
-	getPolarChartName = () => {
-		let name = this.data.find( (e) => e.Nr == this.state.knr).Navn
-		return 'Kulturindeks ' + name + ' ' + this.state.year
-	}
-
-
 
 	render() {
 		return(
 			<Grid>
-			<div style={{height: '30px'}}> </div>
+				<div style={{height: '30px'}}> </div>
 				<Row>
 					<Col>
 						<div className={styles.section}>
@@ -107,15 +94,15 @@ export default class Kommuner extends React.Component {
 							</p>
 						</div>
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
-						<Picker
-							names={this.state.list.map( (e) => e.Nr + ' ' +  e.Navn )}
-							values={this.state.list.map( (e) => e.Nr )}
-							chosen={this.state.knr}
-							handleChange={ (knr) => this.setState({knr}) }
-							title='Velg kommune:'
-							justify='center'
-							width='200px'
-						/>
+							<Picker
+								names={this.knrs.map( (e) => e.Nr + ' ' +  e.Navn )}
+								values={this.knrs.map( (e) => e.Nr )}
+								chosen={this.state.knr}
+								handleChange={ (knr) => this.setState({knr}) }
+								title='Velg kommune:'
+								justify='center'
+								width='200px'
+							/>
 						</div>
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
 						</div>
@@ -131,18 +118,17 @@ export default class Kommuner extends React.Component {
 							width='100px'
 						/>
 						<div style={{height: '30px'}}> </div>
-						<PolarChart
-							bar
-							data={this.polarData[0]}
-							center={this.polarData[1]}
-							x='x'
+						<PolarChart bar
+							data={this.polarData.data}
 							variable='value'
-							name={this.getPolarChartName()}
+							x='x'
+							center={this.polarData.center}
+							name={this.polarData.name}
 						/>
 					</Col>
 					<Col sm={6}>
 						<SectionsPicker
-							sections={this.state.sections}
+							sections={this.variables}
 							chosen={this.state.variable}
 							handleChange={ (variable) => this.setState({variable}) }
 							title='Velg variabel:'
@@ -151,12 +137,12 @@ export default class Kommuner extends React.Component {
 						/>
 						<div style={{height: '30px'}}> </div>
 						<LineChart
+							data={this.lineData.data}
 							variable={this.state.variable}
 							x='År'
-							ytitle={this.getLineBenevning()}
-							data={this.lineData}
 							splitby={'Navn'}
-							name={this.getlineChartName()}
+							name={this.lineData.name}
+							ytitle={this.lineData.unit}
 						/>
 					</Col>
 				</Row>

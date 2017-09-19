@@ -36,17 +36,18 @@ inndelinger.forEach( (inndeling) => {
   )
 })
 
-export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse}) {
+export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse, percentLegend}) {
   let areas = inndeling ? maps[inndeling] : maps.Kommune
-  let colors = ['#CA0020', '#F4A582', '#b29fa9', '#92C5DE', '#0571B0']
-	reverse ? colors.reverse() : null
-	let zeroColor = 'gray'
 
 	let origData = {...data}
 
 	let all = Object.keys(data)
 	let zeros = all.filter( (key) => data[key] === 0 )
-	let whiteZeros = zeros.length / all.length > 0.2
+	let whiteZeros = zeros.length / all.length
+	if(whiteZeros < 0.2) { whiteZeros = 0}
+	let colors = whiteZeros ? ['#c6dbef','#9ecae1','#6baed6','#3182bd','#08519c'] : 
+		['#CA0020', '#F4A582', '#b29fa9', '#92C5DE', '#0571B0']
+	reverse ? colors.reverse() : null
 
 	Object.keys(data).forEach( (key) => {
 		if(data[key] === ""){
@@ -75,7 +76,7 @@ export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse}) 
 
   let threshold = [min(array), ...scale.quantiles(), max(array)]
 	let mapLegend = noLegend ? null : 
-		<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor='gray' whiteZeros={whiteZeros}/>
+		<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor='gray' whiteZeros={whiteZeros} percentLegend={percentLegend}/>
 
   return (
 		<div style={{position: 'relative', zIndex: '-1'}} id="sdff">

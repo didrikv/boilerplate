@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Map.css'
 
-export default function MapLegend({ colors, threshold, borderColor, x, y, whiteZeros}) {
+export default function MapLegend({ colors, threshold, borderColor, x, y, whiteZeros, percentLegend}) {
 	let rectDim = 20
 	let rects = colors.map( (e, i) => 
 		<rect 
@@ -25,7 +25,8 @@ export default function MapLegend({ colors, threshold, borderColor, x, y, whiteZ
 			fill={borderColor}
 			style={{fontSize:'10px'}}
 		>
-			{Math.round(e*Math.pow(10,2))/Math.pow(10,2)} 
+			{percentLegend ? Math.round((whiteZeros + (1-whiteZeros)/5*i)*100) + '%' :
+				Math.round(e*Math.pow(10,2))/Math.pow(10,2)} 
 		</text>
 	)
 
@@ -48,7 +49,7 @@ export default function MapLegend({ colors, threshold, borderColor, x, y, whiteZ
 					fill={borderColor}
 					style={{fontSize:'10px'}}
 				>
-					0
+					{ '0 (' + Math.round(whiteZeros*100) + '%)'}
 				</text>
 			</g>
 	} else {
