@@ -11,15 +11,15 @@ import { VictoryChart,
 import theme from './VictoryTheme.js'
 
 export default function HorizontalBarChart(props) {
-	let { data, x, stack, colorScale, svgId, reverse ,ytitle} = props
+	let { data, x, stack, colorScale, svgId, reverse ,ytitle, legendNames, noticks} = props
+	legendNames = legendNames ? legendNames : stack
 	if(reverse) {
 		data = data.slice()
 	} else {
 		data = data.slice().reverse()
 	}
-	console.log(data)
 	let names = data.map((e) => e[x])
-	let legendData = stack.map( (e) => ({name:'   '+e, symbol: {type: 'square'}}))
+	let legendData = legendNames.map( (e) => ({name:e, symbol: {type: 'square'}}))
 
 	let varCount = stack.length
 	let nameLen = 0
@@ -52,10 +52,19 @@ export default function HorizontalBarChart(props) {
 		<VictoryAxis 
 			crossAxis={false}
 			style={{grid:{stroke: 'transparent'}}}
-			label={ytitle}
+			label={noticks ? null : ytitle}
 			axisLabelComponent={
 				<VictoryLabel dy={20} />
 			}
+			tickFormat={ (tick) => noticks ? "" : tick}
+			style={{
+				ticks:{
+					size: noticks ? 0 : 5
+				},
+				grid:{
+					stroke: null
+				}
+			}}
 		/>
 		
 		<VictoryStack 

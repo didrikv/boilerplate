@@ -87,11 +87,25 @@ export default class Kategori extends React.Component {
 
 		let varInfo = allVariables.find( (e) => e.id == this.state.variable)
 		let reverse = varInfo ? varInfo.reverse : undefined
-		let variable = reverse ? this.state.variable + ' Score' : this.state.variable
+		let variable = this.state.variable
 		if(this.state.variable == categories[i].title) {
 			var stack = categories[i].variables.map( (e) => e + ' Score')
+			var legendNames= categories[i].variables
+			var noLegend=true
+			var noticks=true
 		} else {
-			var stack = [variable]
+			var legendNames= [variable]
+			if(reverse) {
+				variable = variable + ' Score'
+				var stack = [variable]
+				var noticks=true
+				var noLegend=true
+			} else {
+				var stack = [variable]
+				var noticks=false
+				var noLegend=false
+			}
+
 		}
 
 
@@ -99,6 +113,7 @@ export default class Kategori extends React.Component {
 		let mapProps = {
 			variable: variable,
 			createControl: false,
+			noLegend
 		}
 
 		let unit = this.state.variable == this.state.variables[0] ?
@@ -115,7 +130,9 @@ export default class Kategori extends React.Component {
 			years: this.state.years,
 			dataStore: this.state.dataStore,
 			n: 20,
-			ytitle: unit
+			ytitle: unit,
+			legendNames,
+			noticks
 		}
 
 		let infoText = this.state.variable == this.state.variables[0] ? null :
