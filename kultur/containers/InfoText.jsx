@@ -2,7 +2,6 @@ import React from 'react'
 import {OverlayTrigger, Popover, Button, ButtonToolbar} from 'react-bootstrap'
 import styles from './App.css'
 
-
 export default function InfoText(props) {
 
 	let buttons = ['Mål', 'Formel', 'Kilder', 'Vekting']
@@ -27,22 +26,22 @@ export default function InfoText(props) {
 		>
 			<div
 				className={styles.info}
-			> {e} </div>
+			> 
+				{e} 
+			</div>
 		</OverlayTrigger>
 	)
-
-
 
 	return(
 		<div style={{display: 'flex'}}>
 			<div style={{
-				padding: ' 4px 0px',
-				fontWeight: 'bold'
-			}}
-		>
-			Teknisk Info:
-		</div>
+					padding: ' 4px 0px',
+					fontWeight: 'bold'
+				}}
+			>
+				Teknisk Info:
+			</div>
 		{buttons}
-	</div>
+		</div>
 	)
 }

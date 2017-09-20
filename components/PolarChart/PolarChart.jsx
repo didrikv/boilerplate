@@ -1,27 +1,19 @@
 import React from 'react'
 import deepEqual from 'deep-equal'
-import PolarChartSvg from './PolarChartSvg.jsx'
+import PolarLineChart from './PolarLineChart.jsx'
 import ChartWrapper from '../ChartWrapper/ChartWrapper.jsx'
 import PolarBarChart from './PolarBarChart.jsx'
-
 
 export default class PolarChart extends React.Component {
 	constructor(props) {
 		super()
 	}
 
-	renderChart = () => {
-		if(this.props.bar) {
-			return <PolarBarChart {...this.props} />
-		} else {
-			return <PolarChartSvg {...this.props} />
-		}
-	}
-
 	render() {
 		return(
 			<ChartWrapper name={this.props.name}>
-				{this.renderChart()}
+				{this.props.bar ? <PolarBarChart {...this.props}/> 
+												: <PolarLineChart {...this.props}/> }
 			</ChartWrapper>
 		)
 	}

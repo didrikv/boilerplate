@@ -23,12 +23,12 @@ function Header(props) {
 					<div className={styles.navbar}>
 						<Nav>
 							<LinkContainer exact to="/">
-								<NavItem> Hovedresultater </NavItem>
+								<NavItem> Kulturindeksen 2017 </NavItem>
 							</LinkContainer>
 							<LinkContainer exact to="/analyser">
 								<NavItem> Analyer </NavItem>
 							</LinkContainer>
-							<NavDropdown title="Kategorier" >
+							<NavDropdown title="Hovedkategorier" >
 								{categories.map( (e) => 
 									<LinkContainer 
 										to={'/kategori/' + e.title.toLowerCase()}
@@ -38,17 +38,15 @@ function Header(props) {
 									</LinkContainer>
 								)}
 							</NavDropdown>
-							<NavDropdown title="Steder">
-								<LinkContainer to='/kommuner'>
-									<MenuItem> Kommuner </MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/regioner'>
-									<MenuItem> Regioner </MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/fylker'>
-									<MenuItem> Fylker </MenuItem>
-								</LinkContainer>
-							</NavDropdown>
+							<LinkContainer to='/kommuner'>
+								<NavItem> Kommuner </NavItem>
+							</LinkContainer>
+							<LinkContainer to='/regioner'>
+								<NavItem> Regioner </NavItem>
+							</LinkContainer>
+							<LinkContainer to='/fylker'>
+								<NavItem> Fylker </NavItem>
+							</LinkContainer>
 						</Nav>
 					</div>
 				</Navbar>

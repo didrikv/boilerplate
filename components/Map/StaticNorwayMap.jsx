@@ -45,8 +45,9 @@ export default class StaticNorwayMap extends React.Component {
 	}
 
 	generateName = () => {
+		let name = this.props.name ? this.props.name : this.state.variable
+		name += ' '
 		let years = this.state.years
-		let name = this.state.variable + ' '
 		name += years.length == 1 ? years[0] : years[0] + '-' + years[years.length-1]
 		return name
 	}

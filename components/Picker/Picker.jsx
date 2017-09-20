@@ -5,48 +5,52 @@ import '../../node_modules/react-select/dist/react-select.css'
 import styles from './Picker.css'
 
 
-export default function Picker({names, values, handleChange, chosen, boldFirst, title, justify, width}){
-	values = values ? values : names
+export default function Picker(props){
+	let {names, values, handleChange, chosen, 
+		boldFirst, title, justify, width, topTitle, sections} = props
 
-	let options = names.map( (e, i) => {
-		if( boldFirst && i == 0 ) {
-			var cName = styles.bold
-		} else {
-			var cName = undefined
-		}
-		return(
-		{
+	if(sections) {
+		var options = []
+		sections.forEach( (e) => {
+			options.push({
+				label: String(e.name + ':'),
+				value: e.name,
+				disabled: true,
+				className: styles.section
+			})
+			e.subnames.forEach( (v) => {
+				options.push({
+					label: String(v),
+					value: v,
+					className: styles.variable
+				})
+			})
+		})
+	} else {
+		values = values ? values : names
+		var options = names.map( (e, i) => ({
 			label: String(names[i]),
 			value: values[i],
-			className: cName
-		}
-		)
-	})
-
-	function onChange(option) {
-		handleChange(option.value)
+			className: (boldFirst && i == 0) ? styles.bold : undefined
+		}))
 	}
 
-	if(width) {
-		var style={width: width}
-	} else {
-		var style={flex: 1}
-	}
+	let style = width ? {width: width} : {flex: 1}	
+	let displayType = topTitle ? undefined : 'flex'
 
 	return (
-		<div style={{justifyContent: justify}} className={styles.container} >
+		<div style={{justifyContent: justify, display: displayType}}>
 			<div className={styles.title}>
 				{title}&ensp;
 			</div>
-
 			<div style={style}>
-			<Select 
-				value={chosen}
-				options={options}
-				onChange={onChange}
-				clearable={false}
-				className={styles.outer}
-			/>
+				<Select 
+					value={chosen}
+					options={options}
+					onChange={ (option) => handleChange(option.value) }
+					clearable={false}
+					className={styles.outer}
+				/>
 			</div>
 		</div>
 	)

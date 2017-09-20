@@ -4,10 +4,8 @@ import variables from './data/variables.json'
 import categories from './data/categories.json'
 
 let data = dataSet
-
 let years = Object.keys(data).filter( (e) => e != 'vars' ).map((e) => +e )
 let vars = data.vars
-
 
 function sortInt(a, b) {
 	if(a === '') {return -1}
@@ -19,16 +17,18 @@ function createRank(i, data, reverse) {
 	let orig = data.map( (e) => e[i] )
 	let sort = orig.slice().sort(sortInt).reverse()
 	if(reverse) {sort.reverse()}
-	let rank = orig.map( (e) => sort.indexOf(e) )
-	let weight = variables.find( (e) => e.id == vars[i]).weight
-	let category = variables.find( (e) => e.id == vars[i]).category
+	let rank = orig.map( (e) => sort.indexOf(e) + 1)
+
+	let variable = variables.find( (e) => e.id == vars[i])
+	let category = categories.find( (e) => e.title == variable.category)
+
 	let totalWeight = 0
-	categories.find( (e) => e.title == category).variables.forEach( (e) => {
-		totalWeight += variables.find( (k) => k.id == e).weight
+	category.variables.forEach( (catVar) => {
+		totalWeight += variables.find( (e) => e.id == catVar).weight
 	})
-	let max = Math.max( ...rank, 1)	
-	let score = rank.map( (e) => (max - e)*100*weight/max/totalWeight)
-	rank = rank.map( (e) => e + 1 )
+
+	let maxRank = Math.max( ...rank, 1)	
+	let score = rank.map( (e) => (maxRank - e)*100*variable.weight/maxRank/totalWeight)
 
 	data.forEach( (e, j) => {
 		e.push(rank[j])
@@ -112,11 +112,9 @@ years.forEach( (year) => {
 categories.forEach( (e) => {
 	newvars.push(e.title + ' Rank')
 })
-
 newvars.push('Kulturindeks')
 
 newdata.vars = newvars
-
 vars = newvars
 data = newdata
 
@@ -126,9 +124,5 @@ years.forEach( (year) => {
 })
 
 let dataStore = {years, vars, data, allDataObject, createDataObject}
-
-
-
-
 export default dataStore
 

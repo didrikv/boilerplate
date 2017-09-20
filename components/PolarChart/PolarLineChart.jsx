@@ -5,15 +5,12 @@ import {
 	VictoryPolarAxis,
 	VictoryLine,
 	VictoryPortal,
-	VictoryBar,
 	Line
 } from 'victory'
 import theme from './theme.js'
 
-export default function PolarChartSvg(props) {
-	let {data, x, variable, svgId, center} = props
-	let width=540
-	let height=400
+export default function PolarLineChart(props) {
+	let {data, x, variable, svgId} = props
 
 	return(
 		<div id={svgId}>
@@ -24,33 +21,26 @@ export default function PolarChartSvg(props) {
 				padding={{ top: 20, bottom: 20, left: 0, right: 0}}
 				endAngle={450}
 				animate={{duration: 500, onLoad: {duration: 500} }}
-				width={width}
-				height={height}
+				width={540}
+				height={400}
 			>
-
 				<VictoryPolarAxis
 					dependentAxis
+					labelPlacement='vertical'
+					domain={[0,100]}
+					axisAngle={270}
 					style={{axis:{strokeWidth: 0} }}
-					tickFormat={ (t) => ""}
+					tickLabelComponent={<VictoryLabel dy={-5}/>}
 				/>
 
 				<VictoryPolarAxis
 					labelPlacement='vertical'
 				/>
 
-				<VictoryBar
+				<VictoryLine 
 					data={data}
 					x={x}
 					y={variable}
-					width={50}
-				/>
-
-				<VictoryLabel
-					text={center}
-					x={width/2}
-					y={height/2}
-					textAnchor='middle'
-					style={{fontSize: 30, fill: '#90A4Ae'}}
 				/>
 			</VictoryChart>
 		</div>

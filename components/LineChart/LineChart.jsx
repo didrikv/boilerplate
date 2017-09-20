@@ -9,13 +9,10 @@ export default class LineChart extends React.Component {
 		super()
 	}
 
-
 	render() {
 		return (
 			<ChartWrapper name={this.props.name}>
-				<LineChartSvg
-					{...this.props}
-				/>
+				<LineChartSvg {...this.props}/>
 			</ChartWrapper>
 		)
 	}
