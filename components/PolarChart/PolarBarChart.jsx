@@ -29,6 +29,7 @@ export default function PolarChartSvg(props) {
 			>
 
 				<VictoryPolarAxis
+					domain={[0,100]}
 					dependentAxis
 					style={{axis:{strokeWidth: 0} }}
 					tickFormat={ (t) => ""}

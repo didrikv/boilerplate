@@ -42,20 +42,25 @@ function createJustRank(i, data, reverse) {
 	if(reverse) {sort.reverse()}
 	let rank = orig.map( (e) => sort.indexOf(e) + 1 )
 
+	let max = Math.max(...orig)
+	let newOrig = orig.map( (e) => e*100/max )
+
 	data.forEach( (e, j) => {
+		e[i] = newOrig[j]
 		e.push(rank[j])
 	})
 }
 
 let inndeling = ['Land', 'Fylke', 'Kommune', 'Region']
+let inndelingI = vars.indexOf('Inndeling')
+let varsI = variables.map( (e) => vars.indexOf(e.id) ) 
 
 let newdata = {}
 let newvars = vars
 years.forEach( (year) => {
 	newdata[year] = []
 	inndeling.forEach( (inndeling) => {
-		let section = data[year].filter( (e) => e[vars.indexOf('Inndeling')] == inndeling )
-		let varsI = variables.map( (e) => vars.indexOf(e.id) ) 
+		let section = data[year].filter( (e) => e[inndelingI] == inndeling )
 		varsI.forEach( (e, i) => {
 			createRank(e, section, variables[i].reverse) 
 		})
@@ -67,6 +72,7 @@ variables.forEach( (e) => {
 	newvars.push(e.id + ' Rank')
 	newvars.push(e.id + ' Score')
 })
+
 
 years.forEach( (year) => {
 	newdata[year].forEach( (array) => {
@@ -90,16 +96,19 @@ years.forEach( (year) => {
 	})
 })
 
+
 categories.forEach( (e) => {
 	newvars.push(e.title)
 })
 newvars.push('Kulturindeks Score')
 
+
+
+let catI = categories.map( (e) => e.title).map( (cat) => newvars.indexOf(cat))
 years.forEach( (year) => {
 	let newYear = []
 	inndeling.forEach( (inndeling) => {
-		let section = newdata[year].filter( (e) => e[vars.indexOf('Inndeling')] == inndeling )
-		let catI = categories.map( (e) => e.title).map( (cat) => newvars.indexOf(cat))
+		let section = newdata[year].filter( (e) => e[inndelingI] == inndeling )
 		catI.forEach( (cat) => {
 			createJustRank(cat, section, false)
 		})
