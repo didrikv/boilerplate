@@ -20,8 +20,7 @@ export default class Steder extends React.Component {
 
 		this.variables = categories.map( (e) => ({
 			name: e.title,
-			subnames: e.variables.filter( (v) => 
-				!variables.find( (s) => s.id == v).reverse)
+			subnames: e.variables
 		}))
 
 		this.places = createDataObject(data, 2015)
@@ -30,7 +29,7 @@ export default class Steder extends React.Component {
 
 		this.state = {
 			nr: this.places[0].Nr,
-			variable: 'Kunstnertetthet',
+			variable: 'Produktivitet',
 			year: 2015
 		}
 
@@ -48,12 +47,9 @@ export default class Steder extends React.Component {
 		}
 
 		data = data.map( (e) => ({...e, År: String(e.År)}) )
-		let variable = variables.find( (e) => e.id == this.state.variable )
 
 		return {
 			data,
-			name: variable.category + ': ' + variable.id,
-			unit: variable.benevning
 		}
 	}
 
@@ -61,14 +57,14 @@ export default class Steder extends React.Component {
 		let obs = this.data.filter( (e) => e.Nr == nr && e.År == year)[0]
 
 		let data = this.categories.map( (variable) => ({
-			x: variable + ' (' + obs[variable +  ' Rank'] + ')',
-			value: obs[variable]
+			x: variable + ' (' + obs[variable +  ' Indeks Rank'] + ')',
+			value: obs[variable + ' Indeks']
 		}))
 
 		return {
 			data,
-			center: obs['Kulturindeks'],
-			name: 'Kulturindeks ' + obs.Navn + ' ' + year
+			center: obs['Næringsindeks Rank'],
+			name: 'Næringsindeks ' + obs.Navn + ' ' + year
 		}
 	}
 
@@ -82,17 +78,9 @@ export default class Steder extends React.Component {
 		}
 	}
 
-	getLineName = () => {
-		let variable = variables.find( (e) => e.id == this.state.variable )
-		return ({
-			name: variable.category + ': ' + variable.id,
-			unit: variable.benevning
-		})
-	}
-
+	getLineName = () => variables.find( (e) => e.id == this.state.variable).title
 
 	render() {
-		let lineNames = this.getLineName()
 		return(
 			<Grid>
 				<div style={{height: '30px'}}> </div>
@@ -132,12 +120,12 @@ export default class Steder extends React.Component {
 						/>
 						<div style={{height: '30px'}}> </div>
 						<PolarChart bar
-							width={550}
 							data={this.polarData.data}
 							variable='value'
 							x='x'
 							center={this.polarData.center}
 							name={this.polarData.name}
+							width={550}
 						/>
 					</Col>
 					<Col sm={6}>
@@ -150,14 +138,16 @@ export default class Steder extends React.Component {
 							width='300px'
 						/>
 						<div style={{height: '30px'}}> </div>
-						<LineChart
+						<LineChart noPoints
 							data={this.lineData.data}
 							variable={this.state.variable}
 							x='År'
 							splitby={'Navn'}
-							name={lineNames.name}
-							ytitle={lineNames.unit}
+							name={this.state.variable}
 						/>
+						<div style={{display: 'flex', justifyContent: 'center', color: '#555'}} >
+							<p> {this.getLineName()} </p>
+						</div>
 					</Col>
 				</Row>
 			</Grid>

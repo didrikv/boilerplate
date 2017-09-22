@@ -19,7 +19,8 @@ export default class HorizontalChart extends React.Component {
 			population: 1000,
 			n: 10,
 			view: 'top',
-			x: 'Navn',
+			x: 'Nr',
+			name: 'Navn',
 			createControl: true,
 			hideControl: false
 		}
@@ -51,7 +52,7 @@ export default class HorizontalChart extends React.Component {
 
 	generateName = () => {
 		let years = this.state.years
-		let top = this.state.inndeling == 'Fylke' ? 'Top ' : 'Top 10 '
+		let top = this.state.inndeling == 'Fylke' ? 'Top ' : 'Top ' + this.state.n + ' '
 		let name = top + this.state.inndeling + ' '
 		name += years.length == 1 ? years[0] : years[0] + '-' + years[years.length-1]
 		return name

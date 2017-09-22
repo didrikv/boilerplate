@@ -1,0 +1,50 @@
+html {
+	font-size: 16px;
+}
+
+* {
+	font-size: 16px;
+}
+
+.header{
+	font-family: "Helvetica";
+	font-size: 2rem;
+	text-align: center;
+	background: #515A5A;
+	color: whitesmoke;
+	padding: 20px 0;
+
+}
+
+.header p{
+	font-size: 0.8rem
+}
+
+.header h1{
+	font-size: 3rem;
+}
+
+.header p a{
+	color: lightblue;
+}
+
+.navbar{
+	display: flex;
+	justify-content: center;
+	outline: none;
+}
+
+.info{
+	margin-left: 8px;
+	cursor: pointer;
+	user-select: none;
+	padding: 4px 7px;
+	border: 1px solid #e7e7e7;
+	border-radius: 3px;
+	background-color: #f8f8f8;
+	display: inline;
+}
+
+
+
+

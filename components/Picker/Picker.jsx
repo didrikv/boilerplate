@@ -14,7 +14,7 @@ export default function Picker(props){
 		sections.forEach( (e) => {
 			options.push({
 				label: String(e.name + ':'),
-				value: e.name,
+				value: e.name + "noChoose",
 				disabled: true,
 				className: styles.section
 			})

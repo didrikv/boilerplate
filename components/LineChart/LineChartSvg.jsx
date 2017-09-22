@@ -11,7 +11,7 @@ import {
 import theme from './theme.js'
 
 export default function LineChartSvg(props) {
-	let {data, x, variable, splitby, svgId, ytitle} = props
+	let {data, x, variable, splitby, svgId, ytitle, noPoints, showZero} = props
 	let stack = [ ... new Set(data.map( (e) => e[splitby])) ]
 
 	data = data.filter( (e) => !(e[variable] === "") )
@@ -19,6 +19,7 @@ export default function LineChartSvg(props) {
 
 	let min = Math.min( ...data.map((e) => e[variable]))
 	let max = Math.max( ...data.map((e) => e[variable]))
+	let yDomain = showZero ? [Math.min(min, 0), max] : [min, max]
 
 	let renderLines = () => {
 		if(splitby) {
@@ -39,6 +40,11 @@ export default function LineChartSvg(props) {
 				/>
 			)
 			return(
+				noPoints ?
+				<VictoryGroup>
+					{vlines}
+				</VictoryGroup>
+				:
 				<VictoryGroup>
 					{vlines}
 					{vpoints}
@@ -59,6 +65,7 @@ export default function LineChartSvg(props) {
 						style={{data: {fill:theme.stack.colorScale[0]}}}
 						size={5}
 					/>
+					}
 				</VictoryGroup>
 			)
 		}
@@ -79,7 +86,7 @@ export default function LineChartSvg(props) {
 		<div id={svgId} key={stack.length + ' ' + xarray.length}>
 			<VictoryChart
 				theme={theme}
-				domain={{y: [Math.min(0, min), max]}}
+				domain={{y: yDomain}}
 				domainPadding={{x:[0,20], y:[0,20]}}
 				padding={{top: 30, bottom: 30, left:70, right: 50}}
 				height={350}
@@ -91,9 +98,13 @@ export default function LineChartSvg(props) {
 					tickValues={xarray.map( (e,i) => i+1 )}
 					tickFormat={xarray.map( (e) => e)}
 					style={{grid: {stroke: 'none'}}}
+					tickLabelComponent={
+						<VictoryLabel y={330} />
+					}
 				/>
 				<VictoryAxis dependentAxis 
 					label={ytitle}
+					crossAxis={false}
 					axisLabelComponent={
 						<VictoryLabel x={18}/>
 					}

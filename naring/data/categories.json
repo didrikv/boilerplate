@@ -1,0 +1,49 @@
+[
+	{
+		"title":"Arbeidsplassvekst",
+		"webtitle": "arbeidsplassvekst",
+		"text":"",
+		"variables": [
+			"Arbeidsplassvekst",
+			"Bransjejustert arbeidsplassvekst"
+		]
+	},
+	{
+		"title":"Produktivitet",
+		"webtitle": "produktivitet",
+		"text":"",
+		"variables": [
+			"Produktivitet",
+			"Bransjejustert produktivitet"
+		]
+	},
+	{
+		"title":"Lønnsomhet",
+		"webtitle": "lonnsomhet",
+		"text":"",
+		"variables": [
+			"Lønnsomhet",
+			"Bransjejustert lønnsomhet",
+			"Egenkapital"
+		]
+	},
+	{
+		"title":"Nyetablering",
+		"webtitle": "nyetablering",
+		"text":"",
+		"variables": [
+			"Etableringsfrekvens",
+			"Bransjejustert etableringsfrekvens",
+			"Foretaksvekst",
+			"Bransjejustert foretaksvekst"
+		]
+	},
+	{
+		"title":"Størrelse",
+		"webtitle": "storrelse",
+		"text":"",
+		"variables": [
+			"Størrelse"
+		]
+	}
+]

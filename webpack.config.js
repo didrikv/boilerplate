@@ -13,6 +13,7 @@ var config = {
 	context: __dirname,
 	entry: {
 		attraktivitet: './attraktivitet/index.js',
+		naring: './naring/index.js',
 		kultur: './kultur/index.js'
 	},
 	plugins: [
@@ -24,6 +25,18 @@ var config = {
 			template: require('html-webpack-template'),
 			filename: 'attraktivitet/index.html',
 			chunks: ['attraktivitet', 'commons'],
+			appMountId: 'root',
+			alwaysWriteToDisk: true,
+			inject: false,
+		}),
+		new HtmlWebpackPlugin({
+			links: [
+				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
+				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
+			],
+			template: require('html-webpack-template'),
+			filename: 'naring/index.html',
+			chunks: ['naring', 'commons'],
 			appMountId: 'root',
 			alwaysWriteToDisk: true,
 			inject: false,

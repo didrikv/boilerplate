@@ -1,0 +1,86 @@
+[
+	{
+		"id":"Produktivitet",
+		"title":"Verdiskapning per ansatt",
+		"category":"Produktivitet",
+		"hasCountryValue":1,
+		"benevning": ""
+	},
+	{
+		"id":"Bransjejustert produktivitet",
+		"title":"Bransjejustert verdiskapning per ansatt",
+		"category":"Produktivitet",
+		"hasCountryValue":0,
+		"benevning": ""
+	},
+	{
+		"id":"Arbeidsplassvekst",
+		"title":"Vekst i private arbeidsplasser",
+		"category":"Arbeidsplassvekst",
+		"hasCountryValue":1,
+		"benevning":""
+	},
+	{
+		"id":"Bransjejustert arbeidsplassvekst",
+		"title":"Bransjejustert vekst i private arbeidsplasser",
+		"category":"Arbeidsplassvekst",
+		"hasCountryValue":0,
+		"benevning":""
+	},
+	{
+		"id":"Lønnsomhet",
+		"title":"Andel lønsomme bedrifter",
+		"category":"Lønnsomhet",
+		"hasCountryValue":1,
+		"benevning":""
+	},
+	{
+		"id":"Bransjejustert lønnsomhet",
+		"title":"Bransjejustert andel lønnsomme bedrifter",
+		"category":"Lønnsomhet",
+		"hasCountryValue":0,
+		"benevning":""
+	},
+	{
+		"id":"Egenkapital",
+		"title":"Andel bedrifter med positiv egenkapital",
+		"category":"Lønnsomhet",
+		"hasCountryValue":1,
+		"benevning":""
+	},
+	{
+		"id":"Etableringsfrekvens",
+		"title":"Andel nyetablerte bedrifter",
+		"category":"Nyetablering",
+		"hasCountryValue":1,
+		"benevning":""
+	},
+	{
+		"id":"Bransjejustert etableringsfrekvens",
+		"title":"Bransjejustert andel nyetablerte bedrifter",
+		"category":"Nyetablering",
+		"hasCountryValue":0,
+		"benevning":""
+	},
+	{
+		"id":"Foretaksvekst",
+		"title":"Vekst i antall foretak",
+		"category":"Nyetablering",
+		"hasCountryValue":1,
+		"benevning":""
+	},
+	{
+		"id":"Bransjejustert foretaksvekst",
+		"title":"Bransjejustert vekst i antall foretak",
+		"category":"Nyetablering",
+		"hasCountryValue":0,
+		"benevning":""
+	},
+	{
+		"id":"Størrelse",
+		"title":"Næringslivets størrelse i forhold til folketall",
+		"category":"Størrelse",
+		"hasCountryValue":1,
+		"benevning":""
+	}
+]

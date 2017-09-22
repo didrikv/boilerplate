@@ -11,14 +11,17 @@ import { VictoryChart,
 import theme from './VictoryTheme.js'
 
 export default function HorizontalBarChart(props) {
-	let { data, x, stack, colorScale, svgId, reverse ,ytitle, legendNames, noticks} = props
+	let { data, x, stack, colorScale, svgId, reverse ,ytitle, legendNames, noticks, name} = props
 	legendNames = legendNames ? legendNames : stack
 	if(reverse) {
 		data = data.slice()
 	} else {
 		data = data.slice().reverse()
 	}
-	let names = data.map((e) => e[x])
+	data.forEach( (e) => {
+		e[x] = String(e[x])
+	})
+	let names = data.map((e) => e[name])
 	let legendData = legendNames.map( (e) => ({name:e, symbol: {type: 'square'}}))
 
 	let varCount = stack.length
@@ -27,8 +30,8 @@ export default function HorizontalBarChart(props) {
 		nameLen = e.length > nameLen ? e.length : nameLen
 	})
 	
-	let topPadding = 10 + 20*varCount	
-	let leftPadding = 8 + 8*nameLen
+	let topPadding =  varCount == 1 ? 0 : 10 + 20*varCount	
+	let leftPadding = 10 + 8*nameLen
 	let height = 30 + topPadding + names.length * 30
 	
 
@@ -53,8 +56,9 @@ export default function HorizontalBarChart(props) {
 			crossAxis={false}
 			style={{grid:{stroke: 'transparent'}}}
 			label={noticks ? null : ytitle}
+			orientation='bottom'
 			axisLabelComponent={
-				<VictoryLabel dy={20} />
+				<VictoryLabel dy={25} />
 			}
 			tickFormat={ (tick) => noticks ? "" : tick}
 			style={{
@@ -84,19 +88,24 @@ export default function HorizontalBarChart(props) {
 			)}
 		</VictoryStack>
 
-		<VictoryLegend 
-			y={8}
-			x={5}
-			data={legendData}
-			colorScale={colorScale}
-			symbolSpacer={0.1}
-			labelComponent={<VictoryLabel dx={10} />}
-		/>
+		{varCount == 1 ? null :
+			<VictoryLegend 
+				y={8}
+				x={5}
+				data={legendData}
+				colorScale={colorScale}
+				symbolSpacer={0.1}
+				labelComponent={<VictoryLabel dx={10} />}
+			/>
+		}
 
 		<VictoryAxis dependentAxis
 			style={{ticks:{size:0}, grid:{stroke: 'transparent'}}}
 			tickValues={data.map( (e,i) => i+1 )}
-			tickFormat={data.map( (e) => e[x])}
+			tickFormat={data.map( (e) => e[name])}
+			tickLabelComponent={
+				<VictoryLabel x={0} textAnchor='start'/>
+			}
 		/>
 
 		</VictoryChart>

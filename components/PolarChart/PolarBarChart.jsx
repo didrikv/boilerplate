@@ -11,8 +11,8 @@ import {
 import theme from './theme.js'
 
 export default function PolarChartSvg(props) {
-	let {data, x, variable, svgId, center} = props
-	let width=540
+	let {data, x, variable, svgId, center, width} = props
+	width = width ? width : 400
 	let height=400
 
 	return(
@@ -31,6 +31,7 @@ export default function PolarChartSvg(props) {
 				<VictoryPolarAxis
 					domain={[0,100]}
 					dependentAxis
+					tickValues={[25, 50, 75]}
 					style={{axis:{strokeWidth: 0} }}
 					tickFormat={ (t) => ""}
 				/>

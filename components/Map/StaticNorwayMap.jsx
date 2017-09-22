@@ -41,7 +41,6 @@ export default class StaticNorwayMap extends React.Component {
 	componentWillMount = () => {
 		let { createDataObject, data } = this.props.dataStore
 		this.aggData = createDataObject(data, this.state.years)
-		console.log(this.aggData)
 	}
 
 	generateName = () => {

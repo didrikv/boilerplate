@@ -4,6 +4,7 @@
   "scripts": {
     "attraktivitet": "NODE_ENV=develompent webpack-dev-server --content-base ./public/attraktivitet",
     "kultur": "NODE_ENV=develompent webpack-dev-server --content-base ./public/kultur",
+    "naring": "NODE_ENV=develompent webpack-dev-server --content-base ./public/naring",
     "dev": "NODE_ENV=develompent webpack-dev-server",
     "build": "NODE_ENV=production webpack",
     "deploy": "git add -A && git commit -m \"I dont giva a fuck! \" && git push && pm2 deploy production"
