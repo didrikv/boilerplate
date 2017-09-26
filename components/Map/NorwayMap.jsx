@@ -1,6 +1,9 @@
 import React from 'react'
 import { feature } from 'topojson'
-import {min, max, scaleQuantile, scaleLinear, scaleQuantize, geoTransverseMercator, geoPath} from 'd3'
+import {geoTransverseMercator, geoPath} from 'd3-geo'
+import {min, max} from 'd3-array'
+import {scaleQuantile} from 'd3-scale'
+
 import {TransitionGroup} from 'react-transition-group'
 
 import norge_simp from './norway_simple.json'

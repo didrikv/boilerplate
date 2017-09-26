@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 570.66422 100"
+   height="28.222223mm"
+   width="161.05412mm">
+  <defs
+     id="defs4">
+    <filter
+       id="filter8933"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8935"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8937"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8939"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8941"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8943"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8945"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8947"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8949"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8951"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8953"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8955"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8957"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8959"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8961"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8963"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8965"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8967"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8969"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8971"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8973"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8975"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8977"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8979"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8981"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8983"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8985"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8987"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8989"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8991"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8993"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8995"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter8997"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix8999"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9001"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9003"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9005"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9007"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9009"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9011"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9013"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9015"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9017"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9019"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9021"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9023"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9025"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9027"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9029"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9031"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9033"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9035"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9037"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9039"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9041"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9043"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9045"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9047"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9049"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9051"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9053"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9055"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9057"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9059"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9061"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9063"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9065"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9067"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9069"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9071"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9073"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9075"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9077"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9079"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9081"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9083"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9085"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9087"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9089"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9091"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9093"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9095"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9097"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9099"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9101"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9103"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9105"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9107"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9109"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9111"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9113"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9115"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9117"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9119"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9121"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9123"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9125"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9127"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9129"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9131"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9133"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9135"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+    <filter
+       id="filter9137"
+       style="color-interpolation-filters:sRGB;">
+      <feColorMatrix
+         id="feColorMatrix9139"
+         values="-0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 -0.41 2.53 -2.16 0.39 0 0 0 0 1 0 " />
+    </filter>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-4.93755e-6,-952.36223)"
+     id="layer1">
+    <g
+       transform="matrix(1.0598666,0,0,-1.0598666,-188.05928,1336.5803)"
+       id="g10">
+      <g
+         transform="scale(0.1,0.1)"
+         id="g12">
+        <path
+           id="path14"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9137)"
+           d="m 2117.01,2829.29 c 7.83,7.79 20.53,7.79 28.37,-0.03 7.81,-7.84 7.81,-20.5 -0.02,-28.34 -7.82,-7.82 -20.52,-7.82 -28.33,-0.02 -7.83,7.86 -7.83,20.57 -0.02,28.39" />
+        <path
+           id="path16"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9133)"
+           d="m 2173.7,2885.98 c 7.85,7.8 20.51,7.8 28.37,-0.04 7.8,-7.82 7.8,-20.49 -0.02,-28.32 -7.84,-7.85 -20.5,-7.83 -28.34,-0.02 -7.84,7.85 -7.84,20.52 -0.01,28.38" />
+        <path
+           id="path18"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9129)"
+           d="m 2173.71,2772.56 c 7.83,7.82 20.53,7.82 28.39,-0.03 7.79,-7.82 7.79,-20.47 -0.02,-28.3 -7.84,-7.83 -20.53,-7.83 -28.33,-0.02 -7.87,7.84 -7.89,20.54 -0.04,28.35" />
+        <path
+           id="path20"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9125)"
+           d="m 2230.4,2829.26 c 7.85,7.82 20.53,7.82 28.37,-0.03 7.81,-7.83 7.81,-20.47 -0.02,-28.31 -7.82,-7.85 -20.5,-7.85 -28.34,-0.05 -7.82,7.86 -7.84,20.55 -0.01,28.39" />
+        <path
+           id="path22"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9121)"
+           d="m 2230.41,2715.88 c 7.86,7.81 20.54,7.81 28.38,-0.03 7.82,-7.84 7.82,-20.5 -0.02,-28.34 -7.81,-7.83 -20.52,-7.82 -28.34,-0.01 -7.84,7.85 -7.84,20.53 -0.02,28.38" />
+        <path
+           id="path24"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9117)"
+           d="m 2287.11,2772.56 c 7.84,7.82 20.52,7.82 28.36,-0.03 7.82,-7.82 7.82,-20.48 -0.04,-28.32 -7.8,-7.85 -20.48,-7.83 -28.32,-0.03 -7.82,7.85 -7.82,20.53 0,28.38" />
+        <path
+           id="path26"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9113)"
+           d="m 2230.41,2942.71 c 7.84,7.77 20.54,7.77 28.38,-0.05 7.82,-7.86 7.8,-20.5 -0.02,-28.32 -7.82,-7.88 -20.52,-7.84 -28.34,-0.02 -7.84,7.82 -7.84,20.5 -0.02,28.39" />
+        <path
+           id="path28"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9109)"
+           d="m 2287.11,2999.36 c 7.84,7.82 20.5,7.82 28.34,-0.04 7.84,-7.81 7.84,-20.47 -0.02,-28.29 -7.82,-7.85 -20.5,-7.85 -28.32,-0.03 -7.84,7.81 -7.84,20.53 0,28.36" />
+        <path
+           id="path30"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9105)"
+           d="m 2287.11,2885.98 c 7.84,7.81 20.54,7.8 28.37,-0.04 7.84,-7.82 7.84,-20.48 -0.03,-28.3 -7.8,-7.85 -20.5,-7.85 -28.32,-0.04 -7.84,7.85 -7.84,20.54 -0.02,28.38" />
+        <path
+           id="path32"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9101)"
+           d="m 2343.79,2942.67 c 7.87,7.81 20.55,7.81 28.39,-0.03 7.81,-7.84 7.81,-20.47 -0.04,-28.32 -7.8,-7.86 -20.48,-7.86 -28.32,-0.04 -7.84,7.85 -7.84,20.52 -0.03,28.39" />
+        <path
+           id="path34"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9097)"
+           d="m 2343.82,2829.29 c 7.85,7.79 20.53,7.79 28.35,-0.04 7.83,-7.83 7.83,-20.49 0,-28.33 -7.79,-7.82 -20.52,-7.82 -28.33,-0.02 -7.84,7.86 -7.84,20.52 -0.02,28.39" />
+        <path
+           id="path36"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9093)"
+           d="m 2400.51,2885.94 c 7.83,7.84 20.53,7.84 28.36,-0.01 7.8,-7.82 7.82,-20.48 -0.03,-28.33 -7.8,-7.83 -20.5,-7.83 -28.31,0 -7.82,7.82 -7.84,20.52 -0.02,28.34" />
+        <path
+           id="path38"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9089)"
+           d="m 2343.79,3056.05 c 7.85,7.81 20.53,7.84 28.37,0 7.83,-7.85 7.83,-20.51 -0.02,-28.37 -7.82,-7.84 -20.5,-7.84 -28.33,0 -7.83,7.84 -7.83,20.53 -0.02,28.37" />
+        <path
+           id="path40"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9085)"
+           d="m 2400.47,3112.73 c 7.85,7.83 20.55,7.83 28.37,-0.02 7.84,-7.83 7.84,-20.51 0,-28.33 -7.82,-7.85 -20.52,-7.81 -28.35,-0.02 -7.81,7.84 -7.81,20.52 -0.02,28.37" />
+        <path
+           id="path42"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9081)"
+           d="m 2400.5,2999.36 c 7.84,7.79 20.52,7.79 28.37,-0.04 7.8,-7.83 7.8,-20.47 -0.03,-28.29 -7.82,-7.87 -20.5,-7.87 -28.33,-0.07 -7.82,7.85 -7.82,20.57 -0.01,28.4" />
+        <path
+           id="path44"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9077)"
+           d="m 2457.18,3056.05 c 7.83,7.79 20.53,7.79 28.37,-0.03 7.83,-7.84 7.83,-20.5 0,-28.34 -7.84,-7.84 -20.54,-7.84 -28.35,-0.02 -7.83,7.84 -7.84,20.52 -0.02,28.39" />
+        <path
+           id="path46"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9073)"
+           d="m 2457.2,2942.66 c 7.84,7.82 20.52,7.82 28.37,-0.02 7.81,-7.84 7.81,-20.51 -0.03,-28.34 -7.82,-7.84 -20.5,-7.84 -28.31,-0.04 -7.86,7.85 -7.86,20.54 -0.03,28.4" />
+        <path
+           id="path48"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9069)"
+           d="m 2513.89,2999.32 c 7.84,7.82 20.52,7.82 28.37,-0.02 7.81,-7.82 7.81,-20.48 -0.02,-28.32 -7.83,-7.84 -20.51,-7.84 -28.32,-0.02 -7.86,7.84 -7.86,20.54 -0.03,28.36" />
+        <path
+           id="path50"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9065)"
+           d="m 2457.2,3169.47 c 7.84,7.8 20.52,7.83 28.39,-0.02 7.79,-7.85 7.79,-20.5 -0.05,-28.33 -7.82,-7.85 -20.5,-7.85 -28.31,-0.04 -7.86,7.84 -7.86,20.54 -0.03,28.39" />
+        <path
+           id="path52"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9061)"
+           d="m 2513.89,3226.16 c 7.84,7.8 20.52,7.8 28.37,-0.04 7.82,-7.83 7.82,-20.48 0,-28.31 -7.83,-7.83 -20.53,-7.83 -28.34,-0.02 -7.86,7.83 -7.86,20.5 -0.03,28.37" />
+        <path
+           id="path54"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9057)"
+           d="m 2513.92,3112.77 c 7.83,7.82 20.51,7.8 28.36,-0.04 7.82,-7.85 7.82,-20.49 -0.02,-28.33 -7.83,-7.83 -20.51,-7.83 -28.34,-0.02 -7.82,7.86 -7.82,20.56 0,28.39" />
+        <path
+           id="path56"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9053)"
+           d="m 2570.59,3169.45 c 7.84,7.82 20.54,7.8 28.37,-0.04 7.82,-7.83 7.82,-20.49 -0.02,-28.33 -7.81,-7.83 -20.51,-7.81 -28.33,-0.02 -7.83,7.86 -7.83,20.54 -0.02,28.39" />
+        <path
+           id="path58"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9049)"
+           d="m 2570.61,3056.05 c 7.86,7.81 20.54,7.81 28.39,0 7.8,-7.87 7.8,-20.51 -0.04,-28.37 -7.81,-7.84 -20.49,-7.84 -28.34,0 -7.82,7.84 -7.82,20.53 -0.01,28.37" />
+        <path
+           id="path60"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9045)"
+           d="m 2627.3,3112.73 c 7.84,7.83 20.54,7.83 28.36,-0.02 7.82,-7.83 7.82,-20.49 0,-28.33 -7.82,-7.81 -20.52,-7.81 -28.34,-0.02 -7.84,7.84 -7.84,20.52 -0.02,28.37" />
+        <path
+           id="path62"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9041)"
+           d="m 2570.59,3282.86 c 7.84,7.79 20.52,7.81 28.37,-0.04 7.82,-7.85 7.82,-20.5 -0.02,-28.31 -7.83,-7.86 -20.53,-7.85 -28.33,-0.04 -7.85,7.85 -7.87,20.52 -0.02,28.39" />
+        <path
+           id="path64"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9037)"
+           d="m 2627.27,3226.14 c 7.87,7.81 20.57,7.81 28.39,-0.02 7.82,-7.83 7.82,-20.5 -0.02,-28.31 -7.8,-7.85 -20.5,-7.85 -28.32,-0.04 -7.86,7.85 -7.86,20.52 -0.05,28.37" />
+        <path
+           id="path66"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9033)"
+           d="m 2683.98,3169.45 c 7.85,7.8 20.56,7.8 28.39,-0.04 7.81,-7.83 7.81,-20.49 -0.02,-28.33 -7.81,-7.85 -20.52,-7.83 -28.33,-0.04 -7.85,7.88 -7.85,20.54 -0.04,28.41" />
+        <path
+           id="path68"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9029)"
+           d="m 2343.82,3282.84 c 7.85,7.81 20.56,7.81 28.39,-0.02 7.81,-7.85 7.81,-20.5 -0.01,-28.33 -7.82,-7.84 -20.53,-7.84 -28.34,-0.02 -7.84,7.85 -7.86,20.5 -0.04,28.37" />
+        <path
+           id="path70"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9025)"
+           d="m 2400.53,3226.14 c 7.85,7.81 20.55,7.81 28.39,-0.02 7.81,-7.83 7.81,-20.5 -0.02,-28.33 -7.82,-7.85 -20.52,-7.83 -28.31,-0.04 -7.86,7.84 -7.88,20.54 -0.06,28.39" />
+        <path
+           id="path72"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9021)"
+           d="m 2457.23,3282.82 c 7.82,7.83 20.52,7.79 28.38,-0.03 7.81,-7.83 7.81,-20.5 -0.04,-28.32 -7.81,-7.87 -20.52,-7.82 -28.31,-0.04 -7.87,7.84 -7.87,20.54 -0.03,28.39" />
+        <path
+           id="path74"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9017)"
+           d="m 2457.23,3396.21 c 7.82,7.83 20.5,7.83 28.36,-0.01 7.8,-7.85 7.8,-20.49 -0.02,-28.34 -7.84,-7.84 -20.52,-7.84 -28.34,-0.02 -7.84,7.83 -7.84,20.55 0,28.37" />
+        <path
+           id="path76"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9013)"
+           d="m 2400.5,3452.93 c 7.84,7.84 20.52,7.84 28.37,0 7.8,-7.84 7.8,-20.5 -0.03,-28.34 -7.82,-7.84 -20.5,-7.82 -28.33,-0.02 -7.82,7.84 -7.84,20.54 -0.01,28.36" />
+        <path
+           id="path78"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter9009)"
+           d="m 2513.92,3339.53 c 7.85,7.83 20.53,7.79 28.38,-0.05 7.8,-7.84 7.8,-20.47 -0.02,-28.3 -7.83,-7.88 -20.51,-7.88 -28.34,-0.04 -7.84,7.82 -7.84,20.54 -0.02,28.39" />
+        <path
+           id="path80"
+           style="fill:#b3cc95;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter9005)"
+           d="m 2202.38,3008.44 c 11.59,-11.57 11.59,-30.37 0,-41.93 l -104.8,-104.88 c -11.6,-11.55 -30.37,-11.55 -41.96,0.04 l -272.56,272.55 c -11.59,11.59 -11.59,30.34 0,41.95 L 1887.89,3281 c 11.57,11.58 30.36,11.58 41.93,0" />
+        <path
+           id="path82"
+           style="fill:#004964;fill-opacity:1;fill-rule:evenodd;stroke:none;filter:url(#filter9001)"
+           d="m 2370.13,3511.66 c 11.6,-11.61 11.6,-30.39 0.02,-41.96 l -272.57,-272.56 c -11.6,-11.59 -30.37,-11.59 -41.96,0 l -104.83,104.82 c -11.59,11.58 -11.59,30.36 -0.02,41.95 l 272.6,272.57 c 11.59,11.57 30.35,11.57 41.94,-0.02" />
+        <path
+           id="path84"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8997)"
+           d="m 3106.8,3374.38 c -1.19,-4.67 -5.32,-10.56 -12.98,-10.56 l -61.95,0 c -10.59,0 -22.38,-9.98 -22.38,-20.01 l 0,-352.49 c 0,-4.7 -4.73,-8.22 -9.46,-9.41 l -59.57,0 c -4.11,-1.18 -6.45,4.13 -6.45,7.65 l 0,350.17 c 0,9.99 -11.82,19.37 -23.03,19.37 l -57.78,0 c -12.98,0 -25.39,10.61 -25.39,28.81 0,12.92 12.41,29.96 25.39,29.96 l 251.23,0 c 7.66,0 13,-2.37 11.2,-9.42" />
+        <path
+           id="path86"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8993)"
+           d="m 3253.43,3249.84 c -33.05,0 -59.59,-28.21 -59.59,-54.63 l 0,-7.05 c 0,-23.52 21.82,-31.78 33.05,-31.78 l 35.97,0 c 21.82,0 40.69,11.8 40.69,45.85 0,29.98 -23.01,47.61 -50.12,47.61 m 35.37,-130.42 -60.75,0 c -14.74,0 -27.71,-8.87 -27.71,-25.28 0,-32.91 20.04,-70.51 61.32,-70.51 16.53,0 49.56,12.35 61.95,19.38 7.68,3.55 12.36,1.18 15.9,-4.1 l 15.94,-24.1 c 5.32,-8.22 -1.78,-13.51 -5.91,-15.86 -26.52,-14.1 -68.4,-24.66 -93.17,-24.66 -74.91,0 -120.32,57.57 -120.32,130.43 l 0,52.86 c 0,80.5 47.77,141.01 120.89,141.01 57.23,0 105,-32.91 105,-85.17 l 0,-30.59 c 0,-31.71 -34.19,-63.41 -73.14,-63.41" />
+        <path
+           id="path88"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8989)"
+           d="m 3468.61,2981.91 -30.07,0 c -9.41,0 -15.94,6.47 -15.94,17.63 l 0,414.78 c 0,10 5.92,15.89 14.76,17.64 l 34.8,7.06 c 9.43,1.77 12.97,-7.06 12.97,-17.04 l 0,-423.03 c 0,-10.57 -5.9,-17.04 -16.52,-17.04" />
+        <path
+           id="path90"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8985)"
+           d="m 3665.59,3249.84 c -33.05,0 -59.57,-28.21 -59.57,-54.63 l 0,-7.05 c 0,-23.52 21.8,-31.78 33.03,-31.78 l 35.97,0 c 21.82,0 40.69,11.8 40.69,45.85 0,29.98 -23,47.61 -50.12,47.61 m 35.37,-130.42 -60.75,0 c -14.75,0 -27.69,-8.87 -27.69,-25.28 0,-32.91 20.02,-70.51 61.3,-70.51 16.53,0 49.56,12.35 61.95,19.38 7.68,3.55 12.37,1.18 15.91,-4.1 l 15.93,-24.1 c 5.32,-8.22 -1.79,-13.51 -5.9,-15.86 -26.54,-14.1 -68.41,-24.66 -93.17,-24.66 -74.9,0 -120.33,57.57 -120.33,130.43 l 0,52.86 c 0,80.5 47.77,141.01 120.91,141.01 57.2,0 105,-32.91 105,-85.17 l 0,-30.59 c 0,-31.71 -34.21,-63.41 -73.16,-63.41" />
+        <path
+           id="path92"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8981)"
+           d="m 4152.67,2981.91 -28.89,0 c -9.45,0 -15.9,6.47 -15.9,17.63 l 0,216.8 c 0,19.39 -17.12,35.25 -38.37,34.68 -20.63,-0.59 -36.57,-15.89 -36.57,-34.68 l 0,-217.39 c 0,-10.57 -5.89,-17.04 -16.49,-17.04 l -28.93,0 c -9.43,0 -15.92,6.47 -15.92,17.63 l 0,216.8 c 0,18.79 -16.51,34.68 -37.14,34.68 -20.66,0 -36.57,-15.89 -36.57,-34.68 l 0,-217.39 c 0,-10.57 -5.91,-17.04 -16.52,-17.04 l -29.48,0 c -9.43,0 -15.93,6.47 -15.93,17.63 l 0,238.55 c 0,19.95 15.93,25.84 29.49,21.71 l 10.05,-3.51 c 11.79,-2.93 25.34,-0.59 30.66,9.39 12.39,22.34 28.3,32.91 57.79,32.91 23.57,0 41.28,-16.46 50.14,-32.91 11.78,-21.68 32.44,-5.88 35.37,2.36 6.49,19.41 25.96,30.55 50.73,30.55 57.2,0 69,-59.94 69,-109.28 l 0,-190.36 c 0,-10.57 -5.9,-17.04 -16.52,-17.04" />
+        <path
+           id="path94"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8977)"
+           d="m 4338.95,3114.12 -6.47,0 c -29.5,0 -41.3,-24.07 -41.3,-51.12 0,-27.61 11.21,-51.7 41.3,-51.7 l 6.47,0 c 30.07,0 53.68,24.09 53.68,51.7 0,27.05 -24.2,51.12 -53.68,51.12 m 84.37,-109.87 c -5.93,0.59 -12.41,2.35 -18.34,2.35 -23.55,0 -30.03,-34.66 -84.3,-34.66 -50.73,0 -92.59,34.66 -92.59,89.29 0,57.57 27.73,84.03 108.5,84.03 l 5.89,0 c 24.79,0 40.72,13.49 40.72,39.94 l 0,17.62 c 0,42.91 -35.4,48.2 -61.93,48.2 -11.22,0 -16.52,0 -33.63,-6.47 -6.48,-2.35 -12.39,-2.35 -14.73,3.52 l -8.86,22.93 c -2.39,5.84 0.59,10.55 7.06,13.48 19.48,9.41 23.59,14.11 69.03,14.11 72.52,0 105.56,-27 105.56,-117.5 l 0,-161.55 c 0,-15.87 -11.22,-16.49 -22.38,-15.29" />
+        <path
+           id="path96"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8973)"
+           d="m 4671.54,3246.31 c -2.97,-7.66 -12.43,-9.99 -20.64,-5.87 -11.23,5.28 -18.29,11.15 -28.32,11.15 -27.14,0 -48.95,-21.15 -48.95,-46.43 l 0,-206.21 c 0,-10.56 -5.91,-17.04 -16.49,-17.04 l -29.51,0 c -9.45,0 -15.92,6.48 -15.92,17.63 l 0,238.54 c 0,19.95 15.92,25.84 29.48,21.72 l 10.02,-3.52 c 18.29,-5.26 25.37,-0.59 30.65,9.4 12.39,22.33 37.77,32.9 67.24,32.9 13,0 17.13,-1.18 23.59,-2.93 4.73,-1.16 13,-9.98 10.02,-18.18" />
+        <path
+           id="path98"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8969)"
+           d="m 4959.29,2981.91 -37.14,0 c -13.56,0 -17.68,5.89 -23,12.93 l -71.95,99.88 c -18.29,25.28 -48.36,12.32 -48.96,-7.65 l 0,-88.12 c 0,-10.57 -5.89,-17.04 -16.52,-17.04 l -29.49,0 c -9.43,0 -15.91,6.47 -15.91,17.63 l 0,413.62 c 0,9.98 5.29,17.05 14.14,18.8 l 36.58,7.06 c 9.43,1.77 12.95,-7.06 12.95,-17.04 l 0,-266.14 c 0,-17.62 19.47,-12.93 25.96,-2.38 l 74.32,121.67 c 6.5,10.53 16.52,14.66 25.37,14.66 l 21.81,0 c 16.52,0 14.15,-14.66 10.02,-21.75 l -67.24,-110.45 c -8.25,-13.5 -3.53,-14.11 3.54,-24.09 l 93.8,-131.03 c 5.3,-7.04 3.52,-20.56 -8.28,-20.56" />
+        <path
+           id="path100"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8965)"
+           d="m 5106.09,2974.87 c -39.5,0 -69,9.41 -101.44,30.57 -14.74,9.98 -17.68,29.34 -9.45,41.12 7.07,10.56 24.2,18.2 37.75,9.39 30.09,-18.8 43.66,-29.96 67.23,-29.96 26.57,0 41.86,7.64 41.86,29.37 0,23.48 -8.82,38.78 -61.91,54.64 -45.99,12.94 -79.61,50.52 -79.61,101.06 0,56.98 54.25,87.53 104.96,87.53 17.13,0 30.7,-5.26 44.23,-9.97 7.1,-2.36 11.24,-11.15 11.24,-20.58 l 0,-19.4 c 0,-8.19 -6.5,-17.63 -17.14,-11.74 -10.04,5.3 -22.99,11.18 -34.77,11.18 -28.91,0 -47.75,-11.18 -47.75,-38.8 0,-24.08 17.68,-38.18 68.98,-56.4 47.18,-18.19 76.07,-41.11 76.07,-95.17 0,-56.98 -58.39,-82.84 -100.25,-82.84" />
+        <path
+           id="path102"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8961)"
+           d="m 5413.89,3392.57 c -3.53,-9.97 -12.39,-9.37 -15.94,-8.19 -31.82,11.75 -65.45,19.4 -65.45,-48.2 l 0,-29.36 c 0,-8.83 7.08,-17.61 18.27,-17.61 l 48.96,0 c 10.03,0 18.9,-11.17 18.9,-21.17 0,-8.24 -8.87,-14.68 -18.9,-14.68 l -13.54,0 c -39.55,0 -53.69,-21.77 -53.69,-51.13 l 0,-203.28 c 0,-10.56 -5.88,-17.04 -16.5,-17.04 l -28.29,0 c -9.44,0 -15.93,6.48 -15.93,17.63 l 0,236.19 c 0,10.58 -6.51,17.63 -16.51,17.63 l -8.27,0 c -7.08,0 -10.59,4.12 -10.59,9.99 l 0,14.69 c 0,7.63 5.87,11.17 11.73,11.17 l 6.5,0 c 11.82,0 17.14,7.05 17.14,17.61 l 0,37.6 c 0,66.39 32.99,95.78 84.32,95.78 22.99,0 28.88,-2.37 56.63,-12.32 10.03,-3.56 10.62,-10.61 8.82,-14.72" />
+        <path
+           id="path104"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8957)"
+           d="m 5623.81,3190.5 c 0,36.42 -27.72,63.46 -58.99,63.46 -32.41,0 -60.18,-27.04 -60.18,-63.46 l 0,-114 c 0,-35.22 27.77,-62.26 60.18,-62.26 31.86,0 58.99,27.04 58.99,62.26 z m -58.99,-219.77 c -67.78,0 -121.46,59.35 -121.46,131.63 l 0,66.98 c 0,74.06 53.68,131.02 121.46,131.02 65.48,0 120.94,-56.96 120.94,-131.02 l 0,-66.98 c 0,-72.28 -54.27,-131.63 -120.94,-131.63" />
+        <path
+           id="path106"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8953)"
+           d="m 5898,3246.31 c -2.95,-7.66 -12.38,-9.99 -20.64,-5.87 -11.23,5.28 -18.32,11.15 -28.32,11.15 -27.13,0 -48.95,-21.15 -48.95,-46.43 l 0,-206.21 c 0,-10.56 -5.87,-17.04 -16.49,-17.04 l -29.51,0 c -9.42,0 -15.91,6.48 -15.91,17.63 l 0,238.54 c 0,19.95 15.91,25.84 29.47,21.72 l 10.03,-3.52 c 18.28,-5.26 25.36,-0.59 30.64,9.4 12.4,22.33 37.8,32.9 67.27,32.9 13,0 17.13,-1.18 23.62,-2.93 4.66,-1.16 12.93,-9.98 10.01,-18.18" />
+        <path
+           id="path108"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8949)"
+           d="m 6045.4,2974.87 c -39.5,0 -69.03,9.41 -101.44,30.57 -14.73,9.98 -17.72,29.34 -9.46,41.12 7.09,10.56 24.22,18.2 37.77,9.39 30.08,-18.8 43.63,-29.96 67.23,-29.96 26.51,0 41.86,7.64 41.86,29.37 0,23.48 -8.87,38.78 -61.88,54.64 -46.02,12.94 -79.67,50.52 -79.67,101.06 0,56.98 54.27,87.53 104.99,87.53 17.1,0 30.66,-5.26 44.23,-9.97 7.1,-2.36 11.23,-11.15 11.23,-20.58 l 0,-19.4 c 0,-8.19 -6.5,-17.63 -17.13,-11.74 -10.04,5.3 -23,11.18 -34.77,11.18 -28.88,0 -47.78,-11.18 -47.78,-38.8 0,-24.08 17.69,-38.18 69.01,-56.4 47.17,-18.19 76.08,-41.11 76.08,-95.17 0,-56.98 -58.4,-82.84 -100.27,-82.84" />
+        <path
+           id="path110"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8945)"
+           d="m 6438.13,2981.91 -37.13,0 c -13.59,0 -17.73,5.89 -23.02,12.93 l -71.94,99.88 c -18.31,25.28 -48.36,12.32 -48.95,-7.65 l 0,-88.12 c 0,-10.57 -5.91,-17.04 -16.55,-17.04 l -29.45,0 c -9.45,0 -15.95,6.47 -15.95,17.63 l 0,413.62 c 0,9.98 5.31,17.05 14.16,18.8 l 36.56,7.06 c 9.46,1.77 13,-7.06 13,-17.04 l 0,-266.14 c 0,-17.62 19.46,-12.93 25.91,-2.38 l 74.36,121.67 c 6.46,10.53 16.46,14.66 25.33,14.66 l 21.81,0 c 16.5,0 14.16,-14.66 9.98,-21.75 l -67.16,-110.45 c -8.27,-13.5 -3.55,-14.11 3.54,-24.09 l 93.76,-131.03 c 5.27,-7.04 3.54,-20.56 -8.26,-20.56" />
+        <path
+           id="path112"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8941)"
+           d="m 6520.68,2981.91 -29.54,0 c -9.42,0 -15.92,6.47 -15.92,17.63 l 0,237.36 c 0,33.5 15.92,56.42 50.69,56.42 5.36,0 11.81,-1.78 11.81,-17.64 l 0,-276.73 c 0,-10.57 -6.45,-17.04 -17.04,-17.04 m -11.23,351.93 c -23,0 -41.86,18.84 -41.86,41.75 0,22.87 18.86,41.68 41.86,41.68 23,0 41.86,-18.81 41.86,-41.68 0,-22.91 -18.86,-41.75 -41.86,-41.75" />
+        <path
+           id="path114"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8937)"
+           d="m 6811.95,2981.91 -29.47,0 c -9.46,0 -15.94,6.47 -15.94,17.63 l 0,205.62 c 0,25.86 -21.82,46.43 -49.55,46.43 -27.1,0 -48.95,-21.14 -48.95,-46.43 l 0,-206.21 c 0,-10.57 -5.9,-17.04 -16.54,-17.04 l -29.45,0 c -9.46,0 -15.95,6.47 -15.95,17.63 l 0,238.55 c 0,19.95 15.95,25.84 29.53,21.71 l 10.01,-3.51 c 18.26,-5.27 25.35,-0.59 30.68,9.39 12.39,22.34 37.72,32.91 67.17,32.91 57.27,0 84.99,-56.39 84.99,-109.28 l 0,-190.36 c 0,-10.57 -5.9,-17.04 -16.53,-17.04" />
+        <path
+           id="path116"
+           style="fill:#004964;fill-opacity:1;fill-rule:nonzero;stroke:none;filter:url(#filter8933)"
+           d="m 7077.89,3211.06 c 0,25.84 -22.43,47.58 -50.75,47.58 -28.28,0 -50.7,-21.74 -50.7,-47.58 l 0,-14.69 c 0,-25.28 22.96,-47 50.7,-47 27.75,0 50.75,21.72 50.75,47 z m -29.53,-219.14 -32.41,0 c -25.95,0 -47.18,-20.58 -47.18,-44.67 0,-26.45 25.92,-45.23 53.68,-45.23 l 20.04,0 c 25.95,0 53.64,18.78 53.64,45.23 0,24.09 -21.19,44.67 -47.77,44.67 m 1.82,-121.64 -47.82,0 c -36.54,0 -96.72,23.51 -96.72,79.9 0,48.18 51.91,35.26 51.91,52.87 0,11.18 -4.73,13.53 -17.09,17.06 -23.6,5.88 -41.28,21.74 -41.28,44.65 0,19.38 20.63,43.48 40.14,47.01 19.41,3.51 17.63,24.68 4.72,32.32 -22.45,15.25 -30.12,29.37 -30.12,54.05 0,59.34 44.22,100.44 103.8,100.44 l 21.26,0 c 59.55,0 101.42,-41.1 101.42,-100.44 0,-53.47 -44.82,-85.78 -102.05,-91.09 -19.44,-1.76 -28.9,4.72 -50.08,4.72 -17.72,0 -34.27,-26.46 -33.09,-45.24 1.19,-16.47 14.77,-29.39 31.86,-29.39 l 45.44,0 c 49.51,0 126.19,-2.36 126.19,-88.14 0,-41.69 -37.73,-78.72 -108.49,-78.72" />
+      </g>
+    </g>
+  </g>
+</svg>

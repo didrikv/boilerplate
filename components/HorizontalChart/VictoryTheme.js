@@ -1,5 +1,4 @@
-import { assign } from "lodash";
-
+let assign = Object.assign
 // *
 // * Colors
 // *

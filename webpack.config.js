@@ -7,54 +7,36 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const NpmInstallPlugin = require('npm-install-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
+let titles = ['Attraktivitetsanalyser', 'Næringsindeksen', 'Norsk kulturindeks', 'Regional analyser']
+let html = ['attraktivitet', 'naring', 'kultur', 'regional'].map( (chunk, i) => 
+	new HtmlWebpackPlugin({
+		title: titles[i],
+		links: [
+			"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
+			"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
+		],
+		template: require('html-webpack-template'),
+		filename: chunk + '/index.html',
+		chunks: chunk == 'regional' ? [chunk] : [chunk, 'commons'],
+		appMountId: 'root',
+		alwaysWriteToDisk: true,
+		inject: false,
+	})
+)
 
 var config = {
 	context: __dirname,
 	entry: {
 		attraktivitet: './attraktivitet/index.js',
 		naring: './naring/index.js',
-		kultur: './kultur/index.js'
+		kultur: './kultur/index.js',
+		regional: './regional/index.js'
 	},
-	plugins: [
-		new HtmlWebpackPlugin({
-			links: [
-				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
-				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
-			],
-			template: require('html-webpack-template'),
-			filename: 'attraktivitet/index.html',
-			chunks: ['attraktivitet', 'commons'],
-			appMountId: 'root',
-			alwaysWriteToDisk: true,
-			inject: false,
-		}),
-		new HtmlWebpackPlugin({
-			links: [
-				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
-				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
-			],
-			template: require('html-webpack-template'),
-			filename: 'naring/index.html',
-			chunks: ['naring', 'commons'],
-			appMountId: 'root',
-			alwaysWriteToDisk: true,
-			inject: false,
-		}),
-		new HtmlWebpackPlugin({
-			links: [
-				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
-				"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
-			],
-			template: require('html-webpack-template'),
-			filename: 'kultur/index.html',
-			chunks: ['kultur', 'commons'],
-			appMountId: 'root',
-			alwaysWriteToDisk: true,
-			inject: false,
-		}),
+	plugins: html.concat([ 
 		new HtmlWebpackHarddiskPlugin()
-	],
+	]),
 	output: {
 		filename: '[name]/[hash].bundle.js',
 		path: __dirname + '/public',
@@ -116,10 +98,12 @@ var production = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: "commons",
 			filename: "[hash].commons.js",
+			chunks: ['attraktivitet', 'naring', 'kultur'],
 			minChunks: 2
 		}),
 		new CompressionPlugin(),
-		new CleanWebpackPlugin(['public'])
+		new CleanWebpackPlugin(['public']),
+		new FaviconsWebpackPlugin('./logo/my-logo.png')
 	]
 }
 
