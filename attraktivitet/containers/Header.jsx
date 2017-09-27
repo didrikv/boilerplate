@@ -11,6 +11,7 @@ function Header(props) {
 	return(
 		<div>
 			<div className={styles.header} >
+				<img src='../../logo/logoFullFarge.svg' />
 				<p> Telemarksforskning </p>
 				<h1> ATTRAKTIVITETSANALYSER </h1> 
 				<p> HVA FÅR STEDER TIL Å VOKSE? </p>

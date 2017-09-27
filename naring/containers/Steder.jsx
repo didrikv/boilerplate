@@ -5,7 +5,7 @@ import LineChart from '../../components/LineChart/LineChart.jsx'
 import {Grid, Row, Col} from 'react-bootstrap'
 import categories from '../data/categories.json'
 import PolarChart from '../../components/PolarChart/PolarChart.jsx'
-import styles from '../../components/TwoColumn/TwoColumn.css'
+import styles from './App.css'
 
 
 export default class Steder extends React.Component {
@@ -83,15 +83,13 @@ export default class Steder extends React.Component {
 	render() {
 		return(
 			<Grid>
-				<div style={{height: '30px'}}> </div>
 				<Row>
 					<Col>
 						<div className={styles.section}>
-							<h3 className={styles.header}> {sted[this.inndeling].plural} </h3>
-							<p className={styles.paragraph}> 
-								{sted[this.inndeling].text}
-							</p>
+							<h3> {sted[this.inndeling].plural} </h3>
+							<p> {sted[this.inndeling].text} </p>
 						</div>
+						<div style={{height: '30px'}}> </div>
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
 							<Picker
 								names={this.inndeling == "Kommune"

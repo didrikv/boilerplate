@@ -2,7 +2,7 @@
 	{
 		"title":"Arbeidsplassvekst",
 		"webtitle": "arbeidsplassvekst",
-		"text":"",
+		"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 		"variables": [
 			"Arbeidsplassvekst",
 			"Bransjejustert arbeidsplassvekst"
@@ -11,7 +11,7 @@
 	{
 		"title":"Produktivitet",
 		"webtitle": "produktivitet",
-		"text":"",
+		"text":"Produktivitet er her definert som verdiskaping per ansatt. Høy produktivitet betyr at det blir mer verdier å fordele, enten til høyere lønninger for de ansatte, bedre lønnsomhet i bedriften, større utbytte til eierne, eller mer til skatt.",
 		"variables": [
 			"Produktivitet",
 			"Bransjejustert produktivitet"
@@ -20,7 +20,7 @@
 	{
 		"title":"Lønnsomhet",
 		"webtitle": "lonnsomhet",
-		"text":"",
+		"text":"Bedriftsøkonomisk lønnsomhet handler ganske enkelt om at inntektene må være høyere enn kostnadene. Det finnes flere lønnsomhetsmål, men vi konsentrerer oss om bedriftenes resultat før skatt. Bedrifter med underskudd står i fare for å gå konkurs eller legges ned, mens bedrifter med overskudd vil øke egenkapitalen og være rustet til vekst og nyinvesteringer.",
 		"variables": [
 			"Lønnsomhet",
 			"Bransjejustert lønnsomhet",
@@ -30,7 +30,7 @@
 	{
 		"title":"Nyetablering",
 		"webtitle": "nyetablering",
-		"text":"",
+		"text":"Næringslivet kan vokse som følge av at det startes opp nye bedrifter. Nye bedrifter bringer ofte inn innovasjon og nytt blod til næringslivet. Her ser vi nærmere på etableringsaktiviteten i kommunen.",
 		"variables": [
 			"Etableringsfrekvens",
 			"Bransjejustert etableringsfrekvens",
@@ -41,7 +41,7 @@
 	{
 		"title":"Størrelse",
 		"webtitle": "storrelse",
-		"text":"",
+		"text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 		"variables": [
 			"Størrelse"
 		]

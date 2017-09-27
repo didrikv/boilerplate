@@ -1,11 +1,12 @@
 import React from 'react'
 import categories from '../data/categories.json'
 import allVariables from '../data/variables.json'
-import styles from '../../components/TwoColumn/TwoColumn.css'
 import {Row, Col, Grid} from 'react-bootstrap'
 import StaticNorwayMap from '../../components/Map/StaticNorwayMap.jsx'
 import Picker from '../../components/Picker/Picker.jsx'
 import HorizontalChart from '../../components/HorizontalChart/HorizontalChart.jsx'
+import styles from './App.css'
+
 
 export default class Kategori extends React.Component {
 	constructor(props) {
@@ -104,11 +105,10 @@ export default class Kategori extends React.Component {
 
 		return(
 			<Grid>
-				<div style={{height: '30px'}}> </div>
 				<Row>
 					<div className={styles.section}>
-						<h3 className={styles.header}> { category.title } </h3>
-						<p className={styles.paragraph}> { category.text } </p>
+						<h3 > { category.title } </h3>
+						<p > { category.text } </p>
 					</div>
 				</Row>
 				<div style={{height: '30px'}}> </div>
@@ -126,7 +126,6 @@ export default class Kategori extends React.Component {
 						<HorizontalChart {...this.state} {...chartProps} unit={getVarTitle()}/>
 					</Col>
 				</Row>
-				<div style={{height: '100px'}}> </div>
 			</Grid>
 		)
 	}

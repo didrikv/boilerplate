@@ -1,23 +1,38 @@
+@value logoBlue: #004964;
+@value logoGreen: #b3cc95;
+@value lightGreen: #e4ecd5;
+
+@value tmBlue: #00546d;
+@value tmLightGreen: #b1c88a;
+@value tmDarkGreen: #6e8878;
+@value tmGrey: #807f83;
+
+@value sans: 'Open Sans', sans-serif;
+@value serif: 'EB Garamond', serif;
+
 html {
 	font-size: 16px;
+	font-family: sans;
 }
 
 * {
 	font-size: 16px;
+	font-family: sans;
 }
 
 .header{
 	font-family: "Helvetica";
 	font-size: 2rem;
 	text-align: center;
-	background: #515A5A;
-	color: whitesmoke;
+	background: whitesmoke;
+	color: tmBlue;
 	padding: 20px 0;
+	background-image: linear-gradient(to bottom,#fff 0, tmLightGreen 100%);
 
 }
 
 .header p{
-	font-size: 0.8rem
+	font-size: 0.8rem;
 }
 
 .header h1{
@@ -25,13 +40,28 @@ html {
 }
 
 .header p a{
-	color: lightblue;
+	color: logoBlue;
+	font-size: 0.8rem;
 }
-
+		
+.footer{
+	background: whitesmoke;
+	border-top: 1px solid #e7e7e7;
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,.15), 0 -1px 5px rgba(0,0,0,.075);
+	color: #777;
+	padding: 40px 0px 20px 0px;
+	margin-top: 100px;
+}
+		
 .navbar{
 	display: flex;
 	justify-content: center;
 	outline: none;
+}
+
+.navbarWrapper{
+	height: 51px;
+	margin-bottom: 50px;
 }
 
 .info{
@@ -44,6 +74,33 @@ html {
 	background-color: #f8f8f8;
 	display: inline;
 }
+
+.section{
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-grow: 1;
+	transition: 1s;
+	color: #555;
+}
+
+
+.section h3{
+	font-size: 2em;
+	text-align: left;
+	max-width: 50rem;
+	margin: 0 auto;
+	margin-bottom: 20px;
+
+}
+
+.section p{
+	font-size: 1em;
+	max-width: 50rem;
+	margin: 0.5em auto;
+}
+
 
 
 

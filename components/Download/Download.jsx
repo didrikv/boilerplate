@@ -73,13 +73,15 @@ export default class Download extends React.Component {
 							<hr />
 							<Form inline>
 								<Button onClick={this.png}> PNG </Button>
-								&emsp; <b>Resolution:</b> &ensp;
+								<div>
+								<b>Piksler i bredde:</b> &ensp;
 								<FormControl 
 									type='number' 
 									value={this.state.value} 
 									onChange={this.onChange} 
-									style={{width: '100px'}}
+									style={{width: '80px'}}
 								/>
+							</div>
 						</Form>
 					</Modal.Body>
 				</Modal>

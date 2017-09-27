@@ -16,6 +16,7 @@ let html = ['attraktivitet', 'naring', 'kultur', 'regional'].map( (chunk, i) =>
 		links: [
 			"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
 			"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
+			"https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans",
 		],
 		template: require('html-webpack-template'),
 		filename: chunk + '/index.html',

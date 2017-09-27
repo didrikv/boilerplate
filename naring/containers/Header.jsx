@@ -5,22 +5,28 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import {AutoAffix} from 'react-overlays'
 import {LinkContainer} from 'react-router-bootstrap'
+import logo from '../../logo/logoFullFarge.svg'
 import categories from '../data/categories.json'
 
 
 function Header(props) {
 	return(
-		<div style={{height: '260px'}}>
+		<div>
 			<div className={styles.header} >
-				<p> Telemarksforskning </p>
-				<h1> Næringsindeks</h1> 
+				<a href='https://www.telemarksforsking.no'>
+				<img src={logo} height='30px'/>
+				</a>
+				<h1>NÆRINGSINDEKS</h1> 
 				<p> Hvordan går det med næringslivet? </p>
 				<p> av  <a href='http://www.tmforsk.no/medarbeidere/detalj.asp?id=13&merket=6'> Knut Vareide</a> </p>
 			</div>
-
+			<div className={styles.navbarWrapper}>
 			<AutoAffix>
-				<Navbar bsStyle='default' staticTop>
-					<div className={styles.navbar}>
+				<div style={{zIndex:'10'}}>
+				<Navbar bsStyle='default' collapseOnSelect staticTop>
+						<Navbar.Toggle />
+						<div className={styles.navbar}>
+						<Navbar.Collapse>
 						<Nav>
 							<LinkContainer exact to="/">
 								<NavItem> Næringsindeksen 2017 </NavItem>
@@ -45,9 +51,12 @@ function Header(props) {
 								<NavItem> Fylker </NavItem>
 							</LinkContainer>
 						</Nav>
+						</Navbar.Collapse>
 					</div>
 				</Navbar>
+				</div>
 			</AutoAffix>
+		</div>
 		</div>
 	)
 }
