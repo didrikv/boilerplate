@@ -18,10 +18,21 @@ export default class Steder extends React.Component {
 		this.categories = categories.map( (e) => e.title)
 		this.inndeling = props.inndeling
 
+		this.maxRank = this.inndeling == "Fylke" ? 19 :
+			this.inndeling == "Region" ? 86 : 428
+
 		this.variables = categories.map( (e) => ({
 			name: e.title,
 			subnames: e.variables
 		}))
+
+		this.variables.unshift({
+			name: 'Næringsindeks',
+			subnames: [
+				'Næringsindeks',
+				'Næringsindeks Rank'
+			]
+		})
 
 		this.places = createDataObject(data, 2015)
 			.filter( (e) => e.Inndeling == this.inndeling)
@@ -46,12 +57,26 @@ export default class Steder extends React.Component {
 			var data = this.data.filter( (e) => [0, nr].includes(e.Nr) )
 		}
 
+
 		data = data.map( (e) => ({...e, År: String(e.År)}) )
 
-		return {
+		return data
+	}
+
+	filterLineData = () => {
+		let data = this.lineData
+		if(this.state.variable == "Næringsindeks" || this.state.variable == "Næringsindeks Rank") {
+			data = data.filter( (e) => e.Inndeling == this.props.inndeling)
+			var domain = this.state.variable == "Næringsindeks" ? [0, 100] : [1, this.maxRank]
+			var reverse = this.state.variable == "Næringsindeks Rank" ? true : false
+		}
+		return{
 			data,
+			domain,
+			reverse
 		}
 	}
+
 
 	createPolarData = (nr, year) => {
 		let obs = this.data.filter( (e) => e.Nr == nr && e.År == year)[0]
@@ -78,9 +103,13 @@ export default class Steder extends React.Component {
 		}
 	}
 
-	getLineName = () => variables.find( (e) => e.id == this.state.variable).title
+	getLineName = () => !['Næringsindeks','Næringsindeks Rank'].includes(this.state.variable) ? 
+		variables.find( (e) => e.id == this.state.variable).title :
+		undefined
+
 
 	render() {
+		let lineData = this.filterLineData()
 		return(
 			<Grid>
 				<Row>
@@ -137,7 +166,9 @@ export default class Steder extends React.Component {
 						/>
 						<div style={{height: '30px'}}> </div>
 						<LineChart noPoints
-							data={this.lineData.data}
+							data={lineData.data}
+							domain={lineData.domain}
+							reverse={lineData.reverse}
 							variable={this.state.variable}
 							x='År'
 							splitby={'Navn'}

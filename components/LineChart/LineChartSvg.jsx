@@ -7,11 +7,12 @@ import {
 	VictoryAxis,
 	VictoryLabel,
 	VictoryScatter,
+	Line,
 } from 'victory'
 import theme from './theme.js'
 
 export default function LineChartSvg(props) {
-	let {data, x, variable, splitby, svgId, ytitle, noPoints, showZero} = props
+	let {data, x, variable, splitby, svgId, ytitle, noPoints, showZero, domain, reverse} = props
 	let stack = [ ... new Set(data.map( (e) => e[splitby])) ]
 
 	data = data.filter( (e) => !(e[variable] === "") )
@@ -20,6 +21,7 @@ export default function LineChartSvg(props) {
 	let min = Math.min( ...data.map((e) => e[variable]))
 	let max = Math.max( ...data.map((e) => e[variable]))
 	let yDomain = showZero ? [Math.min(min, 0), max] : [min, max]
+	yDomain = domain ? domain : yDomain
 
 	let renderLines = () => {
 		if(splitby) {
@@ -87,8 +89,8 @@ export default function LineChartSvg(props) {
 			<VictoryChart
 				theme={theme}
 				domain={{y: yDomain}}
-				domainPadding={{x:[0,20], y:[0,20]}}
-				padding={{top: 30, bottom: 30, left:70, right: 50}}
+				domainPadding={{x:[0,20], y:[10,10]}}
+				padding={{top: 30, bottom: 30, left:70, right: 30}}
 				height={350}
 				width={600}
 				animate={{duration: 300, onLoad: {duration: 200} }}
@@ -99,12 +101,17 @@ export default function LineChartSvg(props) {
 					tickFormat={xarray.map( (e) => e)}
 					style={{grid: {stroke: 'none'}}}
 					tickLabelComponent={
-						<VictoryLabel y={330} />
+						<VictoryLabel y={330} verticalAnchor='start' />
+					}
+					orientation={reverse ? 'top' : 'bottom'}
+					axisComponent={
+						<Line type={"axis"} y1={320} y2={320}/>
 					}
 				/>
 				<VictoryAxis dependentAxis 
 					label={ytitle}
 					crossAxis={false}
+					orientation={'left'}
 					axisLabelComponent={
 						<VictoryLabel x={18}/>
 					}

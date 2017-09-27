@@ -11,13 +11,9 @@ import styles from './App.css'
 export default class Kategori extends React.Component {
 	constructor(props) {
 		super()
-		let {i} = props
-		this.variables = categories[i].variables.slice()
-		this.variables.unshift(categories[i].title + ' Indeks')
 
 		this.state = {
 			...props,
-			variable: categories[i].title + ' Indeks',
 			inndeling: 'Kommune',
 			years: [2015]
 		}
@@ -26,35 +22,25 @@ export default class Kategori extends React.Component {
 	renderControls = () => {
 		return(
 			<Row style={{width: '50rem', margin: 'auto'}}>
-				<Col sm={3}>
+				<Col sm={6}>
 					<Picker
 						names={['Kommune', 'Region', 'Fylke']}
 						chosen={this.state.inndeling}
 						handleChange={ (inndeling) => this.setState({inndeling}) }
 						title='Velg inndeling:'
-						topTitle
+						justify='center'
 					/>
 				</Col>
-				<Col sm={3}>
+				<Col sm={6}>
 					<Picker
 						names={this.state.dataStore.years}
 						chosen={this.state.years[0]}
 						handleChange={ (years) => this.setState({years: [years]}) }
 						title='Velg år:'
-						topTitle
+						justify='center'
 					/>
 				</Col>
-				<Col sm={6}>
-					<Picker
-						names={this.variables}
-						chosen={this.state.variable}
-						handleChange={ (variable) => this.setState({variable}) }
-						boldFirst={true}
-						title='Velg variabel:'
-						topTitle
-					/>
-				</Col>
-				</Row>
+			</Row>
 		)
 	}
 
@@ -62,54 +48,34 @@ export default class Kategori extends React.Component {
 
 
 	render() {
-		let variable = this.state.variable
-		let category = categories[this.state.i]
-
-		let varInfo = allVariables.find( (e) => e.id == variable)
-
-		if(variable == category.title + ' Indeks') {
-			var stack = category.variables.map( (e) => e + ' Score')
-		} else {
-			var legendNames= [variable]
-			var stack = [variable]
-		}
-
-		let getVarTitle = () => {
-			if(varInfo) {
-				return varInfo.title
-			} else {
-				return 'Samlet indeks for ' + category.title
-			}
-		}
+		let stack = categories.map( (e) => e.title + ' Indeks')
+		let legendNames = categories.map( (e) => e.title)
 
 		let mapProps = {
 			createControl: false,
-			variable,
-			percentLegend: varInfo ? false : true
+			variable: 'Næringsindeks',
+			percentLegend: true,
 		}
 
 		let chartProps = {
 			stack,
-			sortby: variable,
+			sortby: 'Næringsindeks',
 			view: 'top',
 			createControl: false,
 			years: this.state.years,
 			dataStore: this.state.dataStore,
 			n: 20,
 			legendNames,
-			noticks: varInfo ? false : true,
-			ytitle: getVarTitle()
+			noticks: true,
 		}
 
 		return(
 			<Grid>
 				<Row>
-					<Col sm={12}>
 					<div className={styles.section}>
-						<h3 > { category.title } </h3>
-						<p > { category.text } </p>
+						<h3 > Næringsindeks </h3>
+						<p >{text}</p>
 					</div>
-				</Col>
 				</Row>
 				<div style={{height: '30px'}}> </div>
 				{this.renderControls()}
@@ -121,10 +87,12 @@ export default class Kategori extends React.Component {
 						<StaticNorwayMap {...this.state} {...mapProps} />
 					</Col>
 					<Col sm={6} >
-						<HorizontalChart {...this.state} {...chartProps} unit={getVarTitle()}/>
+						<HorizontalChart {...this.state} {...chartProps} />
 					</Col>
 				</Row>
 			</Grid>
 		)
 	}
 }
+
+let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."

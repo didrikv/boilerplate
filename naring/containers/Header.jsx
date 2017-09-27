@@ -32,6 +32,12 @@ function Header(props) {
 								<NavItem> Næringsindeksen 2017 </NavItem>
 							</LinkContainer>
 							<NavDropdown title="Hovedkategorier" >
+								<LinkContainer
+									to={'/kategori/indeks'}
+								>
+									<MenuItem> Næringsindeks </MenuItem>
+								</LinkContainer>
+								<MenuItem divider />
 								{categories.map( (e) => 
 									<LinkContainer 
 										to={'/kategori/' + e.webtitle}

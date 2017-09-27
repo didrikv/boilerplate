@@ -150,7 +150,7 @@ export default class Steder extends React.Component {
 							width='300px'
 						/>
 						<div style={{height: '30px'}}> </div>
-						<LineChart
+						<LineChart showZero
 							data={this.lineData.data}
 							variable={this.state.variable}
 							x='År'

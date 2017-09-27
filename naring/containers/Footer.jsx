@@ -12,12 +12,12 @@ export default function Footer(props) {
 			<Grid>
 				<Row>
 					<Col sm={4} style={{textAlign: 'center'}}>
-						<p>Knut Vareide</p>
-						<p>vareide@tmforsk.no</p>
+						<p> <a href="www.telemarksforsking.no/medarbeidere/detalj.asp?id=13&merket=6">Knut Vareide</a> </p>
+						<p> <a href="mailto:vareide@tmforsk.no">vareide@tmforsk.no</a> </p>
 						<p>+47 982 20 004</p>
 					</Col>
 					<Col sm={4} style={{textAlign: 'center'}}>
-						<p>Telemarksforsking</p>
+						<p> <a href="www.telemarksforsking.no">Telemarksforsking</a> </p>
 						<p>Postboks 4, 3833 Bø i Telemark</p>
 						<p>	+47 35 06 15 00</p>
 					</Col>
