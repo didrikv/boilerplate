@@ -30,7 +30,7 @@ export default function HorizontalBarChart(props) {
 		nameLen = e.length > nameLen ? e.length : nameLen
 	})
 	
-	let topPadding =  varCount == 1 ? 0 : 10 + 20*varCount	
+	let topPadding =  varCount == 1 ? 0 : 10 + 20*Math.ceil(varCount/2)	
 	let leftPadding = 10 + 8*nameLen
 	let height = 30 + topPadding + names.length * 30
 	
@@ -95,7 +95,11 @@ export default function HorizontalBarChart(props) {
 				data={legendData}
 				colorScale={colorScale}
 				symbolSpacer={0.1}
+				gutter={10}
 				labelComponent={<VictoryLabel dx={10} />}
+				itemsPerRow={2}
+				orientation='horizontal'
+
 			/>
 		}
 

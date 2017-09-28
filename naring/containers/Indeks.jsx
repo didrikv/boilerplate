@@ -8,7 +8,7 @@ import HorizontalChart from '../../components/HorizontalChart/HorizontalChart.js
 import styles from './App.css'
 
 
-export default class Kategori extends React.Component {
+export default class Indeks extends React.Component {
 	constructor(props) {
 		super()
 

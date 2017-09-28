@@ -5,7 +5,7 @@ import LineChart from '../../components/LineChart/LineChart.jsx'
 import {Grid, Row, Col} from 'react-bootstrap'
 import categories from '../data/categories.json'
 import PolarChart from '../../components/PolarChart/PolarChart.jsx'
-import styles from '../../components/TwoColumn/TwoColumn.css'
+import styles from './App.css'
 
 
 export default class Steder extends React.Component {
@@ -18,11 +18,22 @@ export default class Steder extends React.Component {
 		this.categories = categories.map( (e) => e.title)
 		this.inndeling = props.inndeling
 
+		this.maxRank = this.inndeling == "Fylke" ? 19 :
+			this.inndeling == "Region" ? 86 : 428
+
 		this.variables = categories.map( (e) => ({
 			name: e.title,
 			subnames: e.variables.filter( (v) => 
 				!variables.find( (s) => s.id == v).reverse)
 		}))
+
+		this.variables.unshift({
+			name: 'Kulturindeks',
+			subnames: [
+				'Kulturindeks',
+			]
+		})
+		
 
 		this.places = createDataObject(data, 2015)
 			.filter( (e) => e.Inndeling == this.inndeling)
@@ -48,13 +59,8 @@ export default class Steder extends React.Component {
 		}
 
 		data = data.map( (e) => ({...e, År: String(e.År)}) )
-		let variable = variables.find( (e) => e.id == this.state.variable )
 
-		return {
-			data,
-			name: variable.category + ': ' + variable.id,
-			unit: variable.benevning
-		}
+		return data
 	}
 
 	createPolarData = (nr, year) => {
@@ -82,28 +88,39 @@ export default class Steder extends React.Component {
 		}
 	}
 
-	getLineName = () => {
+	filterLineData = () => {
+		let data = this.lineData
+		let indeks = this.state.variable == "Kulturindeks"
+		if(indeks) {
+			data = data.filter( (e) => e.Inndeling == this.props.inndeling)
+			var domain = [1, this.maxRank]
+			var reverse = true
+		}
 		let variable = variables.find( (e) => e.id == this.state.variable )
-		return ({
-			name: variable.category + ': ' + variable.id,
-			unit: variable.benevning
-		})
+
+		return {
+			data,
+			domain,
+			reverse,
+			name: indeks ? 'Kulturindeks' : variable.category + ': ' + variable.id,
+			unit: indeks ? 'Rangering' : variable.benevning,
+		}
 	}
 
 
 	render() {
-		let lineNames = this.getLineName()
+		let lineData = this.filterLineData()
 		return(
 			<Grid>
-				<div style={{height: '30px'}}> </div>
 				<Row>
 					<Col>
 						<div className={styles.section}>
-							<h3 className={styles.header}> {sted[this.inndeling].plural} </h3>
-							<p className={styles.paragraph}> 
+							<h3> {sted[this.inndeling].plural} </h3>
+							<p> 
 								{sted[this.inndeling].text}
 							</p>
 						</div>
+						<div style={{height: '30px'}}> </div>
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
 							<Picker
 								names={this.inndeling == "Kommune"
@@ -151,12 +168,14 @@ export default class Steder extends React.Component {
 						/>
 						<div style={{height: '30px'}}> </div>
 						<LineChart showZero
-							data={this.lineData.data}
+							data={lineData.data}
+							domain={lineData.domain}
+							reverse={lineData.reverse}
 							variable={this.state.variable}
 							x='År'
 							splitby={'Navn'}
-							name={lineNames.name}
-							ytitle={lineNames.unit}
+							name={lineData.name}
+							ytitle={lineData.unit}
 						/>
 					</Col>
 				</Row>

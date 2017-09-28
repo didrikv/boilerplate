@@ -11,6 +11,19 @@ app.get('/', (req, res) => {
 
 app.use('/', expressStaticGzip(__dirname + "/public"))
 
+app.get('/naring/*', (req, res) => {
+	res.sendFile(__dirname + '/public/naring/index.html')
+})
+
+app.get('/attraktivitet/*', (req, res) => {
+	res.sendFile(__dirname + '/public/attraktivitet/index.html')
+})
+
+
+app.get('/kultur/*', (req, res) => {
+	res.sendFile(__dirname + '/public/kultur/index.html')
+})
+
 app.listen(3000, () => {
 	console.log("Server running, and listening on port 3000")
 })

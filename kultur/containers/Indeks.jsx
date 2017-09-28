@@ -9,16 +9,12 @@ import HorizontalChart from '../../components/HorizontalChart/HorizontalChart.js
 import InfoText from './InfoText.jsx'
 import InfoText2 from './InfoText2.jsx'
 
-export default class Kategori extends React.Component {
+export default class Indeks extends React.Component {
 	constructor(props) {
 		super()
-		let {i} = props
-		this.variables = categories[i].variables.slice()
-		this.variables.unshift(categories[i].title)
 
 		this.state = {
 			...props,
-			variable: categories[i].title,
 			inndeling: 'Kommune',
 			years: [2015]
 		}
@@ -27,32 +23,22 @@ export default class Kategori extends React.Component {
 	renderControls = () => {
 		return(
 			<Row style={{width: '50rem', margin: 'auto'}}>
-				<Col sm={3}>
+				<Col sm={6}>
 					<Picker
 						names={['Kommune', 'Region', 'Fylke']}
 						chosen={this.state.inndeling}
 						handleChange={ (inndeling) => this.setState({inndeling}) }
 						title='Velg inndeling:'
-						topTitle
+						justify='center'
 					/>
 				</Col>
-				<Col sm={3}>
+				<Col sm={6}>
 					<Picker
 						names={this.state.dataStore.years}
 						chosen={this.state.years[0]}
 						handleChange={ (years) => this.setState({years: [years]}) }
 						title='Velg år:'
-						topTitle
-					/>
-				</Col>
-				<Col sm={6}>
-					<Picker
-						names={this.variables}
-						chosen={this.state.variable}
-						handleChange={ (variable) => this.setState({variable}) }
-						boldFirst={true}
-						title='Velg variabel:'
-						topTitle
+						justify='center'
 					/>
 				</Col>
 			</Row>
@@ -61,59 +47,35 @@ export default class Kategori extends React.Component {
 
 
 	render() {
-		let variable = this.state.variable
-		let category = categories[this.state.i]
-
-		let varInfo = allVariables.find( (e) => e.id == variable)
-		let reverse = varInfo ? varInfo.reverse : undefined
-
-		if(variable == category.title) {
-			var stack = category.variables.map( (e) => e + ' Score')
-		} else {
-			var legendNames= [variable]
-			variable = reverse ? variable+' Score' : variable
-			var stack = [variable]
-		}
+		let stack = categories.map( (e) => e.title)
 
 		let mapProps = {
-			name: reverse ? this.state.variable : variable, 
+			name: 'Norsk Kulturindeks',
 			createControl: false,
-			variable,
-			percentLegend: varInfo ? reverse : true
+			variable: 'Kulturindeks Score',
+			percentLegend: true,
 		}
 
 		let chartProps = {
 			stack,
-			sortby: variable,
+			sortby: 'Kulturindeks Score',
 			view: 'top',
 			createControl: false,
 			years: this.state.years,
 			dataStore: this.state.dataStore,
 			n: 20,
-			ytitle: varInfo ? varInfo.benevning : undefined,
-			legendNames,
-			noticks: varInfo ? reverse : true
+			noticks: true,
 		}
-
-		let infoText = this.state.variable == this.variables[0] ? null :
-			<InfoText {...varInfo} />
 
 		return(
 			<Grid>
 				<Row>
 					<div className={styles.section}>
-						<h3> { category.title } </h3>
-						<p> { category.text } </p>
+						<h3>Norsk Kulturindeks</h3>
+						<p>{text}</p>
 					</div>
 				</Row>
-				<div style={{height: '30px'}}> </div>
-					{this.renderControls()}
-				<div style={{height: '30px'}}> </div>
-				<Row>
-					<div style={{maxWidth: "50rem", margin: 'auto'}}>
-						{infoText}
-					</div>
-				</Row>
+				{this.renderControls()}
 				<div style={{height: '30px'}}> </div>
 				<Row>
 					<Col sm={6} >
@@ -123,7 +85,10 @@ export default class Kategori extends React.Component {
 						<HorizontalChart {...this.state} {...chartProps}/>
 					</Col>
 				</Row>
+				<div style={{height: '100px'}}> </div>
 			</Grid>
 		)
 	}
 }
+
+let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."

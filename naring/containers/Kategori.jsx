@@ -54,7 +54,7 @@ export default class Kategori extends React.Component {
 						topTitle
 					/>
 				</Col>
-				</Row>
+			</Row>
 		)
 	}
 
@@ -105,11 +105,11 @@ export default class Kategori extends React.Component {
 			<Grid>
 				<Row>
 					<Col sm={12}>
-					<div className={styles.section}>
-						<h3 > { category.title } </h3>
-						<p > { category.text } </p>
-					</div>
-				</Col>
+						<div className={styles.section}>
+							<h3 > { category.title } </h3>
+							<p > { category.text } </p>
+						</div>
+					</Col>
 				</Row>
 				<div style={{height: '30px'}}> </div>
 				{this.renderControls()}

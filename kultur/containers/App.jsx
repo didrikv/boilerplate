@@ -1,6 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from './Header.jsx'
+import Footer from './Footer.jsx'
 import KategoriRoute from './KategoriRoute.jsx'
 import Steder from './Steder.jsx'
 
@@ -18,6 +19,7 @@ export default function App(props) {
 					<Route path="/kommuner" render={kommuner} />
 					<Route path="/fylker" render={fylker} />
 					<Route path="/regioner" render={regioner} />
+					<Footer/>
 				</div>
 			</Router>
 		</div>
