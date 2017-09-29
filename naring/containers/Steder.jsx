@@ -83,7 +83,7 @@ export default class Steder extends React.Component {
 	}
 
 
-	createPolarData = (nr) => {
+	createPolarData = (nr, years) => {
 
 		let obs = this.dataObj.filter((e) => e.Nr == nr)[0]
 		let data = this.categories.map( (variable) => ({
@@ -91,7 +91,6 @@ export default class Steder extends React.Component {
 			value: obs[variable + ' Indeks']
 		}))
 
-		let years = this.state.year
 		let name ='Næringsindeks ' + obs.Navn + ' ' 
 		name += years.length == 1 ? years[0] : years[0] + '-' + years[years.length-1]
 
@@ -105,11 +104,11 @@ export default class Steder extends React.Component {
 	componentWillUpdate = (nextProps, nextState) => {
 		if(this.state.nr != nextState.nr) {
 			this.lineData = this.createLineData(nextState.nr)
-			this.polarData = this.createPolarData(nextState.nr)
+			this.polarData = this.createPolarData(nextState.nr, nextState.year)
 		}
 		if(!deepEqual(this.state.year, nextState.year)) {
 			this.dataObj = this.createDataObjectRank(this.rawData, nextState.year)
-			this.polarData = this.createPolarData(nextState.nr)
+			this.polarData = this.createPolarData(nextState.nr, nextState.year)
 		}
 	}
 
