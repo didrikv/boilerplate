@@ -4,6 +4,7 @@ import allVariables from '../data/variables.json'
 import {Row, Col, Grid} from 'react-bootstrap'
 import StaticNorwayMap from '../../components/Map/StaticNorwayMap.jsx'
 import Picker from '../../components/Picker/Picker.jsx'
+import MultiSelect from '../../components/MultiSelect/MultiSelectSmall.jsx'
 import HorizontalChart from '../../components/HorizontalChart/HorizontalChart.jsx'
 import styles from './App.css'
 
@@ -32,10 +33,10 @@ export default class Indeks extends React.Component {
 					/>
 				</Col>
 				<Col sm={6}>
-					<Picker
+					<MultiSelect
 						names={this.state.dataStore.years}
-						chosen={this.state.years[0]}
-						handleChange={ (years) => this.setState({years: [years]}) }
+						chosen={this.state.years}
+						handleChange={ (years) => this.setState({years}) }
 						title='Velg år:'
 						justify='center'
 					/>

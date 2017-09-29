@@ -16,7 +16,7 @@ function Header(props) {
 				<a href='https://www.telemarksforsking.no'>
 					<img src={logo} height='30px'/>
 				</a>
-				<h1>NÆRINGSINDEKS</h1> 
+				<h1>Næringsindeksen</h1> 
 				<p> Hvordan går det med næringslivet? </p>
 				<p> av  <a href='http://www.tmforsk.no/medarbeidere/detalj.asp?id=13&merket=6'> Knut Vareide</a> </p>
 			</div>

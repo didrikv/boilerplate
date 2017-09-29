@@ -4,17 +4,18 @@ import styles from './App.css'
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import {LinkContainer} from 'react-router-bootstrap'
+import logo from '../../logo/logoFullFarge.svg'
 
 
 function Header(props) {
-	console.log(props)
 	return(
 		<div>
 			<div className={styles.header} >
-				<img src='../../logo/logoFullFarge.svg' />
-				<p> Telemarksforskning </p>
-				<h1> ATTRAKTIVITETSANALYSER </h1> 
-				<p> HVA FÅR STEDER TIL Å VOKSE? </p>
+				<a href='https://www.telemarksforsking.no'>
+					<img src={logo} height='30px'/>
+				</a>
+				<h1> Attraktivitetsanalyser </h1> 
+				<p> Hva får steder til å vokse? </p>
 				<p> av  <a href='http://www.tmforsk.no/medarbeidere/detalj.asp?id=13&merket=6'> Knut Vareide </a> </p>
 			</div>
 

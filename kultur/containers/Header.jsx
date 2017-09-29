@@ -16,7 +16,7 @@ function Header(props) {
 				<a href='https://www.telemarksforsking.no'>
 				<img src={logo} height='30px'/>
 				</a>
-				<h1> NORSK KULTURINDEKS</h1> 
+				<h1> Norsk kulturindeks</h1> 
 				<p> Hvor er det kultur? </p>
 				<p> av  <a href='http://www.tmforsk.no/medarbeidere/Detalj.asp?id=80&merket=6'> Bård Kleppe</a> </p>
 			</div>
@@ -24,7 +24,7 @@ function Header(props) {
 			<div className={styles.navbarWrapper}>
 			<AutoAffix>
 				<div style={{zIndex:'10'}}>
-				<Navbar bsStyle='inverse' collapseOnSelect staticTop>
+				<Navbar bsStyle='default' collapseOnSelect staticTop>
 					<Navbar.Toggle/>
 					<div className={styles.navbar}>
 							<Navbar.Collapse>

@@ -1,18 +1,22 @@
 import React from 'react'
 import variables from '../data/variables.json'
 import Picker from '../../components/Picker/Picker.jsx'
+import Multiselect from '../../components/MultiSelect/MultiSelectSmall.jsx'
 import LineChart from '../../components/LineChart/LineChart.jsx'
 import {Grid, Row, Col} from 'react-bootstrap'
 import categories from '../data/categories.json'
 import PolarChart from '../../components/PolarChart/PolarChart.jsx'
 import styles from './App.css'
+import deepEqual from 'deep-equal'
 
 
 export default class Steder extends React.Component {
 	constructor(props) {
 		super()
-		let {data, years, createDataObject, allDataObject} = props.dataStore
-
+		let {data, years, createDataObject, allDataObject, createDataObjectRank} = props.dataStore
+		
+		this.rawData = data
+		this.createDataObjectRank = createDataObjectRank
 		this.data = allDataObject
 		this.years =	years 
 		this.categories = categories.map( (e) => e.title)
@@ -41,8 +45,10 @@ export default class Steder extends React.Component {
 		this.state = {
 			nr: this.places[0].Nr,
 			variable: 'Produktivitet',
-			year: 2015
+			year: [2015]
 		}
+
+		this.dataObj = createDataObjectRank(data, this.state.year) 
 
 		this.lineData = this.createLineData(this.state.nr)
 		this.polarData = this.createPolarData(this.state.nr, this.state.year)
@@ -56,7 +62,6 @@ export default class Steder extends React.Component {
 		} else {
 			var data = this.data.filter( (e) => [0, nr].includes(e.Nr) )
 		}
-
 
 		data = data.map( (e) => ({...e, År: String(e.År)}) )
 
@@ -78,28 +83,33 @@ export default class Steder extends React.Component {
 	}
 
 
-	createPolarData = (nr, year) => {
-		let obs = this.data.filter( (e) => e.Nr == nr && e.År == year)[0]
+	createPolarData = (nr) => {
 
+		let obs = this.dataObj.filter((e) => e.Nr == nr)[0]
 		let data = this.categories.map( (variable) => ({
 			x: variable + ' (' + obs[variable +  ' Indeks Rank'] + ')',
 			value: obs[variable + ' Indeks']
 		}))
 
+		let years = this.state.year
+		let name ='Næringsindeks ' + obs.Navn + ' ' 
+		name += years.length == 1 ? years[0] : years[0] + '-' + years[years.length-1]
+
 		return {
 			data,
 			center: obs['Næringsindeks Rank'],
-			name: 'Næringsindeks ' + obs.Navn + ' ' + year
+			name,
 		}
 	}
 
 	componentWillUpdate = (nextProps, nextState) => {
 		if(this.state.nr != nextState.nr) {
 			this.lineData = this.createLineData(nextState.nr)
-			this.polarData = this.createPolarData(nextState.nr, nextState.year)
+			this.polarData = this.createPolarData(nextState.nr)
 		}
-		if(this.state.year != nextState.year) {
-			this.polarData = this.createPolarData(nextState.nr, nextState.year)
+		if(!deepEqual(this.state.year, nextState.year)) {
+			this.dataObj = this.createDataObjectRank(this.rawData, nextState.year)
+			this.polarData = this.createPolarData(nextState.nr)
 		}
 	}
 
@@ -137,13 +147,13 @@ export default class Steder extends React.Component {
 					</Col>
 					<div style={{height: '30px'}}> </div>
 					<Col sm={6}>
-						<Picker
+						<Multiselect
 							names={this.years}
 							chosen={this.state.year}
 							handleChange={ (year) => this.setState({year}) }
 							title='Velg år:'
 							justify='center'
-							width='100px'
+							width='200px'
 						/>
 						<div style={{height: '30px'}}> </div>
 						<PolarChart bar

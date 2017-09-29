@@ -25,6 +25,70 @@ function createJustRank(i, data, reverse) {
 	})
 }
 
+function rankArray(arr) {
+	let sort = arr.slice().sort(sortInt).reverse()
+	return arr.map( (e) => sort.indexOf(e) + 1 )
+}
+
+function createDataObjectRank(data, years) {
+	years = Array.isArray(years) ? years : [years]
+	if(years.length == 1) {
+		var variables = data[years[0]]
+	} else {
+		let count = years.length
+		let n = data[years[0]].length
+		var variables = Array(n)
+		for(let i=0; i<n; i++) {
+			let nvar = data.vars.length
+			variables[i] = []
+			for(let el=0; el<nvar; el++) {
+				if(['Inndeling', 'Nr', 'Navn', 'Fylke', 'Region', 'År'].includes(data.vars[el])) {
+					variables[i][el] = data[years[0]][i][el]
+				} else {
+					let input = 0
+					for(let year of years) {
+						input += data[year][i][el]
+					}
+					variables[i][el] = +(input/count).toFixed(2)
+				}
+			}
+		}
+		
+		let rankVars = data.vars.filter( (e) => e.substr(e.length - 4) == 'Rank')
+		let rankIs = rankVars.map( (e) => data.vars.indexOf(e) )
+		let origName = rankVars.map( (e) => e.substr(0, e.length - 5) )
+		let origIs = origName.map( (e) => data.vars.indexOf(e) )
+		let inndelingI = data.vars.indexOf('Inndeling')
+		let inndeling = ['Land', 'Fylke', 'Kommune', 'Region']
+
+		let newvars = []
+		inndeling.forEach( (inn) => {
+			let tmp = variables.filter( (e) => e[inndelingI] == inn)
+			origIs.forEach( (e, i) => {
+				let arr = tmp.map( (row) => row[e] )
+				let rank = rankArray(arr)
+				tmp = tmp.map( (e, j) => {
+					e[rankIs[i]] = rank[j]
+					return e
+				})
+			})
+			newvars = newvars.concat(tmp)
+		})
+
+		variables = newvars
+	}
+
+	let dataobj = variables.map( (e) => {
+		let obs = {}
+		for(let i in data.vars) {
+			obs[data.vars[i]] = e[i]
+		}
+		obs['År'] = years
+		return(obs)
+	})
+	return dataobj
+}
+
 let inndeling = ['Land', 'Fylke', 'Kommune', 'Region']
 let inndelingI = vars.indexOf('Inndeling')
 let varScoreI = variables.map( (e) => vars.indexOf(e.id + ' Score') ) 
@@ -76,6 +140,6 @@ years.forEach( (year) => {
 	allDataObject = allDataObject.concat( createDataObject(data, year))
 })
 
-let dataStore = {years, vars, data, allDataObject, createDataObject}
+let dataStore = {years, vars, data, allDataObject, createDataObject, createDataObjectRank}
 export default dataStore
 

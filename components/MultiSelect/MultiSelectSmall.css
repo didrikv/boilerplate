@@ -1,0 +1,94 @@
+
+.container {
+	display: flex;
+	justify-content: center;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+}
+
+.arrowDown{
+	cursor: pointer;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: #999;
+	height: 5px;
+	width: 5px;
+	margin: auto 0;
+	justify-self: right;
+	position: relative;
+	top: 2.5px;
+}
+.arrowUp{
+	composes: arrowDown;
+	border-top-color: transparent;
+	border-bottom-color: #999;
+	top: -2.5px;
+}
+
+.button {
+	border: none;
+	white-space: nowrap;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	flex-grow: 1;
+	padding: 0px 6px 0px 6px;
+	width: 100%;
+	height: 34px;
+	background-color: white;
+	text-align: left;
+}
+
+.title{
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+}
+
+.button:focus {
+	outline: none;
+}
+
+.buttonChecked {
+	composes: button;
+	background: #f2f9fc;
+	outline: none;
+}
+
+.dropbtn {
+	composes: button;
+	margin-bottom: 1px;
+}
+
+.dropdownContent {
+	composes: container;
+	flex-direction: column;
+	margin: 0px;
+	z-index: 2;
+	position: absolute;
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	width: 100%;
+	border-width: 0px 1px 1px 1px;
+	border-style: solid;
+	border-color: #ccc;
+	border-radius: 1px;
+}
+
+.dropdown {
+	position: relative;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.show {
+	composes: dropdownContent;
+	visibility: visible;
+	opacity: 1;
+	transition: 500ms;
+}
+
