@@ -20,7 +20,7 @@ export default class Kategori extends React.Component {
 			...props,
 			variable: categories[i].title + ' Indeks',
 			inndeling: 'Kommune',
-			years: [2015]
+			years: [2016]
 		}
 	}
 

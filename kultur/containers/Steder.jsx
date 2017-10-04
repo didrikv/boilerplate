@@ -35,14 +35,14 @@ export default class Steder extends React.Component {
 		})
 		
 
-		this.places = createDataObject(data, 2015)
+		this.places = createDataObject(data, 2016)
 			.filter( (e) => e.Inndeling == this.inndeling)
 			.map( (e) => ({ Nr: e.Nr, Navn: e.Navn}))
 
 		this.state = {
 			nr: this.places[0].Nr,
 			variable: 'Kunstnertetthet',
-			year: 2015
+			year: 2016
 		}
 
 		this.lineData = this.createLineData(this.state.nr)

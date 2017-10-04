@@ -16,7 +16,7 @@ export default class Indeks extends React.Component {
 		this.state = {
 			...props,
 			inndeling: 'Kommune',
-			years: [2015]
+			years: [2016]
 		}
 	}
 

@@ -116,8 +116,34 @@
 		"weight": 1,
 		"benevning": "per inbygger"
 	},
+        {
+        "id": "Billettselskap Arrangemanger",
+        "title": "Antall konserter billettselskaper", 
+        "category": "Konserter",
+        "mål": "Indikerer hvor mange konserter som har blitt avholdt i en kommune.",
+        "formel": "(A/B) x 1000 der A= Antall konserter registret av de største billettselskapene og B= Antall innbyggere i kommunen.", 
+        "metode": "Beregne antall konserter som har blitt avholdt i de ulike kommunene.",
+        "kilder": "Billettservice, Billettportalen, TicketCo, eBillett, Hoopla, Ringbillett, Aurora, Tikkio og Linticket. Tall for 2015.",
+        "vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
+        "merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette. Vi har benyttet 2014-tall fra TicketCo, da det ikke lot seg gjøre å fremskaffe 2015-tall." ,
+        "weight": 1,
+        "benevning": "per 1000 inbygger"
+    },
+    {
+        "id": "Billettselskap Omsettning",
+        "title": "Billettinntekter for konserter gjennom billettselskaper", 
+        "category": "Konserter",
+        "mål": "Indikerer størrelsen og populariteten på konserter som er avholdt.",
+        "formel": "(A/B) der A= Billettinntekter registret av de største billettselskapene og B= Antall innbyggere i kommunen.", 
+        "metode": "Beregne summen av solgte billetter for konserter avholdt i de ulike kommunene.",
+        "kilder": "Billettservice, Billettportalen, TicketCo, eBillett, Hoopla, Ringbillett, Aurora, Tikkio og Linticket. Tall for 2015.",
+        "vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
+        "merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette. Vi har benyttet 2014-tall fra TicketCo, da det ikke lot seg gjøre å fremskaffe 2015-tall." ,
+        "weight": 1,
+        "benevning": "per inbygger"
+    },
 	{
-		"id": "Arrangemanger",
+		"id": "TONO Arrangemanger",
 		"title": "Antall konserter billettselskaper", 
 		"category": "Konserter",
 		"mål": "Indikerer hvor mange konserter som har blitt avholdt i en kommune.",
@@ -130,7 +156,7 @@
 		"benevning": "per 1000 inbygger"
 	},
 	{
-		"id": "Omsettning",
+		"id": "TONO Avregning",
 		"title": "Billettinntekter for konserter gjennom billettselskaper", 
 		"category": "Konserter",
 		"mål": "Indikerer størrelsen og populariteten på konserter som er avholdt.",

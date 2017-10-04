@@ -45,7 +45,7 @@ export default class Steder extends React.Component {
 		this.state = {
 			nr: this.places[0].Nr,
 			variable: 'Produktivitet',
-			year: [2015]
+			year: [2016]
 		}
 
 		this.dataObj = createDataObjectRank(data, this.state.year) 
