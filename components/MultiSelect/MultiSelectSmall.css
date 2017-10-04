@@ -40,21 +40,29 @@
 	height: 34px;
 	background-color: white;
 	text-align: left;
+	transition: background 300ms;
 }
 
 .title{
 	display: flex;
 	align-items: center;
-	font-weight: bold;
 }
 
 .button:focus {
 	outline: none;
 }
 
+.innerbutton{
+	composes:button
+}
+
+.innerbutton:hover{
+	background:#D6EAF8;
+}
+
 .buttonChecked {
 	composes: button;
-	background: #f2f9fc;
+	background: #D6EAF8;
 	outline: none;
 }
 

@@ -31,8 +31,10 @@ export default function HorizontalBarChart(props) {
 	})
 	
 	let topPadding =  varCount == 1 ? 0 : 10 + 20*Math.ceil(varCount/2)	
-	let leftPadding = 10 + 8*nameLen
+	let leftPadding = 15 + 8*nameLen
 	let height = 30 + topPadding + names.length * 30
+
+	console.log(data)
 	
 
 	return (

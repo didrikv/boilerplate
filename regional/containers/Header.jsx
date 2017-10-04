@@ -10,9 +10,15 @@ import logo from '../../logo/logoFullFarge.svg'
 function Header(props) {
 	return(
 		<div>
+			<div className={styles.linkContainer}>
+				<div> Regional Analyse </div>
+				<a href='/naring' >Næringsindeksen</a>
+				<a href='/attraktivitet'>Attraktivitetsanalyser</a>
+				<a href='/kultur'>Norsk Kulturindeks</a>
+			</div>
 			<div className={styles.header} >
 				<a href='https://www.telemarksforsking.no'>
-					<img src={logo} height='30px'/>
+					<img src={logo} height='40px'/>
 				</a>
 				<h1> Regionale analyser</h1> 
 			</div>

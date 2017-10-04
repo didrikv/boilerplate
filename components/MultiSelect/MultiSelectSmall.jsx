@@ -152,7 +152,7 @@ export default class MultiSelect2 extends React.Component {
 								<button 
 									value={e}
 									key={i}
-									className={chosen.includes(e) ? styles.buttonChecked : styles.button}
+									className={chosen.includes(e)&& this.state.on ? styles.buttonChecked : styles.innerbutton}
 									onMouseEnter={this.onMouseEnter}
 									onMouseDown={this.startSelect}
 									onTouchStart={this.startSelect}

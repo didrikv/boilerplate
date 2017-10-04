@@ -20,6 +20,27 @@ html {
 	font-family: sans;
 }
 
+.linkContainer{
+	display: flex;
+	justify-content: center;
+	background: #fff;
+}
+
+.linkContainer *{
+	padding: 0 10px;
+	color: tmBlue;
+	font-size: 0.8rem;
+	border-left: 1px solid tmDarkGreen;
+}
+
+.linkContainer *:first-child {
+	border-left: none;
+}
+
+.linkContainer div {
+	color: tmDarkGreen;
+}
+
 .header{
 	font-family: "Helvetica";
 	font-size: 2rem;
@@ -32,16 +53,17 @@ html {
 }
 
 .header p{
-	font-size: 0.8rem;
+	font-size: 1rem;
 }
 
 .header h1{
 	font-size: 3rem;
+	margin: 15px 0px;
 }
 
 .header p a{
 	color: logoBlue;
-	font-size: 0.8rem;
+	font-size: 1rem;
 }
 		
 .footer{

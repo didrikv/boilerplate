@@ -46,8 +46,8 @@ function createJustRank(i, data, reverse) {
 	let newOrig = orig.map( (e) => e*100/max )
 
 	data.forEach( (e, j) => {
-		e[i] = newOrig[j]
 		e.push(rank[j])
+		e.push(newOrig[j])
 	})
 }
 
@@ -83,14 +83,11 @@ years.forEach( (year) => {
 			vars.forEach( (variable) => {
 				catScore += array[newvars.indexOf(variable + ' Score')]
 			})
-			array.push(catScore)
-			if(cat.title == 'DKS') {
-				indeks += 0.25*catScore
-			} else if(cat.title == 'Kulturskole') {
-				indeks += 0.75*catScore
-			} else {
-				indeks += catScore
-			}
+			if(cat.title == 'DKS') {var tmp = 0.25*catScore}
+			else if(cat.title == 'Kulturskole') {var tmp = 0.75*catScore}
+			else {var tmp = catScore}
+			array.push(tmp)
+			indeks += tmp
 		})
 		array.push(indeks)
 	})
@@ -120,6 +117,7 @@ years.forEach( (year) => {
 
 categories.forEach( (e) => {
 	newvars.push(e.title + ' Rank')
+	newvars.push(e.title + ' Score flex')
 })
 newvars.push('Kulturindeks')
 

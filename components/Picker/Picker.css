@@ -26,14 +26,42 @@
 
 
 :global(.Select-menu-outer) .variable{
-	margin-left: 20px;
+	padding-left: 30px;
 }
 
+:global(.Select-menu) {
+	max-height: 398px;
+}
+:global(.Select-menu-outer) {
+	max-height: 400px;
+}
+
+
+:global(.Select-option) {
+	color: #333;
+	transition: background 300ms;
+}
+:global(.Select-option.is-focused) {
+	background: none;
+}
+:global(.Select-option.is-selected) {
+	background: none;
+}
+:global(.Select-option):hover {
+	background: #D6EAF8;
+}
+:global(.Select-option.is-disabled) {
+	font-style: italic;
+	color: #777;
+}
+
+:global(.Select-option.is-disabled):hover {
+	background: none;
+}
 
 .title{
 	display: flex;
 	align-items: center;
-	font-weight: bold;
 }
 
 

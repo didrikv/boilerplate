@@ -68,7 +68,7 @@ export default class Steder extends React.Component {
 
 		let data = this.categories.map( (variable) => ({
 			x: variable + ' (' + obs[variable +  ' Rank'] + ')',
-			value: obs[variable]
+			value: obs[variable + ' Score flex']
 		}))
 
 		return {

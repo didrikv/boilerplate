@@ -12,9 +12,15 @@ import categories from '../data/categories.json'
 function Header(props) {
 	return(
 		<div>
+			<div className={styles.linkContainer}>
+				<a href='/regional'> Regional Analyse </a>
+				<a href='/naring' >Næringsindeksen</a>
+				<a href='/attraktivitet'>Attraktivitetsanalyser</a>
+				<div>Norsk Kulturindeks</div>
+			</div>
 			<div className={styles.header} >
 				<a href='https://www.telemarksforsking.no'>
-				<img src={logo} height='30px'/>
+				<img src={logo} height='40px'/>
 				</a>
 				<h1> Norsk kulturindeks</h1> 
 				<p> Hvor er det kultur? </p>
