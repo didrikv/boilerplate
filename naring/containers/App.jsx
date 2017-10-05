@@ -10,16 +10,17 @@ export default class App extends React.Component {
 		super()
 
 		this.state = {
-			year: [2013, 2014, 2015],
+			years: [2013, 2014, 2015],
 			variable: 'Produktivitet',
-			inndeling: 'Kommune'
+			inndeling: 'Kommune',
+			knr: 101,
+			rnr: 3001,
+			fnr: 1
 		}
 	}
 
-	kategori = (routeProps) => <KategoriRoute {...this.props} {...routeProps} Gstate={this.state} setGstate={ () => this.setState()} />
-	kommuner = (routeProps) => <Steder {...this.props} {...routeProps} inndeling='Kommune'/>
-	regioner = (routeProps) => <Steder {...this.props} {...routeProps} inndeling='Region'/>
-	fylker = (routeProps) => <Steder {...this.props} {...routeProps} inndeling='Fylke'/>
+	kategori = (routeProps) => <KategoriRoute {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
+	steder = (routeProps) => <Steder {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
 
 	render() {
 		return(
@@ -28,9 +29,7 @@ export default class App extends React.Component {
 					<div>
 						<Header/>
 						<Route path="/kategori" render={this.kategori} />
-						<Route path="/kommuner" render={this.kommuner} />
-						<Route path="/fylker" render={this.fylker} />
-						<Route path="/regioner" render={this.regioner} />
+						<Route path="/steder" render={this.steder} />
 						<Footer />
 					</div>
 				</Router>

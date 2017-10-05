@@ -34,9 +34,6 @@ export default function HorizontalBarChart(props) {
 	let leftPadding = 15 + 8*nameLen
 	let height = 30 + topPadding + names.length * 30
 
-	console.log(data)
-	
-
 	return (
 		<div id={svgId}>
 		<VictoryChart

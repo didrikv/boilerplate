@@ -55,14 +55,8 @@ function Header(props) {
 												</LinkContainer>
 											)}
 										</NavDropdown>
-										<LinkContainer to='/kommuner'>
-											<NavItem> Kommuner </NavItem>
-										</LinkContainer>
-										<LinkContainer to='/regioner'>
-											<NavItem> Regioner </NavItem>
-										</LinkContainer>
-										<LinkContainer to='/fylker'>
-											<NavItem> Fylker </NavItem>
+										<LinkContainer to='/steder'>
+											<NavItem> Steder</NavItem>
 										</LinkContainer>
 									</Nav>
 								</Navbar.Collapse>

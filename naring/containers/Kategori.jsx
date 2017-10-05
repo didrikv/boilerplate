@@ -19,8 +19,6 @@ export default class Kategori extends React.Component {
 		this.state = {
 			...props,
 			variable: categories[i].title + ' Indeks',
-			inndeling: 'Kommune',
-			years: [2016]
 		}
 	}
 
@@ -30,8 +28,8 @@ export default class Kategori extends React.Component {
 				<Col sm={3}>
 					<Picker
 						names={['Kommune', 'Region', 'Fylke']}
-						chosen={this.state.inndeling}
-						handleChange={ (inndeling) => this.setState({inndeling}) }
+						chosen={this.props.Gstate.inndeling}
+						handleChange={ (inndeling) => this.props.setGstate({inndeling}) }
 						title='Velg inndeling:'
 						topTitle
 					/>
@@ -39,8 +37,8 @@ export default class Kategori extends React.Component {
 				<Col sm={3}>
 					<MultiSelect
 						names={this.state.dataStore.years}
-						chosen={this.state.years}
-						handleChange={ (years) => this.setState({years}) }
+						chosen={this.props.Gstate.years}
+						handleChange={ (years) => this.props.setGstate({years}) }
 						title='Velg år'
 						topTitle
 					/>
@@ -86,7 +84,9 @@ export default class Kategori extends React.Component {
 		let mapProps = {
 			createControl: false,
 			variable,
-			percentLegend: varInfo ? false : true
+			percentLegend: varInfo ? false : true,
+			years: this.props.Gstate.years,
+			inndeling: this.props.Gstate.inndeling
 		}
 
 		let chartProps = {
@@ -94,12 +94,13 @@ export default class Kategori extends React.Component {
 			sortby: variable,
 			view: 'top',
 			createControl: false,
-			years: this.state.years,
+			years: this.props.Gstate.years,
 			dataStore: this.state.dataStore,
 			n: 20,
 			legendNames,
 			noticks: varInfo ? false : true,
-			ytitle: getVarTitle()
+			ytitle: getVarTitle(),
+			inndeling: this.props.Gstate.inndeling
 		}
 
 		return(
@@ -122,7 +123,7 @@ export default class Kategori extends React.Component {
 						<StaticNorwayMap {...this.state} {...mapProps} />
 					</Col>
 					<Col sm={6} >
-						<HorizontalChart {...this.state} {...chartProps} unit={getVarTitle()}/>
+						<HorizontalChart {...chartProps} unit={getVarTitle()}/>
 					</Col>
 				</Row>
 			</Grid>

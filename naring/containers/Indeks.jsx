@@ -15,8 +15,6 @@ export default class Indeks extends React.Component {
 
 		this.state = {
 			...props,
-			inndeling: 'Kommune',
-			years: [2016]
 		}
 	}
 
@@ -26,8 +24,8 @@ export default class Indeks extends React.Component {
 				<Col sm={6}>
 					<Picker
 						names={['Kommune', 'Region', 'Fylke']}
-						chosen={this.state.inndeling}
-						handleChange={ (inndeling) => this.setState({inndeling}) }
+						chosen={this.props.Gstate.inndeling}
+						handleChange={ (inndeling) => this.props.setGstate({inndeling}) }
 						title='Velg inndeling:'
 						justify='center'
 					/>
@@ -35,8 +33,8 @@ export default class Indeks extends React.Component {
 				<Col sm={6}>
 					<MultiSelect
 						names={this.state.dataStore.years}
-						chosen={this.state.years}
-						handleChange={ (years) => this.setState({years}) }
+						chosen={this.props.Gstate.years}
+						handleChange={ (years) => this.props.setGstate({years}) }
 						title='Velg år:'
 						justify='center'
 					/>
@@ -56,6 +54,8 @@ export default class Indeks extends React.Component {
 			createControl: false,
 			variable: 'Næringsindeks',
 			percentLegend: true,
+			inndeling: this.props.Gstate.inndeling,
+			years: this.props.Gstate.years
 		}
 
 		let chartProps = {
@@ -63,11 +63,12 @@ export default class Indeks extends React.Component {
 			sortby: 'Næringsindeks',
 			view: 'top',
 			createControl: false,
-			years: this.state.years,
+			years: this.props.Gstate.years,
 			dataStore: this.state.dataStore,
 			n: 20,
 			legendNames,
 			noticks: true,
+			inndeling: this.props.Gstate.inndeling
 		}
 
 		return(

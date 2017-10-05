@@ -8,6 +8,8 @@ import categories from '../data/categories.json'
 import PolarChart from '../../components/PolarChart/PolarChart.jsx'
 import styles from './App.css'
 import deepEqual from 'deep-equal'
+import RadioPicker from '../../components/RadioPicker/RadioPicker.jsx'
+import RadioButtons from '../../components/RadioPicker/RadioButtons.jsx'
 
 
 export default class Steder extends React.Component {
@@ -18,12 +20,12 @@ export default class Steder extends React.Component {
 		this.rawData = data
 		this.createDataObjectRank = createDataObjectRank
 		this.data = allDataObject
-		this.years =	years 
+		this.allYears =	years 
 		this.categories = categories.map( (e) => e.title)
-		this.inndeling = props.inndeling
+		
+		this.allPlaces = createDataObject(this.rawData, 2015)
+			.map( (e) => ({ Nr: e.Nr, Navn: e.Navn, Inndeling: e.Inndeling}))
 
-		this.maxRank = this.inndeling == "Fylke" ? 19 :
-			this.inndeling == "Region" ? 86 : 428
 
 		this.variables = categories.map( (e) => ({
 			name: e.title,
@@ -38,24 +40,28 @@ export default class Steder extends React.Component {
 			]
 		})
 
-		this.places = createDataObject(data, 2015)
-			.filter( (e) => e.Inndeling == this.inndeling)
-			.map( (e) => ({ Nr: e.Nr, Navn: e.Navn}))
+		this.loadInndeling(props.Gstate)
 
-		this.state = {
-			nr: this.places[0].Nr,
-			variable: 'Produktivitet',
-			year: [2016]
-		}
 
-		this.dataObj = createDataObjectRank(data, this.state.year) 
 
-		this.lineData = this.createLineData(this.state.nr)
-		this.polarData = this.createPolarData(this.state.nr, this.state.year)
+		this.dataObj = createDataObjectRank(data, props.Gstate.years) 
+		this.lineData = this.createLineData(this.nr, props.Gstate.inndeling)
+		this.polarData = this.createPolarData(this.nr, props.Gstate.years)
 	}
 
-	createLineData = (nr) => {
-		if(this.inndeling == 'Kommune') {
+
+	loadInndeling = (Gstate) => {
+		let {inndeling, knr, rnr, fnr } = Gstate
+		this.maxRank = inndeling == "Fylke" ? 19 :
+			inndeling == "Region" ? 86 : 428
+		this.places = this.allPlaces.filter( (e) => e.Inndeling == inndeling)
+		this.nr = inndeling == "Fylke" ? fnr : 
+			inndeling =="Region" ? rnr : knr
+	}
+
+
+	createLineData = (nr, inndeling) => {
+		if(inndeling == 'Kommune') {
 			let fnr = Math.floor(nr/100)
 			var data = this.data.filter( (e) => [0, fnr, nr].includes(e.Nr) )
 			if(nr == 301) {data = data.filter( (e) => !(e.Inndeling == "Fylke") )}
@@ -68,12 +74,12 @@ export default class Steder extends React.Component {
 		return data
 	}
 
-	filterLineData = () => {
+	filterLineData = (variable) => {
 		let data = this.lineData
-		if(this.state.variable == "Næringsindeks" || this.state.variable == "Næringsindeks Rank") {
-			data = data.filter( (e) => e.Inndeling == this.props.inndeling)
-			var domain = this.state.variable == "Næringsindeks" ? [0, 100] : [1, this.maxRank]
-			var reverse = this.state.variable == "Næringsindeks Rank" ? true : false
+		if(variable == "Næringsindeks" || variable == "Næringsindeks Rank") {
+			data = data.filter( (e) => e.Inndeling == this.props.Gstate.inndeling)
+			var domain = variable == "Næringsindeks" ? [0, 100] : [1, this.maxRank]
+			var reverse = variable == "Næringsindeks Rank" ? true : false
 		}
 		return{
 			data,
@@ -101,44 +107,71 @@ export default class Steder extends React.Component {
 		}
 	}
 
-	componentWillUpdate = (nextProps, nextState) => {
-		if(this.state.nr != nextState.nr) {
-			this.lineData = this.createLineData(nextState.nr)
-			this.polarData = this.createPolarData(nextState.nr, nextState.year)
+
+	componentWillReceiveProps = (nextProps) => {
+		if(this.props.Gstate.years != nextProps.Gstate.years) {
+			this.dataObj = this.createDataObjectRank(this.rawData, nextProps.Gstate.years)
+			this.polarData = this.createPolarData(this.nr, nextProps.Gstate.years)
 		}
-		if(!deepEqual(this.state.year, nextState.year)) {
-			this.dataObj = this.createDataObjectRank(this.rawData, nextState.year)
-			this.polarData = this.createPolarData(nextState.nr, nextState.year)
+
+		else if(this.props.Gstate != nextProps.Gstate) {
+			this.loadInndeling(nextProps.Gstate)
+			this.lineData = this.createLineData(this.nr, nextProps.Gstate.inndeling)
+			this.polarData = this.createPolarData(this.nr, nextProps.Gstate.years)
 		}
 	}
 
-	getLineName = () => !['Næringsindeks','Næringsindeks Rank'].includes(this.state.variable) ? 
-		variables.find( (e) => e.id == this.state.variable).title :
+
+
+
+	getLineName = () => !['Næringsindeks','Næringsindeks Rank'].includes(this.props.Gstate.variable) ? 
+		variables.find( (e) => e.id == this.props.Gstate.variable).title :
 		undefined
+
+	setNr = (nr) => {
+		let inndeling = this.props.Gstate.inndeling
+		let str = inndeling == "Kommune" ? 'knr' : 
+			inndeling == "Region" ? 'rnr': 'fnr'
+		this.props.setGstate({ [str]: nr})
+	}
 
 
 	render() {
-		let lineData = this.filterLineData()
+		let lineData = this.filterLineData(this.props.Gstate.variable)
 		return(
 			<Grid>
 				<Row>
 					<Col>
 						<div className={styles.section}>
-							<h3> {sted[this.inndeling].plural} </h3>
-							<p> {sted[this.inndeling].text} </p>
+							<h3> Resultat for enkelte steder </h3>
+							<p>
+								Her kan man se resultat for enkelte kommuner, regioner og fylker.
+								Nede til ventre kan man se rangering i næringsindeksen totalt og for de 5
+								hovedkategoriene. Nede til høyre kan man se utviklingen i alle variablene som indeksene er basert
+								på gjennom tid og sammelignet med land og eventuelt fylke.
+							</p>
 						</div>
+					
+
 						<div style={{height: '30px'}}> </div>
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
+							<div style={{display: 'flex', justifyContent: 'center'}}>
+							<RadioButtons
+								names={['Kommune', 'Region', 'Fylke']}
+								chosen={this.props.Gstate.inndeling}
+								handleChange={(inndeling) => this.props.setGstate({inndeling})}
+							/>
+						</div>
 							<Picker
-								names={this.inndeling == "Kommune"
+								names={this.props.Gstate.inndeling == "Kommune"
 									? this.places.map( (e) => e.Nr + ' ' +  e.Navn )
 									: this.places.map( (e) => e.Navn)}
 								values={this.places.map( (e) => e.Nr )}
-								chosen={this.state.nr}
-								handleChange={ (nr) => this.setState({nr}) }
-								title={'Velg ' + this.inndeling.toLowerCase() + ':'}
+								chosen={this.nr}
+								handleChange={ (nr) => this.setNr(nr) }
+								title={'Velg ' + this.props.Gstate.inndeling.toLowerCase() + ':'}
 								justify='center'
-								width='200px'
+								width='400px'
 							/>
 						</div>
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
@@ -147,9 +180,9 @@ export default class Steder extends React.Component {
 					<div style={{height: '30px'}}> </div>
 					<Col sm={6}>
 						<Multiselect
-							names={this.years}
-							chosen={this.state.year}
-							handleChange={ (year) => this.setState({year}) }
+							names={this.allYears}
+							chosen={this.props.Gstate.years}
+							handleChange={ (years) => this.props.setGstate({years}) }
 							title='Velg år:'
 							justify='center'
 							width='200px'
@@ -167,8 +200,8 @@ export default class Steder extends React.Component {
 					<Col sm={6}>
 						<Picker
 							sections={this.variables}
-							chosen={this.state.variable}
-							handleChange={ (variable) => this.setState({variable}) }
+							chosen={this.props.Gstate.variable}
+							handleChange={ (variable) => this.props.setGstate({variable}) }
 							title='Velg variabel:'
 							justify='center'
 							width='300px'
@@ -178,10 +211,10 @@ export default class Steder extends React.Component {
 							data={lineData.data}
 							domain={lineData.domain}
 							reverse={lineData.reverse}
-							variable={this.state.variable}
+							variable={this.props.Gstate.variable}
 							x='År'
 							splitby={'Navn'}
-							name={this.state.variable}
+							name={this.props.Gstate.variable}
 						/>
 						<div style={{display: 'flex', justifyContent: 'center', color: '#555'}} >
 							<p> {this.getLineName()} </p>
@@ -192,20 +225,3 @@ export default class Steder extends React.Component {
 		)
 	}
 }
-
-const sted = {
-	Kommune:{
-		plural: 'Kommuner',
-		text: 'Lorem ipsum dolor sit amet, veniam epicuri dissentiunt id nam, aperiri deleniti per at. Duis elitr alienum sed an, habeo dolores suavitate his ex, sumo delenit epicurei no pro. Maluisset consectetuer ius eu, natum debitis ei ius, viderer comprehensam definitionem vix id. Sit sonet utamur ut. Iudico mollis accusata vim ea, eu duo veri primis detracto. Stet populo tincidunt et mel, quo ignota placerat te, et vel vidit epicurei assueverit. Mentitum hendrerit vel ex, his labore quaestio id.'
-	},
-	Region: {
-		plural: 'Regioner',
-		text: 'Lorem ipsum dolor sit amet, veniam epicuri dissentiunt id nam, aperiri deleniti per at. Duis elitr alienum sed an, habeo dolores suavitate his ex, sumo delenit epicurei no pro. Maluisset consectetuer ius eu, natum debitis ei ius, viderer comprehensam definitionem vix id. Sit sonet utamur ut. Iudico mollis accusata vim ea, eu duo veri primis detracto. Stet populo tincidunt et mel, quo ignota placerat te, et vel vidit epicurei assueverit. Mentitum hendrerit vel ex, his labore quaestio id.'
-	},
-	Fylke: {
-		plural: 'Fylker',
-		text: 'Lorem ipsum dolor sit amet, veniam epicuri dissentiunt id nam, aperiri deleniti per at. Duis elitr alienum sed an, habeo dolores suavitate his ex, sumo delenit epicurei no pro. Maluisset consectetuer ius eu, natum debitis ei ius, viderer comprehensam definitionem vix id. Sit sonet utamur ut. Iudico mollis accusata vim ea, eu duo veri primis detracto. Stet populo tincidunt et mel, quo ignota placerat te, et vel vidit epicurei assueverit. Mentitum hendrerit vel ex, his labore quaestio id.'
-	}
-}
-
-

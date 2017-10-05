@@ -28,7 +28,7 @@
 	},
 	{
 		"title": "Konserter",
-		"text": "Kategorien konserter tar utgangspunkt i konserttall fra de største billettselskapene i Norge. På grunn av omlegging av datasystem i TONO, fikk vi i år dessverre ikke tilgang derfra, og har valgt å benytte datamateriale fra billettselskaper i kategorien «konserter». Totalt inneholder datasettet i overkant av 17 000 arrangementer. Billettselskap-tallene fanger opp den mest profesjonaliserte delen av konsertvirksomheten i Norge, og det vil dermed være flere arrangement som ikke er inkludert i denne oversikten.",
+		"text": "Kategorien konserter tar utgangspunkt i konserttall fra de største billettselskapene i Norge. På grunn av omlegging av datasystem i TONO, fikk vi i år dessverre ikke tilgang derfra, og har valgt å benytte datamateriale fra billettselskaper i kategorien «konserter». Billettselskap-tallene fanger opp den mest profesjonaliserte delen av konsertvirksomheten i Norge, og det vil dermed være flere arrangement som ikke er inkludert i denne oversikten.",
 		"variables": [
 			"Billettselskap Arrangemanger",
 			"Billettselskap Omsettning",
@@ -93,7 +93,7 @@
 	},
 	{
 		"title": "Frivillighet",
-		"text": "Frivillighet er svært viktig for det lokale kulturlivet. Her presenterer vi aktivitetstall basert på mva.-refusjonsordningen for frivillige organisasjoner, samt medlemstall for tre kulturaktiviteter med et stort samlet medlemstall i svært mange kommuner: Kor, korps og husflidslag Historielag og deltakere på voksenopplæringskurs relatert til kultur er også inkludert i år.",
+		"text": "Frivillighet er svært viktig for det lokale kulturlivet. Her presenterer vi aktivitetstall basert på mva.-refusjonsordningen for frivillige organisasjoner, samt medlemstall for tre kulturaktiviteter med et stort samlet medlemstall i svært mange kommuner: Kor, korps og husflidslag. Historielag, kunstforeninger og deltakere på voksenopplæringskurs relatert til kultur er også inkludert.",
 		"variables": [
 			"Historielag",
 			"Husflidlag",
