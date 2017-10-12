@@ -1,0 +1,26 @@
+{
+	"h1": {
+		"title":"Norsk kulturindeks 2017",
+		"text": [
+			"Norsk kulturindeks er en årlig oversikt over kulturtilbud og kulturaktivitet i norske kommuner, regioner og fylker.",
+			"Indeksen er basert på registerdata fra en rekke offentlige etater, interesseorganisasjoner og foreninger. Målsetningen med Norsk kulturindeks er å beskrive det faktiske kulturtilbudet og den faktiske kulturbruken innenfor kommunen som geografisk område.",
+			"Norsk kulturindeks er utviklet av Telemarksforsking i samarbeid med norske kommuner, fylkeskommuner og en intern referansegruppe. Hvert år samler Telemarksforsking data til Norsk kulturindeks og gir ut en oversikt over hvordan kommunene plasserer seg i forhold til andre. Datamaterialet muliggjør en rekke analyser og gjør oss i stand til å si noe om kulturlivet i alle de 428 norske kommunene, samt i regioner og fylker.",
+			"Indeksen tar utgangspunkt i følgende 10 kategorier: Kunstnere, kulturarbeidere, museum, musikk, kino, bibliotek, scenekunst, kultur for barn og unge (kulturskoler + DKS), sentrale tildelinger og frivillighet. Kategoriene har blitt valgt ut med bakgrunn i tilgjengelige data og ut i fra en tanke om hvilke faktorer som spiller positivt inn på kulturtilbudet og kulturbruken i en kommune."
+		]
+	},
+	"g1": {
+		"title": "Norsk kulturindeks 2017 – topplista",
+		"text": "2017 er tredje året på rad hvor vi finner Røros kommune på toppen av kulturindeksen. Trondheim finner vi, i år som i fjor, på en 2. plass. Stavanger får sin beste plassering noen sinne med en 3. plass."
+	},
+	"m1": {
+		"title": "Kulturkartet",
+		"text": "Basert på innsamlet data om kulturtilbud og kulturaktivitet, rangerer vi kommunene etter hvor mye kultur de har. I kartet til venstre finner vi en oversikt over hvordan kommunene grupperer seg rangeringene i Norsk kulturindeks 2017. De røde kommunene er de som rangerer lavest, mens de mørkeblå kommunene rangerer i toppsjiktet."
+	},
+	"t1": {
+		"title": "Metode og vekting",
+		"text": [
+			"Norsk kulturindeks består av 10 kategorier og 37 delindikatorer. De to første hovedkategoriene tar for seg produksjon av kunst og kultur. De neste syv kategoriene beskriver ulike temaområder innenfor kunst og kultur, mens den siste kategorien oppsummerer kulturpolitiske prioriteringer og kvalitative vurderinger på tvers av tema og kategorier.",
+			"De ti kategoriene teller likt, men delindikatorene er vektet delvis ulikt innenfor de respektive kategoriene. En oversikt over hvordan de ulike indikatorene er regnet ut, finnes under «hovedkategorier», hvor man kan hente data fra de ulike kategoriene for ulike år."
+		]
+	}
+}

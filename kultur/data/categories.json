@@ -30,9 +30,9 @@
 		"title": "Konserter",
 		"text": "Kategorien konserter tar utgangspunkt i konserttall fra de største billettselskapene i Norge. På grunn av omlegging av datasystem i TONO, fikk vi i år dessverre ikke tilgang derfra, og har valgt å benytte datamateriale fra billettselskaper i kategorien «konserter». Billettselskap-tallene fanger opp den mest profesjonaliserte delen av konsertvirksomheten i Norge, og det vil dermed være flere arrangement som ikke er inkludert i denne oversikten.",
 		"variables": [
-			"Billettselskap Arrangemanger",
-			"Billettselskap Omsettning",
-			"TONO Arrangemanger",
+			"Billettselskap Arrangementer",
+			"Billettselskap Omsetning",
+			"TONO Arrangementer",
 			"TONO Avregning"
 		]
 	},
@@ -100,7 +100,8 @@
 			"Kor",
 			"Korps",
 			"MVA Refusjon",
-			"Voksenopplæring"
+			"Voksenopplæring",
+			"Kunstlag"
 		]
 	}
 ]

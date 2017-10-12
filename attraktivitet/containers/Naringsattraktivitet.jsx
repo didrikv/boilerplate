@@ -2,7 +2,6 @@ import React from 'react'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 import article from '../data/Naring.json'
-import styles from './App.css'
 import HorizontalChart from '../../components/HorizontalChart/HorizontalChart.jsx' 
 import StaticNorwayMap from '../../components/Map/StaticNorwayMap.jsx'
 import TwoColumn, { renderSection } from '../../components/TwoColumn/TwoColumn.jsx'

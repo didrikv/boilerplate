@@ -117,7 +117,7 @@
 		"benevning": "per inbygger"
 	},
         {
-        "id": "Billettselskap Arrangemanger",
+        "id": "Billettselskap Arrangementer",
         "title": "Antall konserter billettselskaper", 
         "category": "Konserter",
         "mål": "Indikerer hvor mange konserter som har blitt avholdt i en kommune.",
@@ -130,7 +130,7 @@
         "benevning": "per 1000 inbygger"
     },
     {
-        "id": "Billettselskap Omsettning",
+        "id": "Billettselskap Omsetning",
         "title": "Billettinntekter for konserter gjennom billettselskaper", 
         "category": "Konserter",
         "mål": "Indikerer størrelsen og populariteten på konserter som er avholdt.",
@@ -143,15 +143,15 @@
         "benevning": "per inbygger"
     },
 	{
-		"id": "TONO Arrangemanger",
-		"title": "Antall konserter billettselskaper", 
+		"id": "TONO Arrangementer",
+		"title": "Antall Tono-registrerte konserter", 
 		"category": "Konserter",
 		"mål": "Indikerer hvor mange konserter som har blitt avholdt i en kommune.",
-		"formel": "(A/B) x 1000 der A= Antall konserter registret av de største billettselskapene og B= Antall innbyggere i kommunen.", 
+		"formel": "(A/B) x 1000 der A= Antall TONO-registrerte konserter og B= Antall innbyggere i kommunen.", 
 		"metode": "Beregne antall konserter som har blitt avholdt i de ulike kommunene.",
-		"kilder": "Billettservice, Billettportalen, TicketCo, eBillett, Hoopla, Ringbillett, Aurora, Tikkio og Linticket. Tall for 2015.",
+		"kilder": "TONO, tall",
 		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
-		"merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette. Vi har benyttet 2014-tall fra TicketCo, da det ikke lot seg gjøre å fremskaffe 2015-tall." ,
+		"merknad": "Tallene inkluderer alle konserter og offentlige opptredener som Tono har registrert i løpet av 2013. Gudstjenester er holdt utenfor." ,
 		"weight": 1,
 		"benevning": "per 1000 inbygger"
 	},
@@ -159,12 +159,12 @@
 		"id": "TONO Avregning",
 		"title": "Billettinntekter for konserter gjennom billettselskaper", 
 		"category": "Konserter",
-		"mål": "Indikerer størrelsen og populariteten på konserter som er avholdt.",
-		"formel": "(A/B) der A= Billettinntekter registret av de største billettselskapene og B= Antall innbyggere i kommunen.", 
-		"metode": "Beregne summen av solgte billetter for konserter avholdt i de ulike kommunene.",
-		"kilder": "Billettservice, Billettportalen, TicketCo, eBillett, Hoopla, Ringbillett, Aurora, Tikkio og Linticket. Tall for 2015.",
+		"mål": "Indikerer størrelsen og populariteten på konserter som er avholdt og innrapportert til TONO.",
+		"formel": "(A/B) der A= Beregnede billettinntekter fra Tono-registrerte opptredener og B= Antall innbyggere i kommunen.", 
+		"metode": "Beregne antall kroner arrangørene har blitt avkrevd i Tono-vederlag. Vederlaget er direkte utledet av konsertstørrelsen.",
+		"kilder": "Tono, Norske konsertarrangører og Norsk Jazzforum.",
 		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
-		"merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette. Vi har benyttet 2014-tall fra TicketCo, da det ikke lot seg gjøre å fremskaffe 2015-tall." ,
+		"merknad": "Medlemmer av Norske konsertarrangører og Norsk Jazzforum rapporterer inn konserter og vederlag for alle sine medlemmer. Vi har derfor innhentet tall fra disse. I enkelte tilfeller kan arrangør befinne seg i en annen kommune enn der det faktiske arrangementet ble avholdt. Dette er en svakhet ved dataene vi ikke kan kontrollere per i dag. I de tilfeller vi ikke har tall for Tono-vederlag, kun for billettinntekter, har vi regnet ut fra et snitt på 3% av billettinntekter." ,
 		"weight": 1,
 		"benevning": "per inbygger"
 	},
@@ -429,7 +429,7 @@
 		"kilder": "Lotteri- og stiftelsestilsynet. Organisasjoner innen kunst og kulturfeltet (ICNPO-nr. 1100), lokalledd og enkeltstående organisasjoner.",
 		"vekting": "Delindikatoren vektes med 25 % av frivillighetsindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "Vi har valgt å trekke ut organisasjoner innen kunst og kulturfeltet (ICNPO-nr.1100). Vi har her trukket ut lokallagsledd hvor aktiviteten er knyttet til et sted. Denne utvalgsjobben er foretatt av Lotteri- og stiftelsestilsynet. " ,
-		"weight": 5,
+		"weight": 2,
 		"benevning": "per inbygger"
 	},
 	{
@@ -442,7 +442,7 @@
 		"kilder": "Medlemstall fra Norges Musikkorps Forbund samt medlemstall fra Korpsnett. Tall er hentet ut i juni 2016.",
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
-		"weight": 3,
+		"weight": 1,
 		"benevning": "per 1000 inbygger"
 	},
 	{
@@ -455,7 +455,7 @@
 		"kilder": "Medlemstall fra Norges korforbund, Norsk sangerforbund, Norsk sangerforum, Ung i kor, samt KOSTRA tall for antall kormedlemmer i Den norske kirke. Tall er hentet ut i juni 2016.",
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "Medlemstall for Norsk Sangerforbund seg ikke framskaffe for 2015. Oversikten tar utgangpunkt i fjorårets medlemstall." ,
-		"weight": 3,
+		"weight": 1,
 		"benevning": "per 1000 inbygger"
 	},
 	{
@@ -468,7 +468,7 @@
 		"kilder": "Medlemstall fra Norges husflidslag.",
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
-		"weight": 3,
+		"weight": 1,
 		"benevning": "per 1000 inbygger"
 	},
 	{
@@ -481,7 +481,7 @@
 		"kilder": "Medlemstall fra Landslaget for lokalhistorie.",
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
-		"weight": 3,
+		"weight": 1,
 		"benevning": "per 1000 inbygger"
 	},
 	{
@@ -494,7 +494,20 @@
 		"kilder": "Aktivitetstall fra Studieforbundet kultur og tradisjon samt Musikkens studieforbund. ",
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
-		"weight": 3,
+		"weight": 1,
+		"benevning": "per 1000 inbygger"
+	},
+	{
+		"id": "Kunstlag",
+		"title": "Medlemskap i norske kunstforeninger", 
+		"category": "Frivillighet",
+		"mål": "Indikere størrelsen på en sentral organisasjon innenfor det frivillige kulturlivet.",
+		"formel": "(A/B) x 1000 der A= Antall medlemmer i norske kunstforeninger og B= Antall innbyggere.", 
+		"metode": "Beregne hvor mange medlemmer kunstlagene i kommunen har.",
+		"kilder": "Medlemstall fra norske kunstforeninger",
+		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
+		"merknad": "" ,
+		"weight": 1,
 		"benevning": "per 1000 inbygger"
 	}
 ]

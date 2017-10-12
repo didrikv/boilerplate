@@ -1,10 +1,11 @@
+@value serifstyle: 'Georgia', serif;
+
 .section{
 	font-size: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	flex-grow: 1;
-	font-family: "Georgia, serif";
 	transition: 1s;
 	color: #555;
 }

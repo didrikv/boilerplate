@@ -75,6 +75,7 @@ export default class Indeks extends React.Component {
 						<p>{text}</p>
 					</div>
 				</Row>
+				<div style={{height: '30px'}}> </div>
 				{this.renderControls()}
 				<div style={{height: '30px'}}> </div>
 				<Row>
@@ -91,4 +92,4 @@ export default class Indeks extends React.Component {
 	}
 }
 
-let text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+let text = "Norsk kulturindeks er en årlig oversikt over kulturtilbud og kulturaktivitet i norske kommuner, regioner og fylker. Indeksen er basert på registerdata fra en rekke offentlige etater, interesseorganisasjoner og foreninger. Målsetningen med Norsk kulturindeks er å beskrive det faktiske kulturtilbudet og den faktiske kulturbruken innenfor kommunen som geografisk område. Norsk kulturindeks 2017 er basert på data fra 2016. Under kan du velge rangering fra ulike år."

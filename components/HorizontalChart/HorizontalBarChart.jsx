@@ -11,7 +11,7 @@ import { VictoryChart,
 import theme from './VictoryTheme.js'
 
 export default function HorizontalBarChart(props) {
-	let { data, x, stack, colorScale, svgId, reverse ,ytitle, legendNames, noticks, name} = props
+	let { data, x, stack, colorScale, svgId, reverse ,ytitle, legendNames, noticks, name, itemsPerRow} = props
 	legendNames = legendNames ? legendNames : stack
 	if(reverse) {
 		data = data.slice()
@@ -30,7 +30,8 @@ export default function HorizontalBarChart(props) {
 		nameLen = e.length > nameLen ? e.length : nameLen
 	})
 	
-	let topPadding =  varCount == 1 ? 0 : 10 + 20*Math.ceil(varCount/2)	
+	itemsPerRow = itemsPerRow ? itemsPerRow : 2
+	let topPadding =  varCount == 1 ? 0 : 10 + 20*Math.ceil(varCount/itemsPerRow)	
 	let leftPadding = 15 + 8*nameLen
 	let height = 30 + topPadding + names.length * 30
 
@@ -96,7 +97,7 @@ export default function HorizontalBarChart(props) {
 				symbolSpacer={0.1}
 				gutter={10}
 				labelComponent={<VictoryLabel dx={10} />}
-				itemsPerRow={2}
+				itemsPerRow={itemsPerRow}
 				orientation='horizontal'
 
 			/>

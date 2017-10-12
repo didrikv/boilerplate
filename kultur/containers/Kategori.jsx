@@ -98,32 +98,32 @@ export default class Kategori extends React.Component {
 		let infoText = this.state.variable == this.variables[0] ? null :
 			<InfoText {...varInfo} />
 
-		return(
-			<Grid>
-				<Row>
-					<div className={styles.section}>
-						<h3> { category.title } </h3>
-						<p> { category.text } </p>
-					</div>
-				</Row>
-				<div style={{height: '30px'}}> </div>
+			return(
+				<Grid>
+					<Row>
+						<div className={styles.section}>
+							<h3> { category.title } </h3>
+							<p> { category.text } </p>
+						</div>
+					</Row>
+					<div style={{height: '30px'}}> </div>
 					{this.renderControls()}
-				<div style={{height: '30px'}}> </div>
-				<Row>
-					<div style={{maxWidth: "50rem", margin: 'auto'}}>
-						{infoText}
-					</div>
-				</Row>
-				<div style={{height: '30px'}}> </div>
-				<Row>
-					<Col sm={6} >
-						<StaticNorwayMap {...this.state} {...mapProps} />
-					</Col>
-					<Col sm={6} >
-						<HorizontalChart {...this.state} {...chartProps}/>
-					</Col>
-				</Row>
-			</Grid>
-		)
+					<div style={{height: '30px'}}> </div>
+					<Row>
+						<div style={{maxWidth: "50rem", margin: 'auto'}}>
+							{infoText}
+						</div>
+					</Row>
+					<div style={{height: '30px'}}> </div>
+					<Row>
+						<Col sm={6} >
+							<StaticNorwayMap {...this.state} {...mapProps} />
+						</Col>
+						<Col sm={6} >
+							<HorizontalChart {...this.state} {...chartProps}/>
+						</Col>
+					</Row>
+				</Grid>
+			)
 	}
 }
