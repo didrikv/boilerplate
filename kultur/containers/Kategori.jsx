@@ -19,8 +19,6 @@ export default class Kategori extends React.Component {
 		this.state = {
 			...props,
 			variable: categories[i].title,
-			inndeling: 'Kommune',
-			years: [2016]
 		}
 	}
 
@@ -30,8 +28,8 @@ export default class Kategori extends React.Component {
 				<Col sm={3}>
 					<Picker
 						names={['Kommune', 'Region', 'Fylke']}
-						chosen={this.state.inndeling}
-						handleChange={ (inndeling) => this.setState({inndeling}) }
+						chosen={this.props.Gstate.inndeling}
+						handleChange={ (inndeling) => this.props.setGstate({inndeling}) }
 						title='Velg inndeling:'
 						topTitle
 					/>
@@ -39,8 +37,8 @@ export default class Kategori extends React.Component {
 				<Col sm={3}>
 					<Picker
 						names={this.state.dataStore.years}
-						chosen={this.state.years[0]}
-						handleChange={ (years) => this.setState({years: [years]}) }
+						chosen={this.props.Gstate.years[0]}
+						handleChange={ (years) => this.props.setGstate({years: [years]}) }
 						title='Velg år:'
 						topTitle
 					/>
@@ -79,7 +77,9 @@ export default class Kategori extends React.Component {
 			name: reverse ? this.state.variable : variable, 
 			createControl: false,
 			variable,
-			percentLegend: varInfo ? reverse : true
+			percentLegend: varInfo ? reverse : true,
+			years: this.props.Gstate.years,
+			inndeling: this.props.Gstate.inndeling
 		}
 
 		let chartProps = {
@@ -87,12 +87,13 @@ export default class Kategori extends React.Component {
 			sortby: variable,
 			view: 'top',
 			createControl: false,
-			years: this.state.years,
+			years: this.props.Gstate.years,
 			dataStore: this.state.dataStore,
 			n: 20,
 			ytitle: varInfo ? varInfo.benevning : undefined,
 			legendNames,
-			noticks: varInfo ? reverse : true
+			noticks: varInfo ? reverse : true,
+			inndeling: this.props.Gstate.inndeling
 		}
 
 		let infoText = this.state.variable == this.variables[0] ? null :

@@ -6,25 +6,37 @@ import KategoriRoute from './KategoriRoute.jsx'
 import Steder from './Steder.jsx'
 import FrontPage from './FrontPage.jsx'
 
-export default function App(props) {
-	const kategori = (routeProps) => <KategoriRoute {...props} {...routeProps} />
-	const kommuner = (routeProps) => <Steder {...props} {...routeProps} inndeling='Kommune'/>
-	const regioner = (routeProps) => <Steder {...props} {...routeProps} inndeling='Region'/>
-	const fylker = (routeProps) => <Steder {...props} {...routeProps} inndeling='Fylke'/>
-	const frontPage = (routeProps) => <FrontPage {...props} {...routeProps} />
-	return(
-		<div>
-			<Router basename="/kultur">
-				<div>
-					<Header/>
-					<Route path="/kategori" render={kategori} />
-					<Route path="/kommuner" render={kommuner} />
-					<Route path="/fylker" render={fylker} />
-					<Route path="/regioner" render={regioner} />
-					<Route exact path="/" render={frontPage} />
-					<Footer/>
-				</div>
-			</Router>
-		</div>
-	)
+export default class App extends React.Component {
+	constructor(props){
+		super()
+
+		this.state = {
+			years: [2016],
+			variable: 'Kulturindeks',
+			inndeling: 'Kommune',
+			knr: 101,
+			rnr: 3001,
+			fnr: 1
+		}
+	}
+
+	kategori = (routeProps) => <KategoriRoute {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
+	steder = (routeProps) => <Steder {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
+	frontPage = (routeProps) => <FrontPage {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
+
+	render() {
+		return(
+			<div>
+				<Router basename="/naring">
+					<div>
+						<Header/>
+						<Route path="/kategori" render={this.kategori} />
+						<Route path="/steder" render={this.steder} />
+						<Route exact path="/" render={this.frontPage} />
+						<Footer />
+					</div>
+				</Router>
+			</div>
+		)
+	}
 }
