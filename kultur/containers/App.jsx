@@ -5,6 +5,8 @@ import Footer from './Footer.jsx'
 import KategoriRoute from './KategoriRoute.jsx'
 import Steder from './Steder.jsx'
 import FrontPage from './FrontPage.jsx'
+import Analyser from './Analyser.jsx'
+
 
 export default class App extends React.Component {
 	constructor(props){
@@ -23,16 +25,18 @@ export default class App extends React.Component {
 	kategori = (routeProps) => <KategoriRoute {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
 	steder = (routeProps) => <Steder {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
 	frontPage = (routeProps) => <FrontPage {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
+	analyser = (routeProps) => <Analyser {...this.props} {...routeProps} />
 
 	render() {
 		return(
 			<div>
-				<Router basename="/naring">
+				<Router basename="/kultur">
 					<div>
 						<Header/>
 						<Route path="/kategori" render={this.kategori} />
 						<Route path="/steder" render={this.steder} />
 						<Route exact path="/" render={this.frontPage} />
+						<Route path="/analyser" render={this.analyser} />
 						<Footer />
 					</div>
 				</Router>

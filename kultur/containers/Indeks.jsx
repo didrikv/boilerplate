@@ -72,7 +72,12 @@ export default class Indeks extends React.Component {
 			<Grid>
 				<Row>
 					<div className={styles.section}>
-						<h3>Norsk Kulturindeks</h3>
+						<h3>
+							<img src={require('../data/logo/indeks.svg')} width='50px' />
+							<span style={{width: '20px', display: 'inline-block'}}></span>
+							Norsk Kulturindeks
+							<span style={{width: '70px', display: 'inline-block'}}></span>
+						</h3>
 						<p>{text}</p>
 					</div>
 				</Row>

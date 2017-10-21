@@ -11,12 +11,12 @@
 @value serif: 'EB Garamond', serif;
 
 html {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: sans;
 }
 
 * {
-	font-size: 16px;
+	font-size: 20px;
 	font-family: sans;
 }
 
@@ -108,23 +108,21 @@ html {
 	justify-content: flex-start;
 	flex-grow: 1;
 	transition: 1s;
-	color: #555;
+	max-width: 40rem;
+	margin: 0 auto;
 }
 
 
 .section h3{
 	font-size: 2em;
-	text-align: left;
-	max-width: 50rem;
-	margin: 0 auto;
+	text-align: center;
 	margin-bottom: 20px;
+	color: tmBlue;
 
 }
 
 .section p{
 	font-size: 1em;
-	max-width: 50rem;
-	margin: 0.5em auto;
 }
 
 

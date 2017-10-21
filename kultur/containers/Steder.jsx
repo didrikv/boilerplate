@@ -61,6 +61,7 @@ export default class Steder extends React.Component {
 		}
 
 		data = data.map( (e) => ({...e, År: String(e.År)}) )
+		data.reverse()
 
 		return data
 	}

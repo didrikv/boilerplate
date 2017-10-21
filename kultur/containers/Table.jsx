@@ -5,7 +5,7 @@ import React from 'react'
 export default function Table(props) {
 	return(
 		<div>
-			<style type="text/css" dangerouslySetInnerHTML={{__html: "\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg .tg-95q0{background-color:#75a9dc;color:#ffffff;border-color:black}\n.tg .tg-pnvs{font-weight:bold;background-color:#807f83;color:#ffffff;border-color:black;text-align:center}\n.tg .tg-icwe{background-color:#00546d;color:#ffffff;border-color:black;text-align:center}\n.tg .tg-28d0{background-color:#b1c88a}\n" }} />
+			<style type="text/css" dangerouslySetInnerHTML={{__html: "\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{font-family:Arial, sans-serif;font-size:14px;padding:1px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}\n.tg .tg-95q0{background-color:#75a9dc;color:#ffffff;border-color:black}\n.tg .tg-pnvs{font-weight:bold;background-color:#807f83;color:#ffffff;border-color:black;text-align:center}\n.tg .tg-icwe{background-color:#00546d;color:#ffffff;border-color:black;text-align:center}\n.tg .tg-28d0{background-color:#b1c88a}\n" }} />
 			<table className="tg">
 				<tbody><tr>
 						<th className="tg-pnvs">Kategori</th>

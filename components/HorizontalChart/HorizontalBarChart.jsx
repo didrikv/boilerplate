@@ -13,6 +13,8 @@ import theme from './VictoryTheme.js'
 export default function HorizontalBarChart(props) {
 	let { data, x, stack, colorScale, svgId, reverse ,ytitle, legendNames, noticks, name, itemsPerRow} = props
 	legendNames = legendNames ? legendNames : stack
+	colorScale = colorScale ? colorScale : 
+		['#9CCC65','#5DADE2','#FFA726','#A569BD','#EF5350','#AAB7B8','#8D6E63','#F48FB1','#78909C','#00ACC1','#FFEB3B']
 	if(reverse) {
 		data = data.slice()
 	} else {

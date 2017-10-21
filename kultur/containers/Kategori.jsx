@@ -103,7 +103,12 @@ export default class Kategori extends React.Component {
 				<Grid>
 					<Row>
 						<div className={styles.section}>
-							<h3> { category.title } </h3>
+							<h3> 
+								<img src={require('../data/logo/' + category.title.toLowerCase() + '.svg')} width='50px' style={{display: 'text'}} /> 
+								<span style={{width: '20px', display: 'inline-block'}}></span>
+								{ category.title } 
+								<span style={{width: '70px', display: 'inline-block'}}></span>
+								</h3>
 							<p> { category.text } </p>
 						</div>
 					</Row>

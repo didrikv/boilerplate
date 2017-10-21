@@ -12,11 +12,16 @@ import {
 import theme from './theme.js'
 
 export default function LineChartSvg(props) {
-	let {data, x, variable, splitby, svgId, ytitle, noPoints, showZero, domain, reverse} = props
+	let {data, x, variable, splitby, svgId, ytitle, noPoints, showZero, domain, reverse, colorScale} = props
 	let stack = [ ... new Set(data.map( (e) => e[splitby])) ]
 
+	colorScale = colorScale ? colorScale : 
+		['#9CCC65','#5DADE2','#FFA726','#A569BD','#EF5350','#AAB7B8','#8D6E63','#F48FB1','#78909C','#00ACC1','#FFEB3B']
+	
+
 	data = data.filter( (e) => !(e[variable] === "") )
-	let  xarray = [ ... new Set(data.map( (e) => e[x]) ) ]
+	let  xarray = [ ... new Set(data.map( (e) => e[x]) ) ].sort()
+	let categories = { x: xarray.sort() }
 
 	let min = Math.min( ...data.map((e) => e[variable]))
 	let max = Math.max( ...data.map((e) => e[variable]))
@@ -25,11 +30,13 @@ export default function LineChartSvg(props) {
 
 	let renderLines = () => {
 		if(splitby) {
-			let vlines = stack.map( (cat) =>
+			let vlines = stack.map( (cat, i) =>
 				<VictoryLine
 					data={data.filter( (e) => e[splitby] == cat)}
 					y={variable}
 					x={x}
+					style={{data: {stroke: colorScale[i]}}}
+					categories={categories}
 				/>
 			)
 			let vpoints = stack.map( (cat,i) => 
@@ -37,8 +44,9 @@ export default function LineChartSvg(props) {
 					data={data.filter( (e) => e[splitby] == cat)}
 					y={variable}
 					x={x}
-					style={{data: {fill:theme.stack.colorScale[i]}}}
+					style={{data: {fill:colorScale[i]}}}
 					size={5}
+					categories={categories}
 				/>
 			)
 			return(
@@ -59,6 +67,7 @@ export default function LineChartSvg(props) {
 						data={data}
 						y={variable}
 						x={x}
+						categories={categories}
 					/>
 					<VictoryScatter
 						data={data}
@@ -66,6 +75,7 @@ export default function LineChartSvg(props) {
 						x={x}
 						style={{data: {fill:theme.stack.colorScale[0]}}}
 						size={5}
+						categories={categories}
 					/>
 					}
 				</VictoryGroup>
@@ -81,11 +91,12 @@ export default function LineChartSvg(props) {
 			y={5}
 			gutter={10}
 			symbolSpacer={5}
+			colorScale={colorScale}
 		/> 
 		: null
 
 	return (
-		<div id={svgId} key={stack.length + ' ' + xarray.length}>
+		<div id={svgId} key={stack.length + ' ' + xarray.length + ' ' + data.length}>
 			<VictoryChart
 				theme={theme}
 				domain={{y: yDomain}}
