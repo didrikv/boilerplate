@@ -36,7 +36,6 @@ export default function InfoText(props) {
 		<div style={{display: 'flex'}}>
 			<div style={{
 					padding: ' 4px 0px',
-					fontWeight: 'bold'
 				}}
 			>
 				Teknisk Info:

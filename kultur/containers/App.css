@@ -10,6 +10,7 @@
 @value sans: 'Open Sans', sans-serif;
 @value serif: 'EB Garamond', serif;
 
+
 html {
 	font-size: 20px;
 	font-family: sans;
@@ -23,7 +24,7 @@ html {
 .linkContainer{
 	display: flex;
 	justify-content: center;
-	background: #fff;
+	margin-bottom: 20px;
 }
 
 .linkContainer *{
@@ -47,7 +48,7 @@ html {
 	text-align: center;
 	background: whitesmoke;
 	color: tmBlue;
-	padding: 20px 0;
+	padding-bottom: 20px;
 	background-image: linear-gradient(to bottom,#fff 0, tmLightGreen 100%);
 
 }
@@ -95,7 +96,7 @@ html {
 	cursor: pointer;
 	user-select: none;
 	padding: 4px 7px;
-	border: 1px solid #e7e7e7;
+	border: 1px solid #999;
 	border-radius: 3px;
 	background-color: #f8f8f8;
 	display: inline;

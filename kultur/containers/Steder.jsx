@@ -125,17 +125,18 @@ export default class Steder extends React.Component {
 
 	render() {
 		let lineData = this.filterLineData(this.props.Gstate.variable)
+		let names=this.props.Gstate.inndeling == "Kommune"
+			? this.places.map( (e) => e.Nr + " " + e.Navn)
+			: this.places.map( (e) => e.Navn)
+
 		return(
 			<Grid>
 				<Row>
 					<Col>
 						<div className={styles.section}>
 							<h3> Resultat for enkelte steder </h3>
-							<p> 
-								Her kan man se resultat for enkelte kommuner, regioner og fylker.
-								Nede til ventre kan man se rangering i næringsindeksen totalt og for de 5
-								hovedkategoriene. Nede til høyre kan man se utviklingen i alle variablene som indeksene er basert
-								på gjennom tid og sammelignet med land og eventuelt fylke.
+							<p>
+								Hvordan er kulturlivet i din kommune? Nede til venstre kan man se hvordan de ulike delene av kulturlivet rangerer seg for valgt kommune, og den totale plasseringen i Norsk kulturindeks. Til høyre kan man se nærmere på de variablene som kulturindeksen baserer seg på, og hvordan de har utviklet seg i forhold til hjemfylke og Norge over tid. Det er også mulig å velge fylke- eller regioninndeling.
 							</p>
 						</div>
 						
@@ -143,19 +144,18 @@ export default class Steder extends React.Component {
 						<div style={{maxWidth: '50rem', margin: 'auto'}}>
 							<div style={{display: 'flex', justifyContent: 'center'}}>
 								<RadioButtons
-									names={['Kommune', 'Region', 'Fylke']}
+									values={['Kommune', 'Region', 'Fylke']}
+									names={['Kommuner', 'Regioner', 'Fylker']}
 									chosen={this.props.Gstate.inndeling}
 									handleChange={(inndeling) => this.props.setGstate({inndeling})}
 								/>
 							</div>
+							<div style={{height: '10px'}}> </div>
 							<Picker
-								names={this.props.Gstate.inndeling == "Kommune"
-									? this.places.map( (e) => e.Nr + ' ' +  e.Navn )
-									: this.places.map( (e) => e.Navn)}
+								names={names}
 								values={this.places.map( (e) => e.Nr )}
 								chosen={this.nr}
 								handleChange={ (nr) => this.setNr(nr) }
-								title={'Velg ' + this.props.Gstate.inndeling.toLowerCase() + ':'}
 								justify='center'
 								width='400px'
 							/>

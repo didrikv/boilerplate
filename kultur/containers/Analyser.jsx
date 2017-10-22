@@ -11,11 +11,9 @@ export default class Analyser extends React.Component {
 
 	render() {
 		let url = this.props.match.url
-		console.log(url)
 		return(
 			<Grid>
 				<Row>
-					<div className={styles.section}>
 				<Route
 					exact path={url + '/'}
 					render={() => analyser}
@@ -40,7 +38,6 @@ export default class Analyser extends React.Component {
 					path={url + '/rapport'}
 					render={() => rapport}
 				/>
-			</div>
 			</Row>
 		</Grid>
 		)
@@ -48,7 +45,7 @@ export default class Analyser extends React.Component {
 }
 
 let analyser = 
-	<div >
+	<div className={styles.section}>
 		<h3>Hva skaper kultur?</h3>
 		<br/>
 		<p><i> Kjennetegn ved gode kulturkommuner </i></p>
@@ -60,7 +57,7 @@ let analyser =
 	</div>
 
 let struktur = 
-	<div>
+	<div className={styles.section}>
 		<h3> Strukturelle variabler </h3>
 		<br/>
 		<p>De aller fleste kommuner og kulturadministrasjoner er opptatt av hvordan man kan legge til rette for kulturell aktivitet og, ikke minst, hva som skal til for å fremme en stor mengde kulturell aktivitet. Men selv om både kulturbyråkrater, politikere, lokale kreative næringer og frivillige gjør sitt beste for å fremme et levende kulturliv, kan vi anta at det finnes flere strukturelle forhold som ikke kan styres av kommunene, men som fremmer og begrenser kulturnivået.</p>
@@ -79,7 +76,7 @@ let struktur =
 	</div>
 
 let metode = 
-	<div>
+	<div className={styles.section}>
 		<h3>Statistisk metode</h3>
 		<br/>
 		<p>Studien er satt opp som en kausal analyse som tar sikte på å avgjøre om de 37 indikatorene for en kommunes kulturtilbud og deltakelse (målt gjennom Norsk kulturindeks) påvirkes av noen av de strukturelle variablene. Vår tilnærming til denne analysen er å gjennomføre en enkel multippel regresjonsanalyse. Denne metoden ble valgt først og fremst på grunn av sin enkelhet i bruk.</p>
@@ -90,21 +87,26 @@ let metode =
 
 let resultat = 
 	<div>
+	<div className={styles.section}>
 		<h3>Forskningsresultater</h3>
 		<p>Basert på de strukturelle forholdene i en gitt kommune, kan vi regne ut forventet verdi på de ulike indikatorene i kulturindeksen, noe som kan gi en antydning for det vi kaller «mulighetsrom for forbedring gitt dagens strukturelle forhold». Den statistiske modellen har imidlertid ulik forklaringskraft for de ulike indikatorene. Det betyr at vi treffer det «reelle» mulighetsrommet for forbedring bedre for noen indikator enn andre. I figuren nedenfor viser vi dette. 1 er full forklaringskraft, 0 er ingen forklaringskraft.</p>
 	</div>
+		<img src={require('../data/chart3.svg')} style={{marginTop: '50px'}} width='100%'/>
+	</div>
 
 let potensial = 
-	<div>
+	<div className={styles.section}>
 		<h3>Utnytter kommunene sitt potensial på kulturfeltet?</h3>
 		<p>Kulturindeks-analysene forteller oss noe om forbedringspotensialet og hvilket mulighetsrom kommunen, statistisk sett, har for å forbedre seg når det gjelder ulike deler av det lokale kulturlivet. Basert på de strukturelle forholdene i en gitt kommune, kan vi regne ut forventet resultat på de ulike indikatorene i kulturindeksen. Vi kan for eksempel si noe om hva som kjennetegner en god kinokommune, og i hvilken grad kommunen ser ut til å utnytte sitt potensial innenfor dette området.</p>
 		<p>Våre statistiske analyser viser at det er mange strukturelle fakturer som påvirker kinotilbudet i en kommune og at slike faktorer har en høy forklaringsverdi. Et høyt innbyggertall er viktig, et høyt utdanningsnivå, en høy andel besøksnæringer, tilstedeværelsen av en høgskole og kulturhus samt en netto innpendling til kommunen. Generelt kan man altså si at det er store kommuner med sentrumsfunksjoner som har et godt kinotilbud. I tillegg til dette påvirker den kommunale pengebruken på kino tilbudet i en positiv retning.</p>
 		<p>La oss ta et eksempel fra Kristiansand kommune:</p>
 		<p>Kristiansand har alle kjennetegnene på en god kinokommune. Både innbyggertall, utdanningsnivået, antallet besøksnæringer, netto innpendling, kulturhus- og utdanningstilbud på universitetsnivå skulle tilsi at kommunen hadde et godt kinotilbud. Basert på de statistiske analysene, kunne man forventet seg et kinotilbud bestående av 120 forestillinger pr. tusen innbyggere i 2016. Dette er høyere enn den faktiske situasjonen, så Kristiansand utnytter ikke potensialet sitt ut når det gjelder kinotilbud. Motsatt er kinobesøket i Kristiansand i 2016 litt høyere forventet.</p>
+		<img src={require('../data/chart1.svg')} width='100%' style={{marginTop: '30px'}}/>
+		<img src={require('../data/chart2.svg')} width='100%' style={{marginTop: '30px'}}/>
 	</div>
 
 let rapport = 
-	<div>
+	<div className={styles.section}>
 	<h3>Rapporter for kommuner og fylker</h3>
 	<p>Telemarksforsking tilbyr regionale analyser med utgangspunkt i bakgrunnsdataene fra Norsk kulturindeks. Disse er godt egnet til å beskrive kulturlivet i de norske kommunene. 2017-rapportene er utvidet med en rekke nye data, samt potensialberegninger for alle områdene i Norsk kulturindeks.</p>
 	<p>Kommunerapporter kan i 2017 produseres for kr 30.000 + mva. Vi utarbeider også en forenklet powerpoint-versjon for kr 10.000 + mva.</p>

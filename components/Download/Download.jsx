@@ -4,7 +4,7 @@ import {saveAs} from 'file-saver'
 import { saveSvgAsPng } from 'save-svg-as-png'
 
 import styles from '../ChartWrapper/ChartWrapper.css'
-import download from './download.svg'
+import download from './download5.svg'
 
 export default class Download extends React.Component {
 	constructor() {
@@ -29,7 +29,7 @@ export default class Download extends React.Component {
 		if(svg.nodeName != 'svg') {svg = svg.firstChild}
 		let viewBox = svg.getAttribute('viewBox').split(' ').map( (e) => +e)
 		let scale = this.state.value/viewBox[2]
-		saveSvgAsPng(svg, 'map.png', {
+		saveSvgAsPng(svg, this.props.name + '.png', {
 			left: viewBox[0], 
 			top: viewBox[1], 
 			width: viewBox[2], 
@@ -43,7 +43,7 @@ export default class Download extends React.Component {
 		let blob = new XMLSerializer().serializeToString(svg)
 		let svg_blob = new Blob([blob],
 			               {'type': 'image/svg+xml'})
-		saveAs(svg_blob, 'map.svg')
+		saveAs(svg_blob, this.props.name + '.svg')
 	}
 
 	onChange = (event) => {
@@ -60,7 +60,7 @@ export default class Download extends React.Component {
 					className={styles.svgButton} 
 					type='image' 
 					src={download} 
-					height='30px' 
+					height='60px' 
 					onClick={this.onClick} 
 				/>
 				<Modal show={this.state.showModal} onHide={this.close} bsSize='small'>

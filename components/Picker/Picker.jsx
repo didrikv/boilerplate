@@ -7,7 +7,7 @@ import styles from './Picker.css'
 
 export default function Picker(props){
 	let {names, values, handleChange, chosen, 
-		boldFirst, title, justify, width, topTitle, sections} = props
+		boldFirst, title, justify, width, topTitle, sections, shields} = props
 
 	if(sections) {
 		var options = []
@@ -29,7 +29,7 @@ export default function Picker(props){
 	} else {
 		values = values ? values : names
 		var options = names.map( (e, i) => ({
-			label: String(names[i]),
+			label: names[i],
 			value: values[i],
 			className: (boldFirst && i == 0) ? styles.bold : undefined
 		}))
@@ -38,12 +38,22 @@ export default function Picker(props){
 	let style = width ? {width: width} : {flex: 1}	
 	let displayType = topTitle ? undefined : 'flex'
 
+	//	if(shields) {
+	//		var optionRenderer = (option) => {
+	//			if(option.value < 3000) {
+	//				return <span><img src={require('../../skjold/' + option.value + '.svg')} width='40px' /> {option.label} </span>
+	//			} else {
+	//				return <span><span style={{display: 'inline-block', width: '42px'}}> </span> {option.label} </span>
+	//			}
+	//		}
+	//	} else {var optionRenderer = undefined}
+	//
 	return (
 		<div style={{justifyContent: justify, display: displayType}}>
 			<div className={styles.title}>
 				{title}&ensp;
 			</div>
-			<div style={style}>
+			<div style={style} className={shields ? styles.shield : undefined}>
 				<Select 
 					value={chosen}
 					options={options}

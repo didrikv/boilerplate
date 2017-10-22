@@ -38,7 +38,7 @@ export default function ChartWrapper({ info, name, children }) {
 				<div className={styles.btnContainer}>
 					{infoButton}
 					&emsp;
-					<Download svgId={svgId} />
+					<Download svgId={svgId} name={name}/>
 				</div>
 			</div>
 			

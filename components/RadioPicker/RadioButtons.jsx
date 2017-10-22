@@ -4,14 +4,25 @@ import styles from './RadioButtons.css'
 
 export default function RadioPicker({values, names, chosen, handleChange}){
 	values = values ? values : names
+	console.log(names)
 
-	return (
-		<RadioGroup name="sdf" selectedValue={chosen} onChange={handleChange}>
-			{names.map( (e, i) => 
-				<label key={i} className={styles.label}>
-				<Radio value={values[i]} className={styles.radio}/> {e}
-				</label>
-			)}
-		</RadioGroup>
-	)
+	let options = names.map( (name, i) => {
+		let buttonClass = values[i] == chosen ? styles.checked : styles.unChecked
+
+		return(
+			<div className={buttonClass} onClick={() => handleChange(values[i])} key={i}>
+				<div className={styles.outer}>
+					<div className={styles.inner}>
+					</div>
+				</div>
+				<div className={styles.label}>
+					{name}
+				</div>
+			</div>
+		)
+	})
+
+	return <div className={styles.container}>
+		{options}
+		</div>
 }

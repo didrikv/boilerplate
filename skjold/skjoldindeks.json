@@ -1,0 +1,1782 @@
+﻿[
+ {
+   "Nr": 1,
+   "File": "Østfold_våpen.svg"
+ },
+ {
+   "Nr": 2,
+   "File": "Akershus_våpen.svg"
+ },
+ {
+   "Nr": 3,
+   "File": "Oslo_våpen.svg"
+ },
+ {
+   "Nr": 4,
+   "File": "Hedmark_våpen.svg"
+ },
+ {
+   "Nr": 5,
+   "File": "Oppland_våpen.svg"
+ },
+ {
+   "Nr": 6,
+   "File": "Buskerud_våpen.svg"
+ },
+ {
+   "Nr": 7,
+   "File": "Vestfold_våpen.svg"
+ },
+ {
+   "Nr": 8,
+   "File": "Telemark_våpen.svg"
+ },
+ {
+   "Nr": 9,
+   "File": "Aust-Agder_våpen.svg"
+ },
+ {
+   "Nr": 10,
+   "File": "Vest-Agder_våpen.svg"
+ },
+ {
+   "Nr": 11,
+   "File": "Rogaland_våpen.svg"
+ },
+ {
+   "Nr": 12,
+   "File": "Hordaland_våpen.svg"
+ },
+ {
+   "Nr": 14,
+   "File": "Sogn og Fjordane_våpen.svg"
+ },
+ {
+   "Nr": 15,
+   "File": "Møre og Romsdal_våpen.svg"
+ },
+ {
+   "Nr": 16,
+   "File": "Sør-Trøndelag_våpen.svg"
+ },
+ {
+   "Nr": 17,
+   "File": "Nord-Trøndelag_våpen.svg"
+ },
+ {
+   "Nr": 18,
+   "File": "Nordland_våpen.svg"
+ },
+ {
+   "Nr": 19,
+   "File": "Troms_våpen.svg"
+ },
+ {
+   "Nr": 20,
+   "File": "Finnmark_våpen.svg"
+ },
+ {
+   "Nr": 101,
+   "File": "Halden_komm.svg"
+ },
+ {
+   "Nr": 104,
+   "File": "Moss_komm.svg"
+ },
+ {
+   "Nr": 105,
+   "File": "Sarpsborg_komm.svg"
+ },
+ {
+   "Nr": 106,
+   "File": "Fredrikstad_komm.svg"
+ },
+ {
+   "Nr": 111,
+   "File": "Hvaler_komm.svg"
+ },
+ {
+   "Nr": 118,
+   "File": "Aremark_komm.svg"
+ },
+ {
+   "Nr": 119,
+   "File": "Marker_komm.svg"
+ },
+ {
+   "Nr": 121,
+   "File": "Rømskog_komm.svg"
+ },
+ {
+   "Nr": 122,
+   "File": "Trøgstad_komm.svg"
+ },
+ {
+   "Nr": 123,
+   "File": "Spydeberg_komm.svg"
+ },
+ {
+   "Nr": 124,
+   "File": "Askim_komm.svg"
+ },
+ {
+   "Nr": 125,
+   "File": "Eidsberg_komm.svg"
+ },
+ {
+   "Nr": 127,
+   "File": "Skiptvet_komm.svg"
+ },
+ {
+   "Nr": 128,
+   "File": "Rakkestad_komm.svg"
+ },
+ {
+   "Nr": 135,
+   "File": "Råde_komm.svg"
+ },
+ {
+   "Nr": 136,
+   "File": "Rygge_komm.svg"
+ },
+ {
+   "Nr": 137,
+   "File": "Våler_Østfold_komm.svg"
+ },
+ {
+   "Nr": 138,
+   "File": "Hobøl_komm.svg"
+ },
+ {
+   "Nr": 211,
+   "File": "Vestby_komm.svg"
+ },
+ {
+   "Nr": 213,
+   "File": "Ski_komm.svg"
+ },
+ {
+   "Nr": 214,
+   "File": "Ås_komm.svg"
+ },
+ {
+   "Nr": 215,
+   "File": "Frogn_komm.svg"
+ },
+ {
+   "Nr": 216,
+   "File": "Nesodden_komm.svg"
+ },
+ {
+   "Nr": 217,
+   "File": "Oppegård_komm.svg"
+ },
+ {
+   "Nr": 219,
+   "File": "Bærum_komm.svg"
+ },
+ {
+   "Nr": 220,
+   "File": "Asker_komm.svg"
+ },
+ {
+   "Nr": 221,
+   "File": "Aurskog-Høland_komm.svg"
+ },
+ {
+   "Nr": 226,
+   "File": "Sørum_komm.svg"
+ },
+ {
+   "Nr": 227,
+   "File": "Fet_komm.svg"
+ },
+ {
+   "Nr": 228,
+   "File": "Rælingen_komm.svg"
+ },
+ {
+   "Nr": 229,
+   "File": "Enebakk_komm.svg"
+ },
+ {
+   "Nr": 230,
+   "File": "Lørenskog_komm.svg"
+ },
+ {
+   "Nr": 231,
+   "File": "Skedsmo_komm.svg"
+ },
+ {
+   "Nr": 233,
+   "File": "Nittedal_komm.svg"
+ },
+ {
+   "Nr": 234,
+   "File": "Gjerdrum_komm.svg"
+ },
+ {
+   "Nr": 235,
+   "File": "Ullensaker_komm.svg"
+ },
+ {
+   "Nr": 236,
+   "File": "Nes_Akershus_komm.svg"
+ },
+ {
+   "Nr": 237,
+   "File": "Eidsvoll_komm.svg"
+ },
+ {
+   "Nr": 238,
+   "File": "Nannestad_komm.svg"
+ },
+ {
+   "Nr": 239,
+   "File": "Hurdal_komm.svg"
+ },
+ {
+   "Nr": 301,
+   "File": "Oslo_komm.svg"
+ },
+ {
+   "Nr": 402,
+   "File": "Kongsvinger_komm.svg"
+ },
+ {
+   "Nr": 403,
+   "File": "Hamar_komm.svg"
+ },
+ {
+   "Nr": 412,
+   "File": "Ringsaker_komm.svg"
+ },
+ {
+   "Nr": 415,
+   "File": "Løten_komm.svg"
+ },
+ {
+   "Nr": 417,
+   "File": "Stange_komm.svg"
+ },
+ {
+   "Nr": 418,
+   "File": "Nord-Odal_komm.svg"
+ },
+ {
+   "Nr": 419,
+   "File": "Sør-Odal_komm.svg"
+ },
+ {
+   "Nr": 420,
+   "File": "Eidskog_komm.svg"
+ },
+ {
+   "Nr": 423,
+   "File": "Grue_komm.svg"
+ },
+ {
+   "Nr": 425,
+   "File": "Åsnes_komm.svg"
+ },
+ {
+   "Nr": 426,
+   "File": "Våler_Hedmark_komm.svg"
+ },
+ {
+   "Nr": 427,
+   "File": "Elverum_komm.svg"
+ },
+ {
+   "Nr": 428,
+   "File": "Trysil_komm.svg"
+ },
+ {
+   "Nr": 429,
+   "File": "Åmot_komm.svg"
+ },
+ {
+   "Nr": 430,
+   "File": "Stor-Elvdal_komm.svg"
+ },
+ {
+   "Nr": 432,
+   "File": "Rendalen_komm.svg"
+ },
+ {
+   "Nr": 434,
+   "File": "Engerdal_komm.svg"
+ },
+ {
+   "Nr": 436,
+   "File": "Tolga_komm.svg"
+ },
+ {
+   "Nr": 437,
+   "File": "Tynset_komm.svg"
+ },
+ {
+   "Nr": 438,
+   "File": "Alvdal_komm.svg"
+ },
+ {
+   "Nr": 439,
+   "File": "Folldal_komm.svg"
+ },
+ {
+   "Nr": 441,
+   "File": "Os_Hedmark_komm.svg"
+ },
+ {
+   "Nr": 501,
+   "File": "Lillehammer_komm.svg"
+ },
+ {
+   "Nr": 502,
+   "File": "Gjøvik_komm.svg"
+ },
+ {
+   "Nr": 511,
+   "File": "Dovre_komm.svg"
+ },
+ {
+   "Nr": 512,
+   "File": "Lesja_komm.svg"
+ },
+ {
+   "Nr": 513,
+   "File": "Skjåk_komm.svg"
+ },
+ {
+   "Nr": 514,
+   "File": "Lom_komm.svg"
+ },
+ {
+   "Nr": 515,
+   "File": "Vågå_komm.svg"
+ },
+ {
+   "Nr": 516,
+   "File": "Nord-Fron_komm.svg"
+ },
+ {
+   "Nr": 517,
+   "File": "Sel_komm.svg"
+ },
+ {
+   "Nr": 519,
+   "File": "Sør-Fron_komm.svg"
+ },
+ {
+   "Nr": 520,
+   "File": "Ringebu_komm.svg"
+ },
+ {
+   "Nr": 521,
+   "File": "Øyer_komm.svg"
+ },
+ {
+   "Nr": 522,
+   "File": "Gausdal_komm.svg"
+ },
+ {
+   "Nr": 528,
+   "File": "Østre_Toten_komm.svg"
+ },
+ {
+   "Nr": 529,
+   "File": "Vestre_Toten_komm.svg"
+ },
+ {
+   "Nr": 532,
+   "File": "Jevnaker_komm.svg"
+ },
+ {
+   "Nr": 533,
+   "File": "Lunner_komm.svg"
+ },
+ {
+   "Nr": 534,
+   "File": "Gran_komm.svg"
+ },
+ {
+   "Nr": 536,
+   "File": "Søndre_Land_komm.svg"
+ },
+ {
+   "Nr": 538,
+   "File": "Nordre_Land_komm.svg"
+ },
+ {
+   "Nr": 540,
+   "File": "Sør-Aurdal_komm.svg"
+ },
+ {
+   "Nr": 541,
+   "File": "Etnedal_komm.svg"
+ },
+ {
+   "Nr": 542,
+   "File": "Nord-Aurdal_komm.svg"
+ },
+ {
+   "Nr": 543,
+   "File": "Vestre_Slidre_komm.svg"
+ },
+ {
+   "Nr": 544,
+   "File": "Øystre_Slidre_komm.svg"
+ },
+ {
+   "Nr": 545,
+   "File": "Vang_komm.svg"
+ },
+ {
+   "Nr": 602,
+   "File": "Drammen_komm.svg"
+ },
+ {
+   "Nr": 604,
+   "File": "Kongsberg_komm.svg"
+ },
+ {
+   "Nr": 605,
+   "File": "Ringerike_komm.svg"
+ },
+ {
+   "Nr": 612,
+   "File": "Hole_komm.svg"
+ },
+ {
+   "Nr": 615,
+   "File": "Flå_komm.svg"
+ },
+ {
+   "Nr": 616,
+   "File": "Nes_Buskerud_komm.svg"
+ },
+ {
+   "Nr": 617,
+   "File": "Gol_komm.svg"
+ },
+ {
+   "Nr": 618,
+   "File": "Hemsedal_komm.svg"
+ },
+ {
+   "Nr": 619,
+   "File": "Ål_komm.svg"
+ },
+ {
+   "Nr": 620,
+   "File": "Hol_komm.svg"
+ },
+ {
+   "Nr": 621,
+   "File": "Sigdal_komm.svg"
+ },
+ {
+   "Nr": 622,
+   "File": "Krødsherad_komm.svg"
+ },
+ {
+   "Nr": 623,
+   "File": "Modum_komm.svg"
+ },
+ {
+   "Nr": 624,
+   "File": "Øvre_Eiker_komm.svg"
+ },
+ {
+   "Nr": 625,
+   "File": "Nedre_Eiker_komm.svg"
+ },
+ {
+   "Nr": 626,
+   "File": "Lier_komm.svg"
+ },
+ {
+   "Nr": 627,
+   "File": "Røyken_komm.svg"
+ },
+ {
+   "Nr": 628,
+   "File": "Hurum_komm.svg"
+ },
+ {
+   "Nr": 631,
+   "File": "Flesberg_komm.svg"
+ },
+ {
+   "Nr": 632,
+   "File": "Rollag_komm.svg"
+ },
+ {
+   "Nr": 633,
+   "File": "Nore_og_Uvdal_komm.svg"
+ },
+ {
+   "Nr": 701,
+   "File": "Horten_komm.svg"
+ },
+ {
+   "Nr": 702,
+   "File": "Holmestrand_komm.svg"
+ },
+ {
+   "Nr": 704,
+   "File": "Tønsberg_komm.svg"
+ },
+ {
+   "Nr": 709,
+   "File": "Larvik_komm.svg"
+ },
+ {
+   "Nr": 710,
+   "File": "Sandefjord_komm.svg"
+ },
+ {
+   "Nr": 711,
+   "File": "Svelvik_komm.svg"
+ },
+ {
+   "Nr": 713,
+   "File": "Sande_Vestfold_komm.svg"
+ },
+ {
+   "Nr": 714,
+   "File": "Hof_komm.svg"
+ },
+ {
+   "Nr": 716,
+   "File": "Re_komm.svg"
+ },
+ {
+   "Nr": 722,
+   "File": "Nøtterøy_komm.svg"
+ },
+ {
+   "Nr": 723,
+   "File": "Tjøme_komm.svg"
+ },
+ {
+   "Nr": 728,
+   "File": "Lardal_komm.svg"
+ },
+ {
+   "Nr": 805,
+   "File": "Porsgrunn_komm.svg"
+ },
+ {
+   "Nr": 806,
+   "File": "Skien_komm.svg"
+ },
+ {
+   "Nr": 807,
+   "File": "Notodden_komm.svg"
+ },
+ {
+   "Nr": 811,
+   "File": "Siljan_komm.svg"
+ },
+ {
+   "Nr": 814,
+   "File": "Bamble_komm.svg"
+ },
+ {
+   "Nr": 815,
+   "File": "Kragerø_komm.svg"
+ },
+ {
+   "Nr": 817,
+   "File": "Drangedal_komm.svg"
+ },
+ {
+   "Nr": 819,
+   "File": "Nome_komm.svg"
+ },
+ {
+   "Nr": 821,
+   "File": "Bø_Telemark_komm.svg"
+ },
+ {
+   "Nr": 822,
+   "File": "Sauherad_komm.svg"
+ },
+ {
+   "Nr": 826,
+   "File": "Tinn_komm.svg"
+ },
+ {
+   "Nr": 827,
+   "File": "Hjartdal_komm.svg"
+ },
+ {
+   "Nr": 828,
+   "File": "Seljord_komm.svg"
+ },
+ {
+   "Nr": 829,
+   "File": "Kviteseid_komm.svg"
+ },
+ {
+   "Nr": 830,
+   "File": "Nissedal_komm.svg"
+ },
+ {
+   "Nr": 831,
+   "File": "Fyresdal_komm.svg"
+ },
+ {
+   "Nr": 833,
+   "File": "Tokke_komm.svg"
+ },
+ {
+   "Nr": 834,
+   "File": "Vinje_komm.svg"
+ },
+ {
+   "Nr": 901,
+   "File": "Risør_komm.svg"
+ },
+ {
+   "Nr": 904,
+   "File": "Grimstad_komm.svg"
+ },
+ {
+   "Nr": 906,
+   "File": "Arendal_komm.svg"
+ },
+ {
+   "Nr": 911,
+   "File": "Gjerstad_komm.svg"
+ },
+ {
+   "Nr": 912,
+   "File": "Vegårshei_komm.svg"
+ },
+ {
+   "Nr": 914,
+   "File": "Tvedestrand_komm.svg"
+ },
+ {
+   "Nr": 919,
+   "File": "Froland_komm.svg"
+ },
+ {
+   "Nr": 926,
+   "File": "Lillesand_komm.svg"
+ },
+ {
+   "Nr": 928,
+   "File": "Birkenes_komm.svg"
+ },
+ {
+   "Nr": 929,
+   "File": "Åmli_komm.svg"
+ },
+ {
+   "Nr": 935,
+   "File": "Iveland_komm.svg"
+ },
+ {
+   "Nr": 937,
+   "File": "Evje_og_Hornnes_komm.svg"
+ },
+ {
+   "Nr": 938,
+   "File": "Bygland_komm.svg"
+ },
+ {
+   "Nr": 940,
+   "File": "Valle_komm.svg"
+ },
+ {
+   "Nr": 941,
+   "File": "Bykle_komm.svg"
+ },
+ {
+   "Nr": 1001,
+   "File": "Kristiansand_komm.svg"
+ },
+ {
+   "Nr": 1002,
+   "File": "Mandal_komm.svg"
+ },
+ {
+   "Nr": 1003,
+   "File": "Farsund_komm.svg"
+ },
+ {
+   "Nr": 1004,
+   "File": "Flekkefjord_komm.svg"
+ },
+ {
+   "Nr": 1014,
+   "File": "Vennesla_komm.svg"
+ },
+ {
+   "Nr": 1017,
+   "File": "Songdalen_komm.svg"
+ },
+ {
+   "Nr": 1018,
+   "File": "Søgne_komm.svg"
+ },
+ {
+   "Nr": 1021,
+   "File": "Marnardal_komm.svg"
+ },
+ {
+   "Nr": 1026,
+   "File": "Åseral_komm.svg"
+ },
+ {
+   "Nr": 1027,
+   "File": "Audnedal_komm.svg"
+ },
+ {
+   "Nr": 1029,
+   "File": "Lindesnes_komm.svg"
+ },
+ {
+   "Nr": 1032,
+   "File": "Lyngdal_komm.svg"
+ },
+ {
+   "Nr": 1034,
+   "File": "Hægebostad_komm.svg"
+ },
+ {
+   "Nr": 1037,
+   "File": "Kvinesdal_komm.svg"
+ },
+ {
+   "Nr": 1046,
+   "File": "Sirdal_komm.svg"
+ },
+ {
+   "Nr": 1101,
+   "File": "Eigersund_komm.svg"
+ },
+ {
+   "Nr": 1102,
+   "File": "Sandnes_komm.svg"
+ },
+ {
+   "Nr": 1103,
+   "File": "Stavanger_komm.svg"
+ },
+ {
+   "Nr": 1106,
+   "File": "Haugesund_komm.svg"
+ },
+ {
+   "Nr": 1111,
+   "File": "Sokndal_komm.svg"
+ },
+ {
+   "Nr": 1112,
+   "File": "Lund_komm.svg"
+ },
+ {
+   "Nr": 1114,
+   "File": "Bjerkreim_komm.svg"
+ },
+ {
+   "Nr": 1119,
+   "File": "Hå_komm.svg"
+ },
+ {
+   "Nr": 1120,
+   "File": "Klepp_komm.svg"
+ },
+ {
+   "Nr": 1121,
+   "File": "Time_komm.svg"
+ },
+ {
+   "Nr": 1122,
+   "File": "Gjesdal_komm.svg"
+ },
+ {
+   "Nr": 1124,
+   "File": "Sola_komm.svg"
+ },
+ {
+   "Nr": 1127,
+   "File": "Randaberg_komm.svg"
+ },
+ {
+   "Nr": 1129,
+   "File": "Forsand_komm.svg"
+ },
+ {
+   "Nr": 1130,
+   "File": "Strand_komm.svg"
+ },
+ {
+   "Nr": 1133,
+   "File": "Hjelmeland_komm.svg"
+ },
+ {
+   "Nr": 1134,
+   "File": "Suldal_komm.svg"
+ },
+ {
+   "Nr": 1135,
+   "File": "Sauda_komm.svg"
+ },
+ {
+   "Nr": 1141,
+   "File": "Finnøy_komm.svg"
+ },
+ {
+   "Nr": 1142,
+   "File": "Rennesøy_komm.svg"
+ },
+ {
+   "Nr": 1144,
+   "File": "Kvitsøy_komm.svg"
+ },
+ {
+   "Nr": 1145,
+   "File": "Bokn_komm.svg"
+ },
+ {
+   "Nr": 1146,
+   "File": "Tysvær_komm.svg"
+ },
+ {
+   "Nr": 1149,
+   "File": "Karmøy_komm.svg"
+ },
+ {
+   "Nr": 1151,
+   "File": "Utsira_komm.svg"
+ },
+ {
+   "Nr": 1160,
+   "File": "Vindafjord_komm.svg"
+ },
+ {
+   "Nr": 1201,
+   "File": "Bergen_komm.svg"
+ },
+ {
+   "Nr": 1211,
+   "File": "Etne_komm.svg"
+ },
+ {
+   "Nr": 1216,
+   "File": "Sveio_komm.svg"
+ },
+ {
+   "Nr": 1219,
+   "File": "Bømlo_komm.svg"
+ },
+ {
+   "Nr": 1221,
+   "File": "Stord_komm.svg"
+ },
+ {
+   "Nr": 1222,
+   "File": "Fitjar_komm.svg"
+ },
+ {
+   "Nr": 1223,
+   "File": "Tysnes_komm.svg"
+ },
+ {
+   "Nr": 1224,
+   "File": "Kvinnherad_komm.svg"
+ },
+ {
+   "Nr": 1227,
+   "File": "Jondal_komm.svg"
+ },
+ {
+   "Nr": 1228,
+   "File": "Odda_komm.svg"
+ },
+ {
+   "Nr": 1231,
+   "File": "Ullensvang_komm.svg"
+ },
+ {
+   "Nr": 1232,
+   "File": "Eidfjord_komm.svg"
+ },
+ {
+   "Nr": 1233,
+   "File": "Ulvik_komm.svg"
+ },
+ {
+   "Nr": 1234,
+   "File": "Granvin_komm.svg"
+ },
+ {
+   "Nr": 1235,
+   "File": "Voss_komm.svg"
+ },
+ {
+   "Nr": 1238,
+   "File": "Kvam_komm.svg"
+ },
+ {
+   "Nr": 1241,
+   "File": "Fusa_komm.svg"
+ },
+ {
+   "Nr": 1242,
+   "File": "Samnanger_komm.svg"
+ },
+ {
+   "Nr": 1243,
+   "File": "Os_Hordaland_komm.svg"
+ },
+ {
+   "Nr": 1244,
+   "File": "Austevoll_komm.svg"
+ },
+ {
+   "Nr": 1245,
+   "File": "Sund_komm.svg"
+ },
+ {
+   "Nr": 1246,
+   "File": "Fjell_komm.svg"
+ },
+ {
+   "Nr": 1247,
+   "File": "Askøy_komm.svg"
+ },
+ {
+   "Nr": 1251,
+   "File": "Vaksdal_komm.svg"
+ },
+ {
+   "Nr": 1252,
+   "File": "Modalen_komm.svg"
+ },
+ {
+   "Nr": 1253,
+   "File": "Osterøy_komm.svg"
+ },
+ {
+   "Nr": 1256,
+   "File": "Meland_komm.svg"
+ },
+ {
+   "Nr": 1259,
+   "File": "Øygarden_komm.svg"
+ },
+ {
+   "Nr": 1260,
+   "File": "Radøy_komm.svg"
+ },
+ {
+   "Nr": 1263,
+   "File": "Lindås_komm.svg"
+ },
+ {
+   "Nr": 1264,
+   "File": "Austrheim_komm.svg"
+ },
+ {
+   "Nr": 1265,
+   "File": "Fedje_komm.svg"
+ },
+ {
+   "Nr": 1266,
+   "File": "Masfjorden_komm.svg"
+ },
+ {
+   "Nr": 1401,
+   "File": "Flora_komm.svg"
+ },
+ {
+   "Nr": 1411,
+   "File": "Gulen_komm.svg"
+ },
+ {
+   "Nr": 1412,
+   "File": "Solund_komm.svg"
+ },
+ {
+   "Nr": 1413,
+   "File": "Hyllestad_komm.svg"
+ },
+ {
+   "Nr": 1416,
+   "File": "Høyanger_komm.svg"
+ },
+ {
+   "Nr": 1417,
+   "File": "Vik_komm.svg"
+ },
+ {
+   "Nr": 1418,
+   "File": "Balestrand_komm.svg"
+ },
+ {
+   "Nr": 1419,
+   "File": "Leikanger_komm.svg"
+ },
+ {
+   "Nr": 1420,
+   "File": "Sogndal_komm.svg"
+ },
+ {
+   "Nr": 1421,
+   "File": "Aurland_komm.svg"
+ },
+ {
+   "Nr": 1422,
+   "File": "Lærdal_komm.svg"
+ },
+ {
+   "Nr": 1424,
+   "File": "Årdal_komm.svg"
+ },
+ {
+   "Nr": 1426,
+   "File": "Luster_komm.svg"
+ },
+ {
+   "Nr": 1428,
+   "File": "Askvoll_komm.svg"
+ },
+ {
+   "Nr": 1429,
+   "File": "Fjaler_komm.svg"
+ },
+ {
+   "Nr": 1430,
+   "File": "Gaular_komm.svg"
+ },
+ {
+   "Nr": 1431,
+   "File": "Jølster_komm.svg"
+ },
+ {
+   "Nr": 1432,
+   "File": "Førde_komm.svg"
+ },
+ {
+   "Nr": 1433,
+   "File": "Naustdal_komm.svg"
+ },
+ {
+   "Nr": 1438,
+   "File": "Bremanger_komm.svg"
+ },
+ {
+   "Nr": 1439,
+   "File": "Vågsøy_komm.svg"
+ },
+ {
+   "Nr": 1441,
+   "File": "Selje_komm.svg"
+ },
+ {
+   "Nr": 1443,
+   "File": "Eid_komm.svg"
+ },
+ {
+   "Nr": 1444,
+   "File": "Hornindal_komm.svg"
+ },
+ {
+   "Nr": 1445,
+   "File": "Gloppen_komm.svg"
+ },
+ {
+   "Nr": 1449,
+   "File": "Stryn_komm.svg"
+ },
+ {
+   "Nr": 1502,
+   "File": "Molde_komm.svg"
+ },
+ {
+   "Nr": 1504,
+   "File": "Ålesund_komm.svg"
+ },
+ {
+   "Nr": 1505,
+   "File": "Kristiansund_komm.svg"
+ },
+ {
+   "Nr": 1511,
+   "File": "Vanylven_komm.svg"
+ },
+ {
+   "Nr": 1514,
+   "File": "Sande_Møre_og_Romsdal_komm.svg"
+ },
+ {
+   "Nr": 1515,
+   "File": "Herøy_Møre_og_Romsdal_komm.svg"
+ },
+ {
+   "Nr": 1516,
+   "File": "Ulstein_komm.svg"
+ },
+ {
+   "Nr": 1517,
+   "File": "Hareid_komm.svg"
+ },
+ {
+   "Nr": 1519,
+   "File": "Volda_komm.svg"
+ },
+ {
+   "Nr": 1520,
+   "File": "Ørsta_komm.svg"
+ },
+ {
+   "Nr": 1523,
+   "File": "Ørskog_komm.svg"
+ },
+ {
+   "Nr": 1524,
+   "File": "Norddal_komm.svg"
+ },
+ {
+   "Nr": 1525,
+   "File": "Stranda_komm.svg"
+ },
+ {
+   "Nr": 1526,
+   "File": "Stordal_komm.svg"
+ },
+ {
+   "Nr": 1528,
+   "File": "Sykkylven_komm.svg"
+ },
+ {
+   "Nr": 1529,
+   "File": "Skodje_komm.svg"
+ },
+ {
+   "Nr": 1531,
+   "File": "Sula_komm.svg"
+ },
+ {
+   "Nr": 1532,
+   "File": "Giske_komm.svg"
+ },
+ {
+   "Nr": 1534,
+   "File": "Haram_komm.svg"
+ },
+ {
+   "Nr": 1535,
+   "File": "Vestnes_komm.svg"
+ },
+ {
+   "Nr": 1539,
+   "File": "Rauma_komm.svg"
+ },
+ {
+   "Nr": 1543,
+   "File": "Nesset_komm.svg"
+ },
+ {
+   "Nr": 1545,
+   "File": "Midsund_komm.svg"
+ },
+ {
+   "Nr": 1546,
+   "File": "Sandøy_komm.svg"
+ },
+ {
+   "Nr": 1547,
+   "File": "Aukra_komm.svg"
+ },
+ {
+   "Nr": 1548,
+   "File": "Fræna_komm.svg"
+ },
+ {
+   "Nr": 1551,
+   "File": "Eide_komm.svg"
+ },
+ {
+   "Nr": 1554,
+   "File": "Averøy_komm.svg"
+ },
+ {
+   "Nr": 1557,
+   "File": "Gjemnes_komm.svg"
+ },
+ {
+   "Nr": 1560,
+   "File": "Tingvoll_komm.svg"
+ },
+ {
+   "Nr": 1563,
+   "File": "Sunndal_komm.svg"
+ },
+ {
+   "Nr": 1566,
+   "File": "Surnadal_komm.svg"
+ },
+ {
+   "Nr": 1567,
+   "File": "Rindal_komm.svg"
+ },
+ {
+   "Nr": 1571,
+   "File": "Halsa_komm.svg"
+ },
+ {
+   "Nr": 1573,
+   "File": "Smøla_komm.svg"
+ },
+ {
+   "Nr": 1576,
+   "File": "Aure_komm.svg"
+ },
+ {
+   "Nr": 1601,
+   "File": "Trondheim_komm.svg"
+ },
+ {
+   "Nr": 1612,
+   "File": "Hemne_komm.svg"
+ },
+ {
+   "Nr": 1613,
+   "File": "Snillfjord_komm.svg"
+ },
+ {
+   "Nr": 1617,
+   "File": "Hitra_komm.svg"
+ },
+ {
+   "Nr": 1620,
+   "File": "Frøya_komm.svg"
+ },
+ {
+   "Nr": 1621,
+   "File": "Ørland_komm.svg"
+ },
+ {
+   "Nr": 1622,
+   "File": "Agdenes_komm.svg"
+ },
+ {
+   "Nr": 1624,
+   "File": "Rissa_komm.svg"
+ },
+ {
+   "Nr": 1627,
+   "File": "Bjugn_komm.svg"
+ },
+ {
+   "Nr": 1630,
+   "File": "Åfjord_komm.svg"
+ },
+ {
+   "Nr": 1632,
+   "File": "Roan_komm.svg"
+ },
+ {
+   "Nr": 1633,
+   "File": "Osen_komm.svg"
+ },
+ {
+   "Nr": 1634,
+   "File": "Oppdal_komm.svg"
+ },
+ {
+   "Nr": 1635,
+   "File": "Rennebu_komm.svg"
+ },
+ {
+   "Nr": 1636,
+   "File": "Meldal_komm.svg"
+ },
+ {
+   "Nr": 1638,
+   "File": "Orkdal_komm.svg"
+ },
+ {
+   "Nr": 1640,
+   "File": "Røros_komm.svg"
+ },
+ {
+   "Nr": 1644,
+   "File": "Holtålen_komm.svg"
+ },
+ {
+   "Nr": 1648,
+   "File": "Midtre_Gauldal_komm.svg"
+ },
+ {
+   "Nr": 1653,
+   "File": "Melhus_komm.svg"
+ },
+ {
+   "Nr": 1657,
+   "File": "Skaun_komm.svg"
+ },
+ {
+   "Nr": 1662,
+   "File": "Klæbu_komm.svg"
+ },
+ {
+   "Nr": 1663,
+   "File": "Malvik_komm.svg"
+ },
+ {
+   "Nr": 1664,
+   "File": "Selbu_komm.svg"
+ },
+ {
+   "Nr": 1665,
+   "File": "Tydal_komm.svg"
+ },
+ {
+   "Nr": 1702,
+   "File": "Steinkjer_komm.svg"
+ },
+ {
+   "Nr": 1703,
+   "File": "Namsos_komm.svg"
+ },
+ {
+   "Nr": 1711,
+   "File": "Meråker_komm.svg"
+ },
+ {
+   "Nr": 1714,
+   "File": "Stjørdal_komm.svg"
+ },
+ {
+   "Nr": 1717,
+   "File": "Frosta_komm.svg"
+ },
+ {
+   "Nr": 1718,
+   "File": "Leksvik_komm.svg"
+ },
+ {
+   "Nr": 1719,
+   "File": "Levanger_komm.svg"
+ },
+ {
+   "Nr": 1721,
+   "File": "Verdal_komm.svg"
+ },
+ {
+   "Nr": 1724,
+   "File": "Verran_komm.svg"
+ },
+ {
+   "Nr": 1725,
+   "File": "Namdalseid_komm.svg"
+ },
+ {
+   "Nr": 1736,
+   "File": "Snåsa_komm.svg"
+ },
+ {
+   "Nr": 1738,
+   "File": "Lierne_komm.svg"
+ },
+ {
+   "Nr": 1739,
+   "File": "Røyrvik_komm.svg"
+ },
+ {
+   "Nr": 1740,
+   "File": "Namsskogan_komm.svg"
+ },
+ {
+   "Nr": 1742,
+   "File": "Grong_komm.svg"
+ },
+ {
+   "Nr": 1743,
+   "File": "Høylandet_komm.svg"
+ },
+ {
+   "Nr": 1744,
+   "File": "Overhalla_komm.svg"
+ },
+ {
+   "Nr": 1748,
+   "File": "Fosnes_komm.svg"
+ },
+ {
+   "Nr": 1749,
+   "File": "Flatanger_komm.svg"
+ },
+ {
+   "Nr": 1750,
+   "File": "Vikna_komm.svg"
+ },
+ {
+   "Nr": 1751,
+   "File": "Nærøy_komm.svg"
+ },
+ {
+   "Nr": 1755,
+   "File": "Leka_komm.svg"
+ },
+ {
+   "Nr": 1756,
+   "File": "Inderøy_komm.svg"
+ },
+ {
+   "Nr": 1804,
+   "File": "Bodø_komm.svg"
+ },
+ {
+   "Nr": 1805,
+   "File": "Narvik_komm.svg"
+ },
+ {
+   "Nr": 1811,
+   "File": "Bindal_komm.svg"
+ },
+ {
+   "Nr": 1812,
+   "File": "Sømna_komm.svg"
+ },
+ {
+   "Nr": 1813,
+   "File": "Brønnøy_komm.svg"
+ },
+ {
+   "Nr": 1815,
+   "File": "Vega_komm.svg"
+ },
+ {
+   "Nr": 1816,
+   "File": "Vevelstad_komm.svg"
+ },
+ {
+   "Nr": 1818,
+   "File": "Herøy_Nordland_komm.svg"
+ },
+ {
+   "Nr": 1820,
+   "File": "Alstahaug_komm.svg"
+ },
+ {
+   "Nr": 1822,
+   "File": "Leirfjord_komm.svg"
+ },
+ {
+   "Nr": 1824,
+   "File": "Vefsn_komm.svg"
+ },
+ {
+   "Nr": 1825,
+   "File": "Grane_komm.svg"
+ },
+ {
+   "Nr": 1826,
+   "File": "Hattfjelldal_komm.svg"
+ },
+ {
+   "Nr": 1827,
+   "File": "Dønna_komm.svg"
+ },
+ {
+   "Nr": 1828,
+   "File": "Nesna_komm.svg"
+ },
+ {
+   "Nr": 1832,
+   "File": "Hemnes_komm.svg"
+ },
+ {
+   "Nr": 1833,
+   "File": "Rana_komm.svg"
+ },
+ {
+   "Nr": 1834,
+   "File": "Lurøy_komm.svg"
+ },
+ {
+   "Nr": 1835,
+   "File": "Træna_komm.svg"
+ },
+ {
+   "Nr": 1836,
+   "File": "Rødøy_komm.svg"
+ },
+ {
+   "Nr": 1837,
+   "File": "Meløy_komm.svg"
+ },
+ {
+   "Nr": 1838,
+   "File": "Gildeskål_komm.svg"
+ },
+ {
+   "Nr": 1839,
+   "File": "Beiarn_komm.svg"
+ },
+ {
+   "Nr": 1840,
+   "File": "Saltdal_komm.svg"
+ },
+ {
+   "Nr": 1841,
+   "File": "Fauske_komm.svg"
+ },
+ {
+   "Nr": 1845,
+   "File": "Sørfold_komm.svg"
+ },
+ {
+   "Nr": 1848,
+   "File": "Steigen_komm.svg"
+ },
+ {
+   "Nr": 1849,
+   "File": "Hamarøy_komm.svg"
+ },
+ {
+   "Nr": 1850,
+   "File": "Tysfjord_komm.svg"
+ },
+ {
+   "Nr": 1851,
+   "File": "Lødingen_komm.svg"
+ },
+ {
+   "Nr": 1852,
+   "File": "Tjeldsund_komm.svg"
+ },
+ {
+   "Nr": 1853,
+   "File": "Evenes_komm.svg"
+ },
+ {
+   "Nr": 1854,
+   "File": "Ballangen_komm.svg"
+ },
+ {
+   "Nr": 1856,
+   "File": "Røst_komm.svg"
+ },
+ {
+   "Nr": 1857,
+   "File": "Værøy_komm.svg"
+ },
+ {
+   "Nr": 1859,
+   "File": "Flakstad_komm.svg"
+ },
+ {
+   "Nr": 1860,
+   "File": "Vestvågøy_komm.svg"
+ },
+ {
+   "Nr": 1865,
+   "File": "Vågan_komm.svg"
+ },
+ {
+   "Nr": 1866,
+   "File": "Hadsel_komm.svg"
+ },
+ {
+   "Nr": 1867,
+   "File": "Bø_Nordland_komm.svg"
+ },
+ {
+   "Nr": 1868,
+   "File": "Øksnes_komm.svg"
+ },
+ {
+   "Nr": 1870,
+   "File": "Sortland_komm.svg"
+ },
+ {
+   "Nr": 1871,
+   "File": "Andøy_komm.svg"
+ },
+ {
+   "Nr": 1874,
+   "File": "Moskenes_komm.svg"
+ },
+ {
+   "Nr": 1902,
+   "File": "Tromsø_komm.svg"
+ },
+ {
+   "Nr": 1903,
+   "File": "Harstad_komm.svg"
+ },
+ {
+   "Nr": 1911,
+   "File": "Kvæfjord_komm.svg"
+ },
+ {
+   "Nr": 1913,
+   "File": "Skånland_komm.svg"
+ },
+ {
+   "Nr": 1917,
+   "File": "Ibestad_komm.svg"
+ },
+ {
+   "Nr": 1919,
+   "File": "Gratangen_komm.svg"
+ },
+ {
+   "Nr": 1920,
+   "File": "Lavangen_komm.svg"
+ },
+ {
+   "Nr": 1922,
+   "File": "Bardu_komm.svg"
+ },
+ {
+   "Nr": 1923,
+   "File": "Salangen_komm.svg"
+ },
+ {
+   "Nr": 1924,
+   "File": "Målselv_komm.svg"
+ },
+ {
+   "Nr": 1925,
+   "File": "Sørreisa_komm.svg"
+ },
+ {
+   "Nr": 1926,
+   "File": "Dyrøy_komm.svg"
+ },
+ {
+   "Nr": 1927,
+   "File": "Tranøy_komm.svg"
+ },
+ {
+   "Nr": 1928,
+   "File": "Torsken_komm.svg"
+ },
+ {
+   "Nr": 1929,
+   "File": "Berg_komm.svg"
+ },
+ {
+   "Nr": 1931,
+   "File": "Lenvik_komm.svg"
+ },
+ {
+   "Nr": 1933,
+   "File": "Balsfjord_komm.svg"
+ },
+ {
+   "Nr": 1936,
+   "File": "Karlsøy_komm.svg"
+ },
+ {
+   "Nr": 1938,
+   "File": "Lyngen_komm.svg"
+ },
+ {
+   "Nr": 1939,
+   "File": "Storfjord_komm.svg"
+ },
+ {
+   "Nr": 1940,
+   "File": "Kåfjord_komm.svg"
+ },
+ {
+   "Nr": 1941,
+   "File": "Skjervøy_komm.svg"
+ },
+ {
+   "Nr": 1942,
+   "File": "Nordreisa_komm.svg"
+ },
+ {
+   "Nr": 1943,
+   "File": "Kvænangen_komm.svg"
+ },
+ {
+   "Nr": 2002,
+   "File": "Vardø_komm.svg"
+ },
+ {
+   "Nr": 2003,
+   "File": "Vadsø_komm.svg"
+ },
+ {
+   "Nr": 2004,
+   "File": "Hammerfest_komm.svg"
+ },
+ {
+   "Nr": 2011,
+   "File": "Kautokeino_komm.svg"
+ },
+ {
+   "Nr": 2012,
+   "File": "Alta_komm.svg"
+ },
+ {
+   "Nr": 2014,
+   "File": "Loppa_komm.svg"
+ },
+ {
+   "Nr": 2015,
+   "File": "Hasvik_komm.svg"
+ },
+ {
+   "Nr": 2017,
+   "File": "Kvalsund_komm.svg"
+ },
+ {
+   "Nr": 2018,
+   "File": "Måsøy_komm.svg"
+ },
+ {
+   "Nr": 2019,
+   "File": "Nordkapp_komm.svg"
+ },
+ {
+   "Nr": 2020,
+   "File": "Porsanger_komm.svg"
+ },
+ {
+   "Nr": 2021,
+   "File": "Karasjok_komm.svg"
+ },
+ {
+   "Nr": 2022,
+   "File": "Lebesby_komm.svg"
+ },
+ {
+   "Nr": 2023,
+   "File": "Gamvik_komm.svg"
+ },
+ {
+   "Nr": 2024,
+   "File": "Berlevåg_komm.svg"
+ },
+ {
+   "Nr": 2025,
+   "File": "Tana_komm.svg"
+ },
+ {
+   "Nr": 2027,
+   "File": "Nesseby_komm.svg"
+ },
+ {
+   "Nr": 2028,
+   "File": "Båtsfjord_komm.svg"
+ },
+ {
+   "Nr": 2030,
+   "File": "Sør-Varanger_komm.svg"
+ }
+]

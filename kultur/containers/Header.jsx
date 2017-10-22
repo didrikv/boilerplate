@@ -8,29 +8,19 @@ import {LinkContainer} from 'react-router-bootstrap'
 import logo from '../../logo/logoFullFarge.svg'
 import categories from '../data/categories.json'
 
-import indeks from '../data/logo/indeks.svg'
-import Kunstnere from '../data/logo/kunstnere.svg'
-import Kulturarbeidere from '../data/logo/kulturarbeidere.svg'
-import Museum from '../data/logo/museum.svg'
-import Konserter from '../data/logo/konserter.svg'
-import Kino from '../data/logo/kino.svg'
-import Bibliotek from '../data/logo/bibliotek.svg'
-import Scenekunst from '../data/logo/scenekunst.svg'
-import Kulturskole from '../data/logo/kulturskole.svg'
-import DKS from '../data/logo/dks.svg'
-import Tildelinger from '../data/logo/tildelinger.svg'
-import Frivillighet from '../data/logo/frivillighet.svg'
-
 function Header(props) {
-	return(
-		<div>
+	let links = 
 			<div className={styles.linkContainer}>
 				<a href='/regional'> Regional Analyse </a>
 				<a href='/naring' >Næringsindeksen</a>
 				<a href='/attraktivitet'>Attraktivitetsanalyser</a>
 				<div>Norsk Kulturindeks</div>
 			</div>
+
+	return(
+		<div>
 			<div className={styles.header} >
+				<div style={{height: '20px'}}> </div>
 				<a href='https://www.telemarksforsking.no'>
 				<img src={logo} height='40px'/>
 				</a>

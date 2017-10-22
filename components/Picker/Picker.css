@@ -1,21 +1,21 @@
+@value tmBlue: #00546d;
+@value tmLightGreen: #b1c88a;
+@value tmDarkGreen: #6e8878;
+@value tmGrey: #807f83;
+
 .bold {
 	font-weight: bold;
 }
 
-:global(.Select-menu-outer) .bold {
-	border-bottom: 1px solid #ccc;
-}
 
 .outer{
-	border: 0px;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+	border:  0px;
 }
 
 .outer > div:first-of-type {
-	border: 0px;
-	border-bottom: 1px solid #f0f0f0;
-	border-color: #e7e7e7 !important;
-	border-radius: 0px;
+	border: 2px solid;
+	border-color: tmBlue !important;
+	border-radius: 5px;
 	box-shadow: none !important;
 }
 
@@ -24,22 +24,69 @@
 	font-size: 14px;
 }
 
+.shield :global(.Select-input) {
+	margin-top: 15.5px;
+	margin-bottom: 24.5px;
+	margin-left: 47.5px;
+}
+
+.shield :global(.Select-value) {
+	display: flex;
+	align-items: center;
+}
+
 
 :global(.Select-menu-outer) .variable{
 	padding-left: 30px;
 }
-
 :global(.Select-menu) {
 	max-height: 398px;
+	border: none;
 }
 :global(.Select-menu-outer) {
+	border: none;
+	margin-top: 0px;
 	max-height: 400px;
+	box-shadow: 0px 9px 28px 2px rgba(0,0,0,0.75);
 }
 
+
+
+:global(.Select-menu) .bold{
+	border-bottom: 1px solid tmBlue;
+}
+
+@value arrowSize: 8px;
+
+:global(.Select-arrow) {
+	border-width: arrowSize;
+	border-style: solid;
+	border-color: transparent;
+	border-top-color: tmBlue;
+	height: arrowSize;
+	width:  arrowSize;
+	top: 4px
+}
+
+:global(.Select-arrow-zone):hover :global(.Select-arrow) {
+	border-top-color: tmBlue;
+}
+:global(.Select-arrow-zone) {
+}
+
+
+:global(.is-open) > :global(.Select-control) :global(.Select-arrow) {
+	border-width: arrowSize;
+	border-style: solid;
+	border-color: transparent;
+	border-bottom-color: tmBlue;
+	width: arrowSize;
+	height: arrowSize;
+	top: -4px;
+}
 
 :global(.Select-option) {
 	color: #333;
-	transition: background 300ms;
 }
 :global(.Select-option.is-focused) {
 	background: none;
@@ -48,16 +95,16 @@
 	background: none;
 }
 :global(.Select-option):hover {
-	background: #D6EAF8;
+	background: #DCEDC8;
 }
 :global(.Select-option.is-disabled) {
 	font-style: italic;
 	color: #777;
 }
-
 :global(.Select-option.is-disabled):hover {
 	background: none;
 }
+
 
 .title{
 	display: flex;
