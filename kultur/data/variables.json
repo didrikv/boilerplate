@@ -10,7 +10,7 @@
 		"vekting": "Delindikatoren vektes med 50% av kunstnerindikatoren og 5 % av Norsk kulturindeks.",
 		"merknad": "Totalt utgjør disse medlemmene 78% av norske kunstnere registrert i én eller flere kunstnerorganisasjoner (jf. Heian m.fl 2008).  Tallene omfatter alle medlemmer bosatt i Norge, men enkelte av kunstnerne kan være registrert i flere organisasjoner. Opptakskrav i organisasjonene varierer. Noen stiller strenge krav til kunstnerisk utøvelse, andre er åpne. Mer om dette finnes på den enkelte organisasjons hjemmeside.",
 		"weight": 2,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Kunstnermangfold",
@@ -37,7 +37,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kunstnerindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "Vi har ikke tilgang til summene for garantiinntekt da dette er å regne som private opplysninger. Disse er oppført med en gjennomsnittsinntekt på 238 500,-." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{   "id": "Kunstnerisk Produksjon",
 		"title": "Sysselsatte innen kunstnerisk produksjon", 
@@ -49,7 +49,7 @@
 		"vekting": "Delindikatoren vektes med 33,3 % av indikatoren kulturarbeidere og 3,3 % av Norsk kulturindeks.",
 		"merknad": "I motsetning til Kunstnertetthet, er sysselsatte registrert med arbeidskommune." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Kulturformidling",
@@ -62,7 +62,7 @@
 		"vekting": "Delindikatoren vektes med 33,3 % av indikatoren kulturarbeidere og 3,3 % av Norsk kulturindeks",
 		"merknad": "I motsetning til 1a Kunstnertetthet, er sysselsatte registrert med arbeidskommune. " ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Media",
@@ -75,7 +75,7 @@
 		"vekting": "Delindikatoren vektes med 33,3 % av indikatoren kulturarbeidere og 3,3 % av Norsk kulturindeks.",
 		"merknad": "I motsetning til 1a Kunstnertetthet, er sysselsatte registrert med arbeidskommune." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Kommunale Midler",
@@ -88,7 +88,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av museumsindikatoren og 3,3 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Total Besøk",
@@ -101,7 +101,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av museumsindikatoren og 3,3 % av Norsk kulturindeks.",
 		"merknad": "Noen konsoliderte museer har kun registrert totalt antall besøk. Vi har i slike tilfeller fordelt det totale besøkstallet likt på de ulike museumsarenaene." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Betalende Besøk",
@@ -114,7 +114,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av museumsindikatoren og 3,3 % av Norsk kulturindeks.",
 		"merknad": "En rekke museumsbesøk blir registrert dersom de besøkende kun er innom et parkanlegg eller lignende. Ved å inkludere betalende besøk vektlegger vi personer som har ytt noe for å se en samling, en utstilling eller lignende. Noen museer har kun rapportert inn besøkstall til Kulturrådet, og ikke spesifisert betalende besøk. I slike tilfeller går vi ut fra at antall betalende besøk er 0. ",
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
         {
         "id": "Billettselskap Arrangementer",
@@ -127,7 +127,7 @@
         "vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
         "merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette." ,
         "weight": 1,
-        "benevning": "per 1000 inbygger"
+        "benevning": "per 1000 innbygger"
     },
     {
         "id": "Billettselskap Omsetning",
@@ -140,7 +140,7 @@
         "vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
         "merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette." ,
         "weight": 1,
-        "benevning": "per inbygger"
+        "benevning": "per innbygger"
     },
 	{
 		"id": "TONO Arrangementer",
@@ -153,7 +153,7 @@
 		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
 		"merknad": "Tallene inkluderer alle konserter og offentlige opptredener som Tono har registrert i løpet av 2013. Gudstjenester er holdt utenfor." ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "TONO Avregning",
@@ -166,7 +166,7 @@
 		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
 		"merknad": "Medlemmer av Norske konsertarrangører og Norsk Jazzforum rapporterer inn konserter og vederlag for alle sine medlemmer. Vi har derfor innhentet tall fra disse. I enkelte tilfeller kan arrangør befinne seg i en annen kommune enn der det faktiske arrangementet ble avholdt. Dette er en svakhet ved dataene vi ikke kan kontrollere per i dag. I de tilfeller vi ikke har tall for Tono-vederlag, kun for billettinntekter, har vi regnet ut fra et snitt på 3% av billettinntekter." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Filmfremvisninger",
@@ -179,7 +179,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kinoindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Mangfold filmframvisniger",
@@ -206,7 +206,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kinoindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Mangfold kinobesøk",
@@ -220,7 +220,7 @@
 		"merknad": "" ,
 		"weight": 1,
 		"reverse": true,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Utlån",
@@ -233,7 +233,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av bibliotekindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Besøk",
@@ -246,7 +246,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av bibliotekindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "Innrapporteringen for bibliotekbesøk kan være mangelfull i enkelte kommuner." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Voksne aktive lånere",
@@ -259,7 +259,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av bibliotekindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "En voksen aktiv låner er en person over 18 år som har minst 1 registrert lån i et gitt år." ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Arrangement deltakere",
@@ -271,7 +271,7 @@
 		"kilder": "Folkebibliotekstatistikk frå Nasjonalbiblioteket.",
 		"vekting": "Delindikatoren vektes med 25 % av bibliotekindikatoren og 2,5 % av Norsk kulturindeks.",
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 
 	},
 	{
@@ -285,7 +285,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av scenekunstindikatoren og 3,3 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Teater Publikum",
@@ -298,7 +298,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av scenekunstindikatoren og 3,3 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Dans Forestillinger",
@@ -311,7 +311,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av scenekunstindikatoren og 3,3 % av Norsk kulturindeks",
 		"merknad": "Danseinformasjonen er basert på en frivillig registrering. Det vites derfor ikke om denne oversikten er komplett." ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Timer",
@@ -324,7 +324,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kultur for barn-indikatoren og 2,5 % av Norsk kulturindeks.",
         "merknad": "I de tilfeller der kulturskolen er organisert som et interkommunalt samarbeid er årstimer fordelt etter antall innbyggere i kulturskolealder." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Mangfold Timer",
@@ -351,7 +351,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kultur for barn-indikatoren og 2,5 % av Norsk kulturindeks.",
         "merknad": "For kommuner med interkommunale kulturskoler, er tilbudet fordelt på de respektive kommunene etter folketall." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Publikum",
@@ -364,7 +364,7 @@
 		"vekting": "Delindikatoren vektes med 12,5 % av kultur for barn-indikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "Av mulige DKS-data har vi valgt å inkludere kun denne delindikatoren. Dette fordi deltakelse på tilbudene er obligatoriske, slik at deltagelse henger tett sammen med tilbud. For 100 %-kommunene har vi fordelt ut fylkeskommunale forestillinger innen musikk. 95 % av disse er organisert gjennom Rikskonsertenes skoleordning, som også besøker 100 %-kommuner." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Mangfold Publikum",
@@ -391,7 +391,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av Sentrale tildelinger og 3,3 % av Norsk kulturindeks.",
 		"merknad": "En rekke sentrale tildelinger gis til tiltak som ikke er spesifikt stedbundne, eller som er stedbunden til en region eller et fylke. I denne delindikatoren har vi kun valgt å inkludere de tiltak som har særlig relevans for en (i noen tilfeller to) kommuner. Fra kulturbudsjettet har vi manuelt gjennomgått alle tildelinger innenfor flere kapittel og plukket ut tiltak der aktiviteten er stedbunden." ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Riksantikvar og Kulturminnefond",
@@ -404,7 +404,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av Sentrale tildelinger og 3,3 % av Norsk kulturindeks.",
 		"merknad": "Tildelinger fra Riksantikvaren inkluderer tilskudd til tekniske / industrielle kulturminner og istandsetting (forvaltes av fylkeskommunene) samt tildelinger fra Norsk kulturminnefond. " ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Frifond",
@@ -417,7 +417,7 @@
 		"vekting": "Delindikatoren vektes med 33 % av Sentrale tildelinger og 3,3 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "MVA Refusjon",
@@ -430,7 +430,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av frivillighetsindikatoren og 2,5 % av Norsk kulturindeks.",
 		"merknad": "Vi har valgt å trekke ut organisasjoner innen kunst og kulturfeltet (ICNPO-nr.1100). Vi har her trukket ut lokallagsledd hvor aktiviteten er knyttet til et sted. Denne utvalgsjobben er foretatt av Lotteri- og stiftelsestilsynet. " ,
 		"weight": 2,
-		"benevning": "per inbygger"
+		"benevning": "per innbygger"
 	},
 	{
 		"id": "Korps",
@@ -443,7 +443,7 @@
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Kor",
@@ -456,7 +456,7 @@
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "Medlemstall for Norsk Sangerforbund seg ikke framskaffe for 2015. Oversikten tar utgangpunkt i fjorårets medlemstall." ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Husflidlag",
@@ -469,7 +469,7 @@
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Historielag",
@@ -482,7 +482,7 @@
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Voksenopplæring",
@@ -495,7 +495,7 @@
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Kunstlag",
@@ -508,6 +508,6 @@
 		"vekting": "Delindikatoren vektes med 12.5 % av frivillighetsindikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "" ,
 		"weight": 1,
-		"benevning": "per 1000 inbygger"
+		"benevning": "per 1000 innbygger"
 	}
 ]

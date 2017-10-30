@@ -26,7 +26,6 @@ function Header(props) {
 				</a>
 				<h1> Norsk kulturindeks</h1> 
 				<p>Lokalt kulturliv i norske kommuner</p>
-				<p> av  <a href='http://www.tmforsk.no/medarbeidere/Detalj.asp?id=80&merket=6'> Bård Kleppe</a> </p>
 			</div>
 
 			<div className={styles.navbarWrapper}>
@@ -42,7 +41,7 @@ function Header(props) {
 							</LinkContainer>
 							<NavDropdown title="Analyser">
 								<LinkContainer exact to='/analyser'>
-									<MenuItem>1. Hva skaper kultur?</MenuItem>
+									<MenuItem>1. Kjennetegn ved gode kulturkommuner</MenuItem>
 								</LinkContainer>
 								<LinkContainer to='/analyser/struktur'>
 									<MenuItem> 2. Strukturelle variabler</MenuItem>
@@ -55,9 +54,6 @@ function Header(props) {
 								</LinkContainer>
 								<LinkContainer to='/analyser/potensial'>
 									<MenuItem>5. Utnytter kommunene sitt potensial på kulturfeltet?</MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/analyser/rapport'>
-									<MenuItem>6. Rapporter for kommuner og fylker</MenuItem>
 								</LinkContainer>
 							</NavDropdown>
 							<NavDropdown title="Hovedkategorier" >
@@ -81,6 +77,9 @@ function Header(props) {
 							</NavDropdown>
 							<LinkContainer to='/steder'>
 								<NavItem> Steder </NavItem>
+							</LinkContainer>
+							<LinkContainer to='/bestill'>
+								<NavItem> Bestill rapport</NavItem>
 							</LinkContainer>
 						</Nav>
 					</Navbar.Collapse>

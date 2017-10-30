@@ -6,6 +6,7 @@ import KategoriRoute from './KategoriRoute.jsx'
 import Steder from './Steder.jsx'
 import FrontPage from './FrontPage.jsx'
 import Analyser from './Analyser.jsx'
+import Bestill from './bestill.jsx'
 
 
 export default class App extends React.Component {
@@ -26,17 +27,19 @@ export default class App extends React.Component {
 	steder = (routeProps) => <Steder {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
 	frontPage = (routeProps) => <FrontPage {...this.props} {...routeProps} Gstate={this.state} setGstate={ (obj) => this.setState(obj)} />
 	analyser = (routeProps) => <Analyser {...this.props} {...routeProps} />
+	bestill = (routeProps) => <Bestill {...this.props} {...routeProps} />
 
 	render() {
 		return(
 			<div>
-				<Router basename="/kultur">
+				<Router>
 					<div>
 						<Header/>
 						<Route path="/kategori" render={this.kategori} />
 						<Route path="/steder" render={this.steder} />
 						<Route exact path="/" render={this.frontPage} />
 						<Route path="/analyser" render={this.analyser} />
+						<Route path="/bestill" render={this.bestill} />
 						<Footer />
 					</div>
 				</Router>

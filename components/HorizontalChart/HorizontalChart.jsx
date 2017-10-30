@@ -53,7 +53,7 @@ export default class HorizontalChart extends React.Component {
 
 	generateName = () => {
 		let years = this.state.years
-		let top = this.state.inndeling == 'Fylke' ? 'Top ' : 'Top ' + this.state.n + ' '
+		let top = this.state.inndeling == 'Fylke' ? 'Topp ' : 'Topp ' + this.state.n + ' '
 		let name = top + this.state.inndeling + ' '
 		name += years.length == 1 ? years[0] : years[0] + '-' + years[years.length-1]
 		return name

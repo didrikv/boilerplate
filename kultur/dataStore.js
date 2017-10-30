@@ -131,5 +131,9 @@ years.forEach( (year) => {
 })
 
 let dataStore = {years, vars, data, allDataObject, createDataObject}
+
+let temp = allDataObject.filter( (e) => e.Inndeling == "Kommune" && e.År == 2016 )
+console.log(temp)
+
 export default dataStore
 

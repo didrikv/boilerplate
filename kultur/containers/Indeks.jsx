@@ -25,7 +25,7 @@ export default class Indeks extends React.Component {
 					<Picker
 						names={['Kommune', 'Region', 'Fylke']}
 						chosen={this.props.Gstate.inndeling}
-						handleChange={ (inndeling) => this.setState({inndeling}) }
+						handleChange={ (inndeling) => this.props.setGstate({inndeling}) }
 						title='Velg inndeling:'
 						justify='center'
 					/>
