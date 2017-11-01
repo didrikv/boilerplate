@@ -142,6 +142,5 @@ years.forEach( (year) => {
 })
 
 let dataStore = {years, vars, data, allDataObject, createDataObject}
-console.log(dataStore)
 export default dataStore
 

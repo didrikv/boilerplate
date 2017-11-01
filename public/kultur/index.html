@@ -11,7 +11,34 @@
   <head>
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+		<style>
+			.loader {
+				border: 25px solid #b1c88a;
+				border-radius: 50%;
+				border-top: 25px solid #00546d;
+				width: 120px;
+				height: 120px;
+				-webkit-animation: spin 2s linear infinite;
+				animation: spin 2s linear infinite;
+			}
+			
+			.loaderContainer {
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				padding-top: 10%;
+			}
+			
+			.loaderText {
+				font-size: 30px;
+				color: #00546d;
+			}
 
+			@keyframes spin {
+					0% { transform: rotate(0deg); }
+					100% { transform: rotate(360deg); }
+			}
+		</style>
     
 
     
@@ -42,7 +69,12 @@
     
 
     
-    <div id="root"></div>
+				<div id="root">
+					<div class="loaderContainer">
+						<div class="loader"></div>
+						<p class="loaderText" >Laster inn siden...</p>
+				</div>
+			</div>
     
     
 
@@ -53,9 +85,9 @@
     
 
     
-    <script src="/83ff29241c08dcd8da95.commons.js" type="text/javascript"></script>
+    <script src="/9a38aa19b6f75fe61510.commons.js" type="text/javascript"></script>
     
-    <script src="/kultur/83ff29241c08dcd8da95.bundle.js" type="text/javascript"></script>
+    <script src="/kultur/9a38aa19b6f75fe61510.bundle.js" type="text/javascript"></script>
     
 
     

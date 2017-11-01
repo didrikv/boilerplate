@@ -7,6 +7,7 @@ import Steder from './Steder.jsx'
 import FrontPage from './FrontPage.jsx'
 import Analyser from './Analyser.jsx'
 import Bestill from './bestill.jsx'
+import IEWarning from '../../components/IEWarning.jsx'
 
 
 export default class App extends React.Component {
