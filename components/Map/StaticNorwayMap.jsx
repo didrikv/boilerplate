@@ -35,7 +35,6 @@ export default class StaticNorwayMap extends React.Component {
 
 	shouldComponentUpdate = (nextProps, nextState) => {
 		let should = !deepEqual(this.state, nextState)
-		if(should) {console.log('Map Updated')}
 		return should
 	}
 

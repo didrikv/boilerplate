@@ -12,7 +12,6 @@ import styles from './App.css'
 
 
 export default function FrontPage(props) {
-	console.log(props)
 
 	function renderGraphSection() {
 		let graphProps = {

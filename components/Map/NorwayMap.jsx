@@ -12,12 +12,12 @@ import styles from './Map.css'
 import FadeTransition from '../CrossFade/CrossFade.jsx'
 
 let projection = geoTransverseMercator()
-  .rotate([-15, -65, 0])
-  .translate([450/2, 450/2])
-  .scale(2000)
+	.rotate([-15, -65, 0])
+	.translate([450/2, 450/2])
+	.scale(2000)
 
 let path = geoPath()
-  .projection(projection)
+	.projection(projection)
 
 let norge = norge_simp
 let maps = {}
@@ -28,19 +28,19 @@ maps.Fylke = feature(norge, norge.objects.fylke).features
 
 let inndelinger = ['Kommune', 'Region', 'Fylke']
 inndelinger.forEach( (inndeling) => {
-  maps[inndeling] = maps[inndeling].map( (area) => 
-    <path
-      vectorEffect='non-scaling-stroke'
-      d={path(area)}
-      key={area.properties.Nr}
-      style={{stroke: 'grey', strokeWidth: 0.4}}
-	  className={styles.static}
-    />
-  )
+	maps[inndeling] = maps[inndeling].map( (area) => 
+		<path
+			vectorEffect='non-scaling-stroke'
+			d={path(area)}
+			key={area.properties.Nr}
+			style={{stroke: 'grey', strokeWidth: 0.4}}
+			className={styles.static}
+		/>
+	)
 })
 
 export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse, percentLegend}) {
-  let areas = inndeling ? maps[inndeling] : maps.Kommune
+	let areas = inndeling ? maps[inndeling] : maps.Kommune
 
 	let origData = {...data}
 
@@ -59,44 +59,47 @@ export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse, p
 			delete data[key]
 		}
 	})
-  
-  if(data) {
+
+	if(data) {
 		var array = Object.keys(data).map(
 			function ( key ) { return data[key]; }
 		)
-    var scale = scaleQuantile()
-      .domain(array)
-      .range(colors)
-    areas.forEach( (e) => {
+		var scale = scaleQuantile()
+			.domain(array)
+			.range(colors)
+		areas.forEach( (e) => {
 			if(! (data[e.key] === undefined)) {
 				e.props.style.fill = scale(data[e.key])
 			} else {
 				e.props.style.fill = "#e9e9e9"
 			}
-				
-    })
-  }
 
-  let threshold = [min(array), ...scale.quantiles(), max(array)]
+		})
+	}
+
+	let threshold = [min(array), ...scale.quantiles(), max(array)]
 	let mapLegend = noLegend ? null : 
 		<MapLegend colors={colors} threshold={threshold} x={280} y={250} borderColor='gray' whiteZeros={whiteZeros} percentLegend={percentLegend}/>
 
-  return (
-		<div style={{position: 'relative', zIndex: '-1'}} id="sdff">
-			<TransitionGroup>
-				<FadeTransition key={inndeling}>
-					<svg
-						width='100%'
-						height='100%'
-						viewBox='44 -3 373 467'
-						className={styles.map}
-						id={svgId}
-					>
-						{areas}
-						{mapLegend}
-					</svg>
-				</FadeTransition>
-			</TransitionGroup>
-		</div>
-  )
+		return (
+			<div style={{position: 'relative', zIndex: '-1'}} id="sdff">
+					<div style={{ position: 'relative', height: 0, width: '100%', padding: 0, paddingBottom: `${100 * (700 / 576.66)}%` }} >
+						<TransitionGroup>
+						<FadeTransition key={inndeling}>
+							<svg
+								style={{position: 'absolute', height: '100%', width: '100%', left: 0, top: 0 } }
+								width='100%'
+								height='100%'
+								viewBox='44 -3 373 467'
+								className={styles.map}
+								id={svgId}
+							>
+								{areas}
+								{mapLegend}
+							</svg>
+						</FadeTransition>
+						</TransitionGroup>
+					</div>
+			</div>
+		)
 }

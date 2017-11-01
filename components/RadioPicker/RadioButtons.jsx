@@ -4,7 +4,6 @@ import styles from './RadioButtons.css'
 
 export default function RadioPicker({values, names, chosen, handleChange}){
 	values = values ? values : names
-	console.log(names)
 
 	let options = names.map( (name, i) => {
 		let buttonClass = values[i] == chosen ? styles.checked : styles.unChecked

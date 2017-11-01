@@ -1,5 +1,6 @@
 import React from 'react'
-import { VictoryChart, 
+import VictoryChart from '../IEFriendlyVictoryChart.jsx'
+import { 
 	VictoryBar, 
 	VictoryLabel, 
 	VictoryStack, 
