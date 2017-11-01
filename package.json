@@ -11,6 +11,7 @@
     "deploy": "git add -A && git commit -m \"I dont giva a fuck! \" && git push && pm2 deploy production"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "color": "^2.0.0",
     "d3": "^4.10.0",
     "file-saver": "^1.3.3",

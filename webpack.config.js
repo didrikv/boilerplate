@@ -20,7 +20,7 @@ let html = ['attraktivitet', 'naring', 'kultur', 'regional'].map( (chunk, i) =>
 		],
 		template: require('html-webpack-template'),
 		filename: chunk + '/index.html',
-		chunks: chunk == 'regional' ? [chunk] : [chunk, 'commons'],
+		chunks: chunk == 'regional' ? [ chunk ] : [chunk, 'commons'],
 		appMountId: 'root',
 		alwaysWriteToDisk: true,
 		inject: false,
@@ -30,10 +30,10 @@ let html = ['attraktivitet', 'naring', 'kultur', 'regional'].map( (chunk, i) =>
 var config = {
 	context: __dirname,
 	entry: {
-		attraktivitet: './attraktivitet/index.js',
-		naring: './naring/index.js',
-		kultur: './kultur/index.js',
-		regional: './regional/index.js'
+		attraktivitet: ['babel-polyfill', './attraktivitet/index.js'],
+		naring: ['babel-polyfill', './naring/index.js'],
+		kultur: ['babel-polyfill', './kultur/index.js'],
+		regional: ['babel-polyfill', './regional/index.js']
 	},
 	plugins: html.concat([ 
 		new HtmlWebpackHarddiskPlugin()
