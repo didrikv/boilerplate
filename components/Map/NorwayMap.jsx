@@ -84,8 +84,6 @@ export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse, p
 		return (
 			<div style={{position: 'relative', zIndex: '-1'}} id="sdff">
 					<div style={{ position: 'relative', height: 0, width: '100%', padding: 0, paddingBottom: `${100 * (700 / 576.66)}%` }} >
-						<TransitionGroup>
-						<FadeTransition key={inndeling}>
 							<svg
 								style={{position: 'absolute', height: '100%', width: '100%', left: 0, top: 0 } }
 								width='100%'
@@ -97,8 +95,6 @@ export default function NorwayMap({ inndeling, data, svgId, noLegend, reverse, p
 								{areas}
 								{mapLegend}
 							</svg>
-						</FadeTransition>
-						</TransitionGroup>
 					</div>
 			</div>
 		)
