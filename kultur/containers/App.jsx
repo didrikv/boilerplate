@@ -35,6 +35,7 @@ export default class App extends React.Component {
 			<div>
 				<Router>
 					<div>
+						<IEWarning/>
 						<Header/>
 						<Route path="/kategori" render={this.kategori} />
 						<Route path="/steder" render={this.steder} />

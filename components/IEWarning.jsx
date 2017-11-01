@@ -7,6 +7,7 @@ import { Modal } from 'react-bootstrap'
 export default class IEWarning extends React.Component {
 	constructor() {
 		super()
+		console.log(bowser)
 		this.state = {showModal: bowser.msie}
 	}
 
