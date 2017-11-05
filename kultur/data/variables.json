@@ -49,7 +49,7 @@
 		"vekting": "Delindikatoren vektes med 33,3 % av indikatoren kulturarbeidere og 3,3 % av Norsk kulturindeks.",
 		"merknad": "I motsetning til Kunstnertetthet, er sysselsatte registrert med arbeidskommune." ,
 		"weight": 1,
-		"benevning": "per innbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Kulturformidling",
@@ -62,7 +62,7 @@
 		"vekting": "Delindikatoren vektes med 33,3 % av indikatoren kulturarbeidere og 3,3 % av Norsk kulturindeks",
 		"merknad": "I motsetning til 1a Kunstnertetthet, er sysselsatte registrert med arbeidskommune. " ,
 		"weight": 1,
-		"benevning": "per innbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Media",
@@ -75,7 +75,7 @@
 		"vekting": "Delindikatoren vektes med 33,3 % av indikatoren kulturarbeidere og 3,3 % av Norsk kulturindeks.",
 		"merknad": "I motsetning til 1a Kunstnertetthet, er sysselsatte registrert med arbeidskommune." ,
 		"weight": 1,
-		"benevning": "per innbygger"
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Kommunale Midler",
@@ -324,7 +324,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kultur for barn-indikatoren og 2,5 % av Norsk kulturindeks.",
         "merknad": "I de tilfeller der kulturskolen er organisert som et interkommunalt samarbeid er årstimer fordelt etter antall innbyggere i kulturskolealder." ,
 		"weight": 1,
-		"benevning": "per innbygger"
+		"benevning": "per barn (6-15 år)"
 	},
 	{
 		"id": "Mangfold Timer",
@@ -351,7 +351,7 @@
 		"vekting": "Delindikatoren vektes med 25 % av kultur for barn-indikatoren og 2,5 % av Norsk kulturindeks.",
         "merknad": "For kommuner med interkommunale kulturskoler, er tilbudet fordelt på de respektive kommunene etter folketall." ,
 		"weight": 1,
-		"benevning": "per innbygger"
+		"benevning": "per barn (6-15 år)"
 	},
 	{
 		"id": "Publikum",
@@ -364,7 +364,7 @@
 		"vekting": "Delindikatoren vektes med 12,5 % av kultur for barn-indikatoren og 1,25 % av Norsk kulturindeks.",
 		"merknad": "Av mulige DKS-data har vi valgt å inkludere kun denne delindikatoren. Dette fordi deltakelse på tilbudene er obligatoriske, slik at deltagelse henger tett sammen med tilbud. For 100 %-kommunene har vi fordelt ut fylkeskommunale forestillinger innen musikk. 95 % av disse er organisert gjennom Rikskonsertenes skoleordning, som også besøker 100 %-kommuner." ,
 		"weight": 1,
-		"benevning": "per innbygger"
+		"benevning": "per barn (6-15 år)"
 	},
 	{
 		"id": "Mangfold Publikum",
