@@ -8,6 +8,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const NpmInstallPlugin = require('npm-install-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const PrerendererWebpackPlugin = require('prerenderer-webpack-plugin')
+const BrowserRenderer = PrerendererWebpackPlugin.BrowserRenderer // or JSDOMRenderer, or ChromeRenderer
 
 let titles = ['Attraktivitetsanalyser', 'Næringsindeksen', 'Norsk kulturindeks', 'Regional analyser']
 let html = ['attraktivitet', 'naring', 'kultur', 'regional'].map( (chunk, i) => 
@@ -104,7 +106,19 @@ var production = {
 		}),
 		new CompressionPlugin(),
 		new CleanWebpackPlugin(['public']),
-		new FaviconsWebpackPlugin('./logo/my-logo.png')
+		new FaviconsWebpackPlugin('./logo/my-logo.png'),
+		new PrerendererWebpackPlugin({
+      // Required - The path to the webpack-outputted app to prerender. 
+      staticDir: __dirname + '/public/kultur',
+      // Required - Routes to render. 
+      routes: [ '/'],
+ 
+      // Optional - This is the default. 
+      // or new ChromeRenderer({ command: 'chrome-start-command' }) 
+      // or new JSDOMRenderer() 
+      renderer: new BrowserRenderer()
+    })
+
 	]
 }
 

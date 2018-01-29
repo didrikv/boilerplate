@@ -1,0 +1,645 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"vek",
+				"vekting"
+			],
+			[
+				"m",
+				"mål"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"test",
+				"test_quadratic"
+			],
+			[
+				"plot",
+				"plot_method"
+			],
+			[
+				"rot",
+				"rotsolve_nonrev"
+			],
+			[
+				"on",
+				"one-side"
+			],
+			[
+				"app",
+				"approx"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"e",
+				"e_values"
+			],
+			[
+				"dt",
+				"dt_values"
+			],
+			[
+				"n",
+				"n_values"
+			],
+			[
+				"zero",
+				"zeroderivative"
+			],
+			[
+				"U",
+				"U_L"
+			],
+			[
+				"__",
+				"__name__"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"time",
+				"time_steps_per_period"
+			],
+			[
+				"num",
+				"num_periods"
+			],
+			[
+				"tim",
+				"time_steps_per_period"
+			],
+			[
+				"nu",
+				"num_periods"
+			],
+			[
+				"T",
+				"T"
+			],
+			[
+				"de",
+				"decay_thetascheme"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/dvareide/primus/webpack.config.prod.js",
+			"settings":
+			{
+				"buffer_size": 2618,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "components/RadioPicker/RadioButtons.css",
+			"settings":
+			{
+				"buffer_size": 857,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": ":w",
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				":form",
+				"JsPrettier: Format Code"
+			],
+			[
+				":for",
+				"JsPrettier: Format Code"
+			],
+			[
+				":inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				":insta",
+				"Package Control: Install Package"
+			],
+			[
+				":install",
+				"Package Control: Install Package"
+			],
+			[
+				":colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				":instal",
+				"Package Control: Install Package"
+			],
+			[
+				":wrap\t",
+				"Snippet: React: wrap in a component"
+			],
+			[
+				":pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				":re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				":indet",
+				"Indentation: Reindent Lines"
+			],
+			[
+				":redin",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				":q",
+				"Set Syntax: SQL"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"browe",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"hig",
+				"SublimeHighlight: convert to RTF"
+			],
+			[
+				"packa\t",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 524.0
+	},
+	"console":
+	{
+		"height": 312.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/dvareide/AwesomeWebsite",
+		"/home/dvareide/AwesomeWebsite/components"
+	],
+	"file_history":
+	[
+		"/home/dvareide/AwesomeWebsite/webpack.config.js",
+		"/home/dvareide/AwesomeWebsite/public/naring/index.html",
+		"/home/dvareide/AwesomeWebsite/components/Map/NorwayMap.jsx",
+		"/home/dvareide/AwesomeWebsite/serverold.js",
+		"/home/dvareide/testapp/.eslintrc.js",
+		"/home/dvareide/testapp/testapp.sublime-project",
+		"/home/dvareide/testapp/public/manifest.json",
+		"/home/dvareide/testapp/package.json",
+		"/home/dvareide/testapp/src/index.css",
+		"/home/dvareide/testapp/src/test.html",
+		"/home/dvareide/testapp/src/App.js",
+		"/home/dvareide/.xinputrc",
+		"/home/dvareide/.Xmodmap",
+		"/usr/share/X11/xkb/keycodes/evdev",
+		"/usr/share/X11/xorg.conf.d/10-quirks.conf",
+		"/usr/share/X11/xorg.conf.d/10-evdev.conf",
+		"/usr/share/X11/xkb/symbols/us",
+		"/etc/default/keyboard",
+		"/usr/share/X11/xkb/rules/xorg.lst",
+		"/home/dvareide/testapp/.eslintrc",
+		"/home/dvareide/.config/sublime-text-3/Packages/Emmet/Emmet.sublime-settings",
+		"/home/dvareide/.config/sublime-text-3/Packages/User/Emmet.sublime-settings",
+		"/home/dvareide/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/dvareide/.config/sublime-text-3/Packages/Babel/Babel.sublime-settings",
+		"/home/dvareide/.config/sublime-text-3/Packages/User/Babel.sublime-settings",
+		"/home/dvareide/AwesomeWebsite/public/regional/index.html",
+		"/home/dvareide/AwesomeWebsite/kultur/data/createData.js",
+		"/home/dvareide/AwesomeWebsite/kultur/data/WebInput.js",
+		"/home/dvareide/AwesomeWebsite/kultur/data/categories.json",
+		"/home/dvareide/AwesomeWebsite/kultur/data/variables.json",
+		"/home/dvareide/AwesomeWebsite/naring/data/WebInput2.js",
+		"/home/dvareide/AwesomeWebsite/naring/data/WebInput.js",
+		"/home/dvareide/AwesomeWebsite/naring/data/categories.json",
+		"/home/dvareide/AwesomeWebsite/naring/data/variables.json",
+		"/home/dvareide/AwesomeWebsite/server.js",
+		"/home/dvareide/testapp/src/index.js",
+		"/media/dvareide/ESD-USB/.vimrc",
+		"/home/dvareide/AwesomeWebsite/favicons/manifest.json",
+		"/home/dvareide/AwesomeWebsite/regional/index.html",
+		"/home/dvareide/AwesomeWebsite/naring/data/data.json",
+		"/home/dvareide/AwesomeWebsite/.gitignore",
+		"/home/dvareide/.local/share/Trash/files/index.3.html",
+		"/home/dvareide/primus/kultur/data/data.json",
+		"/home/dvareide/AwesomeWebsite/.nvmrc",
+		"/home/dvareide/primus/kultur/data/rankData.json",
+		"/home/dvareide/primus/kultur/data/WebInput.js",
+		"/home/dvareide/primus/kultur/data/createData.js",
+		"/home/dvareide/primus/server.js",
+		"/home/dvareide/primus/public/kultur/index.html",
+		"/home/dvareide/AwesomeWebsite/package.json",
+		"/home/dvareide/AwesomeWebsite/src/build/index.html",
+		"/home/dvareide/AwesomeWebsite/src/app/data/WebInput.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/data.json",
+		"/home/dvareide/AwesomeWebsite/src/app/data/createData.js",
+		"/home/dvareide/primus/kultur/data/Untitled Folder/Rank kulturdata.js",
+		"/home/dvareide/Downloads/spreadsheet.csv",
+		"/home/dvareide/primus/attraktivitet/data/dataStore.js",
+		"/home/dvareide/AwesomeWebsite/src/app/Layout.js",
+		"/home/dvareide/AwesomeWebsite/src/app/article/SamletAtrakk.js",
+		"/home/dvareide/AwesomeWebsite/src/app/containers/StaticNorwayMap.js",
+		"/home/dvareide/AwesomeWebsite/src/app/dataStore.js",
+		"/home/dvareide/AwesomeWebsite/src/app/article/Naringsattraktivitet.js",
+		"/home/dvareide/primus/components/NorwayMap.jsx",
+		"/home/dvareide/public/app1/index.html",
+		"/home/dvareide/primus/components/Picker.jsx",
+		"/home/dvareide/primus/public/app1/index.html",
+		"/home/dvareide/primus/public/app2/index.html",
+		"/home/dvareide/primus/public/app1/about/index.html",
+		"/home/dvareide/primus/public/app1/test/index.html",
+		"/home/dvareide/primus/public/app1/index2.html/index.html",
+		"/home/dvareide/primus/public/app1/f39cb76bc7b0c7367e65.bundle.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/Naring.json",
+		"/home/dvareide/AwesomeWebsite/src/app/data/SamletAtrakk.json",
+		"/home/dvareide/.local/share/Trash/files/WebInput.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/WebInput.csv",
+		"/home/dvareide/AwesomeWebsite/src/app/data/norway_simple.json",
+		"/home/dvareide/AwesomeWebsite/src/app/data/data.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/info2.svg",
+		"/home/dvareide/Downloads/info2.svg",
+		"/home/dvareide/Downloads/map (4).svg",
+		"/home/dvareide/Downloads/test.txt",
+		"/home/dvareide/AwesomeWebsite/src/app/index.js",
+		"/home/dvareide/AwesomeWebsite/render.js",
+		"/home/dvareide/AwesomeWebsite/ecosystem.config.js",
+		"/home/dvareide/Desktop/dropped text.txt",
+		"/home/dvareide/AwesomeWebsite/src/app/data/article.json",
+		"/home/dvareide/AwesomeWebsite/src/build/styles.css",
+		"/home/dvareide/AwesomeWebsite/src/app/data/WebInput_v2.1_1Aar_2dec.csv",
+		"/home/dvareide/AwesomeWebsite/src/build/index (copy).html",
+		"/home/dvareide/AwesomeWebsite/src/build/index2.html",
+		"/home/dvareide/AwesomeWebsite/src/build/indexPre.html",
+		"/home/dvareide/redux/render-to-document-string.js",
+		"/home/dvareide/redux/src/redux/store.js",
+		"/home/dvareide/redux/src/redux/types.js",
+		"/home/dvareide/redux/src/redux/promiseMiddleware.js",
+		"/home/dvareide/redux/src/redux/loggerMiddleware.js",
+		"/home/dvareide/redux/src/components/App.js",
+		"/home/dvareide/redux/src/routes.js",
+		"/home/dvareide/redux/template.js",
+		"/home/dvareide/redux/src/index.js",
+		"/home/dvareide/redux/webpack.config.prod.js",
+		"/home/dvareide/redux/webpack.config.dev.js",
+		"/home/dvareide/redux/package.json",
+		"/home/dvareide/webpack-2/server.js",
+		"/home/dvareide/webpack-2/webpack.config.dev.js",
+		"/home/dvareide/dream/package.json",
+		"/home/dvareide/dream/webpack.config.dev.js",
+		"/home/dvareide/webpack-2/.babelrc",
+		"/home/dvareide/webpack-2/template.js",
+		"/home/dvareide/webpack-2/package.json",
+		"/home/dvareide/webpack-2/webpack.config.prod.js",
+		"/home/dvareide/dream/webpack.config.js",
+		"/home/dvareide/webpack-2/test.js",
+		"/home/dvareide/webpack-2/README.md",
+		"/home/dvareide/temp/test.html",
+		"/home/dvareide/KartData shp-filer/topojson/norway_original.json",
+		"/home/dvareide/boilerplate/src/app/data/Bostedsattraktivitet.js",
+		"/home/dvareide/boilerplate/src/app/data/VictoryTheme.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/VictoryTheme.js",
+		"/home/dvareide/AwesomeWebsite/node_modules/react-static-webpack-plugin/dist/index.js",
+		"/home/dvareide/Desktop/WebInput.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/WebInput_v2.1_1Aar_2dec.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/webinput.js",
+		"/home/dvareide/AwesomeWebsite/src/app/data/WebInput v2.1 6dec.js",
+		"/home/dvareide/boilerplate/src/app/VictoryTheme.js",
+		"/home/dvareide/Downloads/no_fyl_simp.svg",
+		"/home/dvareide/boilerplate/src/app/no_simp.json",
+		"/home/dvareide/KartData shp-filer/norge/no_fyl_simp.shp"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"norge",
+			"5",
+			"3",
+			"person",
+			"\t\t\t\t\n",
+			"p",
+			"import",
+			"plot",
+			"user",
+			")\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"person",
+			"p"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/dvareide/primus/webpack.config.prod.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "components/RadioPicker/RadioButtons.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 201.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 118.0
+	},
+	"pinned_build_system": "Packages/User/html.sublime-build",
+	"project": "tmWebsite.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"nor",
+				"components/Map/NorwayMap.jsx"
+			],
+			[
+				"eslijs",
+				".eslintrc.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/sublimeProjects/primus.sublime-project"
+			],
+			[
+				"test",
+				"~/testapp/testapp.sublime-project"
+			],
+			[
+				"stest",
+				"~/testapp/testapp.sublime-project"
+			],
+			[
+				"tm",
+				"~/AwesomeWebsite/tmWebsite.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 243.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 322.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
