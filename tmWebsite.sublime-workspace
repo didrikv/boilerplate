@@ -95,30 +95,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/dvareide/primus/webpack.config.prod.js",
-			"settings":
-			{
-				"buffer_size": 2618,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "components/RadioPicker/RadioButtons.css",
-			"settings":
-			{
-				"buffer_size": 857,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -257,11 +233,12 @@
 	},
 	"expanded_folders":
 	[
-		"/home/dvareide/AwesomeWebsite",
-		"/home/dvareide/AwesomeWebsite/components"
+		"/home/dvareide/AwesomeWebsite"
 	],
 	"file_history":
 	[
+		"/home/dvareide/AwesomeWebsite/kultur/containers/Header.jsx",
+		"/home/dvareide/primus/webpack.config.prod.js",
 		"/home/dvareide/AwesomeWebsite/webpack.config.js",
 		"/home/dvareide/AwesomeWebsite/public/naring/index.html",
 		"/home/dvareide/AwesomeWebsite/components/Map/NorwayMap.jsx",
@@ -387,9 +364,7 @@
 		"/home/dvareide/AwesomeWebsite/src/app/data/webinput.js",
 		"/home/dvareide/AwesomeWebsite/src/app/data/WebInput v2.1 6dec.js",
 		"/home/dvareide/boilerplate/src/app/VictoryTheme.js",
-		"/home/dvareide/Downloads/no_fyl_simp.svg",
-		"/home/dvareide/boilerplate/src/app/no_simp.json",
-		"/home/dvareide/KartData shp-filer/norge/no_fyl_simp.shp"
+		"/home/dvareide/Downloads/no_fyl_simp.svg"
 	],
 	"find":
 	{
@@ -436,95 +411,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/dvareide/primus/webpack.config.prod.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2618,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "components/RadioPicker/RadioButtons.css",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 857,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				}
 			]
 		}
 	],

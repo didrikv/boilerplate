@@ -16,8 +16,8 @@ let html = ['attraktivitet', 'naring', 'kultur', 'regional'].map( (chunk, i) =>
 	new HtmlWebpackPlugin({
 		title: titles[i],
 		links: [
-			"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css",
-			"https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css",
+			"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css",
+			"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css",
 			"https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans",
 		],
 		template: './index.ejs',
