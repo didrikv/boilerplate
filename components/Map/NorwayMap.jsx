@@ -6,7 +6,7 @@ import {scaleQuantile} from 'd3-scale'
 
 import {TransitionGroup} from 'react-transition-group'
 
-import norge_simp from './norway_simple.json'
+import norge_simp from './no_2018_simp.json'
 import MapLegend from './MapLegend.jsx'
 import styles from './Map.css'
 import FadeTransition from '../CrossFade/CrossFade.jsx'

@@ -98,4 +98,4 @@ export default class Indeks extends React.Component {
 	}
 }
 
-let text = "Norsk kulturindeks er en årlig oversikt over kulturtilbud og kulturaktivitet i norske kommuner, regioner og fylker. Indeksen er basert på registerdata fra en rekke offentlige etater, interesseorganisasjoner og foreninger. Målsetningen med Norsk kulturindeks er å beskrive det faktiske kulturtilbudet og den faktiske kulturbruken innenfor kommunen som geografisk område. Norsk kulturindeks 2017 er basert på data fra 2016. Under kan du velge rangering fra ulike år."
+let text = "Norsk kulturindeks er en årlig oversikt over kulturtilbud og kulturaktivitet i norske kommuner, regioner og fylker. Indeksen er basert på registerdata fra en rekke offentlige etater, interesseorganisasjoner og foreninger. Målsetningen med Norsk kulturindeks er å beskrive det faktiske kulturtilbudet og den faktiske kulturbruken innenfor kommunen som geografisk område. Norsk kulturindeks 2018 er basert på data fra 2017. Under kan du velge rangering fra ulike år."

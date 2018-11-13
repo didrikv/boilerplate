@@ -26,7 +26,7 @@ export default function Footer(props) {
 						<p><a href="mailto:dvareide@gmail.com">dvareide@gmail.com</a></p>
 					</Col>
 					<Col sm={3} style={{textAlign: 'center'}}>
-						<p> © 2017 Telemarksforsking </p>
+						<p> © 2018 Telemarksforsking </p>
 						<p style={{fontSize: '18px'}}>Icons made by <a style={{fontSize: '18px'}} href="http://www.freepik.com" title="Freepik">Freepik</a> from <a style={{fontSize: '18px'}} href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a style={{fontSize: '18px'}} href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
 					</Col>
 				</Row>

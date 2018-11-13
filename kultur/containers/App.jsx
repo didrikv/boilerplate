@@ -15,11 +15,11 @@ export default class App extends React.Component {
 		super()
 
 		this.state = {
-			years: [2016],
+			years: [2017],
 			variable: 'Kulturindeks',
 			inndeling: 'Kommune',
 			knr: 101,
-			rnr: 3001,
+			rnr: 10001,
 			fnr: 1
 		}
 	}
