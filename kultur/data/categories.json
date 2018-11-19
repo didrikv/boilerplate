@@ -19,7 +19,7 @@
 	},
 	{
 		"title": "Museum",
-		"text": "Vi presenterer her kommunale tildelinger til museer samt totalt besøk og betalende besøk for alle museumsavdelinger som rapporterer tall inn til Norsk kulturråd. Dette inkluderer også museer som får tilskudd fra andre departementer enn Kulturdepartementet.",
+		"text": "Vi presenterer her kommunale tildelinger til museer, totalt besøk og betalende besøk, samt antall utstillinger og arrangementer for alle museumsavdelinger som rapporterer tall inn til Norsk kulturråd. Dette inkluderer også museer som får tilskudd fra andre departementer enn Kulturdepartementet.",
 		"variables": [
 			"Kommunale Midler",
 			"Total Besøk",
@@ -59,7 +59,7 @@
 	},
 	{
 		"title": "Scenekunst",
-		"text": "Opplysningene om teater- og operaforestillinger samt publikum er hentet fra medlemsteatrene i Norsk Teater- og Orkesterforening (NTO). Opplysningene om danseforestillinger er hentet fra Danseinformasjonen.no. Private teatre og frie turnerende scenekunstgrupper er ikke inkludert i oversikten, men flere av disse forestillingene er inkludert i oversikten over DKS-forestillinger.",
+		"text": "Opplysningene om teater- og operaforestillinger og publikum er hentet fra medlemsteatrene i Norsk Teater- og Orkesterforening (NTO). Opplysningene om danseforestillinger er hentet fra Danseinformasjonen.no. Private teatre og frie scenekunstgrupper er i all hovedsak ikke inkludert i oversikten. DKS forestillinger er utelatt siden dette tilbudet presenteres i egen kapittel.",
 		"variables":[
 			"Teater Forestillinger",
 			"Teater Publikum",
@@ -85,11 +85,11 @@
 	},
 	{
 		"title": "Tildelinger",
-		"text": "Støtte til kunst og kultur forteller oss noe om aktiviteten i de kommunene som mottar støtte. Vi har her valgt tre støtteordninger med ulikt nedslagsfelt: Frifond, tildelinger fra Riksantikvaren og Norsk kulturminnefond, samt tildelinger fra Norsk kulturråd og tildelinger over statsbudsjettet til stedbunden aktivitet.",
+		"text": "Støtte til kunst og kultur forteller oss noe om aktiviteten i de kommunene som mottar støtte. Vi har her valgt tre støtteordninger: Frifond, tildelinger fra Riksantikvaren og Norsk kulturminnefond, samt tildelinger fra Norsk kulturråd til stedbunden aktivitet. Før 2017 inkluderte vi også noen tildelinger over statsbudsjettet.",
 		"variables": [
 			"Frifond",
 			"Riksantikvar og Kulturminnefond",
-			"Statsbudsjett og Kulturråd"
+			"Norsk Kulturråd"
 		]
 	},
 	{
