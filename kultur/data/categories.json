@@ -3,9 +3,11 @@
 		"title": "Kunstnere",
 		"text": "Oversikten vi her presenterer tar utgangspunkt i bostedsadresse for kunstnere registrert i de ti største kunstnerorganisasjonene i landet. Vi presenterer også oversikt over tildelinger fra Statens kunstnerstipend (SKS). Dette kan være en indikator på den kunstneriske kvaliteten til kunstnerne som er bosatt i kommunen.",
 		"variables": [
-			"Kunstnertetthet",
-			"Kunstnermangfold",
-			"SKS tildelinger"
+			"SKS tildelinger",
+			"Forfattere",
+			"Musikere og komponister",
+			"Film- og scenekunstnere",
+			"Visuelle kunstnere"
 		]
 	},
 	{
@@ -21,7 +23,6 @@
 		"title": "Museum",
 		"text": "Vi presenterer her kommunale tildelinger til museer, totalt besøk og betalende besøk, samt antall utstillinger og arrangementer for alle museumsavdelinger som rapporterer tall inn til Norsk kulturråd. Dette inkluderer også museer som får tilskudd fra andre departementer enn Kulturdepartementet.",
 		"variables": [
-			"Kommunale Midler",
 			"Total Besøk",
 			"Betalende Besøk",
 			"Utstillinger og arrangementer"
@@ -32,9 +33,7 @@
 		"text": "Kategorien konserter tar utgangspunkt i konserttall fra de største billettselskapene i Norge. På grunn av omlegging av datasystem i TONO, fikk vi fra år 2014 dessverre ikke tilgang derfra, og har valgt å benytte datamateriale fra billettselskaper i kategorien «konserter». Billettselskap-tallene fanger opp den mest profesjonaliserte delen av konsertvirksomheten i Norge, og det vil dermed være flere arrangement som ikke er inkludert i denne oversikten.",
 		"variables": [
 			"Billettselskap Arrangementer",
-			"Billettselskap Omsetning",
-			"TONO Arrangementer",
-			"TONO Avregning"
+			"Billettselskap Omsetning"
 		]
 	},
 	{

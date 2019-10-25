@@ -15,7 +15,7 @@ export default class App extends React.Component {
 		super()
 
 		this.state = {
-			years: [2017],
+			years: [2018],
 			variable: 'Kulturindeks',
 			inndeling: 'Kommune',
 			knr: 101,

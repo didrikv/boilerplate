@@ -1,32 +1,5 @@
 [
 	{
-		"id": "Kunstnertetthet",
-		"title": "Kunstnertetthet",
-		"category": "Kunstnere",
-		"mål": "Indikerer hvor stor andel av befolkningen som er medlem av en kunstnerorganisasjon og som dermed kan anses som en profesjonell kunstner.",
-		"formel": "(A/B) x 1000 der A= Antall medlemskap i de 10 største kunstnerorganisasjonene med hjemmeadresse i kommunen. B= Antall innbyggere i kommunen.",
-		"metode": "Beregne andelen av kommunens innbyggere som er medlem i én av de 10 største kunstnerorganisasjonene. Tallene vises i antall per 1000 innbyggere.",
-		"kilder": "Medlemslister fra Den norske forfatterforeningen, Foreningen for norske tekstforfattere og komponister (NOPA), Gramart, Grafil, Musikernes fellesorganisasjon, Norsk filmforbund, Norsk skuespillerforbund, Norske dansekunstnere, Norske billedkunstnere og Norske kunsthåndverkere. Tall er hentet ut i juni 2016.",
-		"vekting": "Delindikatoren vektes med 50% av kunstnerindikatoren og 5 % av Norsk kulturindeks.",
-		"merknad": "Totalt utgjør disse medlemmene 78% av norske kunstnere registrert i én eller flere kunstnerorganisasjoner (jf. Heian m.fl 2008).  Tallene omfatter alle medlemmer bosatt i Norge, men enkelte av kunstnerne kan være registrert i flere organisasjoner. Opptakskrav i organisasjonene varierer. Noen stiller strenge krav til kunstnerisk utøvelse, andre er åpne. Mer om dette finnes på den enkelte organisasjons hjemmeside.",
-		"weight": 2,
-		"benevning": "per 1000 innbygger"
-	},
-	{
-		"id": "Kunstnermangfold",
-		"title": "Kunstnermangfold",
-		"category": "Kunstnere",
-		"mål": "Indikerer hvor mange medlemmer fra ulike kunstnerorganisasjoner som er bosatt i kommunen. ",
-		"formel": "Summen av rangeringer for (A/B) for hver av de 10 største kunstnerorganisasjonene der A= Antall medlemskap for hver av de 10 største kunstnerorganisasjonene med hjemmeadresse i kommunen. B= Antall innbyggere i kommunen.",
-		"metode": "Ved å summere rangeringer for medlemstetthet i de ulike organisasjonene vil denne indikatoren favorisere kommuner som har høy medlemstetthet i flest mulig medlemsorganisasjoner og dermed kunstnere fra ulike sjangere. Tallene vises som en rangering mellom kommunene.",
-		"kilder": "Medlemslister fra Den norske forfatterforeningen, Foreningen for norske tekstforfattere og komponister (NOPA), Gramart, Grafil, Musikernes fellesorganisasjon, Norsk filmforbund, Norsk skuespillerforbund, Norske dansekunstnere, Norske billedkunstnere og Norske kunsthåndverkere. Tall er hentet ut i juni 2016.",
-		"vekting": "Delindikatoren vektes med 25% av kunstnerindikatoren og 2,5 % av Norsk kulturindeks.",
-		"merknad": "Se Kunstnertetthet.",
-		"weight": 1,
-		"reverse": true,
-		"benevning": "Rang"
-	},
-	{
 		"id": "SKS tildelinger",
 		"title": "Tildelinger Statens kunstnerstipend (SKS)",
 		"category": "Kunstnere",
@@ -34,10 +7,62 @@
 		"formel": "(A/B), der A= Antall kroner tildelt kunstnere i kommunen av Statens kunstnerstipend og B= Antall innbyggere i kommunen.",
 		"metode": "Ved å summere antall kroner tildelt i støtte av Statens kunstnerstipend får man en oversikt som gjenspeiler de kunstneriske vurderinger som er foretatt av SKS. Dette gir en kvantitativ indikator på kvalitet.",
 		"kilder": "SKS sine tildelinger for 2015: Arbeidsstipend, Arbeidsstipend for yngre/nyetablerte kunstnere, diversestipend og garantiinntekt. Tallene inkluderer alle utbetalinger, også til de som har mottatt flerårig stipend fra tidligere år.",
-		"vekting": "Delindikatoren vektes med 25 % av kunstnerindikatoren og 2,5 % av Norsk kulturindeks.",
+		"vekting": "Delindikatoren vektes med 20 % av kunstnerindikatoren og 2% av Norsk kulturindeks.",
 		"merknad": "Vi har ikke tilgang til summene for garantiinntekt da dette er å regne som private opplysninger. Disse er oppført med en gjennomsnittsinntekt på 238 500,-.",
 		"weight": 1,
 		"benevning": "per innbygger"
+	},
+	{
+		"id": "Forfattere",
+		"title": "Forfattere",
+		"category": "Kunstnere",
+		"mål": "Indikerer hvor stor andel av befolkningen som er medlem av en kunstnerorganisasjon og som dermed kan anses som en profesjonell kunstner.",
+		"formel": "(A/B) x 1000 der A= Antall medlemskap i de 10 største kunstnerorganisasjonene med hjemmeadresse i kommunen. B= Antall innbyggere i kommunen.",
+		"metode": "Beregne andelen av kommunens innbyggere som er medlem i én av de 10 største kunstnerorganisasjonene. Tallene vises i antall per 1000 innbyggere.",
+		"kilder": "DNF, Dramatikerforbundet, NBU og Norsk oversetterforening",
+		"vekting": "Delindikatoren vektes med 20 % av kunstnerindikatoren og 2% av Norsk kulturindeks.",
+		"merknad": "",
+		"weight": 1,
+		"benevning": "per 1000 innbygger"
+	},
+	{
+		"id": "Musikere og komponister",
+		"title": "Musikere og komponister",
+		"category": "Kunstnere",
+		"mål": "Indikerer hvor stor andel av befolkningen som er medlem av en kunstnerorganisasjon og som dermed kan anses som en profesjonell kunstner.",
+		"formel": "(A/B) x 1000 der A= Antall medlemskap i de 10 største kunstnerorganisasjonene med hjemmeadresse i kommunen. B= Antall innbyggere i kommunen.",
+		"metode": "Beregne andelen av kommunens innbyggere som er medlem i én av de 10 største kunstnerorganisasjonene. Tallene vises i antall per 1000 innbyggere.",
+		"kilder": "Creo, Folkorg, Gramart, NOPA, Norsk Jazzforum og Norsk komponistforening",
+		"vekting": "Delindikatoren vektes med 20 % av kunstnerindikatoren og 2% av Norsk kulturindeks.",
+		"merknad": "",
+		"weight": 1,
+		"benevning": "per 1000 innbygger"
+	},
+	{
+		"id": "Film- og scenekunstnere",
+		"title": "Film- og scenekunstnere",
+		"category": "Kunstnere",
+		"mål": "Indikerer hvor stor andel av befolkningen som er medlem av en kunstnerorganisasjon og som dermed kan anses som en profesjonell kunstner.",
+		"formel": "(A/B) x 1000 der A= Antall medlemskap i de 10 største kunstnerorganisasjonene med hjemmeadresse i kommunen. B= Antall innbyggere i kommunen.",
+		"metode": "Beregne andelen av kommunens innbyggere som er medlem i én av de 10 største kunstnerorganisasjonene. Tallene vises i antall per 1000 innbyggere.",
+		"kilder": "Norsk Filmforbund, Norsk Skuespillerforbund, Norske dansekunstnere og Norske filmregissører",
+		"vekting": "Delindikatoren vektes med 20 % av kunstnerindikatoren og 2% av Norsk kulturindeks.",
+		"merknad": "",
+		"weight": 1,
+		"benevning": "per 1000 innbygger"
+	},
+	{
+		"id": "Visuelle kunstnere",
+		"title": "Visuelle kunstnere",
+		"category": "Kunstnere",
+		"mål": "Indikerer hvor stor andel av befolkningen som er medlem av en kunstnerorganisasjon og som dermed kan anses som en profesjonell kunstner.",
+		"formel": "(A/B) x 1000 der A= Antall medlemskap i de 10 største kunstnerorganisasjonene med hjemmeadresse i kommunen. B= Antall innbyggere i kommunen.",
+		"metode": "Beregne andelen av kommunens innbyggere som er medlem i én av de 10 største kunstnerorganisasjonene. Tallene vises i antall per 1000 innbyggere.",
+		"kilder": "FFF, Grafil, NIL, Norske billedkunstnere, Norske husflidshåndverkere, Norske kunsthåndverkere og UKS",
+		"vekting": "Delindikatoren vektes med 20 % av kunstnerindikatoren og 2% av Norsk kulturindeks.",
+		"merknad": "",
+		"weight": 1,
+		"benevning": "per 1000 innbygger"
 	},
 	{
 		"id": "Kunstnerisk Produksjon",
@@ -79,19 +104,6 @@
 		"benevning": "per 1000 innbygger"
 	},
 	{
-		"id": "Kommunale Midler",
-		"title": "Kommunale midler til museum",
-		"category": "Museum",
-		"mål": "Måle den lokale museumsaktiviteten.",
-		"formel": "(A/B) der A= Antall kroner tildelt fra kommunen til museumsformål og B= Antall innbyggere i kommunene.",
-		"metode": "Beregne antall kommunale kroner til museum per innbygger i kommunen.",
-		"kilder": "SSB/Kostra (funksjon 375), tall fra 2015.",
-		"vekting": "Delindikatoren vektes med 25 % av museumsindikatoren og 2.5 % av Norsk kulturindeks.",
-		"merknad": "",
-		"weight": 1,
-		"benevning": "per innbygger"
-	},
-	{
 		"id": "Total Besøk",
 		"title": "Besøk på museum",
 		"category": "Museum",
@@ -99,7 +111,7 @@
 		"formel": "A/B) der A= Samlet besøk i hver kommune og B= Antall innbyggere kommunen.",
 		"metode": "Beregne antall besøk per innbygger i kommunen.",
 		"kilder": "Tilsendte, innsamlede tall fra norske museer i 2015, samt tall fra Norsk kulturråd.",
-		"vekting": "Delindikatoren vektes med 25 % av museumsindikatoren og 2,5 % av Norsk kulturindeks.",
+		"vekting": "Delindikatoren vektes med 33,3 % av museumsindikatoren og 3.3 % av Norsk kulturindeks.",
 		"merknad": "Noen konsoliderte museer har kun registrert totalt antall besøk. Vi har i slike tilfeller fordelt det totale besøkstallet likt på de ulike museumsarenaene.",
 		"weight": 1,
 		"benevning": "per innbygger"
@@ -112,7 +124,7 @@
 		"formel": "(A/B) der A= Samlet betalende besøk i hver kommune og B= Antall innbyggere kommunen.",
 		"metode": "Beregne antall betalende besøk per innbygger i kommunen.",
 		"kilder": "Tilsendte, innsamlede tall fra Norske museer i 2015, samt tall fra Norsk kulturråd.",
-		"vekting": "Delindikatoren vektes med 25 % av museumsindikatoren og 2,5 % av Norsk kulturindeks.",
+		"vekting": "Delindikatoren vektes med 33,3 % av museumsindikatoren og 3.3 % av Norsk kulturindeks.",
 		"merknad": "En rekke museumsbesøk blir registrert dersom de besøkende kun er innom et parkanlegg eller lignende. Ved å inkludere betalende besøk vektlegger vi personer som har ytt noe for å se en samling, en utstilling eller lignende. Noen museer har kun rapportert inn besøkstall til Kulturrådet, og ikke spesifisert betalende besøk. I slike tilfeller går vi ut fra at antall betalende besøk er 0. ",
 		"weight": 1,
 		"benevning": "per innbygger"
@@ -125,7 +137,7 @@
 		"formel": "(A/B) der A= Sum av utstillinger, møter, foredrag, seminarer, konserter  og oppsettinger i hver kommune og B= Antall innbyggere kommunen.",
 		"metode": "Beregne antall utstillinger og arrangementer per innbygger i kommunen",
 		"kilder": "Norsk Kulturråd",
-		"vekting": "Delindikatoren vektes med 25 % av museumsindikatoren og 2,5 % av Norsk kulturindeks.",
+		"vekting": "Delindikatoren vektes med 33,3 % av museumsindikatoren og 3.3 % av Norsk kulturindeks.",
 		"merknad": "",
 		"weight": 1,
 		"benevning": "per innbygger"
@@ -153,32 +165,6 @@
 		"kilder": "Aurora, Buytec, DX, Eventim, Gdbillett, Hallingbillett, Hoopla, Linticket, Ringbillett, Ticketco, Ticketmaster og Tikkio",
 		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
 		"merknad": "Utvalgte billettselskaper regnes som de største i markedet. Vi har likevel ingen sikker oversikt over dette.",
-		"weight": 1,
-		"benevning": "per innbygger"
-	},
-	{
-		"id": "TONO Arrangementer",
-		"title": "Antall Tono-registrerte konserter",
-		"category": "Konserter",
-		"mål": "Indikerer hvor mange konserter som har blitt avholdt i en kommune.",
-		"formel": "(A/B) x 1000 der A= Antall TONO-registrerte konserter og B= Antall innbyggere i kommunen.",
-		"metode": "Beregne antall konserter som har blitt avholdt i de ulike kommunene.",
-		"kilder": "TONO, tall",
-		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
-		"merknad": "Tallene inkluderer alle konserter og offentlige opptredener som Tono har registrert i løpet av 2013. Gudstjenester er holdt utenfor.",
-		"weight": 1,
-		"benevning": "per 1000 innbygger"
-	},
-	{
-		"id": "TONO Avregning",
-		"title": "Billettinntekter for konserter gjennom billettselskaper",
-		"category": "Konserter",
-		"mål": "Indikerer størrelsen og populariteten på konserter som er avholdt og innrapportert til TONO.",
-		"formel": "(A/B) der A= Beregnede billettinntekter fra Tono-registrerte opptredener og B= Antall innbyggere i kommunen.",
-		"metode": "Beregne antall kroner arrangørene har blitt avkrevd i Tono-vederlag. Vederlaget er direkte utledet av konsertstørrelsen.",
-		"kilder": "Tono, Norske konsertarrangører og Norsk Jazzforum.",
-		"vekting": "Delindikatoren vektes med 50 % av konsertindikatoren og 5 % av Norsk kulturindeks.",
-		"merknad": "Medlemmer av Norske konsertarrangører og Norsk Jazzforum rapporterer inn konserter og vederlag for alle sine medlemmer. Vi har derfor innhentet tall fra disse. I enkelte tilfeller kan arrangør befinne seg i en annen kommune enn der det faktiske arrangementet ble avholdt. Dette er en svakhet ved dataene vi ikke kan kontrollere per i dag. I de tilfeller vi ikke har tall for Tono-vederlag, kun for billettinntekter, har vi regnet ut fra et snitt på 3% av billettinntekter.",
 		"weight": 1,
 		"benevning": "per innbygger"
 	},

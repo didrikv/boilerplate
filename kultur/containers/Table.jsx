@@ -23,25 +23,31 @@ export default function Table(props) {
 						</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">1a Kunstnertetthet</td>
-						<td className="tg-28d0">
-							Medlemsregister fra 10 kunstnerorganisasjoner
-						</td>
-						<td className="tg-28d0">5.00%</td>
+						<td className="tg-28d0">1a Forfattere</td>
+						<td className="tg-28d0">DNF, Dramatikerforbundet, NBU og Norsk oversetterforening</td>
+						<td className="tg-28d0">2%</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">1b Kunstnermangfold</td>
-						<td className="tg-28d0">
-							Medlemsregister fra 10 kunstnerorganisasjoner
-						</td>
-						<td className="tg-28d0">2,50 %</td>
+						<td className="tg-28d0">1b Musikere og komponister</td>
+						<td className="tg-28d0">Creo, Folkorg, Gramart, NOPA, Norsk Jazzforum og Norsk komponistforening</td>
+						<td className="tg-28d0">2%</td>
+					</tr>
+					<tr>
+						<td className="tg-28d0">1c Scenekunstnere</td>
+						<td className="tg-28d0">Norsk Filmforbund, Norsk Skuespillerforbund, Norske dansekunstnere og Norske filmregissører</td>
+						<td className="tg-28d0">2%</td>
+					</tr>
+					<tr>
+						<td className="tg-28d0">1d Visuelle kunstnere</td>
+						<td className="tg-28d0">FFF, Grafil, NIL, Norske billedkunstnere, Norske husflidshåndverkere, Norske kunsthåndverkere og UKS</td>
+						<td className="tg-28d0">2%</td>
 					</tr>
 					<tr>
 						<td className="tg-28d0">
 							1c Tildelinger fra Statens kunstnerstipend
 						</td>
 						<td className="tg-28d0">Statens kunstnerstipend</td>
-						<td className="tg-28d0">2,50 %</td>
+						<td className="tg-28d0">2%</td>
 					</tr>
 					<tr>
 						<td className="tg-icwe" colSpan={3}>
@@ -77,24 +83,19 @@ export default function Table(props) {
 						</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">3a Kommunale midler til museum</td>
-						<td className="tg-28d0">KOSTRA/SSB </td>
-						<td className="tg-28d0">2,5 %</td>
-					</tr>
-					<tr>
-						<td className="tg-28d0">3b Besøkstall, totalt</td>
+						<td className="tg-28d0">3a Besøkstall, totalt</td>
 						<td className="tg-28d0">Norsk kulturråd</td>
-						<td className="tg-28d0">2,5 %</td>
+						<td className="tg-28d0">3,33 %</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">3c: Besøkstall, betalende</td>
+						<td className="tg-28d0">3b: Besøkstall, betalende</td>
 						<td className="tg-28d0">Norsk kulturråd</td>
-						<td className="tg-28d0">2,5 %</td>
+						<td className="tg-28d0">3,33 %</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">3d: Utstillinger og arrangementer</td>
+						<td className="tg-28d0">3c: Utstillinger og arrangementer</td>
 						<td className="tg-28d0"></td>
-						<td className="tg-28d0">2,5 %</td>
+						<td className="tg-28d0">3,33 %</td>
 					</tr>
 					<tr>
 						<td className="tg-icwe" colSpan={3}>
@@ -102,7 +103,7 @@ export default function Table(props) {
 						</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">4c Antall konserter billettselskaper</td>
+						<td className="tg-28d0">4a Antall konserter billettselskaper</td>
 						<td className="tg-28d0">
 							Ticketmaster, Billettportalen, TicketCo, eBillett, Hoopla, Aurora,
 							Ringbillett, Linticket og Tikkio{' '}
@@ -111,7 +112,7 @@ export default function Table(props) {
 					</tr>
 					<tr>
 						<td className="tg-28d0">
-							4d Billettinntekter for konserter billettselskaper
+							4b Billettinntekter for konserter billettselskaper
 						</td>
 						<td className="tg-28d0">
 							Ticketmaster, Billettportalen, TicketCo, eBillett, Hoopla, Aurora,

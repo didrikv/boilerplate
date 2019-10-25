@@ -35,7 +35,6 @@ let varsI = variables.map( (e) => vars.indexOf(e.id) )
 let newdata = {}
 let newvars = vars
 let maxValues = {}
-
 years.forEach( (year) => {
 	newdata[year] = []
 	inndelinger.forEach( (inndeling) => {
