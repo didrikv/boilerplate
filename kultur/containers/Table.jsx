@@ -94,7 +94,7 @@ export default function Table(props) {
 					</tr>
 					<tr>
 						<td className="tg-28d0">3c: Utstillinger og arrangementer</td>
-						<td className="tg-28d0"></td>
+						<td className="tg-28d0">Norsk kulturråd</td>
 						<td className="tg-28d0">3,33 %</td>
 					</tr>
 					<tr>
@@ -259,7 +259,7 @@ export default function Table(props) {
 						<td className="tg-28d0">
 							9a Kulturfondtildelinger + tilskudd over statsbudsjettet
 						</td>
-						<td className="tg-28d0">Norsk kulturråd og Statsbudsjettet</td>
+						<td className="tg-28d0">Norsk kulturråd</td>
 						<td className="tg-28d0">3,3 %</td>
 					</tr>
 					<tr>
@@ -269,7 +269,7 @@ export default function Table(props) {
 					</tr>
 					<tr>
 						<td className="tg-28d0">9c Tildelinger Riksantikvaren</td>
-						<td className="tg-28d0">RA og Norsk kulturminnefond</td>
+						<td className="tg-28d0">Norsk kulturminnefond</td>
 						<td className="tg-28d0">3,3 %</td>
 					</tr>
 					<tr>

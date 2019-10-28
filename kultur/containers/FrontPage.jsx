@@ -102,7 +102,7 @@ let frontText =
 	<br/>
 		<p><i>Hva kan man bruke datamaterialet til?</i></p>
 		<p>Datamaterialet i Norsk kulturindeks muliggjør en rekke statistiske analyser og sammenligninger, og brukes som kunnskapsgrunnlag for kommuneadministrasjon og politikere i mange norske kommuner. Med basis i indeksen leverer Telemarksforsking ulike typer rapporter som kunnskapsgrunnlag for kulturplanprosesser, planlegging av nytt kulturhus, utredninger av regionale samarbeid med mer. Rapportene er godt egnet til å beskrive kulturlivet i en kommune, region eller fylke – og hvilket mulighetsrom som finnes på de ulike kulturområdene. Slike rapporter kan være til god hjelp i utarbeidelse av bl.a. planer, søknader og rapporteringer.</p>
-		<p><a href="http://www.telemarksforsking.no/publikasjoner/resultat.asp?sok=nk">Klikk her for en oversikt over alle rapporter basert på Norsk kulturindeks.</a></p>
+		<a href="https://www.telemarksforsking.no/prosjekter/norsk-kulturindeks-2018/20180960/">Klikk her for en oversikt over alle rapporter basert på Norsk kulturindeks.</a>
 	</div>
 
 
