@@ -44,6 +44,7 @@ years.forEach( (year) => {
 			let Varr = []
 			let Cmin = 0
 			category.variables.forEach( (variable) => {
+
 				//Creating rank for variable and saving in Varr (and insertion to section)
 				let varInfo = variables.find( (e) => e.id == variable)
 				let varI = vars.indexOf(variable)
@@ -51,6 +52,7 @@ years.forEach( (year) => {
 				Varr.push( rankArr.map( (e) => e*varInfo.weight) )
 				Cmin += varInfo.weight
 			})
+
 			//Finding category max and creating score arrays for variable
 			let Cmax = Varr.reduce( (sum, array) => sum + Math.max( ...array) , 0)
 			let Crange = Cmax - Cmin
@@ -58,10 +60,12 @@ years.forEach( (year) => {
 				let Amax = Math.max( ...array)
 				return array.map( (e) => (Amax - e)/Crange ) 
 			})
+
 			//Inserting score arrays into section
 			section.forEach( (e, i) => {
 				Vscore.forEach( (array) => e.push(array[i]))
 			})
+
 			//Inserting ranking of category sum into section
 			let Csum = Varr[0].map( (e, i) => {
 				let sum = 0
@@ -71,10 +75,12 @@ years.forEach( (year) => {
 			let Csort = Csum.slice().sort(sortInt) 
 			let Crank = Csum.map( (e) => Csort.indexOf(e) + 1) 
 			section.forEach( (e, i) => e.push(Crank[i]) )
+
 			//Creating Score flex functions for categories and inserting it to section
 			let fmax = Math.max( ...Crank)	
 			let Cflex = Crank.map( (e) => (fmax-e)/(fmax-1)*100)
 			section.forEach( (e, i) => e.push(Cflex[i]) )
+
 			//Saving Crank for creating indeks
 			if(category.title == "DKS") {
 				Carr.push(Crank.map( (e) => e*0.25))
@@ -94,6 +100,7 @@ years.forEach( (year) => {
 		section.forEach( (e, i) => {
 			Cscore.forEach( (array) => e.push(array[i]))
 		})
+
 		//Creating sum of category ranks and making indeks
 		let Ksum = Carr[0].map( (e, i) => {
 			let sum = 0
