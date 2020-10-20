@@ -6,7 +6,7 @@ import {scaleQuantile} from 'd3-scale'
 
 import {TransitionGroup} from 'react-transition-group'
 
-import norge_simp from './no_2018_simp.json'
+import norge_simp from './norge.json'
 import MapLegend from './MapLegend.jsx'
 import styles from './Map.css'
 import FadeTransition from '../CrossFade/CrossFade.jsx'
@@ -32,7 +32,7 @@ inndelinger.forEach( (inndeling) => {
 		<path
 			vectorEffect='non-scaling-stroke'
 			d={path(area)}
-			key={area.properties.Nr}
+			key={area.properties.nr}
 			style={{stroke: 'grey', strokeWidth: 0.4}}
 			className={styles.static}
 		/>

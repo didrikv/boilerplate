@@ -103,22 +103,14 @@ export default function Table(props) {
 						</td>
 					</tr>
 					<tr>
-						<td className="tg-28d0">4a Antall konserter billettselskaper</td>
 						<td className="tg-28d0">
-							Ticketmaster, Billettportalen, TicketCo, eBillett, Hoopla, Aurora,
-							Ringbillett, Linticket og Tikkio{' '}
-						</td>
-						<td className="tg-28d0">5.00%</td>
-					</tr>
-					<tr>
-						<td className="tg-28d0">
-							4b Billettinntekter for konserter billettselskaper
+							4a Billettinntekter for konserter billettselskaper
 						</td>
 						<td className="tg-28d0">
 							Ticketmaster, Billettportalen, TicketCo, eBillett, Hoopla, Aurora,
 							Ringbillett, Linticket og Tikkio{' '}
 						</td>
-						<td className="tg-28d0">5.00%</td>
+						<td className="tg-28d0">10.00%</td>
 					</tr>
 					<tr>
 						<td className="tg-icwe" colSpan={3}>

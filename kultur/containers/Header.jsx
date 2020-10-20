@@ -39,23 +39,24 @@ function Header(props) {
 							<LinkContainer exact to="/">
 								<NavItem> Kulturindeksen 2019 </NavItem>
 							</LinkContainer>
-							<NavDropdown title="Analyser">
-								<LinkContainer exact to='/analyser'>
-									<MenuItem>1. Kjennetegn ved gode kulturkommuner</MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/analyser/struktur'>
-									<MenuItem> 2. Strukturelle variabler</MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/analyser/metode'>
-									<MenuItem> 3. Statistisk metode</MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/analyser/resultat'>
-									<MenuItem>4. Forskningsresultater</MenuItem>
-								</LinkContainer>
-								<LinkContainer to='/analyser/potensial'>
-									<MenuItem>5. Utnytter kommunene sitt potensial på kulturfeltet?</MenuItem>
-								</LinkContainer>
-							</NavDropdown>
+							{//<NavDropdown title="Analyser">
+								//<LinkContainer exact to='/analyser'>
+									//<MenuItem>1. Kjennetegn ved gode kulturkommuner</MenuItem>
+								//</LinkContainer>
+								//<LinkContainer to='/analyser/struktur'>
+									//<MenuItem> 2. Strukturelle variabler</MenuItem>
+								//</LinkContainer>
+								//<LinkContainer to='/analyser/metode'>
+									//<MenuItem> 3. Statistisk metode</MenuItem>
+								//</LinkContainer>
+								//<LinkContainer to='/analyser/resultat'>
+									//<MenuItem>4. Forskningsresultater</MenuItem>
+								//</LinkContainer>
+								//<LinkContainer to='/analyser/potensial'>
+									//<MenuItem>5. Utnytter kommunene sitt potensial på kulturfeltet?</MenuItem>
+								//</LinkContainer>
+							//</NavDropdown>
+							}
 							<NavDropdown title="Hovedkategorier" >
 								<LinkContainer 
 									to={'/kategori/indeks'}

@@ -8,6 +8,7 @@ import TwoColumn, { renderSection } from '../../components/TwoColumn/TwoColumn.j
 import categories from '../data/categories.json'
 import Table from './Table.jsx'
 import styles from './App.css'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -92,17 +93,19 @@ export default function FrontPage(props) {
 
 let frontText = 
 	<div className={styles.section}>
-		<h3>Norsk kulturindeks 2019</h3>
+		<h3>Norsk kulturindeks 2020</h3>
 	<br/>
 		<p><i>Hva og hvorfor?</i></p>
 		<p>Norsk kulturindeks er en årlig oversikt over kulturtilbud og kulturaktivitet i norske kommuner, regioner og fylker. Indeksen er basert på registerdata fra en rekke offentlige etater, interesseorganisasjoner og foreninger. Målsetningen med Norsk kulturindeks er å beskrive det faktiske kulturtilbudet og den faktiske kulturbruken innenfor kommunen som geografisk område. Indeksen er utviklet av Telemarksforsking i samarbeid med norske kommuner og fylkeskommuner.</p>
+		<p><NavLink to='/steder'>Finn resultater for din kommune.</NavLink></p>
 		<br/>
 		<p><i>Hvordan fungerer Norsk kulturindeks?</i></p>
-		<p>Hvert år samler Telemarksforsking data til Norsk kulturindeks og gir ut en oversikt over hvordan kommunene plasserer seg i forhold til hverandre. De årlige kulturindeksene er basert på data fra året før. Det vil si at Norsk kulturindeks 2019 er basert på data fra 2018. Man må derfor velge 2018 som år for å få fram datagrunnlaget for Norsk kulturindeks 2019. Den nasjonale hovedrapporten er nå erstattet av denne siden, hvor man kan finne plasseringer og nøkkeltall fra alle år med Norsk kulturindeks.</p>
+		<p>Hvert år samler Telemarksforsking data til Norsk kulturindeks og gir ut en oversikt over hvordan kommunene plasserer seg i forhold til hverandre. De årlige kulturindeksene er basert på data fra året før. Det vil si at Norsk kulturindeks 2020 er basert på data fra 2019. Man må derfor velge 2019 som år for å få fram datagrunnlaget for Norsk kulturindeks 2020.</p>
+		<p><NavLink to='/kategori/indeks'>20 på topp i hver kategori.</NavLink></p>
 	<br/>
 		<p><i>Hva kan man bruke datamaterialet til?</i></p>
 		<p>Datamaterialet i Norsk kulturindeks muliggjør en rekke statistiske analyser og sammenligninger, og brukes som kunnskapsgrunnlag for kommuneadministrasjon og politikere i mange norske kommuner. Med basis i indeksen leverer Telemarksforsking ulike typer rapporter som kunnskapsgrunnlag for kulturplanprosesser, planlegging av nytt kulturhus, utredninger av regionale samarbeid med mer. Rapportene er godt egnet til å beskrive kulturlivet i en kommune, region eller fylke – og hvilket mulighetsrom som finnes på de ulike kulturområdene. Slike rapporter kan være til god hjelp i utarbeidelse av bl.a. planer, søknader og rapporteringer.</p>
-		<a href="https://www.telemarksforsking.no/prosjekter/norsk-kulturindeks-2018/20180960/">Klikk her for en oversikt over alle rapporter basert på Norsk kulturindeks.</a>
+		<a target="_blank" href="https://www.telemarksforsking.no/prosjekter/norsk-kulturindeks-2019/20191310/">Klikk her for en oversikt over alle rapporter basert på Norsk kulturindeks.</a>
 	</div>
 
 
