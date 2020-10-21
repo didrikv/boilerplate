@@ -37,7 +37,7 @@ function Header(props) {
 							<Navbar.Collapse>
 						<Nav>
 							<LinkContainer exact to="/">
-								<NavItem> Kulturindeksen 2019 </NavItem>
+								<NavItem> Kulturindeksen 2020 </NavItem>
 							</LinkContainer>
 							{//<NavDropdown title="Analyser">
 								//<LinkContainer exact to='/analyser'>

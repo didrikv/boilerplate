@@ -19,7 +19,7 @@ export default function FrontPage(props) {
 			dataStore: props.dataStore,
 			stack: categories.map( (e) => e.title ),
 			sortby: 'Kulturindeks Score',
-			years: [2018],	
+			years: [2019],	
 			inndeling: 'Kommune',
 			createControl: false,
 			itemsPerRow: 4,
@@ -41,7 +41,7 @@ export default function FrontPage(props) {
 	function renderMapSection() {
 		let graphProps = {
 			variable: 'Kulturindeks Score',
-			years: [2018],
+			years: [2019],
 			inndeling: 'Kommune',
 			createControl: false,
 			dataStore: props.dataStore,

@@ -90,6 +90,7 @@ export default class Indeks extends React.Component {
 					</Col>
 					<Col sm={6} >
 						<HorizontalChart {...this.state} {...chartProps}/>
+						<p style={{fontSize: '0.8rem'}}>Score tilsvarer omvendt rangering. Høyeste rangering vises med lengst strek, laveste rangering vises ikke.</p>
 					</Col>
 				</Row>
 				<div style={{height: '100px'}}> </div>

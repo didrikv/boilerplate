@@ -144,7 +144,7 @@ export default function Table(props) {
 					</tr>
 					<tr>
 						<td className="tg-28d0">
-							6a Totalt utlån fra folkebibliotek (alle medier)
+							6a Førstegangslån fra folkebibliotek (alle medier)
 						</td>
 						<td className="tg-28d0">
 							Folkebibliotekstatistikk fra Nasjonalbiblioteket
