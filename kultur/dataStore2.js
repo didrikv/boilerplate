@@ -58,7 +58,7 @@ years.forEach( (year) => {
 			let Crange = Cmax - Cmin
 			let Vscore = Varr.map( (array) => {
 				let Amax = Math.max( ...array)
-				return array.map( (e) => (Amax - e)/Crange ) 
+				return array.map( (e) => (Amax + 1 - e)/Crange) 
 			})
 
 			//Inserting score arrays into section

@@ -128,7 +128,7 @@ export default class Kategori extends React.Component {
 						<Col sm={6} >
 							<HorizontalChart {...this.state} {...chartProps}/>
 							{this.state.variable == this.variables[0] 
-								? <p style={{fontSize: '0.8rem'}}>Score tilsvarer omvendt rangering. Høyeste rangering vises med lengst strek, laveste rangering vises ikke.</p> 
+								? <p style={{fontSize: '0.8rem'}}>Score tilsvarer omvendt rangering. Høyeste rangering vises med lengst strek.</p> 
 								: null
 							}
 						</Col>
