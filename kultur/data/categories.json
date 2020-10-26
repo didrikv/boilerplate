@@ -21,7 +21,7 @@
 	},
 	{
 		"title": "Museum",
-		"text": "Vi presenterer her kommunale tildelinger til museer, totalt besøk og betalende besøk, samt antall utstillinger og arrangementer for alle museumsavdelinger som rapporterer tall inn til Norsk kulturråd. Dette inkluderer også museer som får tilskudd fra andre departementer enn Kulturdepartementet.",
+		"text": "Vi presenterer her totalt besøk og betalende besøk, samt antall utstillinger og arrangementer for alle museumsavdelinger som rapporterer tall inn til Norsk kulturråd. Dette inkluderer også museer som får tilskudd fra andre departementer enn Kulturdepartementet.",
 		"variables": [
 			"Total Besøk",
 			"Betalende Besøk",
